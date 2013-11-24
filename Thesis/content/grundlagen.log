@@ -1,0 +1,1384 @@
+This is LuaTeX, Version beta-0.70.2-2012062819 (TeX Live 2012) (format=lualatex 2012.6.30)  16 NOV 2013 13:46
+ restricted \write18 enabled.
+**grundlagen.tex
+(./grundlagen.tex
+LaTeX2e <2011/06/27>
+LuaTeX adaptation of babel <v3.8m-luatex-1.5> and hyphenation patterns for engl
+ish, dumylang, nohyphenation, loaded.
+! Undefined control sequence.
+l.5 \chapter
+            {Grundlagen der HDR-Bilder}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \chapter{G
+              rundlagen der HDR-Bilder}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 5--7
+[][]Grundlagen
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 I
+     n den vergangenen Jahren hat die digitale Fotografie zu einem Umdenken ...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 9--10
+[][]In
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 D
+      urch die Verbreitung von digital Kameras (insbesondere auch solchen di...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 11--13
+[][]Durch
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 B
+      evor auf die Grundlagen von \gls{HDR}-Bildern näher eingegangen wird ...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.14 Bevor auf die Grundlagen von \gls
+                                      {HDR}-Bildern näher eingegangen wird ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 14--15
+[][]Bevor
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 D
+      igital Bilder werden in der heutigen Zeit in der Regel in Form der dre...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.16 ...Rot, Grün und Blau dargestellt (sog. \gls
+                                                  {RGB-Farbraum}). Häufig k...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 16--17
+[][]Digital
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 D
+      iese drei bzw. vier Kanäle werden in der Regel mittels eines Bytes re...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{Reinhard}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.18 ...präsentieren (vgl. \cite[S.~1f]{Reinhard}
+                                                  ).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Reinhard' on page  undefined on input line 18.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 18--19
+[][]Diese
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 18--19
+[[],
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 D
+      ieses Problem wird durch die Verwendung von \gls{HDR} Bildern behoben....
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.20 ...Problem wird durch die Verwendung von \gls
+                                                  {HDR} Bildern behoben. Zie...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 ... dies zu ermöglichen erhöht man bei \gls
+                                                  {HDR} Bildern den \gls{Dyn...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 ...erhöht man bei \gls{HDR} Bildern den \gls
+                                                  {Dynamikumfang} des Bildbe...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 ...Darstellung der daraus entstehenden \glspl
+                                                  {Radiance Map} (eine Form ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 ... spezielle Bildschirme oder aber sog. \gls
+                                                  {Tone-Mapping} (dt.: Dynam...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.20 ...tztere stellen ein Bild mit erhöhtem \gls
+                                                  {Dynamikumfang} durch eine...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<write> ... `subsec:ToneMapping' on page \thepage 
+                                                  \space undefined\on@line .
+l.20 ...ateien dar (siehe \ref{subsec:ToneMapping}
+                                                  ).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `subsec:ToneMapping' on page  undefined on input line 
+20.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 20--21
+[][]Dieses
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 20--21
+[]). 
+ []
+
+! Undefined control sequence.
+l.22 \section
+             {Prinzip}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \section{P
+               rinzip}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 22--23
+[][]Prinzip 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 D
+      as menschliche Auge kann in einer täglichen Szene einen \gls{Dynamiku...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.24 ... kann in einer täglichen Szene einen \gls
+                                                  {Dynamikumfang} im Bereich...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\citation{Fairchild04theicam}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.24 ...n 1:10.000 (vgl. \cite{Fairchild04theicam}
+                                                  ) wahrnehmen. Dies liegt w...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Fairchild04theicam' on page  undefined on input line 2
+4.
+
+! Undefined control sequence.
+<write> ...ce `tab:illumination' on page \thepage 
+                                                  \space undefined\on@line .
+l.24 ...ors. In der Tabelle \ref{tab:illumination}
+                                                   können verschiedenen Dyn...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `tab:illumination' on page  undefined on input line 24
+.
+
+! Undefined control sequence.
+l.25 Um wie gewünscht mit \gls
+                               {HDR} Bildern einen höheren \gls{Dynamikumfa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 ... mit \gls{HDR} Bildern einen höheren \gls
+                                                  {Dynamikumfang} darstellen...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 ...er mehrere Bilder mit verschiedenen \glspl
+                                                  {Belichtungszeit} zu einer...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 ...enen \glspl{Belichtungszeit} zu einer \gls
+                                                  {Radiance Map} kombiniert ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\citation{Yang99a640}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.25 ...hiede) aufzunehmen (vgl. \cite{Yang99a640}
+                                                  ).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Yang99a640' on page  undefined on input line 25.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 24--26
+[][]Das
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 24--26
+[[]])
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 24--26
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 24--26
+[[]]). 
+ []
+
+
+! LaTeX Error: Environment table undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \begin{table}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29   \begin{center}
+                     
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 29--29
+[][] 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 30.
+! Undefined control sequence.
+l.31 	\toprule
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \midrule 
+                         
+l.32 ... Beleuchtungsstärke ($cd/m^2$)\\ \midrule
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \midrule 
+                         
+l.37 	\midrule
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \bottomrule 
+                            
+l.39 	\bottomrule
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41     \caption
+                 {Beleuchtungsstärken in verschiedenen Umgebungen \cite[S.~...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\citation{Reinhard}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.41 ...chiedenen Umgebungen \cite[S.~6]{Reinhard}
+                                                  }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Reinhard' on page  undefined on input line 41.
+
+
+Overfull \hbox (27.7987pt too wide) in paragraph at lines 30--43
+ [] 
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 30--43
+ [[], 
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{table}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 \end{table}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.48 Der hier verwendete Begriff des \enquote
+                                             {\gls{Dynamikumfang}}beschreibt...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 Der hier verwendete Begriff des \enquote{\gls
+                                                  {Dynamikumfang}}beschreibt...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.48 ... Bildschirmen hingegen wird unter dem \gls
+                                                  {Dynamikumfang} das Verhä...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\citation{Reinhard}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.48 ...aft verstanden (vgl. \cite[S.~4]{Reinhard}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Reinhard' on page  undefined on input line 48.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 48--49
+[][]Der
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 48--49
+[[],
+ []
+
+! Undefined control sequence.
+l.50 \section
+             {Anwendungsgebiet und Geschichte}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 50--51
+[][]Anwendungsgebiet
+ []
+
+! Undefined control sequence.
+l.52 Die Möglichkeiten des Einsatzes von \gls
+                                              {HDR} Bildern sind vielfältig...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\citation{Reinhard}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.52 ... werden kann (vgl. \cite[S.~87f]{Reinhard}
+                                                  ).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Reinhard' on page  undefined on input line 52.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 52--53
+[][]Die
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 52--53
+[[],
+ []
+
+
+! LaTeX Error: Environment description undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \begin{description}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 \item[Digitale Fotografie:]
+                                 Die verschiedenen Kamera-Hersteller gehen b...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.56 ...der Regel jedoch auch um verschiedene \gls
+                                                  {RAW} Formate, die meist n...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \item[Satellitenbilder:]
+                              Satellitenbilder beinhalten in aller Regel seh...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.58 ...ichtbaren Bereich des Lichtspektrums. \gls
+                                                  {HDR} Bilder sind hier von...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 \item[Visualisierungen und Rendering:]
+                                            Eine der ersten Anwendungen ware...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 \item[Bildbearbeitungssoftware:]
+                                      Die großen Bildbearbeitungs-Anwendung...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.62 ...h die Bearbeitung und Generierung von \gls
+                                                  {HDR} Bildern an. Als Beis...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@footnotetext ...tins {\reset@font \footnotesize 
+                                                  \interlinepenalty \interfo...
+l.62 ...footnote{\url{http://adobe.com/photoshop}}
+                                                  , Photogenics\footnote{\ur...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@footnotetext ...}\color@begingroup \@makefntext 
+                                                  {\rule \z@ \footnotesep \i...
+l.62 ...footnote{\url{http://adobe.com/photoshop}}
+                                                  , Photogenics\footnote{\ur...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \url 
+                {http://adobe.com/photoshop}
+l.62 ...footnote{\url{http://adobe.com/photoshop}}
+                                                  , Photogenics\footnote{\ur...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (102.22249pt too wide) in paragraph at lines 62--62
+[][][]\OT1/cmr/m/n/10 http://adobe.com/pho-
+ []
+
+
+Overfull \hbox (12.22224pt too wide) in paragraph at lines 62--62
+\OT1/cmr/m/n/10 to-
+ []
+
+
+Overfull \hbox (20.0556pt too wide) in paragraph at lines 62--62
+\OT1/cmr/m/n/10 shop| 
+ []
+
+! Undefined control sequence.
+\@footnotetext ...tins {\reset@font \footnotesize 
+                                                  \interlinepenalty \interfo...
+l.62 ...s\footnote{\url{http://www.cinepaint.org}}
+                                                   und Photomatix\footnote{\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@footnotetext ...}\color@begingroup \@makefntext 
+                                                  {\rule \z@ \footnotesep \i...
+l.62 ...s\footnote{\url{http://www.cinepaint.org}}
+                                                   und Photomatix\footnote{\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \url 
+                {http://www.cinepaint.org}
+l.62 ...s\footnote{\url{http://www.cinepaint.org}}
+                                                   und Photomatix\footnote{\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (76.38902pt too wide) in paragraph at lines 62--62
+[][][]\OT1/cmr/m/n/10 http://www.cine-
+ []
+
+
+Overfull \hbox (39.19455pt too wide) in paragraph at lines 62--62
+\OT1/cmr/m/n/10 paint.org| 
+ []
+
+! Undefined control sequence.
+\@footnotetext ...tins {\reset@font \footnotesize 
+                                                  \interlinepenalty \interfo...
+l.62 ...url{http://www.hdrsoft.com/download.html}}
+                                                   genannt.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@footnotetext ...}\color@begingroup \@makefntext 
+                                                  {\rule \z@ \footnotesep \i...
+l.62 ...url{http://www.hdrsoft.com/download.html}}
+                                                   genannt.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \url 
+                {http://www.hdrsoft.com/download.html}
+l.62 ...url{http://www.hdrsoft.com/download.html}}
+                                                   genannt.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (74.1946pt too wide) in paragraph at lines 62--62
+[][][]\OT1/cmr/m/n/10 http://www.hdr-
+ []
+
+
+Overfull \hbox (67.83348pt too wide) in paragraph at lines 62--62
+\OT1/cmr/m/n/10 soft.com/down-
+ []
+
+
+Overfull \hbox (41.389pt too wide) in paragraph at lines 62--62
+\OT1/cmr/m/n/10 load.html| 
+ []
+
+
+Overfull \hbox (4.48613pt too wide) in paragraph at lines 62--63
+Photoshop[],
+ []
+
+
+Overfull \hbox (4.48613pt too wide) in paragraph at lines 62--63
+Photogenics[]
+ []
+
+
+Overfull \hbox (4.48613pt too wide) in paragraph at lines 62--63
+Photomatix[]
+ []
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 \item[Virtual Reality:]
+                             Bei Anwendungen, bei denen sich der Benutzer in...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.64 ...ig gute Kompressions-Algorithmen für \gls
+                                                  {HDR} Bilder zu entwickeln...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\citation{Debevec:2008:RSO:1401132.1401175}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.64 ...l. \cite{Debevec:2008:RSO:1401132.1401175}
+                                                  ) können \gls{HDR} Bilder...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Debevec:2008:RSO:1401132.1401175' on page  undefined o
+n input line 64.
+
+! Undefined control sequence.
+l.64 ...ec:2008:RSO:1401132.1401175}) können \gls
+                                                  {HDR} Bilder eingesetzt we...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{description}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 \end{description}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 64--66
+[[]])
+ []
+
+! Undefined control sequence.
+l.67 \section
+             {Physikalische Grundlagen}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 67--68
+[][]Physikalische
+ []
+
+! Undefined control sequence.
+l.69 \section
+             {Bilderzeugung}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.70 Um ein \gls
+                {HDR} Bild zu erzeugen braucht man zunächst die Grundlage f...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 69--71
+[][]Bilderzeugung
+ []
+
+! Undefined control sequence.
+l.72 ...et ist) kann man zum Beispiel den \nameref
+                                                  {subsec:MTB} Ansatz (siehe...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<write> ...eference `subsec:MTB' on page \thepage 
+                                                  \space undefined\on@line .
+l.72 ...subsec:MTB} Ansatz (siehe \ref{subsec:MTB}
+                                                  ) verwenden \footnote{TODO...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `subsec:MTB' on page  undefined on input line 72.
+
+! Undefined control sequence.
+\@footnotetext ...tins {\reset@font \footnotesize 
+                                                  \interlinepenalty \interfo...
+l.72 ...nal of Graphics Tools, 8(2):17–30, 2003}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@footnotetext ...}\color@begingroup \@makefntext 
+                                                  {\rule \z@ \footnotesep \i...
+l.72 ...nal of Graphics Tools, 8(2):17–30, 2003}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (33.19452pt too wide) in paragraph at lines 72--72
+[][][]\OT1/cmr/m/n/10 TODO:
+ []
+
+
+Overfull \hbox (21.3056pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Fast,
+ []
+
+
+Overfull \hbox (15.69446pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Ro-
+ []
+
+
+Overfull \hbox (18.94449pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 bust
+ []
+
+
+Overfull \hbox (15.2778pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Im-
+ []
+
+
+Overfull \hbox (14.44447pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 age
+ []
+
+
+Overfull \hbox (20.1389pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Reg-
+ []
+
+
+Overfull \hbox (10.05556pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 is-
+ []
+
+
+Overfull \hbox (16.13892pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 tra-
+ []
+
+
+Overfull \hbox (17.22227pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 tion
+ []
+
+
+Overfull \hbox (11.97226pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 for
+ []
+
+
+Overfull \hbox (23.88893pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Com-
+ []
+
+
+Overfull \hbox (24.77783pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 posit-
+ []
+
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 ing
+ []
+
+
+Overfull \hbox (20.83339pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 High
+ []
+
+
+Overfull \hbox (16.25003pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Dy-
+ []
+
+
+Overfull \hbox (26.11118pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 namic
+ []
+
+
+Overfull \hbox (27.36116pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Range
+ []
+
+
+Overfull \hbox (20.69449pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Pho-
+ []
+
+
+Overfull \hbox (37.8612pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 tographs
+ []
+
+
+Overfull \hbox (20.30562pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 from
+ []
+
+
+Overfull \hbox (26.9445pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Hand-
+ []
+
+
+Overfull \hbox (20.27782pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Held
+ []
+
+
+Overfull \hbox (15.4167pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Ex-
+ []
+
+
+Overfull \hbox (14.1667pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 po-
+ []
+
+
+Overfull \hbox (24.58336pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 sures,”
+ []
+
+
+Overfull \hbox (22.94449pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Jour-
+ []
+
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 nal
+ []
+
+
+Overfull \hbox (8.05559pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 of
+ []
+
+
+Overfull \hbox (31.20839pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Graph-
+ []
+
+
+Overfull \hbox (11.16667pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 ics
+ []
+
+
+Overfull \hbox (26.16672pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 Tools,
+ []
+
+
+Overfull \hbox (43.33347pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 8(2):17–30,
+ []
+
+
+Overfull \hbox (20.00006pt too wide) in paragraph at lines 72--72
+\OT1/cmr/m/n/10 2003| 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 72--73
+[][]Ein
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 72--73
+[])
+ []
+
+
+Overfull \hbox (4.48613pt too wide) in paragraph at lines 72--73
+[]. 
+ []
+
+! Undefined control sequence.
+l.74 \subsection
+                {\gls{MTB}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.74 \subsection{\gls
+                     {MTB}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.76 Dem \gls
+             {MTB} Verfahren wird eine Serie von $N$ Bildern als Eingabe gel...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 74--77
+[][]MTB
+ []
+
+
+Overfull \hbox (9.12497pt too wide) in paragraph at lines 74--77
+\OML/cmm/m/it/10 N$
+ []
+
+
+Overfull \hbox (128.4912pt too wide) detected at line 79
+\OML/cmm/m/it/10 Y \OT1/cmr/m/n/10 = []
+ []
+
+\citation{Reinhard}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.81 ...legbar sind (vgl. \cite[S. 123f]{Reinhard}
+                                                  ).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Reinhard' on page  undefined on input line 81.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 81--82
+[][]Aus
+ []
+
+
+Overfull \hbox (16.90277pt too wide) in paragraph at lines 81--82
+\OML/cmm/m/it/10 N \OMS/cmsy/m/n/10  
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 81--82
+\OT1/cmr/m/n/10 1$
+ []
+
+
+Overfull \hbox (23.19908pt too wide) in paragraph at lines 81--82
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 81--82
+[[],
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 83--84
+[][]Diese
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 85--86
+[][]Das
+ []
+
+
+Overfull \hbox (54.09703pt too wide) in paragraph at lines 87--88
+[][]\OT1/cmr/bx/n/10 TODO
+ []
+
+
+Overfull \hbox (40.26369pt too wide) in paragraph at lines 87--88
+\OT1/cmr/bx/n/10 Alorith-
+ []
+
+
+Overfull \hbox (20.18877pt too wide) in paragraph at lines 87--88
+\OT1/cmr/bx/n/10 mus
+ []
+
+
+Overfull \hbox (59.26498pt too wide) in paragraph at lines 87--88
+\OT1/cmr/bx/n/10 beschreiben 
+ []
+
+! Undefined control sequence.
+l.89 \section
+             {Bildspeicherung}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.90 \section
+             {Bilddarstellung}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.91 \subsection
+                {Tone-Mapping Verfahren}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.93 \section
+             {Software zur Erstellung von \gls{HDR} Bildern}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.93 \section{Software zur Erstellung von \gls
+                                              {HDR} Bildern}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+! Emergency stop.
+<*> grundlagen.tex
+                  
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 38 strings out of 494982
+ 100000,89155 words of node,token memory allocated 45377 words of node memory still in use:
+   222 hlist, 2 vlist, 15 rule, 4 ins, 20 disc, 25 math, 1240 glue, 25 kern, 13
+1 penalty, 6015 glyph, 1 page_insert, 266 glue_spec, 1 temp, 4 write, 32 local_
+par, 1 dir nodes
+   avail lists: 2:12,3:12,7:85,10:78
+ 3694 multiletter control sequences out of 65536+200000
+ 26 fonts using 1034167 bytes
+ 20i,8n,26p,829b,136s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

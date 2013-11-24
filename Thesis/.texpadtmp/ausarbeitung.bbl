@@ -1,0 +1,78 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{RWPD05}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[BGH{\etalchar{+}}06]{Klingler_Richter_Strobel_2006}
+J.~Burghartz, H.-g. Graf, C.~Harendt, W.~Klingler, H.~Richter, M.~Strobel.
+\newblock HDR CMOS imagers and their applications.
+\newblock In \emph{International Conference on Solid-State and Integrated
+  Circuit Technology Proceedings}, S. 528--531. IEEE Press, 2006.
+
+\bibitem[Blo12]{Bloch2012}
+C.~Bloch.
+\newblock \emph{Das HDRI-Handbuch 2.0 - High Dynamic Range Imaging für
+  Fotografen und Computergrafiker}.
+\newblock dpunkt, Heidelberg, 2012.
+
+\bibitem[Bru06]{bruhn06}
+A.~Bruhn.
+\newblock \emph{Variational Optic Flow Computation: Accurate Modelling and
+  Efficient Numerics}.
+\newblock Dissertation, Department of Mathematics and Computer Science,
+  Saarland University, 2006.
+
+\bibitem[Deb08]{Debevec:2008:RSO:1401132.1401175}
+P.~Debevec.
+\newblock Rendering Synthetic Objects into Real Scenes: Bridging Traditional
+  and Image-based Graphics with Global Illumination and High Dynamic Range
+  Photography.
+\newblock In \emph{ACM SIGGRAPH 2008 Classes}, S. 32:1--32:10. ACM Press, 2008.
+
+\bibitem[DM97]{paper}
+P.~Debevec, J.~Malik.
+\newblock Recovering high dynamic range radiance maps from photographs.
+\newblock In \emph{ACM SIGGRAPH 1997}, S. 369--378. ACM Press/Addison-Wesley
+  Publishing Co., 1997.
+
+\bibitem[FJ04]{Fairchild04theicam}
+M.~D. Fairchild, G.~M. Johnson.
+\newblock The iCAM framework for image appearance, image differences, and image
+  quality.
+\newblock \emph{Journal of Electronic Imaging}, 13:126--138, 2004.
+
+\bibitem[LZR12]{Jing_Hong_Zheng_Rahardja_2012}
+Z.~G. Li, J.~H. Zheng, S.~Rahardja.
+\newblock Detail-enhanced exposure fusion.
+\newblock \emph{IEEE Transactions on Image Processing}, 21(11):4672--4676,
+  2012.
+
+\bibitem[RWPD05]{Reinhard}
+E.~Reinhard, G.~Ward, S.~Pattanaik, P.~Debevec.
+\newblock \emph{High Dynamic Range Imaging: Acquisition, Display, and
+  Image-Based Lighting}.
+\newblock Morgan Kaufmann Publishers Inc., 2005.
+
+\bibitem[War03]{Ward03fast}
+G.~Ward.
+\newblock Fast, robust image registration for compositing high dynamic range
+  photographs from handheld exposures.
+\newblock \emph{Journal of Graphics Tools}, 8:17--30, 2003.
+
+\bibitem[Wes08]{Westermann2008}
+T.~Westermann.
+\newblock \emph{Mathematik für Ingenieure - Ein anwendungsorientiertes
+  Lehrbuch}.
+\newblock Springer, 6 Auf\/lage, 2008.
+
+\bibitem[YGFT99]{Yang99a640}
+D.~X.~D. Yang, A.~E. Gamal, B.~Fowler, H.~Tian.
+\newblock A 640 512 CMOS image sensor with ultrawide dynamic range
+  floating-point pixel-level ADC.
+\newblock \emph{IEEE Journal of Solid-State Circuits}, 34:1821--1834, 1999.
+
+\end{thebibliography}

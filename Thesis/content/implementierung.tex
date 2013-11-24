@@ -1,0 +1,52 @@
+%Die Angabe des schlauen Spruchs auf diesem Wege funtioniert nur,
+%wenn keine Änderung des Kapitels mittels den in preambel/chapterheads.tex
+%vorgeschlagenen Möglichkeiten durchgeführt wurde.
+%\setchapterpreamble[u]{%
+%\dictum[Albert Einstein]{Probleme kann man niemals mit derselben Denkweise lösen, durch die sie entstanden sind.}
+%}
+\chapter{Implementierung}
+\label{chap:impl}
+Großer Teil der Arbeit war neben der mathematischen Ausarbeitung (siehe \autoref{chap:maths}) auch die eigentliche Implementierung des erarbeiten Verfahrens, für welche folgende grundlegende Anforderungen bestanden:
+
+\begin{description}
+\item[Portierbarkeit:] In der Aufgabenstellung war bereits gefordert, dass die Implementierung auf verschiedenen Systemen portierbar sein soll. Aus diesem Grund kamen bereits nur einige wenige Programmiersprachen in Frage
+\item[Evaluation der Daten:] Da die entstehenden Daten auch evaluiert und grafisch dargestellt werden sollten, war eine weitere Anforderung an die Software, dass sie eine \gls{GUI} besitzt oder aber Bild-Formate exportieren kann.
+\item[Funktionalität:] Die Funktionalität der Implementierung stand primär im Vordergrund. An die Performanz der Implementierung und dem Design der \gls{GUI} wurden keine besonderen Anforderungen gestellt.
+\item[Software-Qualität:] Da diese Arbeit eine Bachelor-Arbeit der Fachrichtung \textit{Softwaretechnik} ist bestand eine gewisse Anforderung an die Qualität des Quellcodes. Dies beinhaltet u.a. automatisierte Tests, Objektorientierte Programmierung und Modulare Strukturen.
+\end{description}
+
+\section{Wahl der Programmier-Sprache}
+\label{sec:language}
+Aus den oben beschriebenen Anforderungen ließen sich im großen und ganzen drei mögliche Programmiersprachen ableiten, aus denen eine gewählt werden musste.
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{l|c|c|c|}
+	\toprule
+      Sprache & Java & C & C\# \\ 
+      \midrule
+      Portierbarkeit & \checkmark & \checkmark & \checkmark \footnote{Mono (\url{http://www.mono-project.com}) ist eine portierbare Version von C\# die auch auf Unix kompiliert}\\
+      \gls{GUI} & \checkmark & \checkmark\footnote{Durch Libraries (z.B. GTK+ \url{http://www.gtk.org}) können in C auch grafische Benutzeroberflächen entwickelt werden } & \checkmark\\
+      Objektorientierte Programmierung & \checkmark & $\times$\footnote{Obwohl C keine objektorientierte Sprache ist, ist es grundsätzlich natürlich trotzdem möglich ähnliche Konstrukte zu erzeugen.}  & \checkmark\\
+      Automatisierte Tests & \checkmark & \checkmark\footnote{Nicht direkt unterstützt, aber es gibt Testframeworks wie z.B. \url{http://check.sourceforge.net}} & \checkmark\\
+      Native Systemzugriff\footnote{Der Zugriff auf native Systemfunktionen ermöglicht häufig einen Performance-Gewinn}& $\times$\footnote{Java läuft im sog. \gls{JRE} und hat damit nicht direkt Zugriff auf native Funktionen} & \checkmark & \checkmark\\
+	\bottomrule
+    \end{tabular}
+    \caption{Vergleich }
+    \label{tab:languages}
+  \end{center}
+\end{table}
+
+
+\section{Architektur}
+\label{sec:architektur}
+\section{Algorithmus in Pseudocode}
+\label{sec:pseudocode}
+\section{Ausgewählte Programmabschnitte}
+\label{sec:sample-codes}
+\section{Verwendetes \gls{Tone-Mapping}-Verfahren}
+\label{sec:tone-mapping}
+\section{Laufzeitanalyse}
+\label{sec:laufzeit}
+
+

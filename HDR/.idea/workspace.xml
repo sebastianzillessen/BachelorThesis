@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd42bff0-ab5d-4dc0-84b5-c455bb2abeef" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/ImageChooser/JImageChooser.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/Ludwigsburg_001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/Ludwigsburg_002.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/Ludwigsburg_003.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/Monrepos_001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/Monrepos_002.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/Monrepos_003.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/Tamm_001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/Tamm_002.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/Tamm_003.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/_MG_0001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/_MG_0009.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/_MG_9980.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/_MG_9988.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/_MG_9992.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Other Images/_MG_9999.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/1:10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/1:160.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/1:20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/1:40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/1:6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/1:60.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img2/Kuehtai_001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img2/Kuehtai_002.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img2/Kuehtai_003.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img2/Kuehtai_004.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img2/Kuehtai_005.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img2/Kuehtai_006.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img2/Kuehtai_007.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_small/1:10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_small/1:160.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_small/1:20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_small/1:40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_small/1:6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_small/1:60.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_super_small/1:10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_super_small/1:160.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_super_small/1:20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_super_small/1:40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_super_small/1:6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img_super_small/1:60.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_400_15_n_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_400_15_n_DEFAULT_Reinhard(0.72).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_400_15_n_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_400_15_n_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_400_15_n_DEFAULT_g(20%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_400_15_n_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_400_15_n_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_400_15_n_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_400_15_n_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_400_15_n_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_n_DEFAULT_Energieverlauf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_n_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_n_DEFAULT_Reinhard(0.72).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_n_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_n_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_n_DEFAULT_g(20%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_n_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_n_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_n_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_n_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_n_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_Energieverlauf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_Reinhard(0.09).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_Reinhard(0.18).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_Reinhard(0.36).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_Reinhard(0.72).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_g(20%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_2_50_15_y_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_Energieverlauf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_Reinhard(0.36).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_Reinhard(0.72).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_g(20%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_40_50_15_n_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_59_50_15_y_DEFAULT_Energieverlauf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_59_50_15_y_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_59_50_15_y_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_59_50_15_y_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_59_50_15_y_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_59_50_15_y_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_59_50_15_y_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_59_50_15_y_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_59_50_15_y_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_62_50_15_n_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_62_50_15_n_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_62_50_15_n_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_62_50_15_n_DEFAULT_g(20%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_62_50_15_n_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_62_50_15_n_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_62_50_15_n_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_62_50_15_n_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Kueht_62_50_15_n_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_n_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_n_DEFAULT_Reinhard(0.36).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_n_DEFAULT_Reinhard(0.72).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_n_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_n_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_n_DEFAULT_g(20%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_n_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_n_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_n_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_n_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_n_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_y_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_y_DEFAULT_Reinhard(0.72).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_y_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_y_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_y_DEFAULT_g(20%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_y_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_y_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_y_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_y_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Ludwi_2_50_15_y_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_116_15_n_DEFAULT_Energieverlauf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_116_15_n_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_116_15_n_DEFAULT_Reinhard(0.72).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_116_15_n_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_116_15_n_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_116_15_n_DEFAULT_g(20%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_116_15_n_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_116_15_n_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_116_15_n_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_116_15_n_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_116_15_n_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_Energieverlauf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_Reinhard(0.18).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_Reinhard(0.36).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_Reinhard(0.72).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_g(20%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_n_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_Energieverlauf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_Reinhard(0.18).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_Reinhard(0.36).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_Reinhard(0.72).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_g(20%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/Monre_2_50_15_y_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_n_DEFAULT_Energieverlauf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_n_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_n_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_n_DEFAULT_g(20%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_n_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_n_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_n_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_n_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_n_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_y_DEFAULT_Energieverlauf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_y_DEFAULT_HighContrast.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_y_DEFAULT_SpatiallyUniformMapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_y_DEFAULT_g(100%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_y_DEFAULT_g(33%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_y_DEFAULT_g(46%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_y_DEFAULT_g(60%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_y_DEFAULT_g(73%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/_MG_0_2_50_15_y_DEFAULT_g(86%).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Display/Plots/InputPlot.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Display/images/gifIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Display/images/jpgIcon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Display/images/pngIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Display/images/tiffIcon.gif" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/jheader-0.1.jar" afterPath="$PROJECT_DIR$/Libs/jheader-0.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/metadata-extractor-2.6.4.jar" afterPath="$PROJECT_DIR$/Libs/metadata-extractor-2.6.4.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Display/GUIFrame.java" afterPath="$PROJECT_DIR$/src/View/GUIFrame.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Display/ImageFileView.java" afterPath="$PROJECT_DIR$/src/View/ImageChooser/ImageFileView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Display/ImageFilter.java" afterPath="$PROJECT_DIR$/src/View/ImageChooser/ImageFilter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Display/ImagePreview.java" afterPath="$PROJECT_DIR$/src/View/ImageChooser/ImagePreview.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Display/Utils.java" afterPath="$PROJECT_DIR$/src/View/ImageChooser/Utils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/xmpcore.jar" afterPath="$PROJECT_DIR$/Libs/xmpcore.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_HighContrast.png" afterPath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_HighContrast.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_Reinhard(0.72).png" afterPath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_Reinhard(0.72).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_SpatiallyUniformMapping.png" afterPath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_SpatiallyUniformMapping.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_g(100%).png" afterPath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_g(100%).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_g(20%).png" afterPath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_g(20%).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_g(86%).png" afterPath="$PROJECT_DIR$/Generated/Ludwi_2_50_15_n_DEFAULT_g(86%).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_Energieverlauf.png" afterPath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_Energieverlauf.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(100%).png" afterPath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(100%).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(33%).png" afterPath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(33%).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(46%).png" afterPath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(46%).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(60%).png" afterPath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(60%).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(73%).png" afterPath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(73%).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(86%).png" afterPath="$PROJECT_DIR$/Generated/_MG_0_2_50_15_n_DEFAULT_g(86%).png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ctrl/Controller.java" afterPath="$PROJECT_DIR$/src/Ctrl/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Solver/Image.java" afterPath="$PROJECT_DIR$/src/Solver/Image.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Display/Plots/ImagePlot.java" afterPath="$PROJECT_DIR$/src/Display/Plots/ImagePlot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Display/ImageTableModel.java" afterPath="$PROJECT_DIR$/src/Display/ImageTableModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java" afterPath="$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tonemapping/LocalReinhardMapping.java" afterPath="$PROJECT_DIR$/src/tonemapping/LocalReinhardMapping.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Display/Plots/Plot.java" afterPath="$PROJECT_DIR$/src/Display/Plots/Plot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tonemapping/ReinhardMapping.java" afterPath="$PROJECT_DIR$/src/tonemapping/ReinhardMapping.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Display/Plots/ScatterPlot.java" afterPath="$PROJECT_DIR$/src/Display/Plots/ScatterPlot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tonemapping/ToneMapping.java" afterPath="$PROJECT_DIR$/src/tonemapping/ToneMapping.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Display/Plots/ToneMappingPlot.java" afterPath="$PROJECT_DIR$/src/Display/Plots/ToneMappingPlot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/jheader_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/jheader_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/metadata_extractor_2_6_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/metadata_extractor_2_6_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/xmpcore.xml" afterPath="$PROJECT_DIR$/.idea/libraries/xmpcore.xml" />
+    </list>
+    <ignored path="HDR.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/HDR$Controller.coverage" NAME="Controller Coverage Results" MODIFIED="1372525005613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="HDR" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="ImagePlot.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Display/Plots/ImagePlot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="70" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1350">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Plot.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Display/Plots/Plot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="5" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0" vertical-offset="463" max-vertical-offset="1440">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ctrl/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="27" selection-start="953" selection-end="953" vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="1425">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IterativeEnergySolver.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="98" column="30" selection-start="2976" selection-end="2977" vertical-scroll-proportion="0.045889102" vertical-offset="1326" max-vertical-offset="7710">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GUIFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/GUIFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="187" column="46" selection-start="6180" selection-end="6180" vertical-scroll-proportion="-8.92" vertical-offset="2327" max-vertical-offset="4755">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScatterPlot.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Display/Plots/ScatterPlot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="159" column="45" selection-start="4041" selection-end="4042" vertical-scroll-proportion="-7.12" vertical-offset="2147" max-vertical-offset="3510">
+              <folding>
+                <element signature="e#6549#6550#0" expanded="true" />
+                <element signature="e#6584#6585#0" expanded="true" />
+                <element signature="e#6623#6624#0" expanded="true" />
+                <element signature="e#6658#6659#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Solver/Image.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="257" column="56" selection-start="6858" selection-end="6858" vertical-scroll-proportion="0.0" vertical-offset="3855" max-vertical-offset="4110">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToneMappingPlot.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Display/Plots/ToneMappingPlot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="44" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="1185">
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1208#2119#0" expanded="false" />
+                <element signature="e#2108#2109#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToneMapping.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tonemapping/ToneMapping.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="19" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="2070">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocalReinhardMapping.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tonemapping/LocalReinhardMapping.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="225" column="26" selection-start="8827" selection-end="8827" vertical-scroll-proportion="0.0" vertical-offset="3375" max-vertical-offset="3825">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReinhardMapping.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tonemapping/ReinhardMapping.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="85" column="23" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="1590">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/Display/GUIFrame.java" />
+        <option value="$PROJECT_DIR$/src/View/ImageChooser/ImageFileView.java" />
+        <option value="$PROJECT_DIR$/src/View/ImageChooser/JImageChooser.java" />
+        <option value="$PROJECT_DIR$/src/Display/Plots/InputPlot.java" />
+        <option value="$PROJECT_DIR$/src/Display/ImageTableModel.java" />
+        <option value="$PROJECT_DIR$/src/Display/Plots/Plot.java" />
+        <option value="$PROJECT_DIR$/src/Display/Plots/ImagePlot.java" />
+        <option value="$PROJECT_DIR$/src/Solver/Image.java" />
+        <option value="$PROJECT_DIR$/src/tonemapping/ToneMapping.java" />
+        <option value="$PROJECT_DIR$/src/Display/Plots/ToneMappingPlot.java" />
+        <option value="$PROJECT_DIR$/src/tonemapping/ReinhardMapping.java" />
+        <option value="$PROJECT_DIR$/src/tonemapping/LocalReinhardMapping.java" />
+        <option value="$PROJECT_DIR$/src/Ctrl/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java" />
+        <option value="$PROJECT_DIR$/src/View/GUIFrame.java" />
+        <option value="$PROJECT_DIR$/src/Display/Plots/ScatterPlot.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1920" />
+    <option name="y" value="502" />
+    <option name="width" value="1920" />
+    <option name="height" value="1125" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>File Watchers</id>
+          </State>
+          <State>
+            <id>Imports</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+          <State>
+            <id>Resource management issues</id>
+          </State>
+          <State>
+            <id>Serialization issues</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tonemapping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Plots" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pictures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pictures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ludw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="63" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="65" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="63" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Spitzeljagd_Entwicklung/20/spyday/spyday.iml" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="68" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="710" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="710" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="68" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="65" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="editor" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="tonemapping" />
+      <recent name="Tests.Maths" />
+      <recent name="Maths" />
+      <recent name="Calculation.Tests" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Tests.Maths" />
+      <recent name="Tests" />
+      <recent name="Maths" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="Maths" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="View.ImageChooser" />
+      <recent name="Display" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Libs" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/Display" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Controller">
+    <configuration default="false" name="LocalReinhardMappingTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Tests.Maths.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="HDR" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Tests.Maths" />
+      <option name="MAIN_CLASS_NAME" value="Tests.Maths.LocalReinhardMappingTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ReinhardMappingTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tonemapping.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="HDR" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.ReinhardMappingTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Tests in HDR" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="HDR" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BandMatrixTest.solvePenta" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Tests.Maths.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="HDR" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Tests.Maths" />
+      <option name="MAIN_CLASS_NAME" value="Tests.Maths.BandMatrixTest" />
+      <option name="METHOD_NAME" value="solvePenta" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BandMatrixTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Tests.Maths.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="HDR" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Tests.Maths" />
+      <option name="MAIN_CLASS_NAME" value="Tests.Maths.BandMatrixTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Controller" type="Application" factoryName="Application" show_console_on_std_out="true" show_console_on_std_err="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Ctrl.Controller" />
+      <option name="VM_PARAMETERS" value="-Xmx5120m" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HDR" />
+      <envs />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Application.Controller" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.LocalReinhardMappingTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ReinhardMappingTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Tests in HDR" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BandMatrixTest.solvePenta" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.BandMatrixTest" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Tests in HDR" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BandMatrixTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BandMatrixTest.solvePenta" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LocalReinhardMappingTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ReinhardMappingTest" />
+      </list>
+    </recent_temporary>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd42bff0-ab5d-4dc0-84b5-c455bb2abeef" name="Default" comment="" />
+      <created>1372430692020</created>
+      <updated>1372430692020</updated>
+      <workItem from="1384899110059" duration="4868000" />
+      <workItem from="1385069906713" duration="6552000" />
+    </task>
+    <task id="LOCAL-00001" summary="Implemented some more functions to solve a lgs&#10;">
+      <created>1372517704706</created>
+      <updated>1372517704706</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changed indizes from x,y to row,col represetnation (like it should be if you handle matrices)&#10;">
+      <created>1372519612536</created>
+      <updated>1372519612536</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Reimplemented Gaussian Elemination">
+      <created>1372601421353</created>
+      <updated>1372601421353</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Things corrected&#10;">
+      <created>1372686056234</created>
+      <updated>1372686056234</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Integrated Iterative Energy Solver&#10;">
+      <created>1372795271856</created>
+      <updated>1372795271856</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Tried to fix it with Fractions&#10;">
+      <created>1373642614844</created>
+      <updated>1373642614844</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changed to BigDecimal&#10;">
+      <created>1373714853222</created>
+      <updated>1373714853222</updated>
+    </task>
+    <task id="LOCAL-00008" summary="BigDecimal implementation working!">
+      <created>1373734834155</created>
+      <updated>1373734834155</updated>
+    </task>
+    <task id="LOCAL-00009" summary="All working">
+      <created>1373794593332</created>
+      <updated>1373794593332</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Integrated UI for Input and Displaying stuff&#10;">
+      <created>1373817950684</created>
+      <updated>1373817950684</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Integrated UI">
+      <created>1373821323114</created>
+      <updated>1373821323114</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Image Plot started to integrate">
+      <created>1373965569299</created>
+      <updated>1373965569299</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Integrated Further ToneMappers&#10;&#10;">
+      <created>1373992616324</created>
+      <updated>1373992616324</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Working example with monotonie constraint&#10;">
+      <created>1384517432419</created>
+      <updated>1384517432419</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Working with räumlicher Glattheit and all other stuff!">
+      <created>1384895345190</created>
+      <updated>1384895345190</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="11420000" />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1920" y="502" width="1920" height="1125" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670778" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39402986" sideWeight="0.19316968" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.178762" sideWeight="0.16915423" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3243781" sideWeight="0.49786553" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14781217" sideWeight="0.60597014" order="1" side_tool="false" content_ui="tabs" x="738" y="247" width="463" height="674" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18729989" sideWeight="0.60597014" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39104477" sideWeight="0.8068303" order="2" side_tool="false" content_ui="tabs" x="203" y="417" width="1513" height="335" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="106" y="147" width="1720" height="925" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670778" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.6706468" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="Implemented some more functions to solve a lgs&#10;" />
+    <MESSAGE value="Changed indizes from x,y to row,col represetnation (like it should be if you handle matrices)&#10;" />
+    <MESSAGE value="Reimplemented Gaussian Elemination" />
+    <MESSAGE value="Things corrected&#10;" />
+    <MESSAGE value="Integrated Iterative Energy Solver&#10;" />
+    <MESSAGE value="Tried to fix it with Fractions&#10;" />
+    <MESSAGE value="Changed to BigDecimal&#10;" />
+    <MESSAGE value="BigDecimal implementation" />
+    <MESSAGE value="BigDecimal implementation working!" />
+    <MESSAGE value="All working" />
+    <MESSAGE value="Integrated UI for Input and Displaying stuff&#10;" />
+    <MESSAGE value="Integrated UI" />
+    <MESSAGE value="Image Plot started to integrate" />
+    <MESSAGE value="Integrated Further ToneMappers&#10;&#10;" />
+    <MESSAGE value="Working example with monotonie constraint&#10;" />
+    <MESSAGE value="Working with räumlicher Glattheit and all other stuff!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working with räumlicher Glattheit and all other stuff!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Display/Plots/ImagePlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="183" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pictures/Ludw/Ludwigsburg_001.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pictures/Ludw/Ludwigsburg_003.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/Plots/Plot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="19" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1830">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solver/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="257" column="56" selection-start="6858" selection-end="6858" vertical-scroll-proportion="0.0" vertical-offset="3855" max-vertical-offset="4110">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/Plots/ToneMappingPlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="53" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1350">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1208#2119#0" expanded="false" />
+            <element signature="e#2108#2109#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tonemapping/ToneMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="19" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="2070">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tonemapping/LocalReinhardMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="225" column="27" selection-start="8827" selection-end="8827" vertical-scroll-proportion="0.0" vertical-offset="3375" max-vertical-offset="3825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tonemapping/ReinhardMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="32" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="1590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/GUIFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="53" selection-start="4840" selection-end="4840" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ctrl/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="2038" selection-end="2038" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/ImageTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="2025">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/Plots/ScatterPlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="8" selection-start="2539" selection-end="2544" vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3330">
+          <folding>
+            <element signature="e#6549#6550#0" expanded="true" />
+            <element signature="e#6584#6585#0" expanded="true" />
+            <element signature="e#6623#6624#0" expanded="true" />
+            <element signature="e#6658#6659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/Plots/ImagePlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="61" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solver/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="263" column="49" selection-start="7132" selection-end="7132" vertical-scroll-proportion="0.0" vertical-offset="3945" max-vertical-offset="4095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/Plots/ToneMappingPlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="27" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1260">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1208#2119#0" expanded="false" />
+            <element signature="e#2108#2109#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tonemapping/ToneMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="26" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="2010">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tonemapping/LocalReinhardMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="243" column="28" selection-start="9312" selection-end="9312" vertical-scroll-proportion="0.0" vertical-offset="3645" max-vertical-offset="3810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tonemapping/ReinhardMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="28" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="1575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solver/IHDRSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="33" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ImageChooser/ImageFileView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="29" selection-start="1842" selection-end="1842" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ImageChooser/JImageChooser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="39" selection-start="605" selection-end="605" vertical-scroll-proportion="0.4608295" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/LeftDotTableRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.25345623" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/ImageTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tonemapping.ToneMapping">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tonemapping.ToneMapping</OriginalElement>
+          <nodes>
+            <node x="" y="">tonemapping.ToneMapping</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="60.0" y="15.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solver/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="257" column="56" selection-start="6858" selection-end="6858" vertical-scroll-proportion="0.0" vertical-offset="3236" max-vertical-offset="3810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tonemapping/ToneMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="19" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="1361" max-vertical-offset="2040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tonemapping/ReinhardMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="23" selection-start="2417" selection-end="2417" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="1590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tonemapping/LocalReinhardMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="225" column="26" selection-start="8827" selection-end="8827" vertical-scroll-proportion="0.0" vertical-offset="3375" max-vertical-offset="3825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pictures/Ludw/Ludwigsburg_003.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pictures/Ludw/Ludwigsburg_001.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/Controller.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="977">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/Plots/Plot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="5" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0" vertical-offset="463" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/Plots/ToneMappingPlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="44" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0" vertical-offset="106" max-vertical-offset="1185">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1208#2119#0" expanded="false" />
+            <element signature="e#2108#2109#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/Plots/ImagePlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="70" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ctrl/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="27" selection-start="953" selection-end="953" vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="1425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/swing/AbstractButton.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="236" column="16" selection-start="10293" selection-end="10293" vertical-scroll-proportion="0.33211678" vertical-offset="3343" max-vertical-offset="5790">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/GUIFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="187" column="46" selection-start="6180" selection-end="6180" vertical-scroll-proportion="-8.92" vertical-offset="2327" max-vertical-offset="4755">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display/Plots/ScatterPlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="45" selection-start="4041" selection-end="4042" vertical-scroll-proportion="-7.12" vertical-offset="2147" max-vertical-offset="3510">
+          <folding>
+            <element signature="e#6549#6550#0" expanded="true" />
+            <element signature="e#6584#6585#0" expanded="true" />
+            <element signature="e#6623#6624#0" expanded="true" />
+            <element signature="e#6658#6659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="30" selection-start="2976" selection-end="2977" vertical-scroll-proportion="0.045889102" vertical-offset="1326" max-vertical-offset="7710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>abstract (v1.0.0, RVM: ruby-1.9.3-p429) [gem]</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>HDR</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>HDR</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

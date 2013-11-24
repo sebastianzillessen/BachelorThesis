@@ -1,0 +1,11 @@
+%\setchapterpreamble[u]{%
+%\dictum[Albert Einstein]{Probleme kann man niemals mit derselben Denkweise lösen, durch die sie entstanden sind.}
+%}
+\chapter{Verwandte Arbeiten}
+\label{chap:references}
+
+
+\section{Bekannte Implementierungen}
+Das Standard-Verfahren wurde bereits in verschiedenen Programmen so implementiert. Im ursprünglichen Artikel von Debevec und Malik gibt es bereits eine \texttt{MATLAB}-Version des Algorithmus. 
+
+Darauf basierend hat z.B. Mathias Eitz eine Implementierung\footnote{\url{http://cybertron.cg.tu-berlin.de/eitz/hdr/index.html}} des kompletten Prozesses in \texttt{MATLAB} geschrieben. Dieser arbeitet ohne Erweiterungen und implementiert direkt den Ansatz von Debevec und Malik. Die \nameref{algo:schwachstellen:selektion} (siehe \autoref{algo:schwachstellen:selektion}) geschieht in dieser Implementierung in einer Art Rasterung der Bilder und berücksichtigt keine der Forderungen von Debevec und Malik.

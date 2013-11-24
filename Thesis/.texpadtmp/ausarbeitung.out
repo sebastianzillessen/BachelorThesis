@@ -1,0 +1,43 @@
+\BOOKMARK [0][]{chapter.1}{1 Einleitung}{}% 1
+\BOOKMARK [1][-]{section.1.1}{1.1 Motivation}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{1.2 Aufgabenstellung}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{1.3 Gliederung}{chapter.1}% 4
+\BOOKMARK [0][]{chapter.2}{2 Grundlagen der HDR-Bilder}{}% 5
+\BOOKMARK [1][-]{section.2.1}{2.1 Prinzip}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{2.2 Anwendungsgebiet und Geschichte}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{2.3 Bilderzeugung}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.4}{2.4 Bildspeicherung}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.5}{2.5 Bilddarstellung}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.6}{2.6 Software zur Erstellung von HDR Bildern}{chapter.2}% 11
+\BOOKMARK [0][]{chapter.3}{3 Verwandte Arbeiten}{}% 12
+\BOOKMARK [1][-]{section.3.1}{3.1 Bekannte Implementierungen}{chapter.3}% 13
+\BOOKMARK [0][]{chapter.4}{4 Algorithmus von Debevec und Malik paper}{}% 14
+\BOOKMARK [1][-]{section.4.1}{4.1 Ansatz}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.2}{4.2 Berechnung der Antwortkurve}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.3}{4.3 Konstruktion der Radiance Map}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.4}{4.4 M\366gliche Erweiterungen des Ansatzes}{chapter.4}% 18
+\BOOKMARK [0][]{chapter.5}{5 Mathematische Ausarbeitung}{}% 19
+\BOOKMARK [1][-]{section.5.1}{5.1 Optimierungsansatz}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.2}{5.2 Erweiterung um Monotonie-Eigenschaft}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.3}{5.3 R\344umlicher Glattheitsterm}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.4}{5.4 Erweiterung um Robustheit}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.5}{5.5 L\366sung der LGS}{chapter.5}% 24
+\BOOKMARK [0][]{chapter.6}{6 Implementierung}{}% 25
+\BOOKMARK [1][-]{section.6.1}{6.1 Wahl der Programmier-Sprache}{chapter.6}% 26
+\BOOKMARK [1][-]{section.6.2}{6.2 Architektur}{chapter.6}% 27
+\BOOKMARK [1][-]{section.6.3}{6.3 Algorithmus in Pseudocode}{chapter.6}% 28
+\BOOKMARK [1][-]{section.6.4}{6.4 Ausgew\344hlte Programmabschnitte}{chapter.6}% 29
+\BOOKMARK [1][-]{section.6.5}{6.5 Verwendetes Tone-Mapping-Verfahren}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.6}{6.6 Laufzeitanalyse}{chapter.6}% 31
+\BOOKMARK [0][]{chapter.7}{7 Ergebnisse und Resultate}{}% 32
+\BOOKMARK [1][-]{section.7.1}{7.1 Ergebnisse ohne Erweiterungen}{chapter.7}% 33
+\BOOKMARK [1][-]{section.7.2}{7.2 Ergebnisse mit Erweiterungen}{chapter.7}% 34
+\BOOKMARK [1][-]{section.7.3}{7.3 Vergleich der Ergebnisse}{chapter.7}% 35
+\BOOKMARK [1][-]{section.7.4}{7.4 Vergleich zum naiven Ansatz von Debevec und Malik paper}{chapter.7}% 36
+\BOOKMARK [0][]{chapter.8}{8 Zusammenfassung und Ausblick}{}% 37
+\BOOKMARK [0][]{appendix.A}{A Anhang}{}% 38
+\BOOKMARK [1][-]{section.A.1}{A.1 Artikel paper}{appendix.A}% 39
+\BOOKMARK [1][-]{section.A.2}{A.2 Verwendete Algorithmen}{appendix.A}% 40
+\BOOKMARK [1][-]{section.A.3}{A.3 Programmcode}{appendix.A}% 41
+\BOOKMARK [0][]{section.A.3}{Glossar}{}% 42
+\BOOKMARK [0][]{appendix*.21}{Literaturverzeichnis}{}% 43

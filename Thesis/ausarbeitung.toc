@@ -1,0 +1,39 @@
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1}Einleitung}{9}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{9}{section.1.1}
+\contentsline {section}{\numberline {1.2}Aufgabenstellung}{10}{section.1.2}
+\contentsline {section}{\numberline {1.3}Gliederung}{10}{section.1.3}
+\contentsline {chapter}{\numberline {2}Grundlagen der HDR-Bilder}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Prinzip}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Anwendungsgebiet und Geschichte}{12}{section.2.2}
+\contentsline {section}{\numberline {2.3}Bilderzeugung}{13}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Pseudo-HDR Bilder}{13}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}HDR-Kameras}{14}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}HDR-Bildgenerierung aus einer Belichtungsreihe}{14}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Bildspeicherung}{14}{section.2.4}
+\contentsline {section}{\numberline {2.5}Bilddarstellung}{14}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Tone-Mapping Verfahren}{14}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.6}Software zur Erstellung von \gls {HDR} Bildern}{14}{section.2.6}
+\contentsline {chapter}{\numberline {3}Verwandte Arbeiten}{15}{chapter.3}
+\contentsline {chapter}{\numberline {4}Algorithmus von Debevec und Malik \cite {paper}}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ansatz}{17}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Verwendete Symbole}{17}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Herleitung}{18}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Eindeutigkeit der L\IeC {\"o}sung f\IeC {\"u}r $g$}{18}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Berechnung der Antwortkurve}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}Konstruktion der Radiance Map}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}M\IeC {\"o}gliche Erweiterungen des Ansatzes}{20}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Gewichtungsfunktion}{20}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Selektion von Bildpunkten}{20}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Robustheit des Verfahrens}{21}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Monotonie-Kriterium}{21}{subsection.4.4.4}
+\contentsline {section}{\numberline {4.5}Bekannte Implementierungen}{21}{section.4.5}
+\contentsline {chapter}{\numberline {5}Mathematische Ausarbeitung}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Optimierungsansatz}{23}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Gleichungssystem f\IeC {\"u}r $g$}{24}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}L\IeC {\"o}sen von $E$}{27}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}L\IeC {\"o}sung der \gls {LGS}}{28}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}LU-Zerlegung einer Pentadiagonal-Matrix}{28}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}SOR-Algorithmus}{29}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Erweiterung um Monotonie-Eigenschaft}{29}{section.5.3}
+\contentsline {section}{\numberline {5.4}Erweiterung um Robustheit}{30}{section.5.4}

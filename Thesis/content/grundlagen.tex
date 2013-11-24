@@ -1,0 +1,93 @@
+%\setchapterpreamble[u]{%
+%\dictum[Albert Einstein]{Probleme kann man niemals mit derselben Denkweise lösen, durch die sie entstanden sind.}
+%}
+
+\chapter{Grundlagen der HDR-Bilder}
+\label{chap:hdr}
+
+
+In den vergangenen Jahren hat die digitale Fotografie zu einem Umdenken und einer Neuschaffung von Kommunikationskanälen geführt. Im analogen Zeitalter war Fotografie in erster Linie ein autobiographisches Medium. Fotografien hatten unter anderem eine Daseinsberechtigung im Familien-Fotoalbum als Gedächtnisstütze zu früheren Zeiten.
+
+Durch die Verbreitung von digital Kameras (insbesondere auch solchen die in Smartphones und Handys eingebaut sind) haben Fotografien aber auch eine immer größere Rolle als Kommunikationsmedium eingenommen. 
+In diesem Zuge spielt auch die digitale Bildbearbeitung eine immer größer werdende Rolle. 
+
+Bevor auf die Grundlagen von \gls{HDR}-Bildern näher eingegangen wird bedarf es noch zunächst der Schaffung von einigen Grundlagen.
+
+Digital Bilder werden in der heutigen Zeit in der Regel in Form der drei Farbkanäle für Rot, Grün und Blau dargestellt (sog. \gls{RGB-Farbraum}). Häufig kommt noch ein vierter Kanal, der sog. Alpha-Kanal hinzu, der für die Darstellung von Transparenz genutzt wird. 
+
+Diese drei bzw. vier Kanäle werden in der Regel mittels eines Bytes repräsentiert. Damit können 16,7 Millionen verschieden Farben dargestellt werden. Trotz dieser großen Zahl sind nur 256 verschiedene Werte für jeden Farbkanal möglich. Diese Anzahl ist häufig unzureichend Szenen mit hohen Helligkeitsunterschieden zu repräsentieren (vgl. \cite[S.~1f]{Reinhard}).
+
+Dieses Problem wird durch die Verwendung von \gls{HDR} Bildern behoben. Ziel ist es mehr Farben und Details in unterschiedlichen Bildbereichen sichtbar zu machen. Um dies zu ermöglichen erhöht man bei \gls{HDR} Bildern den \gls{Dynamikumfang} des Bildbereiches. Dazu bricht man die Beschränkung auf den Byte-Bereich auf und erlaubt Fließkomma-Werte im Bildbereich. Für die Darstellung der daraus entstehenden \glspl{Radiance Map} (eine Form der Repräsentation der generierten Bilder) gibt es vereinzelte spezielle Bildschirme oder aber sog. \gls{Tone-Mapping} (dt.: Dynamikkompressions) Verfahren. Letztere stellen ein Bild mit erhöhtem \gls{Dynamikumfang} durch eine andere Skalierung des Bildbereichs auf handelsüblichen Monitoren oder als herkömmliche Bilddateien dar (siehe \autoref{subsec:ToneMapping}).
+
+\section{Prinzip}
+
+Das menschliche Auge kann in einer täglichen Szene einen \gls{Dynamikumfang} im Bereich von 1:10.000 (vgl. \cite{Fairchild04theicam}) wahrnehmen. Dies liegt weit über den herkömmlichen Werten eines normalen Kamera-Sensors. In der Tabelle \autoref{tab:illumination} können verschiedenen Dynamikumfänge (und die damit zusammenhängende Beleuchtungsstärke) entnommen werden. 
+Um wie gewünscht mit \gls{HDR} Bildern einen höheren \gls{Dynamikumfang} darstellen zu können müssen daher mehr Informationen als über den herkömmlichen Weg beschafft werden. Dazu werden entweder mehrere Bilder mit verschiedenen \glspl{Belichtungszeit} zu einer \gls{Radiance Map} kombiniert oder es werden spezielle Kamera-Sensoren eingesetzt, welche in der Lage sind die höhere Dichte der Bildinformationen (z.B. die großen Helligkeitsunterschiede) aufzunehmen (vgl. \cite{Yang99a640}). 
+
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{ccc}
+	\toprule
+	Umgebung & Beleuchtungsstärke ($cd/m^2$)\\ \midrule
+	Sternenhimmel & $10^{-3} $\\	
+	Mondschein & $10^{-1} $\\	
+	Innenraum Beleuchtung & $10^{2} $\\	
+	Sonnenlicht & $10^{5} $\\	
+	\midrule
+	Herkömmliche Monitore & $10^{2} $\\	
+	\bottomrule
+    \end{tabular}
+    \caption{Beleuchtungsstärken in verschiedenen Umgebungen \cite[S.~6]{Reinhard}}
+    \label{tab:illumination}
+  \end{center}
+\end{table}
+
+
+
+Der hier verwendete Begriff des \enquote{\gls{Dynamikumfang}} beschreibt das Verhältnis zwischen hellstem und dunkelstem Pixel im Bild. Um Ausreißer weniger zu berücksichtigen und die Messung robuster zu machen werden hierbei manchmal auch Quantile verwendet die dafür sorgen sollen, dass Rauschen nicht ins Gewicht fällt. Bei Bildschirmen hingegen wird unter dem \gls{Dynamikumfang} das Verhältnis zwischen der maximalen und minimalen Leuchtkraft verstanden (vgl. \cite[S.~4]{Reinhard}.
+
+\section{Anwendungsgebiet und Geschichte}
+
+Die Möglichkeiten des Einsatzes von \gls{HDR} Bildern sind vielfältig. Die nachfolgende Liste umfasst einige der Gebiete, in denen diese Technologie eingesetzt wird oder werden kann (vgl. \cite[S.~87f]{Reinhard}).
+
+\begin{description}
+
+\item[Digitale Fotografie:] Die verschiedenen Kamera-Hersteller gehen bereits immer mehr in Richtung der sog. Aufnahme abhängigen Daten. In diesen sind bereits häufig mehr Bildinformationen enthalten. Dabei handelt es sind bei verschiedenen Herstellern in der Regel jedoch auch um verschiedene \gls{RAW} Formate, die meist nicht kompatibel sind. 
+
+\item[Satellitenbilder:] Satellitenbilder beinhalten in aller Regel sehr viel mehr Informationen als nur den sichtbaren Bereich des Lichtspektrums. \gls{HDR} Bilder sind hier von Bedeutung, da sie multispektrale Aufnahmen ermöglichen.
+
+\item[Visualisierungen und Rendering:] Eine der ersten Anwendungen waren vermutlich die ersten Render-Engines von Visualisierungen (Computer-Spiele, Med. Visualisierungen und Simulationen, etc.). Bei manchen Anwendungen ist es insbesondere für Reflektionen wichtig auch nicht sichtbare Frequenzen bei Berechnungen mit einzubeziehen. Da diese durch Interferenzen wieder sichtbar werden können und somit der Detailgrad steigt.
+
+\item[Bildbearbeitungssoftware:] Die großen Bildbearbeitungs-Anwendungen bieten mittlerweile in der Regel auch die Bearbeitung und Generierung von \gls{HDR} Bildern an. Als Beispiele seinen hier Adobe Photoshop\footnote{\url{http://adobe.com/photoshop}}, Photogenics\footnote{\url{http://www.cinepaint.org}} und Photomatix\footnote{\url{http://www.hdrsoft.com/download.html}} genannt.
+
+\item[Medizin:] In der Endoskopie besteht ein hoher Bedarf an immer höher auflösender \gls{CMOS} Bildsensoren. Diese können immer bessere Aufnahmen aus dem Inneren des Körpers liefern und helfen damit in der Medizin große Fortschritte zu machen. Solche Sensoren können bereits in der Größe eines Streichholzkopfes einen Dynamikumfang von 179 dB erreichen (vgl. \cite{Klingler_Richter_Strobel_2006}).
+
+\item[Virtual Reality:] Bei Anwendungen, bei denen sich der Benutzer in einem virtuellen Raum bewegt, wird die Wahrnehmung zunehmend wichtig. Auch hier spielen deshalb hohe Dynamikumfänge eine besondere Rolle. Außerdem ist es besonders in diesem Bereich wichtig gute Kompressions-Algorithmen für \gls{HDR} Bilder zu entwickeln um eine schnelle Übertragung dieser zu gewährleisten. Auch bei dem platzieren von sythetischen Objekten in realen Szenen (vgl. \cite{Debevec:2008:RSO:1401132.1401175}) können \gls{HDR} Bilder eingesetzt werden um dem Betrachter eine noch realere Szene darstellen zu können.
+\end{description}
+
+\section{Bilderzeugung}
+Bei der Erstellung von \gls{HDR} Bildern gibt es unterschiedliche Möglichkeiten. Dabei muss man jedoch zwischen echten \gls{HDR} Bildern und \enquote{Pseudo-\gls{HDR}} Bildern unterscheiden. Im Nachfolgenden werden die verschiedenen Verfahren kurz beschrieben. Der Fokus liegt jedoch auf dem letzten Verfahren, der \nameref{sub:belichtungsreihe}.
+
+\subsection{Pseudo-HDR Bilder}
+Bei Pseudo-\gls{HDR} Bildern handelt es sich um eine einfache Fusion von Bildreihen. Deswegen werden diese Verfahren auch Exposure Blending oder Exposure Fusion genannt. Bei dieser Technologie geht es darum mehr Details aus einer Belichtungsreihe von \gls{LDR} Bildern zu generieren, ohne dabei ein \gls{HDR} Bild zu erzeugen (vgl. \cite{Jing_Hong_Zheng_Rahardja_2012}). Die Bilder der Belichtungsreihe werden dazu einfach fusioniert. Diese Technologie wird hier jedoch nicht behandelt.
+
+\subsection{HDR-Kameras} 
+Diese speziellen Kameras verfügen über Bildsensoren die von sich aus einen hohen Dynamikumfang aufnehmen können und dadurch bereits die notwendigen Informationen in einer Aufnahme generieren können. Diese Spezial-Kameras sind jedoch noch sehr teuer und wenig verbreitet. (vgl. \cite[S. 96]{Bloch2012}). Viele digitale Spiegelreflex-Kameras bieten mittlerweile einen \gls{HDR}-Modus an.
+
+\subsection{HDR-Bildgenerierung aus einer Belichtungsreihe}
+\label{sub:belichtungsreihe}
+Um ein \gls{HDR} Bild zu aus einer Belichtungsreihe zu erzeugen braucht man zunächst die Grundlage für das Bild. Dazu sind in der Regel mehr Informationen notwendig als eine einzelne Aufnahme liefern kann. Deshalb werden mehrere Bilder der selben Szene mit unterschiedlichen Belichtungszeiten aufgenommen. Ziel der Algorithmen ist es dann anschließend aus diesen Bildern ein \gls{HDR} Bild zu erzeugen.
+
+Um die Bilder später weiter zu verarbeiten müssen diese jedoch zunächst aligniert werden. Dies ist aufgrund der verschiedenen Belichtungswerte der Aufnahmen nicht über Kantendetektionsverfahren möglich, da diese Merkmale unter den unterschiedlichen Belichtungen sehr stark variieren können.
+
+Ein performanter Ansatz um Bilder zu alignieren ist der \gls{MTB} Ansatz (siehe \autoref{subsec:MTB}). Da dies jedoch kein Teil der Aufgabenstellung war, wurde dieser nicht weiter untersucht oder implementiert. 
+
+
+\section{Bildspeicherung}
+\section{Bilddarstellung}
+\subsection{Tone-Mapping Verfahren}
+\label{subsec:ToneMapping}
+
+
+\section{Software zur Erstellung von \gls{HDR} Bildern}

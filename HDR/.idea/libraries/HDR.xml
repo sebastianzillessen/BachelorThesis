@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="HDR">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/suanshu-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/suanshu-javadoc-2.0.0.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
