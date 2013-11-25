@@ -47,7 +47,8 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
     private NumericTextField inputMu;
     private NumericTextField inputAlpha;
     private boolean robustnessDataG;
-    private boolean robustnessSmoothnessG;
+    private boolean robustnessSmoothnessE;
+    private boolean saltAndPepperNoise;
 
     private boolean updatePrefix() {
         try {
@@ -69,9 +70,10 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         s += "_Mu=" + mu;
         s += "_It=" + iteration;
         s += "_RoDataG=" + (robustnessDataG ? "y" : "n");
-        s += "_RoSmoothG=" + (robustnessSmoothnessG ? "y" : "n");
+        s += "_RoSmoothE=" + (robustnessSmoothnessE ? "y" : "n");
         s += "_We=" + weightning;
         s += "_Al=" + alpha;
+        s += "_S&P=" + (saltAndPepperNoise ? "y" : "n");
         setTitle("HDR: " + s);
         if (prefix != null)
             prefix.setText(s);
@@ -108,9 +110,9 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
                         img.put(tableModel.getValueAt(i, 0).toString(), (Float) tableModel.getValueAt(i, 1));
                     }
                     try {
-                        Controller.getInstance().readImages(img);
+                        Controller.getInstance().readImages(img, this.saltAndPepperNoise, false);
                         append("Images read.");
-                        Controller.getInstance().solve(lambda, iteration, mu, robustnessDataG, robustnessSmoothnessG, weightning, alpha);
+                        Controller.getInstance().solve(lambda, iteration, mu, robustnessDataG, robustnessSmoothnessE, weightning, alpha);
                     } catch (Exception e) {
                         append("Failure in Reading images: \n" + e.toString());
                         e.printStackTrace();
@@ -197,7 +199,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
 
     private void buildCtrlPanel() {
         ctrlPnl = new JPanel(new BorderLayout());
-        JPanel btns = new JPanel(new GridLayout(9, 1));
+        JPanel btns = new JPanel(new GridLayout(10, 1));
         JButton btnChoose = new JButton("Bilder wählen");
         btnChoose.addActionListener(this);
         btnChoose.setActionCommand(String.valueOf(ACTIONS.CHOOSE_FILE));
@@ -273,18 +275,32 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         });
         btns.add(check);
 
-        btns.add(new JLabel("Subquadratische Bestrafungsterme (Glattheitsterm g)"));
-        JCheckBox check2 = new JCheckBox("enable");
-        check2.setSelected(this.robustnessSmoothnessG);
-        check2.addChangeListener(new ChangeListener() {
+        btns.add(new JLabel("Subquadratische Bestrafungsterme (Glattheitsterm von E)"));
+        JCheckBox check3 = new JCheckBox("enable");
+        check3.setSelected(this.robustnessSmoothnessE);
+        check3.addChangeListener(new ChangeListener() {
             @Override
             public void stateChanged(ChangeEvent changeEvent) {
                 JCheckBox box = (JCheckBox) changeEvent.getSource();
-                GUIFrame.this.robustnessSmoothnessG = box.isSelected();
+                GUIFrame.this.robustnessSmoothnessE = box.isSelected();
                 updatePrefix();
             }
         });
-        btns.add(check2);
+        btns.add(check3);
+
+        btns.add(new JLabel("Salt & Pepper Rauschen?"));
+        JCheckBox saltNPepper = new JCheckBox("enable");
+        saltNPepper.setSelected(this.robustnessSmoothnessE);
+        saltNPepper.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent changeEvent) {
+                JCheckBox box = (JCheckBox) changeEvent.getSource();
+                GUIFrame.this.saltAndPepperNoise = box.isSelected();
+                updatePrefix();
+            }
+        });
+        btns.add(saltNPepper);
+
     }
 
     private void buildIterationSlider(JPanel btns) {

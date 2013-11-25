@@ -3,45 +3,55 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ausarbeitung.aux
 The style file: ../bibliography/IAASde.bst
 Database file #1: ../bibliography/bibliography.bib
+Warning--entry type for "tellone" isn't style-file defined
+--line 114 of file ../bibliography/bibliography.bib
+Warning--entry type for "adobe:tiff" isn't style-file defined
+--line 122 of file ../bibliography/bibliography.bib
+Warning--entry type for "tone_mapper_1" isn't style-file defined
+--line 152 of file ../bibliography/bibliography.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 11 entries,
+Warning--empty booktitle in logluv
+Warning--can't use both volume and number fields in logluv
+Warning--empty booktitle in Nayar00highdynamic
+You've used 19 entries,
             3039 wiz_defined-function locations,
-            704 strings with 7146 characters,
-and the built_in function-call counts, 5823 in all, are:
-= -- 471
-> -- 199
-< -- 8
-+ -- 72
-- -- 70
-* -- 370
-:= -- 797
-add.period$ -- 36
-call.type$ -- 11
-change.case$ -- 66
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 462
-empty$ -- 502
-format.name$ -- 91
-if$ -- 1206
+            752 strings with 8504 characters,
+and the built_in function-call counts, 9974 in all, are:
+= -- 814
+> -- 359
+< -- 15
++ -- 131
+- -- 128
+* -- 627
+:= -- 1360
+add.period$ -- 62
+call.type$ -- 19
+change.case$ -- 114
+chr.to.int$ -- 19
+cite$ -- 22
+duplicate$ -- 777
+empty$ -- 840
+format.name$ -- 164
+if$ -- 2066
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 96
-newline$ -- 64
-num.names$ -- 33
-pop$ -- 197
+missing$ -- 161
+newline$ -- 103
+num.names$ -- 57
+pop$ -- 358
 preamble$ -- 1
-purify$ -- 81
+purify$ -- 142
 quote$ -- 0
-skip$ -- 181
+skip$ -- 324
 stack$ -- 0
-substring$ -- 284
-swap$ -- 227
-text.length$ -- 8
-text.prefix$ -- 5
+substring$ -- 448
+swap$ -- 385
+text.length$ -- 15
+text.prefix$ -- 8
 top$ -- 0
-type$ -- 76
-warning$ -- 0
-while$ -- 43
-width$ -- 13
-write$ -- 130
+type$ -- 140
+warning$ -- 3
+while$ -- 75
+width$ -- 22
+write$ -- 214
+(There were 6 warnings)

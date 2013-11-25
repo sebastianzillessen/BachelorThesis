@@ -55,8 +55,8 @@
 %Angaben in die PDF-Infos uebernehmen
 \makeatletter
 \hypersetup{
-            pdftitle={}, %Titel der Arbeit
-            pdfauthor={}, %Author
+            pdftitle={HDR Bildfusion mit gleichzeitiger Schätzung der Kamera-Antwortkurve}, %Titel der Arbeit
+            pdfauthor={Sebastian Zillessen}, %Author
             pdfkeywords={}, % CR-Klassifikation und ggf. weitere Stichworte
             pdfsubject={}
 }
@@ -222,8 +222,10 @@
 %\printindex
 %\bibliographystyle{alphadin}
 
-\addcontentsline{toc}{chapter}{Glossar}
 \glossarystyle{altlist}
+\renewcommand*{\glossaryname}{Glossar und Abkürzungsverzeichnis}
+\deftranslation{Glossary}{Glossar und Abkürzungsverzeichnis}
+%\addcontentsline{toc}{chapter}{Glossar}
 \printglossary % if no option is supplied the default glossary is printed.
 
 

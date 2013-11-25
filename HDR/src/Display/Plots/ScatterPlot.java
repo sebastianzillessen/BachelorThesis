@@ -229,4 +229,12 @@ public class ScatterPlot extends Plot {
     public String getYDescription() {
         return YDescription;
     }
+
+    public void setXDescription(String XDescription) {
+        this.XDescription = XDescription;
+    }
+
+    public void setYDescription(String YDescription) {
+        this.YDescription = YDescription;
+    }
 }

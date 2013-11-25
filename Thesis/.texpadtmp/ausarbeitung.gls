@@ -8,63 +8,73 @@
 		\setentrycounter[]{page}\glsnumberformat{15}}}\glsgroupskip
 \glsgroupheading{D}\relax \glsresetentrylist %
 \glossaryentryfield{Dynamikumfang}{\glsnamefont{Dynamikumfang}}{Verhältnis von größter und kleinster Leuchtdichte.}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{13\delimN 14}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{13\delimR 15}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{18}}}\glsgroupskip
 \glsgroupheading{G}\relax \glsresetentrylist %
 \glossaryentryfield{GUI}{\glsnamefont{GUI}}{grafische Benutzerschnittstelle (engl. graphical user interface)}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{41\delimN 42}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{47\delimN 48}}}\glsgroupskip
 \glsgroupheading{H}\relax \glsresetentrylist %
 \glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{5}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{9\delimN 10}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{13\delimR 16}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{19\delimN 20}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{25}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{9}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{11}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{13\delimR 20}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{23\delimR 26}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{31}}}\glsgroupskip
 \glsgroupheading{J}\relax \glsresetentrylist %
 \glossaryentryfield{JRE}{\glsnamefont{JRE}}{Java Runtime Environment}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{42}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{48}}}\glsgroupskip
 \glsgroupheading{K}\relax \glsresetentrylist %
 \glossaryentryfield{Antwortkurve}{\glsnamefont{Kamera Antwortkurve}}{Test test}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{22}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{28}}}\glsgroupskip
 \glsgroupheading{L}\relax \glsresetentrylist %
 \glossaryentryfield{LDR}{\glsnamefont{LDR}}{Low Dynamic Range}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{15}}}%
+		\setentrycounter[]{page}\glsnumberformat{16}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{18}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{23\delimN 24}}}%
 \glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineares Gleichungssystem}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{5}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{21\delimN 22}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{25\delimN 26}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{29}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{33}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{38}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{27\delimN 28}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{31\delimN 32}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{35}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{39}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{44}}}\glsgroupskip
 \glsgroupheading{M}\relax \glsresetentrylist %
 \glossaryentryfield{Monotonie}{\glsnamefont{Monotonie}}{Test test}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{10}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{43}}}%
+		\setentrycounter[]{page}\glsnumberformat{49}}}%
 \glossaryentryfield{MTB}{\glsnamefont{MTB}}{Mean Threshold Bitmap Alignment}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{16}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{58}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{17}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{64}}}\glsgroupskip
 \glsgroupheading{R}\relax \glsresetentrylist %
 \glossaryentryfield{Radiance Map}{\glsnamefont{Radiance Map}}{Test test}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{13\delimN 14}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{21}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{25}}}%
+		\setentrycounter[]{page}\glsnumberformat{14}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{18}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{27}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{31}}}%
 \glossaryentryfield{RAW}{\glsnamefont{RAW}}{}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{14}}}%
+		\setentrycounter[]{page}\glsnumberformat{15}}}%
 \glossaryentryfield{RGB-Farbraum}{\glsnamefont{RGB-Farbraum}}{test}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{13}}}%
 \glossaryentryfield{Robustheit}{\glsnamefont{Robustheit}}{Test test}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{43}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{49}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossaryentryfield{SaltAndPepperNoise}{\glsnamefont{Salt \& Pepper Rauschen}}{Das sog. Salt \& Pepper Rauschen beschreibt eine Verkörnung des Bildes, bei Pixel auf weiß oder schwarz gesetzt sind. Dies kann durch Sensor- oder Messfehler entstehen oder durch Übertragungs- oder Abspeicherungsfehler. Salt \& Pepper Rauschen kann künstlich sehr leicht produziert werden, indem einzelne Bildpunkte zufällig auf weiß oder schwarz gesetzt werden. }{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{34}}}%
-\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{35}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{38\delimN 39}}}%
-\glossaryentryfield{SVD}{\glsnamefont{SVD}}{singular value decomposition (dt. Singulärwertzerlegung)}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{21}}}\glsgroupskip
-\glsgroupheading{T}\relax \glsresetentrylist %
-\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone-Mapping}}{Test test}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{5}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{10}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{13}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{41}}}%
+		\setentrycounter[]{page}\glsnumberformat{40}}}%
+\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{41}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{44\delimN 45}}}%
+\glossaryentryfield{SVD}{\glsnamefont{SVD}}{singular value decomposition (dt. Singulärwertzerlegung)}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{27}}}\glsgroupskip
+\glsgroupheading{T}\relax \glsresetentrylist %
+\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{5}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{11}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{18\delimN 19}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{21}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{24}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{47}}}%
 \end{theglossary}\glossarypostamble

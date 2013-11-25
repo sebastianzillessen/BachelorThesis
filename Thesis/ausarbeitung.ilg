@@ -368,66 +368,60 @@ Scanning input file ausarbeitung.tex...
    -- Unknown index keyword \input.
 !! Input index error (file = ausarbeitung.tex, line = 210):
    -- Unknown index keyword \input.
-!! Input index error (file = ausarbeitung.tex, line = 211):
+!! Input index error (file = ausarbeitung.tex, line = 212):
    -- Unknown index keyword \input.
-!! Input index error (file = ausarbeitung.tex, line = 213):
-   -- Unknown index keyword \input.
+!! Input index error (file = ausarbeitung.tex, line = 215):
+   -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 216):
    -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 217):
-   -- Missing arguments -- need two (premature LFD).
+   -- Unknown index keyword %\renewcommand.
 !! Input index error (file = ausarbeitung.tex, line = 218):
    -- Unknown index keyword %\renewcommand.
 !! Input index error (file = ausarbeitung.tex, line = 219):
    -- Unknown index keyword %\renewcommand.
 !! Input index error (file = ausarbeitung.tex, line = 220):
-   -- Unknown index keyword %\renewcommand.
+   -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 221):
-   -- Missing arguments -- need two (premature LFD).
-!! Input index error (file = ausarbeitung.tex, line = 222):
    -- Unknown index keyword \input.
+!! Input index error (file = ausarbeitung.tex, line = 222):
+   -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 223):
-   -- Missing arguments -- need two (premature LFD).
-!! Input index error (file = ausarbeitung.tex, line = 224):
    -- Unknown index keyword %\bibliographystyle.
-!! Input index error (file = ausarbeitung.tex, line = 226):
-   -- Unknown index keyword \addcontentsline.
-!! Input index error (file = ausarbeitung.tex, line = 227):
+!! Input index error (file = ausarbeitung.tex, line = 225):
    -- Unknown index keyword \glossarystyle.
+!! Input index error (file = ausarbeitung.tex, line = 226):
+   -- Unknown index keyword \renewcommand*.
+!! Input index error (file = ausarbeitung.tex, line = 227):
+   -- Unknown index keyword \deftranslation.
 !! Input index error (file = ausarbeitung.tex, line = 228):
-   -- Missing arguments -- need two (premature LFD).
-!! Input index error (file = ausarbeitung.tex, line = 231):
+   -- Unknown index keyword %\addcontentsline.
+!! Input index error (file = ausarbeitung.tex, line = 229):
    -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 232):
-   -- Unknown index keyword \bibliographystyle.
+   -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 233):
-   -- Missing arguments -- need two (premature LFD).
-!! Input index error (file = ausarbeitung.tex, line = 234):
    -- Unknown index keyword \bibliographystyle.
+!! Input index error (file = ausarbeitung.tex, line = 234):
+   -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 235):
-   -- Missing arguments -- need two (premature LFD).
+   -- Unknown index keyword \bibliographystyle.
 !! Input index error (file = ausarbeitung.tex, line = 236):
-   -- Unknown index keyword \bibliography.
-!! Input index error (file = ausarbeitung.tex, line = 237):
    -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = ausarbeitung.tex, line = 237):
+   -- Unknown index keyword \bibliography.
 !! Input index error (file = ausarbeitung.tex, line = 238):
    -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 239):
    -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 240):
-   -- Missing arguments -- need two (premature LFD).
+   -- Unknown index keyword \pagestyle.
 !! Input index error (file = ausarbeitung.tex, line = 241):
+   -- Unknown index keyword \renewcommand*.
+!! Input index error (file = ausarbeitung.tex, line = 242):
    -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 243):
-   -- Missing arguments -- need two (premature LFD).
-!! Input index error (file = ausarbeitung.tex, line = 244):
-   -- Unknown index keyword \pagestyle.
-!! Input index error (file = ausarbeitung.tex, line = 245):
-   -- Unknown index keyword \renewcommand*.
-!! Input index error (file = ausarbeitung.tex, line = 246):
-   -- Missing arguments -- need two (premature LFD).
-!! Input index error (file = ausarbeitung.tex, line = 247):
    -- Unknown index keyword \end.
-done (0 entries accepted, 214 rejected).
+done (0 entries accepted, 211 rejected).
 Nothing written in ausarbeitung.ind.
 Transcript written in ausarbeitung.ilg.

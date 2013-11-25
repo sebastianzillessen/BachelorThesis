@@ -3,11 +3,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {Algorithmus}{\numberline {5.1}{\ignorespaces Alternierendes L\IeC {\"o}sen nach $g(k)$ und $E_i$\relax }}{25}{Algorithmus.caption.9}
-\contentsline {Algorithmus}{\numberline {5.2}{\ignorespaces Erweitertes alternierendes L\IeC {\"o}sen nach $g(k)$ und $\qopname \relax o{ln}E_i$ mit Haupt- und Inneniterationen\relax }}{36}{Algorithmus.caption.12}
+\contentsline {Algorithmus}{\numberline {5.1}{\ignorespaces Alternierendes L\IeC {\"o}sen nach $g(k)$ und $E_i$\relax }}{31}{Algorithmus.caption.14}
+\contentsline {Algorithmus}{\numberline {5.2}{\ignorespaces Erweitertes alternierendes L\IeC {\"o}sen nach $g(k)$ und $\qopname \relax o{ln}E_i$ mit Haupt- und Inneniterationen\relax }}{42}{Algorithmus.caption.17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {Algorithmus}{\numberline {A.1}{\ignorespaces L\IeC {\"o}sen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax }}{60}{Algorithmus.caption.18}
+\contentsline {Algorithmus}{\numberline {A.1}{\ignorespaces L\IeC {\"o}sen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax }}{66}{Algorithmus.caption.23}
 \addvspace {10\p@ }

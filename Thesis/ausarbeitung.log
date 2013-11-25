@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  22 NOV 2013 00:03
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  25 NOV 2013 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**ausarbeitung.tex
+**ausarbeitung
 (./ausarbeitung.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
@@ -1248,104 +1248,4 @@ Package: mfirstuc 2012/05/21 v1.06 (NLCT)
 Package: xfor 2009/02/05 v1.05 (NLCT)
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/translator.sty
-Package: translator 2010/06/12 ver 1.10
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/beamer/translator/translator-lang
-uage-mappings.tex))
-\gls@level=\count189
-\@gls@tmpb=\toks44
-\gls@tmplen=\skip83
-\glswrite=\write5
-\glskeylisttok=\toks45
-\glslabeltok=\toks46
-\glsshorttok=\toks47
-\glslongtok=\toks48
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-hypern
-av.sty
-Package: glossary-hypernav 2007/07/04 v1.01 (NLCT)
-)
-(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-list.s
-ty
-Package: glossary-list 2011/03/28 v3.0 (NLCT)
-\glslistdottedwidth=\skip84
-)
-(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-long.s
-ty
-Package: glossary-long 2011/03/28 v3.0 (NLCT)
-\glsdescwidth=\skip85
-\glspagelistwidth=\skip86
-)
-(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-super.
-sty
-Package: glossary-super 2011/03/28 v3.0 (NLCT)
- (/usr/local/texlive/2012/texmf-dist/tex/latex/supertabular/supertabular.sty
-Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count190
-\ST@wd=\dimen202
-\ST@rightskip=\skip87
-\ST@leftskip=\skip88
-\ST@parfillskip=\skip89
-\ST@pageleft=\dimen203
-\ST@headht=\dimen204
-\ST@tailht=\dimen205
-\ST@pagesofar=\dimen206
-\ST@pboxht=\dimen207
-\ST@lineht=\dimen208
-\ST@stretchht=\dimen209
-\ST@prevht=\dimen210
-\ST@toadd=\dimen211
-\ST@dimen=\dimen212
-\ST@pbox=\box48
-))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/glossaries/styles/glossary-tree.s
-ty
-Package: glossary-tree 2011/03/28 v3.0 (NLCT)
-\glstreeindent=\skip90
-)) (/usr/local/texlive/2012/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2012/04/03 v0.4s Insert pages of external PDF documents (AM)
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
-)
-(/usr/local/texlive/2012/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2012/04/03 v0.4s Pdfpages driver for pdfTeX (AM)
-)
-\AM@pagebox=\box49
-\AM@toc@title=\toks49
-\c@AM@survey=\count191
-\AM@templatesizebox=\box50
-))
-\@indexfile=\write6
-\openout6 = `ausarbeitung.idx'.
-
-
-Writing index file ausarbeitung.idx
-Package csquotes Info: Checking for multilingual support...
-Package csquotes Info: ... found 'babel' package.
-Package csquotes Info: Adjusting default style.
-Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
-(./ausarbeitung.aux
-! Missing \endcsname inserted.
-<to be read again> 
-                   \T1\quotesinglbase 
-l.218 ...um Robustheit\relax }{equation.5.4.31}{}}
-                                                  
-? 
-! Emergency stop.
-<to be read again> 
-                   \T1\quotesinglbase 
-l.218 ...um Robustheit\relax }{equation.5.4.31}{}}
-                                                  
-End of file on the terminal!
-
- 
-Here is how much of TeX's memory you used:
- 25766 strings out of 493488
- 440371 string characters out of 3141326
- 614332 words of memory out of 3000000
- 28582 multiletter control sequences out of 15000+200000
- 6423 words of font info for 17 fonts, out of 3000000 for 9000
- 957 hyphenation exceptions out of 8191
- 77i,1n,77p,1491b,278s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+Package: translator 2010/06/12 ve

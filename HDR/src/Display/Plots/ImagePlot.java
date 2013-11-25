@@ -89,6 +89,8 @@ public class ImagePlot extends Plot {
     @Override
     public void saveGraphic(String filename) {
         System.out.println("SaveGraphics in ImagePlot");
-        saveGraphic(filename, bi);
+        BufferedImage bufferedImage= new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
+        bufferedImage.getGraphics().drawImage(bi.getScaledInstance(image.getWidth(),  image.getHeight(), Image.SCALE_REPLICATE), 0, 0, null);
+        saveGraphic(filename, bufferedImage);
     }
 }

@@ -52,13 +52,13 @@ public class Controller {
         display.append("Ready...");
     }
 
-    public void solve(double lambda, final int iterations, double mu, boolean robustnessDataG, boolean robustnessSmoothnessG, IterativeEnergySolver.WEIGHTNING_MODES weight, double alpha) {
+    public void solve(double lambda, final int iterations, double mu, boolean robustnessDataG, boolean robustnessSmoothnessE, IterativeEnergySolver.WEIGHTNING_MODES weight, double alpha) {
 
         if (solver != null && solver.getState() != IHDRSolver.StateValue.DONE) {
             solver.cancel(true);
         }
 
-        solver = new IterativeEnergySolver(images, lambda, iterations, mu, robustnessDataG, robustnessSmoothnessG, weight, alpha);
+        solver = new IterativeEnergySolver(images, lambda, iterations, mu, robustnessDataG, robustnessSmoothnessE, weight, alpha);
         solver.addPropertyChangeListener(new PropertyChangeListener() {
             @Override
             public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
@@ -84,12 +84,13 @@ public class Controller {
     }
 
 
-    public void readImages(Map<String, Float> imgList) throws Exception {
+    public void readImages(Map<String, Float> imgList, boolean saltAndPepperNoise, boolean gaussianNoise) throws Exception {
         display.append("Reading files...");
         images = new ArrayList<Solver.Image>();
         for (Map.Entry<String, Float> e : imgList.entrySet()) {
             Image image = new Image(e.getKey(), e.getValue());
-            image.addSaltAndPepper(0.05);
+            if (saltAndPepperNoise)
+                image.addSaltAndPepper(0.02);
             images.add(image);
         }
 

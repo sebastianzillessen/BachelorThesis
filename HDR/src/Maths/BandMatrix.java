@@ -485,6 +485,7 @@ public class BandMatrix extends Matrix {
             System.out.println("File '" + filename + "' saved successfully.");
             success = true;
         } catch (IOException e) {
+            e.printStackTrace();
         } finally {
             try {
                 if (writer != null)

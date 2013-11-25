@@ -390,7 +390,7 @@ An den Termen für die Glattheit von $\b g$ ($\lambda  \sum_z [w(Z_{ij}) \cdot \
 
 
 % --------------------------------------------------------------------------------------------------------------
-\subsection{Subquadratische Bestrafungsfunktion im Datenterm von $\b g$}
+\subsection{Subquadratische Bestrafungsfunktion im Datenterm von $\b g$ und $\b E$}
 Der Datemterm von $\b g$ berücksichtigt bisher keine Ausreißer. Sind also starke Ausreißer in den Bildern der Belichtungsserie zu finden (wie z.B. \gls{SaltAndPepperNoise}), dann werden diese den Datenterm quadratisch beeinflussen. Besser wäre es hier große Ausreißer weniger stark zu gewichten.
 Hier kommen die subquadratischen Bestrafungsfunktionen zum Einsatz, die damit die Standard-Form des Verfahrens (siehe \autoref{eq:energy:weights}) durch folgendes neues Energiefunktional erweitern. Dieses wird dann wieder partiell nach $\b g(k)$ und $\ln E_i$ abgeleitet um den Optimierungsansatz zu lösen. 
 
@@ -430,13 +430,8 @@ Hier kommen die subquadratischen Bestrafungsfunktionen zum Einsatz, die damit di
 
 Der dabei vorkommende Bestrafungsfaktor $\varphi'([\b g(k)-\ln E_i - \ln \Delta t_j]^2)$ wird regelmäßig neu berechnet  (aus den alten Werten von $\b g$ und $\ln E_i$) und dann zeitweise festgehalten. Damit fließt dieser nur als Faktor in die Berechnung ein. Die Koeffizienten $\tilde a_k$ und $\tilde b_k$ ersetzen die Matrix- bzw. Vektoreinträge des Gleichungssystemes aus \autoref{eq:matrix:data}. Der Glattheitsterm $\Theta$ bleibt zusammen mit seinen partiellen Ableitungen identisch. Auch mit dieser Erweiterung hat sich die Struktur des LGS für $\b g$ nicht verändert und kann deswegen mit der LU-Zerlegung (siehe \autoref{sec:maths:lu}) gelöst werden. 
 
-
-
-
-% --------------------------------------------------------------------------------------------------------------
-\subsection{Subquadratische Bestrafungsfunktion im Datenterm von $\b E$}
 \label{subsec:robust:e:daten}
-Diese Erweiterung kann nun auch noch bei der Berechnung von $\ln E_i$ berücksichtigt werden. Auch hierzu wird das Energiefunktional $\tilde{\Omega}$ (siehe \autoref{eq:energy:robust}) wieder partiell nach $\ln E_i$ abgeleitet. Aus der \autoref{eq:fi:basic} entsteht dann bei aktiviertem subquadratischem Bestrafungsterm die neue Berechnung von $\ln E_i$:
+Diese Erweiterung muss nun auch noch bei der Berechnung von $\ln E_i$ berücksichtigt werden. Auch hierzu wird das Energiefunktional $\tilde{\Omega}$ (siehe \autoref{eq:energy:robust}) wieder partiell nach $\ln E_i$ abgeleitet. Aus der \autoref{eq:fi:basic} entsteht dann bei aktiviertem subquadratischem Bestrafungsterm die neue Berechnung von $\ln E_i$:
 
 \begin{align}
     \label{eq:f_i:robust}
@@ -487,7 +482,7 @@ Das Abbruchkriterium der inneren Schleife könnte ebenfalls wie beim \gls{SOR} V
 
 
 % --------------------------------------------------------------------------------------------------------------
-\subsection{Subquadratische Bestrafungsfunktion im räumlichen Glattheitterm von $\b E$}
+\subsection{Subquadratische Bestrafungsfunktion im räumlichen Glattheitsterm von $\b E$}
 \label{subsec:robust:e:raum}
 Die subquadratischen Bestrafungsfunktionen machen auch bei der Betrachtung des räumlichen Glattheitsterms für $\b E$ 
 Sinn. Durch die weniger starke Gewichtung von starken Ausreißern (wie sie z.B. typischer Weise an Kanten in Bildern vorkommen) können Strukturen im Bild besser erhalten werden.

@@ -4,10 +4,6 @@ import Ctrl.Controller;
 import Display.Plots.ScatterPlot;
 import Maths.*;
 
-import java.math.BigDecimal;
-import java.math.MathContext;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -18,18 +14,10 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class IterativeEnergySolver extends IHDRSolver {
+    private final boolean robustnessDataG;
+    private final boolean robustnessSmoothnessE;
     private double alpha;
     private int GLOBAL_INNER_ITERATIONS = 5;
-
-
-    public static enum WEIGHTNING_MODES {
-        NONE,
-        DEFAULT,
-        PARABEL
-
-    }
-
-    ;
     private static final double EPSILON_2 = 0.0001d;
     private final int iterations;
     private final int N;
@@ -41,19 +29,32 @@ public class IterativeEnergySolver extends IHDRSolver {
 
     private int[] histogram;
     private int energySteps = 2;
-    private double[] phi_smooth;
-    private double[][] phi_data = null;
+    private double[][] phi_data_g = null;
     private double ln_t[];
 
-    private boolean robustnessDataG = false, robustnessSmoothnessG = false;
+
+    /**
+     * Weightning mode for g
+     * <p/>
+     * None:        constant function 1
+     * Default :    Triangle function
+     * Parabel:     Parabel function
+     */
+    public static enum WEIGHTNING_MODES {
+        NONE,
+        DEFAULT,
+        PARABEL
+    }
+
+    ;
 
 
-    public IterativeEnergySolver(List<Image> images, double lambda, int iterations, int updateInterval, int mu, boolean robustnessDataG, boolean robustnessSmoothnessG, WEIGHTNING_MODES weightMode, double alpha) {
-        this(images, lambda, iterations, mu, robustnessDataG, robustnessSmoothnessG, weightMode, alpha);
+    public IterativeEnergySolver(List<Image> images, double lambda, int iterations, int updateInterval, int mu, boolean robustnessDataG, boolean robustnessDataE, boolean robustnessSmoothnessE, WEIGHTNING_MODES weightMode, double alpha) {
+        this(images, lambda, iterations, mu, robustnessDataG, robustnessSmoothnessE, weightMode, alpha);
         energySteps = iterations / updateInterval;
     }
 
-    public IterativeEnergySolver(List<Image> images, double lambda, int iterations, double mu, boolean robustnessDataG, boolean robustnessSmoothnessG, WEIGHTNING_MODES weightMode, double alpha) {
+    public IterativeEnergySolver(List<Image> images, double lambda, int iterations, double mu, boolean robustnessDataG, boolean robustnessSmoothnessE, WEIGHTNING_MODES weightMode, double alpha) {
         super(images);
         this.lambda = lambda;
         this.alpha = alpha;
@@ -62,7 +63,7 @@ public class IterativeEnergySolver extends IHDRSolver {
         this.iterations = iterations;
         this.mu = mu;
         this.robustnessDataG = robustnessDataG;
-        this.robustnessSmoothnessG = robustnessSmoothnessG;
+        this.robustnessSmoothnessE = robustnessSmoothnessE;
         this.weightMode = weightMode;
 
 
@@ -70,23 +71,24 @@ public class IterativeEnergySolver extends IHDRSolver {
 
         initLnT(images);
         // initialize robustness function with "1"
-        initPhiSmooth();
         initPhiData();
         generateOverallHistogramm();
         initWeightMatrix();
         initDerivateMatrices();
-
-        Controller.getInstance().getDisplay().addPlot(new ScatterPlot(histogram), "Histogram");
+        ScatterPlot h = new ScatterPlot(histogram);
+        h.setYDescription("Anzahl");
+        h.setXDescription("Grauwert");
+        Controller.getInstance().getDisplay().addPlot(h, "Histogram");
 
 
     }
 
     private void initPhiData() {
-        if (phi_data == null)
-            phi_data = new double[images.get(0).getImageSize()][ln_t.length];
-        for (int i = 0; i < phi_data.length; i++) {
+        if (phi_data_g == null)
+            phi_data_g = new double[images.get(0).getImageSize()][ln_t.length];
+        for (int i = 0; i < phi_data_g.length; i++) {
             for (int j = 0; j < ln_t.length; j++) {
-                phi_data[i][j] = 1;
+                phi_data_g[i][j] = 1;
             }
         }
     }
@@ -127,13 +129,6 @@ public class IterativeEnergySolver extends IHDRSolver {
         }
     }
 
-    private void initPhiSmooth() {
-        phi_smooth = new double[256];
-        for (int k = 0; k < phi_smooth.length; k++) {
-            phi_smooth[k] = 1;
-        }
-    }
-
     @Override
     public double w(double z) {
         if (this.weightMode == WEIGHTNING_MODES.NONE)
@@ -153,46 +148,45 @@ public class IterativeEnergySolver extends IHDRSolver {
     private BandMatrix buildDerivateMatrix() {
         int n = 256;
         BandMatrix d = new BandMatrix(n, new int[]{-2, -1, 0, 1, 2});
-        int[] basis = new int[]{1, -4, 6, -4, 1};
-        d.set(0, 0, +1 * w2(1) / phi_smooth[1]);
-        d.set(0, 1, -2 * w2(1) / phi_smooth[1]);
-        d.set(0, 2, +1 * w2(1) / phi_smooth[1]);
+        d.set(0, 0, +1 * w2(1));
+        d.set(0, 1, -2 * w2(1));
+        d.set(0, 2, +1 * w2(1));
         // second row
-        d.set(1, 0, -2 * w2(1) / phi_smooth[1]);
-        d.set(1, 1, 4 * w2(1) / phi_smooth[1] + w2(2) / phi_smooth[2]);
-        d.set(1, 2, -2 * (w2(1) / phi_smooth[1] + w2(2) / phi_smooth[2]));
-        d.set(1, 3, w2(2) / phi_smooth[2]);
+        d.set(1, 0, -2 * w2(1));
+        d.set(1, 1, 4 * w2(1) + w2(2));
+        d.set(1, 2, -2 * (w2(1) + w2(2)));
+        d.set(1, 3, w2(2));
         // diagonale
         for (int row = 2; row < n - 2; row++) {
             // default matrixG 2nd degree on the base.
-            d.set(row, row - 2, w2(row - 1) / phi_smooth[row - 1]);
-            d.set(row, row - 1, -2 * (w2(row - 1) / phi_smooth[row - 1] + w2(row) / phi_smooth[row]));
-            d.set(row, row, w2(row - 1) / phi_smooth[row - 1] + 4 * w2(row) / phi_smooth[row] + w2(row + 1) / phi_smooth[row + 1]);
-            d.set(row, row + 1, -2 * (w2(row) / phi_smooth[row] + w2(row + 1) / phi_smooth[row + 1]));
-            d.set(row, row + 2, w2(row + 1) / phi_smooth[row + 1]);
+            d.set(row, row - 2, w2(row - 1));
+            d.set(row, row - 1, -2 * (w2(row - 1) + w2(row)));
+            d.set(row, row, w2(row - 1) + 4 * w2(row) + w2(row + 1));
+            d.set(row, row + 1, -2 * (w2(row) + w2(row + 1)));
+            d.set(row, row + 2, w2(row + 1));
         }
         // second last row
-        d.set(n - 2, n - 4, w2(253) / phi_smooth[253]);
-        d.set(n - 2, n - 3, -2 * (w2(253) / phi_smooth[253] + w2(254) / phi_smooth[254]));
-        d.set(n - 2, n - 2, w2(253) / phi_smooth[253] + 4 * w2(254) / phi_smooth[254]);
-        d.set(n - 2, n - 1, -2 * w2(254) / phi_smooth[254]);
+        d.set(n - 2, n - 4, w2(253));
+        d.set(n - 2, n - 3, -2 * (w2(253) + w2(254)));
+        d.set(n - 2, n - 2, w2(253) + 4 * w2(254));
+        d.set(n - 2, n - 1, -2 * w2(254));
 
         // last row
-        d.set(n - 1, n - 3, w2(254) / phi_smooth[254]);
-        d.set(n - 1, n - 2, -2 * w2(254) / phi_smooth[254]);
-        d.set(n - 1, n - 1, w2(254) / phi_smooth[254]);
+        d.set(n - 1, n - 3, w2(254));
+        d.set(n - 1, n - 2, -2 * w2(254));
+        d.set(n - 1, n - 1, w2(254));
         return d.mult(2 * lambda);
     }
 
     private DecimalVector calculateG(DecimalVector F, DecimalVector g, int iteration) {
         int MAX_ITERATIONS = 1;
-        if (robustnessDataG || robustnessSmoothnessG || mu > 0) {
+        if (robustnessDataG || mu > 0) {
             MAX_ITERATIONS = GLOBAL_INNER_ITERATIONS;
             System.out.println("We have robustness or monotonie. So we will iterate the G Process");
         }
         for (int iterations = 0; iterations < MAX_ITERATIONS; iterations++) {
             System.out.print(".");
-            update_phi_smooth(g);
+            //update_phi_smooth(g);
             update_phi_data(g, F);
             BandMatrix m = buildDerivateMatrix();
             DecimalVector b = initializeB(F, g);
@@ -221,7 +215,7 @@ public class IterativeEnergySolver extends IHDRSolver {
                 for (int i = 0; i < N; i++) {
                     for (int j = 0; j < P; j++) {
                         if (Z(i, j) == k) {
-                            t += w2(k) / phi_data[i][j];
+                            t += w2(k) * phi_data_g[i][j];
                         }
                     }
                 }
@@ -234,20 +228,19 @@ public class IterativeEnergySolver extends IHDRSolver {
 
 
     private BandMatrix monotonieConstraint(DecimalVector g, BandMatrix m) {
-        BandMatrix v = new BandMatrix(256, new int[]{0});
-        int count = 0;
+        BandMatrix vwwv = new BandMatrix(256, new int[]{0});
         for (int i = 1; i < g.length(); i++) {
             double diff = g.get(i - 1) - (g.get(i));
             if (diff > 0) {
-                v.set(i, i, diff);
-                count++;
+                vwwv.set(i, i, w2(i));
             }
         }
-        BandMatrix mon = dt.mult(v.transpose().mult(weight).mult(v)).mult(d).mult(mu);
-        /*if (count > 0)
-            mon.toFileSync("calc/mon_" + System.currentTimeMillis() + ".txt");
-        else
-            System.out.println("No monotonie needed");*/
+        System.out.println(mu);
+
+        // mu *(dt * vt * wt * w * v * d)
+        // = mu (dt * vwwv * d)
+        BandMatrix mon = dt.mult(vwwv.mult(d)).mult(mu);
+        //mon.toFileSync("calc/Monotonie.txt");
         return m.add(mon);
     }
 
@@ -262,7 +255,7 @@ public class IterativeEnergySolver extends IHDRSolver {
                     if (Z(i, j) == k) {
                         double t = F.get(i) + ln_t[j];
                         if (robustnessDataG) {
-                            t /= phi_data[i][j];
+                            t *= phi_data_g[i][j];
                         }
                         s += t;
                     }
@@ -280,7 +273,6 @@ public class IterativeEnergySolver extends IHDRSolver {
         }
         for (int it = 0; it < MAX_ITERATIONS; it++) {
             if (robustnessDataG) {
-                update_phi_smooth(g);
                 update_phi_data(g, F);
             }
             if (alpha > 0)
@@ -301,10 +293,10 @@ public class IterativeEnergySolver extends IHDRSolver {
             for (int j = 0; j < P; j++) {
                 if (robustnessDataG) {
                     // Zähler
-                    t = w2(Z(i, j)) / phi_data[i][j] * (g.get(Z(i, j)) - ln_t[j]);
+                    t = w2(Z(i, j)) * phi_data_g[i][j] * (g.get(Z(i, j)) - ln_t[j]);
                     quot += t;
                     // Nenner
-                    t = w2(Z(i, j)) / phi_data[i][j];
+                    t = w2(Z(i, j)) * phi_data_g[i][j];
                     div += t;
                 } else {
                     quot += g.get(Z(i, j)) - ln_t[j] * w(Z(i, j));
@@ -339,7 +331,7 @@ public class IterativeEnergySolver extends IHDRSolver {
         for (int i = 0; i < F.length(); i++)
             F.set(i, 1);
         ScatterPlot enPlot = new ScatterPlot(energy);
-        Controller.getInstance().getDisplay().addPlot(enPlot, "Energieverlauf");
+        //Controller.getInstance().getDisplay().addPlot(enPlot, "Energieverlauf");
 
         for (int i = 0; i < iterations && !isCancelled(); i++) {
             setProgress(100 * i / iterations);
@@ -375,12 +367,13 @@ public class IterativeEnergySolver extends IHDRSolver {
         if (robustnessDataG) {
             for (int i = 0; i < F.length(); i++) {
                 for (int j = 0; j < ln_t.length; j++) {
-                    phi_data[i][j] = Math.sqrt(Math.pow(g.get(Z(i, j)) - F.get(i) - ln_t[j], 2) + EPSILON_2);
+                    phi_data_g[i][j] = 1.0 / (2.0 * Math.sqrt(Math.pow(g.get(Z(i, j)) - F.get(i) - ln_t[j], 2) + EPSILON_2));
                 }
             }
         }
     }
 
+    /*
     protected void update_phi_smooth(DecimalVector g) {
         if (robustnessSmoothnessG) {
             // set boundaries (not required, just to make a well defined state)
@@ -392,11 +385,16 @@ public class IterativeEnergySolver extends IHDRSolver {
             }
         }
     }
+     */
 
     protected void process(List<HDRResult> pairs) {
         DecimalVector g = pairs.get(0).getG();
         DecimalVector E = pairs.get(0).getE();
-        Controller.getInstance().getDisplay().addPlot(new ScatterPlot(g), "g(" + getProgress() + "%)");
+
+        ScatterPlot p = new ScatterPlot(g);
+        p.setXDescription("Grauwert");
+        p.setYDescription("ln E(i)");
+        Controller.getInstance().getDisplay().addPlot(p, "g(" + getProgress() + "%)");
         //Controller.getInstance().getDisplay().addPlot(new ScatterPlot(E), "E(" + getProgress() + "%)");
     }
 
@@ -455,8 +453,8 @@ public class IterativeEnergySolver extends IHDRSolver {
         s += " Image-Size:           " + N + "\n";
         s += " Weight-Mode:          " + weightMode.toString() + "\n";
         s += " Räumliche Glattheit:  " + (alpha > 0 ? alpha : "deaktiviert") + "\n";
-        s += " Robustheit Datenterm g:" + (robustnessDataG ? "aktiv" : "deaktiv") + "\n";
-        s += " Robustheit Glattheit g:" + (robustnessSmoothnessG ? "aktiv" : "deaktiv") + "\n";
+        s += " Robustheit Datenterm :" + (robustnessDataG ? "aktiv" : "deaktiv") + "\n";
+        s += " Robustheit Glattheit E:" + (robustnessSmoothnessE ? "aktiv" : "deaktiv") + "\n";
 
         return s;
     }
@@ -466,12 +464,12 @@ public class IterativeEnergySolver extends IHDRSolver {
         int cols = images.get(0).getWidth();
         int rows = images.get(0).getHeight();
 
-        BandMatrix res = generateNeighborsBandMatrix(alpha, cols, rows);
+        BandMatrix res = generateNeighborsBandMatrix(F, alpha, cols, rows);
         DecimalVector b = new DecimalVector(F.length());
         for (int i = 0; i < b.length(); i++) {
             double sum = 0;
             for (int j = 0; j < P; j++) {
-                sum += w(Z(i, j)) * (g.get(Z(i, j)) - ln_t[j]);
+                sum += w2(Z(i, j)) * (g.get(Z(i, j)) - ln_t[j]);
             }
             b.set(i, sum);
         }
@@ -479,37 +477,54 @@ public class IterativeEnergySolver extends IHDRSolver {
     }
 
 
-    private BandMatrix neighborsBandMatrix = null;
+    private double phi_smoothness_e(DecimalVector F, int i, int j) {
+        if (robustnessSmoothnessE) {
+            double v = F.get(i) - F.get(j);
+            if (v == 0)
+                return 1;
+            else
+                return 1.0 / (2 * Math.sqrt(v * v + EPSILON_2));
+        } else
+            return 1;
+    }
 
-    private BandMatrix generateNeighborsBandMatrix(double alpha, int cols, int rows) {
-        if (neighborsBandMatrix == null) {
-            neighborsBandMatrix = new BandMatrix(cols * rows, new int[]{-cols, -1, 0, 1, cols});
-            for (int i = 0; i < cols * rows; i++) {
-                int d = -4;
-                if (i / cols == 0 || i / cols == rows - 1)
-                    d += 1;
-                if (i % cols == 0 || (i + 1) % cols == 0)
-                    d += 1;
 
-                // weight
-                double sum = 0;
-                for (int j = 0; j < P; j++) {
-                    sum += w(Z(i, j));
-                }
-                neighborsBandMatrix.set(i, i, sum - alpha * d);
-                // left band
-                if (i - 1 >= 0)
-                    neighborsBandMatrix.set(i - 1, i, -1 * alpha);
-                // right band
-                if (i + 1 < cols * rows)
-                    neighborsBandMatrix.set(i + 1, i, -1 * alpha);
-                // upper band
-                if (i - cols >= 0)
-                    neighborsBandMatrix.set(i - cols, i, -1 * alpha);
-                // lower band
-                if (i + cols < cols * rows)
-                    neighborsBandMatrix.set(i + cols, i, -1 * alpha);
+    private BandMatrix generateNeighborsBandMatrix(DecimalVector F, double alpha, int cols, int rows) {
+        BandMatrix neighborsBandMatrix = new BandMatrix(cols * rows, new int[]{-cols, -1, 0, 1, cols});
+        for (int i = 0; i < cols * rows; i++) {
+            // weight
+            double sum = 0;
+            for (int j = 0; j < P; j++) {
+                sum += w2(Z(i, j));
             }
+            double d = 0;
+            // left band
+            if (i - 1 >= 0) {
+                double v = phi_smoothness_e(F, i, i - 1);
+                d += v;
+                neighborsBandMatrix.set(i - 1, i, -v * alpha);
+            }
+            // right band
+            if (i + 1 < cols * rows) {
+                double v = phi_smoothness_e(F, i + 1, i);
+                d += v;
+                neighborsBandMatrix.set(i + 1, i, -v * alpha);
+            }
+            // upper band
+            if (i - cols >= 0) {
+                double v = phi_smoothness_e(F, i, i - cols);
+                d += v;
+                neighborsBandMatrix.set(i - cols, i, -v * alpha);
+            }
+            // lower band
+            if (i + cols < cols * rows) {
+                double v = phi_smoothness_e(F, i + cols, i);
+                d += v;
+                neighborsBandMatrix.set(i + cols, i, -v * alpha);
+            }
+
+            neighborsBandMatrix.set(i, i, sum + alpha * d);
+
         }
         return neighborsBandMatrix;
     }

@@ -1,11 +1,27 @@
 %\setchapterpreamble[u]{%
 %\dictum[Albert Einstein]{Probleme kann man niemals mit derselben Denkweise lösen, durch die sie entstanden sind.}
 %}
-\chapter{Verwandte Arbeiten}
+\chapter{Verwandte Arbeiten und Implementierungen}
 \label{chap:references}
 
+In diesem Kapitel soll kurz auf verwandte Arbeiten und Implementierungen eingegangen werden. Der Fokus liegt bei der nachfolgenden Recherche auf dem Ansatz aus einer Belichtungsserie von \gls{LDR} Bildern ein \gls{HDR} Bild zu generieren.
 
-\section{Bekannte Implementierungen}
+\section{Bekannte Implementierungen des Ansatzes von Debevec und Malik}
 Das Standard-Verfahren wurde bereits in verschiedenen Programmen so implementiert. Im ursprünglichen Artikel von Debevec und Malik gibt es bereits eine \texttt{MATLAB}-Version des Algorithmus. 
 
-Darauf basierend hat z.B. Mathias Eitz eine Implementierung\footnote{\url{http://cybertron.cg.tu-berlin.de/eitz/hdr/index.html}} des kompletten Prozesses in \texttt{MATLAB} geschrieben. Dieser arbeitet ohne Erweiterungen und implementiert direkt den Ansatz von Debevec und Malik. Die \nameref{algo:schwachstellen:selektion} (siehe \autoref{algo:schwachstellen:selektion}) geschieht in dieser Implementierung in einer Art Rasterung der Bilder und berücksichtigt keine der Forderungen von Debevec und Malik.
+Darauf basierend hat z.B. Mathias Eitz eine Implementierung\footnote{\url{http://cybertron.cg.tu-berlin.de/eitz/hdr/index.html}} des kompletten Prozesses in \texttt{MATLAB} geschrieben. Dieser arbeitet ohne Erweiterungen und implementiert direkt den Ansatz von Debevec und Malik. Die \nameref{algo:schwachstellen:selektion} (siehe \autoref{algo:schwachstellen:selektion}) geschieht in dieser Implementierung in einer Art Rasterung der Bilder und berücksichtigt keine der Forderungen von Debevec und Malik (siehe \autoref{algo:schwachstellen:selektion}). 
+
+Auch in der beschriebenen Software zur Erstellung von \gls{HDR} Bildern (siehe \autoref{sec:software}) wird z.T. dieser Ansatz verwendet.
+
+
+\section{Verwandte Arbeiten}
+
+Die veröffentlichten Arbeiten zu \gls{HDR} Bildern, deren Generierung, Darstellung und Verarbeitung nimmt stetig zu. Deswegen hat die nachfolgende Auflistung keinen Anspruch auf Vollständigkeit und dient lediglich einer groben Übersicht.
+
+Nayar et al. \cite{Nayar00highdynamic} stellen in ihrem Verfahren einen anderen Ansatz der Generierung von \gls{HDR} Bildern vor. Dabei wird bereits bei der Aufnahme eines Bildes eine Rasterung durch ein optisches Gitter mit unterschiedlichen Transparenzen erzielt. Das so aufgenommene Bild wird als spatially varying exposure (dt. ortsabhängig belichtetes) Bild bezeichnet. Da die Struktur des Gitters bekannt ist kann aus den aufgenommenen Bildern nun ein höherer Dynamikumfang für das Bild errechnet werden, da die unterschiedlichen Transparenzen des Gitters dafür sorgen, dass sowohl hohe als auch niedere Belichtungen wahrgenommen werden können. Mitthilfe dieser Technik können bereits durch eine Einzelaufnahme mit der richtigen Apparatur HDR Bilder erzeugt werden.
+
+Jinno and Okkuda \cite{Jinno} beschreiben in Ihrer Alternative für die Fusion von Belichtungsserien darüber hinaus auch die Problematik von sich bewegenden Objekten. Daraus entstehen bei der Fusion häufig ghosting artifacts (dt. Geist-Artefakte) oder motion blur (dt. Bewegungsunschärfe). In dieser Veröffentlichung werden dazu die bewegten Objekte erkannt und bei der Berechnung des HDR Bildes ausgenommen. Das MAP-basierte Verfahren sagt dabei Überdeckung, Sättigung und Verschiebungen in den Ausgangsbildern hervor und konstruiert dann die HDR Bilder, wobei die errechneten Artefakte entfernt werden können. Damit erzeugen sie insbesondere in Serien mit hoher Bewegung sehr viel bessere Ergebnisse als der Herkömmliche Ansatz.
+
+Kuang et al. \cite{tone_mapper_2} vergleichen in ihrer Studie über \gls{HDR} Bildgenerierungs-Algorithmen vier lokale und zwei globale Operatoren miteinander. Während der Studie werden verschiedene Bildszenen mit den sechs Operatoren von Probanden in drei unterschiedlichen Experimenten bewertet. Dazu werden die Bilder paarweise auf einem \gls{LDR} Bildschirm gezeigt. Dabei wurde festgestellt, dass keiner der verwendeten Operatoren durchweg in allen Szenen besser abgeschnitten hat als alle anderen. Dies führt zur Schlussfolgerung, dass eine große Korrelation zwischen Szene und \gls{Tone-Mapping} Verfahren vorliegt. 
+
+In einer Arbeit von Yoshida et al. \cite{tone_mapper_1} wurden sieben \gls{Tone-Mapping} Operatoren im Direktvergleich der realen Szene und dem korrespondierendem \gls{LDR} Bild von Testpersonen bewertet. Berücksichtigt wurden dabei sowohl globale als auch lokale Operatoren. Eine der Haupterkenntnisse dieser Vergleiche ist, dass die lokalen Operatoren die Bilddetails besser beibehalten und die globalen Operatoren den Kontrast besser darstellen.

@@ -7,6 +7,12 @@
   \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 
+\bibitem[Ado92]{adobe:tiff}
+Adobe.
+\newblock Tiff specification, Revision 6.0, 1992.
+\newblock
+  \urlprefix\url{http://partners.adobe.com/public/developer/en/tiff/TIFF6.pdf}.
+
 \bibitem[BGH{\etalchar{+}}06]{Klingler_Richter_Strobel_2006}
 J.~Burghartz, H.-g. Graf, C.~Harendt, W.~Klingler, H.~Richter, M.~Strobel.
 \newblock HDR CMOS imagers and their applications.
@@ -15,9 +21,9 @@ J.~Burghartz, H.-g. Graf, C.~Harendt, W.~Klingler, H.~Richter, M.~Strobel.
 
 \bibitem[Blo12]{Bloch2012}
 C.~Bloch.
-\newblock \emph{Das HDRI-Handbuch 2.0 - High Dynamic Range Imaging für
-  Fotografen und Computergrafiker}.
-\newblock dpunkt, Heidelberg, 2012.
+\newblock \emph{The HDRI Handbook - High Dynamic Range Imaging for
+  Photographers and CG Artists}.
+\newblock O'Reilly Media, Sebastapool, 1 Auf\/lage, 2012.
 
 \bibitem[Bru06]{bruhn06}
 A.~Bruhn.
@@ -45,17 +51,51 @@ M.~D. Fairchild, G.~M. Johnson.
   quality.
 \newblock \emph{Journal of Electronic Imaging}, 13:126--138, 2004.
 
+\bibitem[KYL{\etalchar{+}}07]{tone_mapper_2}
+J.~Kuang, H.~Yamaguchi, C.~Liu, G.~M, M.~D. Fairchild.
+\newblock Evaluating HDR rendering algorithms.
+\newblock \emph{ACM Trans. Appl. Percept}, 2007.
+
+\bibitem[Lar98]{logluv}
+G.~W. Larson.
+\newblock LogLuv Encoding for Full-gamut, High-dynamic Range Images.
+\newblock Band~3, S. 15--31. A. K. Peters, Ltd., 1998.
+
 \bibitem[LZR12]{Jing_Hong_Zheng_Rahardja_2012}
 Z.~G. Li, J.~H. Zheng, S.~Rahardja.
 \newblock Detail-enhanced exposure fusion.
 \newblock \emph{IEEE Transactions on Image Processing}, 21(11):4672--4676,
   2012.
 
+\bibitem[NM00]{Nayar00highdynamic}
+S.~K. Nayar, T.~Mitsunaga.
+\newblock High dynamic range imaging: Spatially varying pixel exposures.
+\newblock S. 472--479. 2000.
+
+\bibitem[RSD05]{Reinhard05}
+E.~Reinhard, I.~C. Society, K.~Devlin.
+\newblock Dynamic range reduction inspired by photoreceptor physiology.
+\newblock \emph{IEEE Transactions on Visualization and Computer Graphics},
+  11:13--24, 2005.
+
+\bibitem[RSSF02]{ReinhardToneMapper}
+E.~Reinhard, M.~Stark, P.~Shirley, J.~Ferwerda.
+\newblock Photographic Tone Reproduction for Digital Images.
+\newblock In \emph{ACM SIGGRAPH 2002}, S. 267--276. ACM Press/Addison-Wesley
+  Publishing Co., 2002.
+
 \bibitem[RWPD05]{Reinhard}
 E.~Reinhard, G.~Ward, S.~Pattanaik, P.~Debevec.
 \newblock \emph{High Dynamic Range Imaging: Acquisition, Display, and
   Image-Based Lighting}.
 \newblock Morgan Kaufmann Publishers Inc., 2005.
+
+\bibitem[Tel10]{tellone}
+P.~Tellone.
+\newblock How to Shoot and Post-Process Professional HDR Photos in One Day,
+  2010.
+\newblock
+  \urlprefix\url{http://photography.tutsplus.com/tutorials/how-to-shoot-and-post-process-professional-hdr-photos-in-one-day-2--photo-4102}.
 
 \bibitem[War03]{Ward03fast}
 G.~Ward.
@@ -68,6 +108,11 @@ T.~Westermann.
 \newblock \emph{Mathematik für Ingenieure - Ein anwendungsorientiertes
   Lehrbuch}.
 \newblock Springer, 6 Auf\/lage, 2008.
+
+\bibitem[YBMS05]{tone_mapper_1}
+A.~Yoshida, V.~Blanz, K.~Myszkowski, H.-P. Seidel.
+\newblock Perceptual evaluation of tone mapping operators with real-world
+  scenes, 2005.
 
 \bibitem[YGFT99]{Yang99a640}
 D.~X.~D. Yang, A.~E. Gamal, B.~Fowler, H.~Tian.

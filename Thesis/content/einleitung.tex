@@ -10,7 +10,7 @@ Während viele Arbeiten sich nur mit der pixelweisen Fusion der Bilddaten ausein
 \begin{figure}
   \begin{center}
     \includegraphics[width=\textwidth]{ImageAquisitionPipeline}
-    \caption{\textbf{Bildaufnahme Pipeline} veranschaulicht welche Prozesse durchlaufen werden bis aus einer realen Szene (links) das digitale Bild für die Verwendung erzeugt wird. \cite[S.2]{paper}}
+    \caption{Die Bildaufnahme Pipeline veranschaulicht welche Prozesse durchlaufen werden bis aus einer realen Szene (links) das digitale Bild für die Verwendung erzeugt wird. \cite[S.2]{paper}}
     \label{fig:antwortkurve}
   \end{center}
 \end{figure}
@@ -23,6 +23,18 @@ Ziel der Arbeit ist es zunächst, das Verfahren von Debevec und Malik \cite{pape
 
 Diese \nameref{chap:impl} soll dann sukzessive um robuste Funktionen, \gls{Monotonie}-Beschränkungen (siehe \autoref{sec:monotonie}) und räumliche Glattheitsterme (siehe \autoref{sec:raeumlich}) erweitert werden.
 
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{teezer/g_noise_no_robustness}
+    \includegraphics[width=0.4\textwidth]{teezer/g_noise_robustness_raum}
+    \includegraphics[width=0.4\textwidth]{teezer/E_noise_no_robustness}
+    \includegraphics[width=0.4\textwidth]{teezer/E_noise_robustness_raum}
+    \caption{Geschätzte Antwortkurven und zugehöriges HDR-Bild für eine Bilderserie~\cite{tellone}. Mit 4\% \gls{SaltAndPepperNoise}. Links: ohne robuste Bestrafungsterme. Rechts mit robusten Bestrafungstermen und räumlicher Glattheitsforderung. Das HDR-Bild wurde mittels lokalem Reinhard-Tone-Mapper (vgl. \autoref{sec:tone-mapping}) erstellt.}
+    \label{fig:teezer}
+  \end{center}
+\end{figure}
+
+
 Neben der Modellierung und Implementation der einzelnen Erweiterungen soll auch eine geeignete visuelle Evaluation der Ergebnisse erfolgen. Hierzu sollen \gls{Tone-Mapping} Verfahren (siehe \autoref{sec:tone-mapping}) aus der Literatur verwendet werden. 
 
 
@@ -30,17 +42,17 @@ Neben der Modellierung und Implementation der einzelnen Erweiterungen soll auch 
 Die Arbeit ist in folgender Weise gegliedert:
 \begin{description}
 
-\item[Kapitel~\autoref{chap:hdr} -- \nameref{chap:hdr}:] Hier werden die Grundlagen der \gls{HDR} Bilder vermittelt. Dabei wird auf die physikalischen, historischen und anwendungsorientierten Eigenschaften von \gls{HDR} Bildern eingegangen.
+\item[\autoref{chap:hdr} -- \nameref{chap:hdr}:] Hier werden die Grundlagen der \gls{HDR} Bilder vermittelt. Dabei wird auf die physikalischen, historischen und anwendungsorientierten Eigenschaften von \gls{HDR} Bildern eingegangen.
 
-\item[Kapitel~\autoref{chap:references} -- \nameref{chap:references}:] Anschließend werden verwandte Arbeiten zum Thema \gls{HDR} vorgestellt.
+\item[\autoref{chap:references} -- \nameref{chap:references}:] Anschließend werden verwandte Arbeiten zum Thema \gls{HDR} vorgestellt.
 
-\item[Kapitel~\autoref{chap:algo} -- \nameref{chap:algo}:] Die zu Grunde liegende Vorgehensweise von Debevec und Malik \cite{paper} soll in diesem Kapitel beschrieben werden. Außerdem werden die existierenden Schwachstellen des bisherigen Ansatzes dargestellt.
+\item[\autoref{chap:algo} -- \nameref{chap:algo}:] Die zu Grunde liegende Vorgehensweise von Debevec und Malik \cite{paper} soll in diesem Kapitel beschrieben werden. Außerdem werden die existierenden Schwachstellen des bisherigen Ansatzes dargestellt.
 
-\item[Kapitel~\autoref{chap:maths} -- \nameref{chap:maths}:] Der theoretische Ansatz aus Kapitel \autoref{chap:maths} wird hier mathematisch umgesetzt und diskutiert. Außerdem werden die Erweiterungen des Algorithmus beschrieben und formal spezifiziert.
+\item[\autoref{chap:maths} -- \nameref{chap:maths}:] Der theoretische Ansatz aus Kapitel \autoref{chap:maths} wird hier mathematisch umgesetzt und diskutiert. Außerdem werden die Erweiterungen des Algorithmus beschrieben und formal spezifiziert.
 
-\item[Kapitel~\autoref{chap:impl} -- \nameref{chap:impl}:] Die Implementierung der in Kapitel \autoref{chap:algo} und \autoref{chap:maths} beschriebenen Modelle wird hier erläutert. Darüber hinaus werden einzelne Programm-Passagen (siehe \autoref{sec:sample-codes}) genauer beleuchtet und die Laufzeit der Anwendung (siehe \autoref{sec:laufzeit}) analysiert.
+\item[\autoref{chap:impl} -- \nameref{chap:impl}:] Die Implementierung der in Kapitel \autoref{chap:algo} und \autoref{chap:maths} beschriebenen Modelle wird hier erläutert. Darüber hinaus werden einzelne Programm-Passagen (siehe \autoref{sec:sample-codes}) genauer beleuchtet und die Laufzeit der Anwendung (siehe \autoref{sec:laufzeit}) analysiert.
 
-\item[Kapitel~\autoref{chap:results} -- \nameref{chap:results}:] Anschließend werden die Resultate und Einflüsse der unterschiedlichen Erweiterungen vorgestellt und diskutiert.
+\item[\autoref{chap:results} -- \nameref{chap:results}:] Anschließend werden die Resultate und Einflüsse der unterschiedlichen Erweiterungen vorgestellt und diskutiert.
 
-\item[Kapitel~\autoref{chap:zusfas} -- \nameref{chap:zusfas}] fasst die Ergebnisse der Arbeit zusammen und stellt Anknüpfungspunkte zu weiteren Arbeiten vor.
+\item[\autoref{chap:zusfas} -- \nameref{chap:zusfas}] fasst die Ergebnisse der Arbeit zusammen und stellt Anknüpfungspunkte zu weiteren Arbeiten vor.
 \end{description}
