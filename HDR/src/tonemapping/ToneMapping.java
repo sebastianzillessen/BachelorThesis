@@ -2,8 +2,6 @@ package tonemapping;
 
 import Solver.Image;
 
-import java.util.Observable;
-
 /**
  * Created with IntelliJ IDEA.
  * User: sebastianzillessen

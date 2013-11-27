@@ -1,10 +1,6 @@
 package Tests;
 
-import Solver.Bitmap;
 import org.junit.Before;
-import org.junit.Test;
-
-import static junit.framework.Assert.assertEquals;
 
 /**
  * Created with IntelliJ IDEA.

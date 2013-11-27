@@ -1,17 +1,20 @@
 package Ctrl;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.util.*;
-
-import View.GUIFrame;
-import Display.Plots.ToneMappingPlot;
+import View.Plots.ToneMappingPlot;
 import Maths.DecimalVector;
-import Solver.*;
+import Solver.HDRResult;
+import Solver.IHDRSolver;
 import Solver.Image;
-import tonemapping.*;
+import Solver.IterativeEnergySolver;
+import View.GUIFrame;
+import tonemapping.LocalReinhardMapping;
+import tonemapping.ReinhardMapping;
 
 import javax.swing.*;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.ArrayList;
+import java.util.Map;
 /**
  *
  */
@@ -21,6 +24,7 @@ import javax.swing.*;
  */
 public class Controller {
 
+    public static final double PERCENTAGE_OF_SALT_N_PEPPER = 0.02;
     private GUIFrame display;
 
     private static Controller ourInstance = new Controller();
@@ -59,6 +63,7 @@ public class Controller {
         }
 
         solver = new IterativeEnergySolver(images, lambda, iterations, mu, robustnessDataG, robustnessSmoothnessE, weight, alpha);
+        display.append(solver.toString());
         solver.addPropertyChangeListener(new PropertyChangeListener() {
             @Override
             public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
@@ -68,10 +73,7 @@ public class Controller {
                         display.setProgress(Integer.parseInt(propertyChangeEvent.getNewValue().toString()));
 
                     if (propertyChangeEvent.getPropertyName() == "state" && propertyChangeEvent.getNewValue().toString().equals("DONE")) {
-                        //display.addPlot(new ToneMappingPlot(solver.get(), new LinearMapping()), "LinearMapping");
                         display.addPlot(new ToneMappingPlot(solver.get(), new LocalReinhardMapping(0.6, 0.05, 8.0, 0.18)), "LocalReinhardMapping");
-                        //display.addPlot(new ToneMappingPlot(solver.get(), new HighContrast()), "HighContrast");
-                        //display.addPlot(new ToneMappingPlot(solver.get(), new SpatiallyUniformMapping()), "SpatiallyUniformMapping");
                         display.addPlot(new ToneMappingPlot(solver.get(), new ReinhardMapping(0.72)), "Reinhard");
                     }
                 } catch (Exception e) {
@@ -84,21 +86,27 @@ public class Controller {
     }
 
 
-    public void readImages(Map<String, Float> imgList, boolean saltAndPepperNoise, boolean gaussianNoise) throws Exception {
+    public void readImages(Map<String, Float> imgList, boolean saltAndPepperNoise, double gaussianNoise) throws Exception {
         display.append("Reading files...");
         images = new ArrayList<Solver.Image>();
         for (Map.Entry<String, Float> e : imgList.entrySet()) {
             Image image = new Image(e.getKey(), e.getValue());
-            if (saltAndPepperNoise)
-                image.addSaltAndPepper(0.02);
             images.add(image);
         }
 
-        // align images
-        //images = ImageAlignment.align(images);
         for (Image image : images) {
+
+            // add salt and pepper nois if required
+            if (saltAndPepperNoise)
+                image.addSaltAndPepper(PERCENTAGE_OF_SALT_N_PEPPER);
+            // add gauss noise if required
+            if (gaussianNoise > 0)
+                image.addGaussian(gaussianNoise);
             display.append(image);
         }
+
+
+
     }
 
 

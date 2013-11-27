@@ -1,9 +1,6 @@
 package tonemapping;
 
 import Maths.Convolution;
-import Maths.DecimalMatrix;
-import com.sun.tools.javac.resources.version;
-import org.junit.internal.matchers.Each;
 
 /**
  * Implements the Reinhard local tonemapping operator
@@ -79,8 +76,6 @@ public class LocalReinhardMapping extends ToneMapping {
         maxScale = Math.min(8, maxScale);
 
         for (int i = 0; i < maxScale; i++) {
-            //v(:,:,i)=abs((v1(:,:,i))-v1(:,:,i + 1))./((2 ^ phi) * key / (s ^ 2) + v1(:,:,i));
-            //new DecimalMatrix(v1[i]).toFileSync("calc/v1_" + i + ".txt");
             for (int j = 0; j < v[i].length; j++) {
                 for (int k = 0; k < v[i][j].length; k++) {
                     double v2 = Math.pow(2, phi) * key / Math.pow(s, 2) + v1[i][j][k];
@@ -88,7 +83,7 @@ public class LocalReinhardMapping extends ToneMapping {
                     v[i][j][k] = Math.abs(v3) / v2;
                 }
             }
-            //new DecimalMatrix(v[i]).toFileSync("calc/v_" + i + ".txt");
+
         }
 
 
@@ -241,7 +236,6 @@ public class LocalReinhardMapping extends ToneMapping {
         } catch (NumberFormatException e) {
 
         }
-
 
 
         return false;

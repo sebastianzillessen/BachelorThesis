@@ -1,33 +1,25 @@
 package Maths;
 
-import java.applet.*;
-import java.awt.*;
-import java.awt.image.*;
-import java.net.*;
-import java.util.*;
-import java.io.*;
-import java.lang.Math.*;
-import java.awt.Color.*;
-
 /**
  * Convolution is the code for applying the convolution operator.
  *
  * @author: Simon Horne, Sebastian Zillessen
  * @see: http://www.inf.ufpr.br/danielw/pos/ci724/20102/HIPR2/flatjavasrc/Convolution.java
  */
-public class Convolution extends Thread {
+public class Convolution {
+    private Convolution() {
 
-
-    /**
-     * Default no-arg constructor.
-     */
-    public Convolution() {
     }
 
-
+    /**
+     * Returns a approximation of a gaussian kernel as stencil for the 1D.
+     *
+     * @param radius Radius in pixels
+     * @param sigma  sigma for the gaussian to use
+     * @return
+     */
     public static double[] getGaussianKernel1D(int radius, double sigma) {
         double[] res = new double[radius * 2 + 1];
-        //sigma#=radius / 3 'apparently this is all you need to get a good approximation
         double norm = 1.0 / (Math.sqrt(2 * Math.PI) * sigma);
         double coeff = 2 * sigma * sigma;
         double total = 0;
@@ -42,6 +34,13 @@ public class Convolution extends Thread {
         return res;
     }
 
+    /**
+     * Returns a approximation of a gaussian kernel as stencil for the 2D case.
+     *
+     * @param radius Radius in pixels
+     * @param sigma  sigma for the gaussian to use
+     * @return
+     */
     public static double[][] getGaussianKernel2D(int radius, double sigma) {
         double[] gaus = getGaussianKernel1D(radius, sigma);
         double[][] res = new double[gaus.length][gaus.length];
@@ -53,15 +52,6 @@ public class Convolution extends Thread {
         return res;
     }
 
-
-    private static int getMirrowed(int length, int x) {
-        if (x >= 0 && x < length)
-            return x;
-        else if (x < 0)
-            return -x;
-        else
-            return 2 * length - x - 1;
-    }
 
     /**
      * Takes an image (grey-levels) and a kernel and a position,
@@ -95,8 +85,8 @@ public class Convolution extends Thread {
      * over the area of the image specified by width and height and returns
      * a part of the final image.
      *
-     * @param input        the 2D double array representing the image
-     * @param kernel       the 2D array representing the kernel
+     * @param input  the 2D double array representing the image
+     * @param kernel the 2D array representing the kernel
      * @return the 2D array representing the new image
      */
     public static double[][] convolute(double[][] input,

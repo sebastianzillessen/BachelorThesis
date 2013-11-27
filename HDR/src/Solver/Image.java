@@ -1,16 +1,12 @@
 package Solver;
 
-import Maths.DecimalVector;
-
+import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.Arrays;
-
-import javax.imageio.ImageIO;
+import java.util.Random;
 
 public class Image {
     protected String fileName;
@@ -203,28 +199,8 @@ public class Image {
         }
     }
 
-    public Bitmap getMTB() {
-        int m = this.getMedian();
-        Bitmap res = new Bitmap(getWidth(), getHeight());
-        for (int i = 0; i < data.length; i++) {
-            res.set(i, data[i] <= m ? 0 : 1);
-        }
-        return res;
-    }
 
-    public Bitmap getExclusionBitmap(int tolerance) {
-        int m = this.getMedian();
-        Bitmap res = new Bitmap(getWidth(), getHeight());
-        for (int i = 0; i < data.length; i++) {
-            if (Math.abs(data[i] - m) < tolerance)
-                res.set(i, 0);
-            else
-                res.set(i, 1);
-        }
-        return res;
-    }
-
-    public Image shift(int xs, int ys) {
+    public Image shiftedInstance(int xs, int ys) {
         Image res = new Image(w, h);
         for (int x = 0; x < w; x++) {
             for (int y = 0; y < h; y++) {
@@ -255,7 +231,6 @@ public class Image {
     }
 
     public BufferedImage getBufferedImage() {
-        System.out.println("GET Buffered Image in Img");
         BufferedImage bi = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_BYTE_GRAY);
         for (int x = 0; x < getWidth(); x++) {
             for (int y = 0; y < getHeight(); y++) {
@@ -264,5 +239,19 @@ public class Image {
             }
         }
         return bi;
+    }
+
+    public void addGaussian(double devStd) {
+        Random r = new Random();
+        for (int i = 0; i < data.length; i++) {
+            int src = data[i];
+            int c = (int) (src + (devStd * (r.nextGaussian())));
+            if (c < 0)
+                c = 0;
+            if (c > 255)
+                c = 255;
+            data[i] = c;
+        }
+        updateHistogram();
     }
 }

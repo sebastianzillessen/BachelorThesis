@@ -4,54 +4,57 @@ The top-level auxiliary file: ausarbeitung.aux
 The style file: ../bibliography/IAASde.bst
 Database file #1: ../bibliography/bibliography.bib
 Warning--entry type for "tellone" isn't style-file defined
---line 114 of file ../bibliography/bibliography.bib
+--line 116 of file ../bibliography/bibliography.bib
 Warning--entry type for "adobe:tiff" isn't style-file defined
---line 122 of file ../bibliography/bibliography.bib
+--line 124 of file ../bibliography/bibliography.bib
 Warning--entry type for "tone_mapper_1" isn't style-file defined
---line 152 of file ../bibliography/bibliography.bib
+--line 155 of file ../bibliography/bibliography.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--empty booktitle in logluv
 Warning--can't use both volume and number fields in logluv
+Warning--empty booktitle in Xinqiao
 Warning--empty booktitle in Nayar00highdynamic
-You've used 19 entries,
+Warning--empty booktitle in zimmer
+Warning--can't use both volume and number fields in zimmer
+You've used 22 entries,
             3039 wiz_defined-function locations,
-            752 strings with 8504 characters,
-and the built_in function-call counts, 9974 in all, are:
-= -- 814
-> -- 359
-< -- 15
-+ -- 131
-- -- 128
-* -- 627
-:= -- 1360
-add.period$ -- 62
-call.type$ -- 19
-change.case$ -- 114
-chr.to.int$ -- 19
-cite$ -- 22
-duplicate$ -- 777
-empty$ -- 840
-format.name$ -- 164
-if$ -- 2066
+            770 strings with 8940 characters,
+and the built_in function-call counts, 11911 in all, are:
+= -- 984
+> -- 419
+< -- 19
++ -- 152
+- -- 149
+* -- 753
+:= -- 1604
+add.period$ -- 73
+call.type$ -- 22
+change.case$ -- 130
+chr.to.int$ -- 22
+cite$ -- 28
+duplicate$ -- 932
+empty$ -- 1000
+format.name$ -- 191
+if$ -- 2479
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 161
-newline$ -- 103
-num.names$ -- 57
-pop$ -- 358
+missing$ -- 194
+newline$ -- 118
+num.names$ -- 66
+pop$ -- 423
 preamble$ -- 1
-purify$ -- 142
+purify$ -- 164
 quote$ -- 0
-skip$ -- 324
+skip$ -- 389
 stack$ -- 0
-substring$ -- 448
-swap$ -- 385
-text.length$ -- 15
+substring$ -- 558
+swap$ -- 475
+text.length$ -- 19
 text.prefix$ -- 8
 top$ -- 0
-type$ -- 140
-warning$ -- 3
-while$ -- 75
-width$ -- 22
-write$ -- 214
-(There were 6 warnings)
+type$ -- 164
+warning$ -- 6
+while$ -- 92
+width$ -- 26
+write$ -- 250
+(There were 9 warnings)

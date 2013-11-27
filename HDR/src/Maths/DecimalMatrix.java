@@ -1,9 +1,5 @@
 package Maths;
 
-import Solver.IWeight;
-
-import java.math.MathContext;
-
 /**
  * Created with IntelliJ IDEA.
  * User: sebastianzillessen
@@ -46,6 +42,7 @@ public class DecimalMatrix extends Matrix {
             }
         }
     }
+
     public DecimalMatrix(double[][] doubles) {
         this(doubles.length, doubles[0].length);
         for (int i = 0; i < doubles.length; i++) {
@@ -61,7 +58,7 @@ public class DecimalMatrix extends Matrix {
         DecimalMatrix m = new DecimalMatrix(rows(), cols());
         for (int i = 0; i < mat.length; i++) {
             for (int j = 0; j < mat[i].length; j++) {
-                m.set(i, j, mat[i][j]*(a));
+                m.set(i, j, mat[i][j] * (a));
             }
         }
         return m;

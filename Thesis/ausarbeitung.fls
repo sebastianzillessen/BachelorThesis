@@ -327,6 +327,8 @@ INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/pdfpages/pppdftex.def
 INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/pdfpages/pppdftex.def
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT /usr/local/texlive/2012/texmf-dist/tex/latex/tools/tabularx.sty
 OUTPUT ausarbeitung.idx
 INPUT ausarbeitung.aux
 INPUT ausarbeitung.aux

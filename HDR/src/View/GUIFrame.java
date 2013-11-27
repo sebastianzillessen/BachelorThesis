@@ -1,9 +1,10 @@
 package View;
 
 import Ctrl.Controller;
-import Display.*;
-import Display.Plots.ImagePlot;
-import Display.Plots.Plot;
+import View.ImageTable.ImageTableModel;
+import View.ImageTable.LeftDotTableRenderer;
+import View.Plots.ImagePlot;
+import View.Plots.Plot;
 import Solver.IterativeEnergySolver;
 import View.ImageChooser.JImageChooser;
 
@@ -11,8 +12,10 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
+import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +30,8 @@ import java.util.Map;
  */
 public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
 
-    JTabbedPane tabs = new JTabbedPane();
+    // UI Elements
+    private JTabbedPane tabs = new JTabbedPane();
     private JPanel ctrlPnl;
     private ImageTableModel tableModel;
     private JTable table;
@@ -35,27 +39,179 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
     private JTextField prefix;
     private JButton btnStart;
     private JProgressBar progressBar;
-    private double lambda = 50;
-    private int iteration = 10;
-    private double mu = 5;
-    private String outputPrefix = "output_" + new Date().toString();
-    private IterativeEnergySolver.WEIGHTNING_MODES weightning = IterativeEnergySolver.WEIGHTNING_MODES.DEFAULT;
-    private long init_time = System.currentTimeMillis() / 1000;
-    private double alpha = 0;
     private NumericTextField lambdaInput;
     private NumericTextField inputIterations;
     private NumericTextField inputMu;
     private NumericTextField inputAlpha;
-    private boolean robustnessDataG;
-    private boolean robustnessSmoothnessE;
-    private boolean saltAndPepperNoise;
+    private NumericTextField inputDevStd;
+    private final DecimalFormat format = new DecimalFormat("###.###");
 
+
+    // Parameters
+    private double lambda = 50;
+    private int iteration = 10;
+    private double mu = 5;
+    private IterativeEnergySolver.WEIGHTNING_MODES weightning = IterativeEnergySolver.WEIGHTNING_MODES.DEFAULT;
+    private long init_time = System.currentTimeMillis() / 1000;
+    private boolean robustnessDataG = false;
+    private boolean robustnessSmoothnessE = false;
+    private boolean saltAndPepperNoise = false;
+    private double devStd = 0;
+    private double alpha = 0;
+
+    private String outputPrefix = "output_" + new Date().toString();
+
+    private enum ACTIONS {
+        CHOOSE_FILE,
+        START
+    }
+
+
+    /**
+     * Action Handler for the button events on the UI
+     *
+     * @param actionEvent
+     */
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+        ACTIONS a = ACTIONS.valueOf(actionEvent.getActionCommand());
+        switch (a) {
+            case CHOOSE_FILE:
+                // create JFileChooser-Object
+                JImageChooser chooser = new JImageChooser(".");
+                //Show it.
+                int returnVal = chooser.showDialog(this,
+                        "Öffnen");
+                //Process the results.
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    File[] files = chooser.getSelectedFiles();
+                    showFileProperties(files);
+                    if (files.length > 0) {
+                        btnStart.setEnabled(true);
+                    } else {
+                        btnStart.setEnabled(false);
+                    }
+                }
+                break;
+            case START:
+                if (updatePrefix()) {
+                    this.outputPrefix = prefix.getText();
+                    Map<String, Float> img = new HashMap<String, Float>();
+                    for (int i = 0; i < tableModel.getRowCount(); i++) {
+                        img.put(tableModel.getValueAt(i, 0).toString(), (Float) tableModel.getValueAt(i, 1));
+                    }
+                    try {
+                        Controller.getInstance().readImages(img, this.saltAndPepperNoise, this.devStd);
+                        append("Images read (" + (saltAndPepperNoise ? "SaltNPepperNoise" : "") + " " + (devStd > 0 ? "GaussianNoise: " + devStd : "") + ")");
+                        Controller.getInstance().solve(lambda, iteration, mu, robustnessDataG, robustnessSmoothnessE, weightning, alpha);
+                    } catch (Exception e) {
+                        append("Failure in Reading images: \n" + e.toString());
+                        e.printStackTrace();
+                    }
+                }
+                break;
+            default:
+                throw new IllegalArgumentException("Could not cast " + actionEvent.getActionCommand() + " to a ACTION.");
+        }
+    }
+
+
+    /**
+     * Constructor to build up a new GUI for the HDR Solver.
+     *
+     * @param name Display Name
+     */
+    public GUIFrame(String name) {
+        super(name);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        // add Ui Components
+        tabs.setPreferredSize(new Dimension(700, 700));
+        add(tabs, BorderLayout.CENTER);
+        buildCtrlPanel();
+        addLog();
+        addProgressBar();
+
+        loadDefaultPictures();
+        SwingUtilities.invokeLater(this);
+
+    }
+
+    /**
+     * Run method to execute the ui in seperate thread
+     */
+    @Override
+    public void run() {
+        pack();
+        setVisible(true);
+    }
+
+    /**
+     * sets the progress on the UI.
+     * @param progress Progress (0..100)
+     */
+    public void setProgress(int progress) {
+        progressBar.setEnabled(true);
+        progressBar.setValue(progress);
+    }
+
+
+
+    /**
+     * Add a Plot with a headline to the UI.
+     *
+     * @param p    Plot to be added
+     * @param name Headline in the tap
+     */
+    public void addPlot(Plot p, String name) {
+        tabs.addTab(name, p);
+        p.setOutputFileName(this.outputPrefix + "_" + name + "_" + init_time);
+    }
+
+
+    // LOG METHODS
+
+    /**
+     * Appends a log message
+     *
+     * @param s
+     */
+    @Override
+    public void append(Object s) {
+        write(s + "\n");
+        if (s instanceof Solver.Image) {
+            final Solver.Image image = (Solver.Image) s;
+            this.addPlot(new ImagePlot(image), "Image");
+        }
+    }
+
+    /**
+     * write some object to the logger
+     *
+     * @param s
+     */
+    @Override
+    public void write(final Object s) {
+        log.append(s.toString());
+    }
+
+
+    // ------------- PRIVATE METHODS
+
+
+
+    /**
+     * updates all the values from the input fields and generates a new prefix for the generated images.
+     *
+     * @return true if the reading from the input fields succeed.
+     */
     private boolean updatePrefix() {
         try {
             lambda = lambdaInput.getDoubleValue().doubleValue();
             mu = inputMu.getDoubleValue().doubleValue();
             iteration = inputIterations.getLongValue().intValue();
             alpha = inputAlpha.getDoubleValue().doubleValue();
+            devStd = inputDevStd.getDoubleValue().doubleValue();
         } catch (Exception e) {
             System.out.println(e);
             JOptionPane.showMessageDialog(this, "Fehlerhafter Input", "Die Parameter waren nicht gültig.", JOptionPane.OK_CANCEL_OPTION);
@@ -74,54 +230,12 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         s += "_We=" + weightning;
         s += "_Al=" + alpha;
         s += "_S&P=" + (saltAndPepperNoise ? "y" : "n");
+        s += "_gauss=" + (devStd > 0 ? devStd + "" : "-");
         setTitle("HDR: " + s);
         if (prefix != null)
             prefix.setText(s);
         outputPrefix = s;
         return true;
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent actionEvent) {
-        ACTIONS a = ACTIONS.valueOf(actionEvent.getActionCommand());
-        switch (a) {
-            case CHOOSE_FILE:
-                // JFileChooser-Objekt erstellen
-                JImageChooser chooser = new JImageChooser(".");
-
-                //Show it.
-                int returnVal = chooser.showDialog(this,
-                        "Öffnen");
-
-                //Process the results.
-                if (returnVal == JFileChooser.APPROVE_OPTION) {
-                    File[] files = chooser.getSelectedFiles();
-                    showFileProperties(files);
-                    if (files.length > 0) {
-                        btnStart.setEnabled(true);
-                    }
-                }
-                break;
-            case START:
-                if (updatePrefix()) {
-                    this.outputPrefix = prefix.getText();
-                    Map<String, Float> img = new HashMap<String, Float>();
-                    for (int i = 0; i < tableModel.getRowCount(); i++) {
-                        img.put(tableModel.getValueAt(i, 0).toString(), (Float) tableModel.getValueAt(i, 1));
-                    }
-                    try {
-                        Controller.getInstance().readImages(img, this.saltAndPepperNoise, false);
-                        append("Images read.");
-                        Controller.getInstance().solve(lambda, iteration, mu, robustnessDataG, robustnessSmoothnessE, weightning, alpha);
-                    } catch (Exception e) {
-                        append("Failure in Reading images: \n" + e.toString());
-                        e.printStackTrace();
-                    }
-                }
-                break;
-            default:
-                throw new IllegalArgumentException("Could not cast " + actionEvent.getActionCommand() + " to a ACTION.");
-        }
     }
 
 
@@ -130,58 +244,11 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         updatePrefix();
     }
 
-    @Override
-    public void append(Object s) {
-        write(s + "\n");
-        if (s instanceof Solver.Image) {
-            final Solver.Image image = (Solver.Image) s;
-            this.addPlot(new ImagePlot(image), "Image");
-        }
-    }
-
-
-    @Override
-    public void write(final Object s) {
-        log.append(s.toString());
-    }
-
-    @Override
-    public void run() {
-        pack();
-        setVisible(true);
-    }
-
-    public void setProgress(int progress) {
-        progressBar.setEnabled(true);
-        progressBar.setValue(progress);
-    }
-
-    public String getOutputPrefix() {
-        return outputPrefix;
-    }
-
-
-    private enum ACTIONS {
-        CHOOSE_FILE,
-        START
-    }
-
-    public GUIFrame(String name) {
-        super(name);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        tabs.setPreferredSize(new Dimension(700, 700));
-        getContentPane().add(tabs, BorderLayout.CENTER);
-        setLocationRelativeTo(null);
-        buildCtrlPanel();
+    private void addProgressBar() {
         progressBar = new JProgressBar(0, 100);
         progressBar.setEnabled(false);
         progressBar.setStringPainted(true);
-        getContentPane().add(progressBar, BorderLayout.SOUTH);
-
-        SwingUtilities.invokeLater(this);
-        loadDefaultPictures();
-
-
+        add(progressBar, BorderLayout.SOUTH);
     }
 
     private void loadDefaultPictures() {
@@ -199,7 +266,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
 
     private void buildCtrlPanel() {
         ctrlPnl = new JPanel(new BorderLayout());
-        JPanel btns = new JPanel(new GridLayout(10, 1));
+        JPanel btns = new JPanel(new GridLayout(11, 1));
         JButton btnChoose = new JButton("Bilder wählen");
         btnChoose.addActionListener(this);
         btnChoose.setActionCommand(String.valueOf(ACTIONS.CHOOSE_FILE));
@@ -209,7 +276,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         table = new JTable(tableModel);
         LeftDotTableRenderer leftDot = new LeftDotTableRenderer();
         table.getColumnModel().getColumn(0).setCellRenderer(leftDot);
-        ctrlPnl.add(new JScrollPane(table), BorderLayout.CENTER);
+        ctrlPnl.add(new JScrollPane(table), BorderLayout.SOUTH);
 
 
         btnStart = new JButton("Start");
@@ -227,14 +294,19 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         buildWightPanel(btns);
         buildAlphaSlider(btns);
 
-
-        ctrlPnl.add(btns, BorderLayout.NORTH);
+        ctrlPnl.add(btns, BorderLayout.CENTER);
 
 
         tabs.addTab("Control", ctrlPnl);
-        tabs.addTab("LOG", new JScrollPane(log));
 
+    }
 
+    private void addLog() {
+        log.setBackground(Color.black);
+        log.setForeground(Color.gray);
+        log.setLineWrap(true);
+        log.setFont(new Font("Monospaced", Font.PLAIN, 15));
+        tabs.addTab("Logs", new JScrollPane(log));
     }
 
     private void buildWightPanel(JPanel btns) {
@@ -288,7 +360,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         });
         btns.add(check3);
 
-        btns.add(new JLabel("Salt & Pepper Rauschen?"));
+        btns.add(new JLabel("Salt&Pepper (4%)"));
         JCheckBox saltNPepper = new JCheckBox("enable");
         saltNPepper.setSelected(this.robustnessSmoothnessE);
         saltNPepper.addChangeListener(new ChangeListener() {
@@ -301,6 +373,17 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         });
         btns.add(saltNPepper);
 
+        buildGaussInput(btns);
+    }
+
+    private void buildGaussInput(JPanel btns) {
+        String tool = "Bestimmt wie groß die Standardabweichung des Gauss-Filters sein soll.";
+        final JLabel l = new JLabel("Standardabweichung Gauss");
+        l.setToolTipText(tool);
+        btns.add(l);
+        inputDevStd = new NumericTextField(5,format);
+        inputDevStd.setValue(devStd);
+        btns.add(inputDevStd);
     }
 
     private void buildIterationSlider(JPanel btns) {
@@ -308,7 +391,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         final JLabel l = new JLabel("Iterationen= " + alpha);
         l.setToolTipText(tool);
         btns.add(l);
-        inputIterations = new NumericTextField();
+        inputIterations = new NumericTextField(5,format);
         inputIterations.setValue(iteration);
         btns.add(inputIterations);
     }
@@ -319,7 +402,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         l.setToolTipText(tool);
         btns.add(l);
 
-        lambdaInput = new NumericTextField();
+        lambdaInput = new NumericTextField(5,format);
         lambdaInput.setValue(lambda);
         btns.add(lambdaInput);
     }
@@ -329,7 +412,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         final JLabel l = new JLabel("Monotonie");
         l.setToolTipText(tool);
         btns.add(l);
-        inputMu = new NumericTextField();
+        inputMu = new NumericTextField(5,format);
         inputMu.setValue(mu);
         btns.add(inputMu);
     }
@@ -339,15 +422,10 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         final JLabel l = new JLabel("Räumlicher Glattheitsterm");
         l.setToolTipText(tool);
         btns.add(l);
-
-        inputAlpha = new NumericTextField();
+        inputAlpha = new NumericTextField(5,format);
         inputAlpha.setValue(alpha);
         btns.add(inputAlpha);
     }
 
-    public void addPlot(Plot p, String name) {
-        tabs.addTab(name, p);
-        p.setOutputFileName(this.outputPrefix + "_" + name + "_" + init_time);
-    }
 
 }

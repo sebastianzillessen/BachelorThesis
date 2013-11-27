@@ -8,9 +8,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 /**
  * Created with IntelliJ IDEA.
@@ -67,10 +65,10 @@ public class ConvolutionTest {
         double[][] gaussianKernel2D = Convolution.getGaussianKernel2D(2, 0.8);
         assertArrayEquals(Matrix.parse(
                 " 0.0005 0.0050 0.0109 0.0050 0.0005\n" +
-                " 0.0050 0.0522 0.1141 0.0522 0.0050\n" +
-                " 0.0109 0.1141 0.2491 0.1141 0.0109\n" +
-                " 0.0050 0.0522 0.1141 0.0522 0.0050\n" +
-                " 0.0005 0.0050 0.0109 0.0050 0.0005").toArray(), gaussianKernel2D, 0.001);
+                        " 0.0050 0.0522 0.1141 0.0522 0.0050\n" +
+                        " 0.0109 0.1141 0.2491 0.1141 0.0109\n" +
+                        " 0.0050 0.0522 0.1141 0.0522 0.0050\n" +
+                        " 0.0005 0.0050 0.0109 0.0050 0.0005").toArray(), gaussianKernel2D, 0.001);
         double[][] conv = Convolution.convolute(m.toArray(), gaussianKernel2D);
         System.out.println(new DecimalMatrix(conv));
         Matrix c = Matrix.parse(

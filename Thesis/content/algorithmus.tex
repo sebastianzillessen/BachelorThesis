@@ -6,42 +6,44 @@
 %}
 \chapter{Algorithmus von Debevec und Malik \cite{paper}}
 \label{chap:algo}
-Diese Arbeit behandelt im Kern den Ansatz von Paul E. Debevec und Jitendra Malik \cite{paper}. Trotz des ungewöhnlich hohen Alters des Artikels (Verfassung 1997) wird das Verfahren noch immer in vielen Anwendungen benutzt. Der Kerngedanke des Artikels ist es \gls{HDR} Bilder aus Bildserien zu genierieren, welche mit einer herkömmlichen Kamera-Ausrüstung aufgenommen wurden.
+Diese Arbeit behandelt im Kern den Ansatz von Paul E. Debevec und Jitendra Malik \cite{paper}. Trotz des ungewöhnlich hohen Alters des Artikels (Verfassung 1997) wird das Verfahren noch immer in vielen Anwendungen benutzt (siehe \autoref{sec:implementations}). Der Kerngedanke des Artikels ist es \gls{HDR} Bilder aus Bildserien zu generieren, welche mit einer herkömmlichen Kamera-Ausrüstung aufgenommen wurden.
 
 \section{Ansatz}
-Der Algorithmus schätzt während der Generierung des \gls{HDR} Bildes gleichzeitig auch die sog. Antwortkurve der Kamera. Diese Antwortkurve ist die kameraspezifische Abbildung, welche aus den Beleuchtungswerten der aufzunehmenden Szene digital verarbeitbare Daten erzeugt (siehe \autoref{fig:antwortkurve}). 
+Der Algorithmus schätzt während der Generierung des \gls{HDR} Bildes gleichzeitig auch die sog. Antwortkurve der Kamera. Diese Antwortkurve ist die kameraspezifische Abbildung, welche aus den Beleuchtungswerten der aufzunehmenden Szene digital weiterverwertbare Daten erzeugt (siehe \autoref{fig:antwortkurve}). 
 
-Um aus der Belichtungsserie ein \gls{HDR} Bild erzeugen zu können, müssen die Beleuchtungswerte der Kamera-Sensorik (hier $E$) herausgefunden werden. Normalerweise geschieht dies indem die Umkehrfunktion der Kamera-Antwortkurve vorab berechnet wird. Dazu muss die Kamera durch Test-Bilder vermessen und das System kalibriert werden. Beim Ansatz von Debevec und Malik hingegen wird diese Kamera-Antwortfunktion während der Generierung des \gls{HDR} Bildes ebenfalls aus der Belichtungsserie errechnet. Damit bietet es die Möglichkeit, Belichtungsserien (auch ohne Kenntnisse über die Apparatur) zu \gls{HDR} Bildern zu fusionieren.
+Um aus der Belichtungsserie ein \gls{HDR} Bild erzeugen zu können, müssen die Beleuchtungswerte der Kamera-Sensorik (hier $E$) herausgefunden werden. Normalerweise geschieht dies indem die Umkehrfunktion der Kamera-Antwortkurve vorab berechnet wird. Dazu muss die Kamera durch Test-Bilder vermessen und das System kalibriert werden. Beim Ansatz von Debevec und Malik hingegen wird diese Kamera-Antwortfunktion während der Generierung des \gls{HDR} Bildes aus der Belichtungsserie errechnet. Damit bietet es die Möglichkeit, Belichtungsserien (auch ohne Kenntnisse über die Apparatur) zu \gls{HDR} Bildern zu fusionieren.
 
 
 \subsection{Verwendete Symbole}
 In den nachfolgenden Beschreibungen werden analog zu \cite{paper} folgende Symbole verwendet:
 \begin{description}
 \item[$P$:] Die Anzahl der unterschiedlichen Belichtungen in der Bildserie
-\item[$N$:] Die Anzahl der Bildpunkte in jedem Bild (für gewöhnlich haben wir ein $n \times m$ Pixel $\Rightarrow N = n \cdot m$
-\item[$Z_{i,j}$:] Der Grauwert $i$ des Bildes $j$
-\item[$E_i$:] Beleuchtungsstärke im Pixel $i$ (ist für alle Bilder in der Serie gleich)
-\item[$\Delta t_j$:] Belichtungsdauer des Bildes $j$
+\item[$N$:] Die Anzahl der Bildpunkte in jedem Bild ($n \times m$ Bild $\Rightarrow N = n \cdot m$)
+\item[$Z_{i,j}$:] Der Grauwert $i \in [0, N-1]$ des Bildes $j \in [0, P-1]$
+\item[$Z_{min}$:] Minimale Grauwert $Z_{min} = \min \{Z_{ij}\} \; \forall i,j$. Wird aus Gründen der Vereinfachung mit $0$ belegt
+\item[$Z_{max}$:] Maximaler Grauwert $Z_{max} = \max \{Z_{ij}\} \; \forall i,j$. Wird aus Gründen der Vereinfachung mit $255$ belegt
+\item[$E_i$:] Beleuchtungsstärke im Pixel $i \in [0, N-1]$ 
+\item[$F_i$:] wird als abkürzende Notation für $\ln E_i$ verwendet
+\item[$\Delta t_j$:] Belichtungsdauer des Bildes $j \in [0, P-1]$
 \item[$f(X)$:] $f$ sei die nichtlineare Funktion, welche aus einer Belichtung $X$ in einem Pixel einen Grauwertbild $Z$ erzeugt mit $f(X) = Z$
-\item[$F_i := \ln E_i$:] Diese Schreibweise dient zur Vereinfachung
 \item[$\b g(z)$:] Ist trotz der Funktionsschreibweise tatsächlich ein Vektor mit 256 Einträgen und damit diskret (abuse of notation).
 \item[$\b{g}'(z), \; \b{g}''(z) $:] Steht für die Approximation der ersten bzw. zweiten Ableitung der diskret definierten Funktion $\b g(z)$. Für die Approximation der ersten Ableitung werden grundsätzlich Rückwärtsdifferenzen verwendet ($\b g'(z) = \b g(z) - \b g(z-1)$. Für die Approximation der zweiten Ableitung wird die zentrale Differenz verwendet ($ \b g''(z) = \b g(z-1)-2\b g(z)+\b g(z+1)$).\\
 
 \end{description}
 
 \subsection{Herleitung}
-Da aus physikalischer Sicht angenommen werden kann, dass $f$ monoton steigend ist ist auch $f^{-1}$ definiert. Damit kann die Belichtung $X$ zu jedem Pixel $i$ mit $f^{-1}(Z) = X$ berechnet werden. Die Belichtung hängt linear von der Beleuchtungsstärke $E$ und der Belichtungsdauer $\Delta t$ mit $X = E \cdot \Delta t$ ab.
+Da aus physikalischer Sicht angenommen werden kann, dass $f$ monoton steigend ist, sei auch $f^{-1}$ definiert. Damit kann die Belichtung $X$ mit $f^{-1}(Z) = X$ berechnet werden. Die Belichtung hängt linear von der Beleuchtungsstärke $E$ und der Belichtungsdauer $\Delta t$ mit $X = E \cdot \Delta t$ ab.
 
 Mithilfe dieses Rahmens lassen sich folgende Zusammenhänge darstellen:
 \begin{align*}
-Z_{ij} &= f(X)\\
+Z_{ij} &= f(X_{ij})\\
 Z_{ij} &=f(E_i \cdot \Delta t_j)&&\text{(siehe oben)}\\
 f^{-1}(Z_{ij}) &= E_i \cdot \Delta t_j & &\text{(mit Monotonie begründete Umkehrfunktion)}\\
 \ln f^{-1}(Z_{ij}) &= \ln E_i + \ln \Delta t_j&&\text{(natürlicher Logarithmus)}\\
 \b g(Z_{ij}) &:= \ln f^{-1}(Z_{ij}) = \ln E_i + \ln \Delta t_j && \text{(vereinfachte Definition)}\\
 \end{align*}
 
-Das obige Gleichungssystem hat die Unbekannten $\b g(z)$ und $E_i$. Um also das Gesamtsystem zu lösen und das \gls{HDR} Bild zu erzeugen muss nun die folgende Gleichung minimiert werden:
+Das obige Gleichungssystem hat die Unbekannten $\b g(z)$ und $\b E$. Um das Gesamtsystem zu lösen und das \gls{HDR} Bild zu erzeugen lässt sich folgendes Energiefunktional aufstellen, dass minimiert werden muss:
 
 \begin{equation}
 \label{eq:energy:default}
@@ -55,19 +57,21 @@ Das hier (und in den folgenden Gleichungen) verwendete $z$ im Glattheitsterm ist
 Durch die Minimierung von \autoref{eq:energy:default} kann $\b g$ nicht konkret bestimmt werden. Durch die Minimierung bleibt ein Skalierungsfaktor $\alpha$ unbekannt. Dies ist daran ersichtlich, dass ein Ersetzen von $\ln E_i$ durch $\ln E_i + \alpha$ und $\b g$ durch $\b g + \alpha$ keine Änderung in \autoref{eq:energy:default} hervorrufen würde. Um jedoch klare Ergebnisse für die Antwortkurven zu erhalten wird eine weitere Bedingung für $\b g$ dem \gls{LGS} hinzugefügt. Diese besagt, dass die der mittlere Grauwert $Z_{mid} = \frac{1}{2}\cdot(Z_{min}+Z_{max})$ auch eine einheitliche Beleuchtung erhalten soll: $\b g(Z_{mid}) \overset{!}{=} 0$
 
 \section{Berechnung der Antwortkurve}
-Debevec und Malik schlagen vor dieses überbestimmte \gls{LGS} in \autoref{eq:energy:default} mithilfe der \gls{SVD} zu lösen. Da das entstehende \gls{LGS} nur sehr dünn besetzt ist kann dies mit wenig Komplexität durchgeführt werden. Dazu wird die Gleichung \autoref{eq:energy:default} zunächst partiell nach $E_i$ und $\b g(k) \forall k \in [Z_{min}, Z_{max}]$ abgeleitet. Dazu wird u.a. die zentrale Approximation für die zweite Ableitung verwendet ($\b{g}''(z) = \b g(z-1)-2\b g(z)+\b g(z+1)$). Außerdem wird die Kurve durch die Zusatzbedingung $\b g (Z_{mid}) = 0$ fixiert.
+Aus dem Energiefunktional (siehe \autoref{eq:energy:default}) lassen sich durch partielles Ableiten nach $E_i$ und $\b g(k) \forall k \in [Z_{min}, Z_{max}]$ mehrere Gleichungen erstellen. Debevec und Malik schlagen vor dieses überbestimmte \gls{LGS} mithilfe der \gls{SVD} zu lösen. Da das entstehende \gls{LGS} nur sehr dünn besetzt ist kann dies mit geringem Rechenaufwand realisiert werden. Für das Aufstellen des Gleichungssystemes werden u.a. die zentrale Approximation für die zweite Ableitung ($\b{g}''(z) = \b g(z-1)-2\b g(z)+\b g(z+1)$) und die Zusatzbedingung für die Fixierung der Kurve bei $Z_{mid}$ ($\b g (Z_{mid}) = 0$) verwendet.
 
 
 \section{Konstruktion der Radiance Map}
 \label{sec:algo:radiance}
-Sobald die Antwortkurve $\b g$ bestimmt wurde kann mit ihrer Hilfe die \gls{Radiance Map} der Belichtungsserie schnell bestimmt werden.
-Dies geschieht mittels der Gleichung \autoref{eq:radiance:default}, welche nach $E_i$ umgestellt werden kann. Aus Gründen der Robustheit und um alle Bilder bei der Konstruktion der \gls{Radiance Map} zu verwenden, schlagen Debevec und Malik des Weiteren vor für die Berechnung von $\ln E_i$ alle Bilder der Belichtungsserie zu verwenden und diese gewichtet zu mitteln (siehe \autoref{eq:radiance:weight}). Diese Gleichung entsteht aus \autoref{eq:energy:weights} durch die partiellen Ableitung nach $E_i$.
+Sobald die Antwortkurve $\b g$ bestimmt wurde kann mit ihrer Hilfe die \gls{Radiance Map} der Belichtungsserie bestimmt werden. Dies geschieht mittels der \autoref{eq:radiance:default}, welche nach $E_i$ umgestellt werden kann. 
 
 \begin{align}
 \label{eq:radiance:default}
 g(Z_{ij}) &= \ln E_i + \ln \Delta t_j\\
 \ln E_i &= \b g(Z_{ij})-\ln \Delta t_j
 \end{align}
+
+Aus Gründen der Robustheit und um alle Bilder bei der Konstruktion der \gls{Radiance Map} zu verwenden, schlagen Debevec und Malik des Weiteren vor, für die Berechnung von $\ln E_i$ alle Bilder der Belichtungsserie zu verwenden und diese gewichtet zu mitteln (siehe \autoref{eq:radiance:weight}).
+
 
 \begin{align}
 \label{eq:radiance:weight}
@@ -76,12 +80,12 @@ g(Z_{ij}) &= \ln E_i + \ln \Delta t_j\\
 
 \section{Mögliche Erweiterungen des Ansatzes}
 \label{algo:schwachstellen}
-Der Grundlegende Ansatz von Debevec und Malik (\autoref{eq:energy:default}) hat einige Schwachstellen. Diese werden zum Teil bereits durch die Autoren des Artikels (vgl. \cite{paper}) angesprochen und werden hier nochmals aufgelistet.
+Der Grundlegende Ansatz von Debevec und Malik (\autoref{eq:energy:default}) hat einige Schwachstellen. Diese werden zum Teil bereits durch die Autoren des Artikels (vgl. \cite{paper}) angesprochen und werden hier der Vollständigkeit halber aufgelistet.
+
 \subsection{Gewichtungsfunktion}
 \label{algo:schwachstellen:gewichtung}
-Da $\b g$ typischerweise sehr steil in der Nähe von $Z_{min}$ und $Z_{max}$ sein wird, macht es Sinn diese Randbezirke bei der Berechnung von $\b g$ weniger Stark einzubeziehen. Aus diesem Grund wird eine Gewichtungsfunktion $w(z)$ als Sägezahn-Funktion eingeführt (siehe \autoref{eq:w}). Damit wird die Anpassung der \gls{Antwortkurve} in der Mitte stärker gewichtet und die steilen äußeren Bereiche der Kurve $\b g$ fallen nicht so sehr ins Gewicht.
-
-Diese Gewichtungsfunktion wird außerdem auch in der \nameref{sec:algo:radiance} (siehe \autoref{sec:algo:radiance}) verwendet um den Einfluss der Bildpunkte aus der kompletten Belichtungsserie zu mitteln.
+Da $\b g$ typischerweise sehr steil in der Nähe von $Z_{min}$ und $Z_{max}$ sein wird, macht es Sinn diese Randbezirke bei der Berechnung von $\b g$ weniger stark zu gewichten. Aus diesem Grund wird eine Gewichtungsfunktion $w(z)$ als Dreiecks-Funktion eingeführt (siehe \autoref{eq:w}). 
+Durch diese werden die Terme des Energiefunktionals in der Mitte stärker gewichtet und die steilen äußeren Bereiche der Kurve $\b g$ weniger. Diese Gewichtungsfunktion wird außerdem auch bei der Rekonstruktion der \gls{Radiance Map} verwendet um den Einfluss der Bildpunkte über die gesamte Belichtungsserie zu mitteln. Diese Veränderung wird in das Enegiefunktional (siehe \autoref{eq:energy:weights}) eingearbeitet.
 
 \begin{align}
 \label{eq:w}
@@ -90,8 +94,6 @@ z - Z_{min}&  \text{falls } z \leq Z_{mid}  \\
 Z_{max}-z& \text{sonst}\\
 \end{cases}
 \end{align}
-
-Dadurch verändert sich die Gleichung \autoref{eq:energy:default}:
 \begin{equation}
 \label{eq:energy:weights}
 \Omega = \sum \limits_{i=1}^{N} \sum \limits_{j=1}^{P}w^2(Z_{ij})\cdot[\b g(Z_{ij}) - \ln E_i - \ln \Delta t_j]^2 + \lambda  \sum \limits_{z=Z_{min}+1}^{Z_{max}-1} [w(z) \cdot \b{g}''(z)]^2\\
@@ -99,21 +101,20 @@ Dadurch verändert sich die Gleichung \autoref{eq:energy:default}:
 
 \subsection{Selektion von Bildpunkten}
 \label{algo:schwachstellen:selektion}
-Debevec und Malik stellen fest, dass bei der Schätzung der Kamera-Antwortkurve nicht jeden Pixel in den Ausgangsbildern verwendet werden muss. Das von ihnen vorgestellte Verfahren führt zu einem \gls{LGS} mit $N \times P + Z_{min} - Z_{max}$ Unbekannten. Um das Gleichungssystem ausreichend überbestimmt zu halten schlagen sie deswegen vor $N$ so zu wählen, dass $N\cdot(P-1) > (Z_{min}-Z_{max})$ gilt. Nur durch die Reduktion der betrachteten Pixel kann das \gls{LGS} effizient gelöst werden. Jedoch wird dadurch auch die verwendete Information aus den Bildern reduziert und somit kann es zu Abweichungen der geschätzten von der tatsächlichen Antwortkurve kommen. Außerdem werden die $E_i$ bei diesem Verfahren erst anschließend berechnet. Das Verfahren an sich bestimmt also zunächst nur eine möglichst genaue Approximation von $\b g$. 
+Debevec und Malik stellen fest, dass bei der Schätzung der Kamera-Antwortkurve nicht jeden Pixel in den Ausgangsbildern verwendet werden muss. Das von ihnen vorgestellte Verfahren führt zu einem \gls{LGS} mit $N \times P + Z_{min} - Z_{max}$ Unbekannten. Um das Gleichungssystem ausreichend überbestimmt zu halten schlagen sie deswegen vor $N$ so zu wählen, dass $N\cdot(P-1) > (Z_{min}-Z_{max})$ gilt. Nur durch die Reduktion der betrachteten Pixel kann das \gls{LGS} effizient gelöst werden. Jedoch wird dadurch auch die verwendete Information aus den Bildern reduziert und somit kann es zu Abweichungen der geschätzten von der tatsächlichen Antwortkurve kommen. Außerdem werden die $E_i$ bei diesem Verfahren erst anschließend berechnet.
 
-Diese Selektion der Referenzpunkte aus den Belichtungsserien wird von Debevec und Malik noch händisch durchgeführt. Bei $11$ Bildern in einer Belichtungsreihe schlagen sie vor ca. $50$ Bildkoordinaten zu bestimmen die für die Berechnung verwendet werden sollen. Dabei ist darauf zu achten, dass diese Koordinaten gleichmäßig über die Ausgangsbilder verteilt sind und das sie aus Regionen stammen, die keine große Varianz aufweisen. Dies macht die Schätzung der Antwortkurve jedoch auch anfällig für Rauschen auf dem Ausgangsmaterial.
+Diese Selektion der Referenzpunkte aus den Belichtungsserien wird von Debevec und Malik noch händisch durchgeführt. Bei $11$ Bildern in einer Belichtungsreihe schlagen sie vor ca. $50$ Bildkoordinaten zu bestimmen, die für die Berechnung verwendet werden sollen. Dabei ist darauf zu achten, dass diese Koordinaten gleichmäßig über die Ausgangsbilder verteilt sind und das sie aus Regionen stammen, die keine große Varianz aufweisen. Dies macht die Schätzung der Antwortkurve anfällig für Rauschen auf dem Ausgangsmaterial und soll damit verhindert werden. Einen Ansatz zum automatisierten festlegen der Bildpunkte stellen sie nicht vor.
 
 \subsection{Robustheit des Verfahrens}
 \label{algo:schwachstellen:robustheit}
-In vielen Bildbearbeituns-Algorithmen werden heutzutage robuste Funktionen eingesetzt um Messfehler und Rauschen weniger stark zu gewichten. Die übliche quadratische Bestrafung in Datentermen mit $\varphi(s^2) = s^2$ ist im Bezug auf Konstanzannahmen nicht robust. Eine typische Erweiterung ergibt sich durch den Einsatz von nichtlinearen Bestrafungsfunktionen (vgl. \cite[S. 9f, S. 87f]{bruhn06}). Diese haben den Vorteil, dass sie Ausreißer in der Eingabe (wie z.B. Messfehler oder Rauschen) bei der Minimierung abschwächen und diese somit das Ergebnis weniger stark beeinflussen. Hier wird eine sog. subquadratischen Bestrafungsfunktion (siehe \autoref{eq:penalty:non-linear}) zusammen mit ihrer Ableitung (siehe \autoref{eq:penalty:non-linear:derivate}) eingesetzt.
+In vielen Bildbearbeitungs-Algorithmen werden heutzutage robuste Funktionen eingesetzt um Messfehler und Rauschen weniger stark zu gewichten. Die übliche quadratische Bestrafung in Datentermen mit $\varphi(s^2) = s^2$ ist im Bezug auf Konstanzannahmen nicht robust. Eine typische Erweiterung ergibt sich durch den Einsatz von nichtlinearen Bestrafungsfunktionen (vgl. \cite[S. 9f, S. 87f]{bruhn06}). Diese haben den Vorteil, dass sie Ausreißer in der Eingabe (wie z.B. Messfehler oder Rauschen) bei der Minimierung abschwächen und diese somit das Ergebnis weniger stark beeinflussen. Hier wird eine sog. subquadratischen Bestrafungsfunktion (siehe \autoref{eq:penalty:non-linear}) zusammen mit ihrer Ableitung eingesetzt.
 
 \begin{align}
 \label{eq:penalty:non-linear}
-\varphi(s^2) &= \sqrt{s^2 + \epsilon^2}\\
-\label{eq:penalty:non-linear:derivate}
+\varphi(s^2) &= \sqrt{s^2 + \epsilon^2} & 
 \varphi'(s^2) &= \frac{1}{2\sqrt{s^2 + \epsilon^2}}
 \end{align}
 
 \subsection{Monotonie-Kriterium}
 \label{algo:schwachstellen:monotonie}
-Aus physikalischer Sicht muss die Kamera-Antwortkurve (streng) monoton steigend sein. Diese Eigenschaft wird für $\b g$ im Standard-Ansatz nicht weiter verfolgt. Ein Teil dieser Arbeit ist es deshalb auch, das Verfahren um eine Forderung an die Monotonie von $\b g$ zu erweitern und dieses auch zu implementieren (siehe \autoref{sec:monotonie}).
+Aus physikalischer Sicht muss die Kamera-Antwortkurve (streng) monoton steigend sein. Diese Eigenschaft wird für $\b g$ im Standard-Ansatz nicht weiter verfolgt. Ein Teil dieser Arbeit ist es deshalb auch, das Verfahren um eine Forderung an die Monotonie von $\b g$ zu erweitern und diese zu implementieren (siehe \autoref{sec:monotonie}).

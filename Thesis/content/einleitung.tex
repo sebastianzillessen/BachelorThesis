@@ -25,11 +25,25 @@ Diese \nameref{chap:impl} soll dann sukzessive um robuste Funktionen, \gls{Monot
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=0.4\textwidth]{teezer/g_noise_no_robustness}
-    \includegraphics[width=0.4\textwidth]{teezer/g_noise_robustness_raum}
-    \includegraphics[width=0.4\textwidth]{teezer/E_noise_no_robustness}
-    \includegraphics[width=0.4\textwidth]{teezer/E_noise_robustness_raum}
-    \caption{Geschätzte Antwortkurven und zugehöriges HDR-Bild für eine Bilderserie~\cite{tellone}. Mit 4\% \gls{SaltAndPepperNoise}. Links: ohne robuste Bestrafungsterme. Rechts mit robusten Bestrafungstermen und räumlicher Glattheitsforderung. Das HDR-Bild wurde mittels lokalem Reinhard-Tone-Mapper (vgl. \autoref{sec:tone-mapping}) erstellt.}
+    \includegraphics[width=2cm]{img/1_6}
+    \includegraphics[width=2cm]{img/1_10}
+    \includegraphics[width=2cm]{img/1_20}
+    \includegraphics[width=2cm]{img/1_40}
+    \includegraphics[width=2cm]{img/1_60}
+    \includegraphics[width=2cm]{img/1_160}
+    \caption{Die in dieser Ausarbeitung häufig verwendete Belichtungsserie besteht aus sechs Einzelaufnahmen mit den Belichtungszeiten 1/6, 1/10, 1/20, 1/40, 1/60 und 1/160 (v. l.) \cite{tellone}.}
+    \label{fig:teezer}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{teezer/g_noise_no_robustness}
+    \includegraphics[width=0.45\textwidth]{teezer/g_noise_robustness_raum}
+    \includegraphics[width=0.45\textwidth]{teezer/E_noise_no_robustness}
+    \includegraphics[width=0.45\textwidth]{teezer/E_noise_robustness_raum}
+    \caption{Geschätzte Antwortkurven und zugehöriges HDR-Bild für die Bilderserie \cite{tellone} mit \gls{SaltAndPepperNoise}. \textbf{o.l.}: ohne robuste Bestrafungsterme. \textbf{o.r.}: mit robusten Bestrafungstermen und räumlicher Glattheitsforderung. \textbf{unten}: Das HDR-Bild wurde mittels lokalem Reinhard-Tone-Mapper (vgl. \autoref{sec:tone-mapping}) erstellt.}
     \label{fig:teezer}
   \end{center}
 \end{figure}

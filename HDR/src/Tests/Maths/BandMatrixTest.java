@@ -1,19 +1,17 @@
 package Tests.Maths;
 
+import Maths.BandMatrix;
 import Maths.DecimalMatrix;
 import Maths.DecimalVector;
 import Maths.Matrix;
-import Maths.BandMatrix;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.math.BigDecimal;
 import java.util.Arrays;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.fail;
 
 /**
  * Created with IntelliJ IDEA.

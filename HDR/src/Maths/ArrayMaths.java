@@ -3,13 +3,20 @@ package Maths;
 import java.util.Set;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sebastianzillessen
- * Date: 15.11.13
- * Time: 14:07
- * To change this template use File | Settings | File Templates.
+ * Helpermethods to perform some frequently used operations on Arrays.
+ *
+ * @author sebastianzillessen
  */
 public class ArrayMaths {
+
+    private ArrayMaths(){
+
+    }
+    /**
+     * Transforms an int array to double
+     * @param d int array
+     * @return same array as double
+     */
     public static double[] intToDouble(int[] d) {
         double[] r = new double[d.length];
         for (int i = 0; i < d.length; i++) {
@@ -18,6 +25,11 @@ public class ArrayMaths {
         return r;
     }
 
+    /**
+     * Transforms an Integer array to int
+     * @param indexes Integer array
+     * @return same array int
+     */
     public static int[] TointArray(Integer[] indexes) {
         int[] r = new int[indexes.length];
 
@@ -27,24 +39,34 @@ public class ArrayMaths {
         return r;
     }
 
+    /**
+     * Transforms an Integer set to int
+     * @param indexes Integer set
+     * @return same array int
+     */
+
     public static int[] TointArray(Set<Integer> indexes) {
         return TointArray((Integer[]) indexes.toArray(new Integer[indexes.size()]));
     }
 
 
-    public static double round(double targetValue, int roundToDecimalPlaces) {
-
-        int valueInTwoDecimalPlaces = (int) (targetValue * Math.pow(10, roundToDecimalPlaces));
-
-        return (float) (valueInTwoDecimalPlaces / Math.pow(10, roundToDecimalPlaces));
+    /**
+     * Rounds a double value with a given presicion of decimal places
+     * @param value the value to round
+     * @param precisionDigets the number of digests
+     * @return the rounded value
+     */
+    public static double round(double value, int precisionDigets) {
+        int valueInTwoDecimalPlaces = (int) (value * Math.pow(10, precisionDigets));
+        return (float) (valueInTwoDecimalPlaces / Math.pow(10, precisionDigets));
     }
 
 
     /**
-     * returns the maximum difference of the the arrays in each component
+     * Returns the maximum difference of the the arrays in each component
      *
-     * @param a1
-     * @param a2
+     * @param a1 array 1
+     * @param a2 array 2
      * @return maximum difference (regarded on components)
      */
     public static double diffMax(double[] a1, double[] a2) {

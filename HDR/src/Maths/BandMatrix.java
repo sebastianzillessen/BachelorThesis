@@ -3,32 +3,35 @@ package Maths;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Set;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sebastianzillessen
- * Date: 03.11.13
- * Time: 18:45
- * To change this template use File | Settings | File Templates.
+ * This implements a band Matrix with diagonales from top left to bottom right.
+ * It can be used to save memory.
+ *
+ * @author sebastianzillessen
  */
 public class BandMatrix extends Matrix {
 
-    final int MAX_ITERATIONS_SOR = 100;
+
+    private final int MAX_ITERATIONS_SOR = 100;
+    //If we only have a change of 1 promille it is already fine!
+    private final double ACCEPTED_DIFFERENCE_SOR = 0.001;
+    //less then 2 percent improvement is already done ;)
+    private final double ACCEPTED_PERCENTAGE_RESIDUUM_SOR = 0.02;
+    private final double OMEGA_SOR = 1.2;
+
 
     /**
-     * If we only have a change of 1 promille it is already fine!
+     * creates a new BandMatrix out of an existing matrix (can sometimes be good for transformations)
+     *
+     * @param m
      */
-    final double ACCEPTED_DIFFERENCE_SOR = 0.001;
-    /**
-     * less then 2 percent improvement is already done ;)
-     */
-    final double ACCEPTED_PERCENTAGE_RESIDUUM_SOR = 0.02;
-
-    final double OMEGA_SOR = 1.2;
-
-
     public BandMatrix(Matrix m) {
         this(m.cols(), extractBands(m));
         // init values

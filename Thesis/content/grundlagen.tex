@@ -125,31 +125,32 @@ Für die Abspeicherung der \gls{HDR} Bilder werden in \autoref{tab:formats} die 
 
 \subsection{RGBE - Das .hdr Format}
 
-Dieses Format wurde ursprünglich unter den Dateiendungen $.hdr$ und $.pic$ eingeführt. Abgesehen von den Metadaten (wie Bildgröße, Ausrichtung und den notwendigen Angaben zur verwendeten Kodierung) werden die Bildpunkte mit 32-bit dargestellt. Diese umfassen die Kanäle für Rot, Grün und Blau sowie einen Exponenten, was zu einer Vergrößerung des Dynamikbereiches führt \cite[S. 92]{Reinhard}.
+Dieses Format wurde ursprünglich unter den Dateiendungen $.hdr$ und $.pic$ eingeführt. Abgesehen von den Metadaten (wie z.B. Bildgröße, Ausrichtung, notwendigen Angaben zur verwendeten Kodierung, etc.) werden die Bildpunkte mit 32-bit dargestellt. Diese umfassen die Kanäle für Rot, Grün und Blau sowie einen Exponenten, was zu einer Vergrößerung des Dynamikbereiches führt \cite[S. 92]{Reinhard}.
 
 \subsection{TIFF - Gleitkomma Codierung}
 \label{sub:tiff}
-Das Format $.tif$ bzw. $.tiff$ enthält eine 32-bit Kodierung pro Komponente (also 96-bit für einen Bildpunkt). Dabei werden die Bildpunkte mittels Gleitkommazahlen dargestellt\cite{adobe:tiff}. Dieser Standard unterstützt bereits eine sehr hohe Genauigkeit mit fast 79 Abstufungen. Dazu benötigt dieses Dateiformat im Vergleich zu anderen am meisten Speicherplatz. Mit dieser Darstellung lassen sich nahezu verlustfreie Abspeicherungen von \gls{HDR} Bildern erreichen. Im Standard von 1992 wurde auf jede Form der Komprimierung verzichtet \cite[S. 93]{Reinhard}. Es kann jedoch um verschieden Kompressionsverfahren erweitert werden. \texttt{LogLuv} ist beispielsweise ein solches, bei dem die Werte logarithmisch skaliert und quantisiert werden \cite{logluv}. 
+Das Format $.tif[f]$ enthält eine 32-bit Kodierung pro Komponente (also 96-bit für einen Bildpunkt). Dabei werden die Bildpunkte mittels Fließkommazahlen dargestellt \cite{adobe:tiff}. Dieser Standard unterstützt bereits eine sehr hohe Genauigkeit. Dazu benötigt dieses Dateiformat im Vergleich zu anderen jedoch auch am meisten Speicherplatz. Allerdings lassen sich nahezu verlustfreie Abspeicherungen von \gls{HDR} Bildern erreichen. Im Standard von 1992 wurde auf jede Form der Komprimierung verzichtet \cite[S. 93]{Reinhard}. Dieser kann jedoch um verschieden Kompressionsverfahren erweitert werden. \texttt{LogLuv} ist beispielsweise ein solches, bei dem die Werte logarithmisch skaliert und quantisiert werden \cite{logluv}. 
 
 
 \subsection{EXR - EXtended Range Format}
 
-Dieses Format wurde 2002\footnote{www.openexr.com} veröffentlicht und basiert ebenfalls auf der Speicherung von Gleitkommazahlen. In einem Fall des Formates werden die Gleitkommazahlen jedoch nur mit 16 Bit (Hälfte der normalen Anzahl) abgespeichert: ein Bit für das Vorzeichen, fünf für den Exponenten und zehn für die Mantisse. Für diese Komprimierung sind Quantisierungsschritte von unter 0.1\% notwendig. Dieser Wert liegt weit unter dem durch das menschliche Auge erkennbaren und ist somit verlustfrei durchzuführen (vgl. \cite[S. 97f]{Reinhard}).
+Dieses Format\footnote{www.openexr.com} wurde 2002 veröffentlicht und basiert ebenfalls auf der Speicherung von Fließkommazahlen. Dabei ist es jedoch auch möglich die Fließkommazahlen nur mit 16 Bit (Hälfte der normalen Anzahl) abzuspeichern: ein Bit für das Vorzeichen, fünf für den Exponenten und zehn für die Mantisse. Für diese Komprimierung sind Quantisierungsschritte von unter 0.1\% vorgesehen und damit für das menschliche Auge nicht erkennbar. Dadurch ist die Kompression quasi verlustfrei durchzuführen (vgl. \cite[S. 97f]{Reinhard}).
 
 %------------------------------------------------------------------------------------------------------------
 \section{Bilddarstellung}
 \label{subsec:ToneMapping}
- Für die Darstellung der \glspl{Radiance Map} (eine Form der Repräsentation der generierten Bilder) gibt es vereinzelte spezielle Hardware, die in der Lage sind den erweiterten Dynamikumfang darzustellen. Sehr viel häufiger kommen jedoch sog. \gls{Tone-Mapping} (dt.: Dynamikkompressions) Verfahren zum Einsatz. Diese stellen ein Bild mit erhöhtem \gls{Dynamikumfang} durch eine andere Skalierung des Bildbereichs auf handelsüblichen Monitoren oder als herkömmliche Bilddateien dar. 
+ Für die Darstellung der \glspl{Radiance Map} gibt es vereinzelte spezielle Hardware, die in der Lage sind den erweiterten Dynamikumfang darzustellen. Sehr viel häufiger kommen jedoch sog. \gls{Tone-Mapping} (dt.: Dynamikkompressions) Verfahren zum Einsatz. Diese stellen ein Bild mit erhöhtem \gls{Dynamikumfang} durch eine andere Skalierung des Bildbereichs auf handelsüblichen Monitoren oder als herkömmliche Bilddateien dar. 
  
- Der Kerngedanke beim Tone Mapping besteht darin, einen geeigneten Weg für die Zuordnung von Bildpunkten aus dem \gls{HDR} Bild in das \gls{LDR} Bild zu finden (vgl. \cite[S. 145]{Bloch2012}). Diese Zuordnungsfunktionen nennen sich \gls{Tone-Mapping} Operatoren und können generell in zwei Kategorien unterschieden werden. Die globalen Operatoren (siehe \autoref{sub:tone:global}) bearbeiten alle Bildpunkte gleich, während die lokalen Operatoren (siehe \autoref{sub:tone:local}) Informationen aus der Umgebung in die Berechnung in jedem Bildpunkt mit einbeziehen.
+ Der Kerngedanke beim Tone Mapping besteht darin, einen geeigneten Weg für die Zuordnung von Bildpunkten aus dem \gls{HDR} Bild in das \gls{LDR} Bild zu finden (vgl. \cite[S. 145]{Bloch2012}). Diese Zuordnungsfunktionen nennen sich \gls{Tone-Mapping} Operatoren und können generell in zwei Kategorien unterschieden werden. Die globalen Operatoren (siehe \autoref{sub:tone:global}) bearbeiten alle Bildpunkte gleich, während die lokalen Operatoren (siehe \autoref{sub:tone:local}) Informationen aus der Umgebung in die Berechnung an jedem Bildpunkt mit einbeziehen.
  
 
  \subsection{Globale Tone Mapping Operatoren}
 \label{sub:tone:global}
-Bei globalen \gls{Tone-Mapping} Operatoren wird die gesamte Farbkurve (engl. tone curves) modifiziert. Die Veränderungen können auf den verschiedenen Farbkanälen unterschiedlich sein. Auch die Berechnung der modifizierten Kurve kann sich ändern (vgl. \cite[S. 146]{Bloch2012}).
+Bei globalen \gls{Tone-Mapping} Operatoren wird die gesamte Farbkurve (engl. tone curves) modifiziert. Die Veränderungen können auf den verschiedenen Farbkanälen unterschiedlich sein. Auch die Berechnung der modifizierten Kurve kann sich aufgrund des Bildes ändern (vgl. \cite[S. 146]{Bloch2012}). 
 
+Es bestehen viele verschiedene Ansätze für globale \gls{Tone-Mapping} Operatoren, die unterschiedliche Vor- und Nachteile aufweisen können.
 In dieser Arbeit wurde lediglich der \gls{Tone-Mapping} Operator von Reinhard et al. \cite{ReinhardToneMapper} implementiert und verwendet. Dies ist die vereinfachte Form des komplexeren lokalen Operators, der im gleichen Artikel veröffentlich wurde.
-Hierzu wird zunächst die durchschnittliche Wert des Logarithmus aus der Helligkeit des Bildes ($L_w(x,y)$) bestimmt. Dieser wird als charakteristischer Wert der Szene $\tilde{L}_w$ beschrieben. Anschließend werden die skalierten Helligkeiten des Bildes bestimmt (siehe \autoref{eq:skaled:greyvalues}). $\alpha$ bestimmt die Lage des mittleren Grauwertes und hat in der Regel den Wert $0.18$. Daraus lässt sich dann der einfache globale Operator in \autoref{eq:tonemapping:locale} erstellen.
+Hierzu wird zunächst die durchschnittliche Wert des Logarithmus aus der Helligkeit des Bildes ($L_w(x,y)$) bestimmt. Dieser wird als charakteristischer Wert der Szene $\tilde{L}_w$ beschrieben. Anschließend werden die skalierten Helligkeiten des Bildes bestimmt (siehe \autoref{eq:skaled:greyvalues}). $\alpha$ bestimmt die Lage des mittleren Grauwertes und hat in der Regel den Wert $0.18$. Daraus lässt sich dann der einfache globale Operator in \autoref{eq:tonemapping:global} erstellen.
 \begin{align}
 \label{eq:skaled:greyvalues}
 L(x,y) = \frac{\alpha}{\tilde{L}_w} L_w(x,y)\\
@@ -161,25 +162,27 @@ L_d(x, y) =\frac{L(x,y)}{1+ L(x,y)}
 \subsection{Lokale Tone Mapping Operatoren}
 \label{sub:tone:local}
 
-Reinhard et al. \cite{ReinhardToneMapper} stellen in ihrer Ausarbeitung auch einen weitaus komplexeren Operator vor, der die lokalen Eigenschaften des Bildes mit analysiert und dem entsprechend den Operator anpasst. Bei diesem handelt es sich um einen lokalenen \gls{Tone-Mapping} Operator, der dodging-and-burning (dt. abwedeln) zur Berechnung verwendet. Bei diesem Verfahren handelt es sich um eine Technik, bei der die Belichtungszeit in einzelnen Bereichen des Bildes vergrößert wird und das eigentlich aus der analogen Fotografie stammt. Die Wahl der einzelnen Bereiche geschieht durch die Berechnung des lokalen Kontrastes im Bild. Die Reichweite des Einflusses der umliegenden Bildpunkte wird über diese Bereiche gesteuert.
+Lokale \gls{Tone-Mapping} Operatoren können bei der Zuordnung eines Wertes aus dem \gls{HDR} in das \gls{LDR} Bild auch die lokale Umgebung eines jeden Bildpunktes berücksichtigen. Damit erreichen Sie besonders in sehr dynamischen Bildern bessere Ergebnisse und können mehr Details in den Bildern hervorheben. Auch hier gibt es sehr viele verschiedene Operatoren, die alle ihre Vor- und Nachteile haben. Da keine Analyse der \gls{Tone-Mapping} Operatoren im Fokus der Arbeit stand, wurde hier ebenfalls ein Operator gewählt.
+ 
+Reinhard et al. \cite{ReinhardToneMapper} stellen in ihrer Ausarbeitung auch einen weitaus komplexeren Operator vor, der die lokalen Eigenschaften des Bildes mit analysiert und dem entsprechend den Operator anpasst. Bei diesem handelt es sich um einen lokalenen \gls{Tone-Mapping} Operator, der dodging-and-burning (dt. abwedeln) zur Berechnung verwendet. Dieses Verfahren ist eine Technik, die aus der analogen Fotografie stammt. Dabei wird die Belichtungszeit in einzelnen Bereichen des Bildes verändert, um dies bei der Entwicklung des Filmmaterials anders zu behandeln. Die Wahl der einzelnen Bereiche geschieht im technischen Ansatz durch die Berechnung des lokalen Kontrastes im Bild. Die Reichweite des Einflusses der umliegenden Bildpunkte wird über diese Bereiche gesteuert.
 
-Auf eine weitere Beschreibung des Verfahrens wird hier aus Gründen der Komplexität des Algorithmus verzichtet.
+Auf eine weitere Beschreibung des Verfahrens wird hier aus Gründen der Komplexität verzichtet.
 
 
 %------------------------------------------------------------------------------------------------------------
 \section{Software zur Erstellung von HDR Bildern}
 \label{sec:software}
-Herkömmlich Programme zur Bildbearbeitung (z.B. \texttt{Photoshop}\footnote{\url{http://www.adobe.com/de/products/photoshop.html}} oder \texttt{GIMP}\footnote{\url{http://www.gimp.org} mit Plugin \texttt{Exposure Blend} (\url{http://tir.astro.utoledo.edu/jdsmith/code/exposure_blend.php})}) unterstützen die Erzeugung von \gls{HDR} Bildern aus Belichtungsserie recht gut. Es gibt in der Regel mehrere \gls{Tone-Mapping} Operatoren deren Parameter anschaulich verändert werden können. Diese trumpfen mit hohem Funktionsumfang, vielfältigen Einstellungsvarianten und der Möglichkeit der weiteren Bearbeitung auf.
-
-Darüber hinaus gibt es verschiedene Programme, die speziell auf die Erzeugung von \gls{HDR} Bildern spezialisiert sind (z.B. \texttt{Photomatix}\footnote{\url{http://www.hdrsoft.com/de/}} oder \texttt{Luminance HDR}\footnote{http://qtpfsgui.sourceforge.net}). Der Funktionsumfang dieser Programme ist verhältnismäßig klein, führt jedoch auch Laien schnell zum Ziel, da (wie z.B. bei \texttt{Luminance HDR}, siehe \autoref{fig:luminance}) interaktive Assistenten den Benutzer bei der Erstellung anleiten. 
-
-\begin{figure}
+Herkömmlich Programme zur Bildbearbeitung (z.B. \texttt{Photoshop}\footnote{\url{http://www.adobe.com/de/products/photoshop.html}} oder \texttt{GIMP}\footnote{\url{http://www.gimp.org} mit Plugin \texttt{Exposure Blend} (\url{http://tir.astro.utoledo.edu/jdsmith/code/exposure_blend.php})}) unterstützen die Erzeugung von \gls{HDR} Bildern aus Belichtungsserie recht gut. Es gibt in der Regel mehrere \gls{Tone-Mapping} Operatoren, deren Parameter anschaulich verändert werden können. Diese trumpfen mit hohem Funktionsumfang, vielfältigen Einstellungsvarianten und der Möglichkeit der weiteren Bearbeitung auf.
+\begin{figure}[h]
   \begin{center}
     \includegraphics[width=0.8\textwidth]{Luminance}
     \caption{Der Erstell-Assistent von \texttt{Luminance HDR}. Auch hier wird intern der Algorithmus von Debevec und Malik \cite{paper} verwendet.}
     \label{fig:luminance}
   \end{center}
 \end{figure}
+
+Darüber hinaus gibt es verschiedene Programme, die speziell auf die Erzeugung von \gls{HDR} Bildern spezialisiert sind (z.B. \texttt{Photomatix}\footnote{\url{http://www.hdrsoft.com/de/}, kostenpflichtig} oder \texttt{Luminance HDR}\footnote{\url{http://qtpfsgui.sourceforge.net}, Freeware}). Der Funktionsumfang dieser Programme ist verhältnismäßig klein, führt jedoch auch Laien schnell zum Ziel, da (wie z.B. bei \texttt{Luminance HDR}, siehe \autoref{fig:luminance}) interaktive Assistenten den Benutzer bei der Erstellung anleiten. 
+
 
 \begin{figure}
   \begin{center}
@@ -189,5 +192,8 @@ Darüber hinaus gibt es verschiedene Programme, die speziell auf die Erzeugung v
   \end{center}
 \end{figure}
 
+Als weitere Beispiele für HDR-Software seien hier außerdem \texttt{Dynamic-Photo HDR}\footnote{\url{http://www.mediachance.com/hdri/index.html}, kostenpflichtig} und \texttt{HDR Darkroom}\footnote{\url{http://www.everimaging.com}, kostenpflichtig} genannt. Diese haben sehr viele \gls{Tone-Mapping} Operatoren implementiert und können sowohl realistische als auch sehr verfremdete \gls{HDR} Bilder generieren. 
+
+Ein wirklich einfaches Programm ist \texttt{Picturenaut}\footnote{\url{http://www.hdrlabs.com/picturenaut/}, Freeware}. Die Anzahl und der Funktionsumfang der implementierten \gls{Tone-Mapping} Operatoren ist limitiert, jedoch liefert das Programm recht rasch realitätsgetreue Bilder.
 
 

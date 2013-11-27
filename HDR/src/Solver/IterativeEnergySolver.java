@@ -1,8 +1,9 @@
 package Solver;
 
 import Ctrl.Controller;
-import Display.Plots.ScatterPlot;
-import Maths.*;
+import View.Plots.ScatterPlot;
+import Maths.BandMatrix;
+import Maths.DecimalVector;
 
 import java.util.List;
 
@@ -17,7 +18,6 @@ public class IterativeEnergySolver extends IHDRSolver {
     private final boolean robustnessDataG;
     private final boolean robustnessSmoothnessE;
     private double alpha;
-    private int GLOBAL_INNER_ITERATIONS = 5;
     private static final double EPSILON_2 = 0.0001d;
     private final int iterations;
     private final int N;
@@ -65,10 +65,6 @@ public class IterativeEnergySolver extends IHDRSolver {
         this.robustnessDataG = robustnessDataG;
         this.robustnessSmoothnessE = robustnessSmoothnessE;
         this.weightMode = weightMode;
-
-
-        System.out.println(this);
-
         initLnT(images);
         // initialize robustness function with "1"
         initPhiData();
@@ -181,11 +177,9 @@ public class IterativeEnergySolver extends IHDRSolver {
     private DecimalVector calculateG(DecimalVector F, DecimalVector g, int iteration) {
         int MAX_ITERATIONS = 1;
         if (robustnessDataG || mu > 0) {
-            MAX_ITERATIONS = GLOBAL_INNER_ITERATIONS;
-            System.out.println("We have robustness or monotonie. So we will iterate the G Process");
+            MAX_ITERATIONS = iterations;
         }
         for (int iterations = 0; iterations < MAX_ITERATIONS; iterations++) {
-            System.out.print(".");
             //update_phi_smooth(g);
             update_phi_data(g, F);
             BandMatrix m = buildDerivateMatrix();
@@ -203,7 +197,6 @@ public class IterativeEnergySolver extends IHDRSolver {
                 g = g.subtract(g.get(127));
             }
         }
-        System.out.println();
         return g;
     }
 
@@ -235,12 +228,10 @@ public class IterativeEnergySolver extends IHDRSolver {
                 vwwv.set(i, i, w2(i));
             }
         }
-        System.out.println(mu);
 
         // mu *(dt * vt * wt * w * v * d)
         // = mu (dt * vwwv * d)
         BandMatrix mon = dt.mult(vwwv.mult(d)).mult(mu);
-        //mon.toFileSync("calc/Monotonie.txt");
         return m.add(mon);
     }
 
@@ -269,7 +260,7 @@ public class IterativeEnergySolver extends IHDRSolver {
     private DecimalVector calculateF(DecimalVector g, DecimalVector F, int i) {
         int MAX_ITERATIONS = 1;
         if (!robustnessDataG) {
-            MAX_ITERATIONS = GLOBAL_INNER_ITERATIONS;
+            MAX_ITERATIONS = iterations;
         }
         for (int it = 0; it < MAX_ITERATIONS; it++) {
             if (robustnessDataG) {
@@ -334,6 +325,7 @@ public class IterativeEnergySolver extends IHDRSolver {
         //Controller.getInstance().getDisplay().addPlot(enPlot, "Energieverlauf");
 
         for (int i = 0; i < iterations && !isCancelled(); i++) {
+            Controller.getInstance().getDisplay().append("Running iteration " + i + " out of " + iterations);
             setProgress(100 * i / iterations);
             F = calculateF(g, F, i);
             setProgress(getProgress() + 100 / (iterations * 2));
@@ -344,7 +336,6 @@ public class IterativeEnergySolver extends IHDRSolver {
             try {
                 energy[i / energySteps] = calculateEnergy(F, g);
             } catch (Exception e) {
-                System.out.println("Did not add energy");
             }
             enPlot.setY(energy);
             //}

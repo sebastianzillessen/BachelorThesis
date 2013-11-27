@@ -27,12 +27,12 @@
  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */ 
+ */
 
 package View.ImageChooser;
 
+import javax.swing.filechooser.FileFilter;
 import java.io.File;
-import javax.swing.filechooser.*;
 
 /* ImageFilter.java is used by FileChooserDemo2.java. */
 public class ImageFilter extends FileFilter {
@@ -46,12 +46,12 @@ public class ImageFilter extends FileFilter {
         String extension = Utils.getExtension(f);
         if (extension != null) {
             if (extension.equals(Utils.tiff) ||
-                extension.equals(Utils.tif) ||
-                extension.equals(Utils.gif) ||
-                extension.equals(Utils.jpeg) ||
-                extension.equals(Utils.jpg) ||
-                extension.equals(Utils.png)) {
-                    return true;
+                    extension.equals(Utils.tif) ||
+                    extension.equals(Utils.gif) ||
+                    extension.equals(Utils.jpeg) ||
+                    extension.equals(Utils.jpg) ||
+                    extension.equals(Utils.png)) {
+                return true;
             } else {
                 return false;
             }

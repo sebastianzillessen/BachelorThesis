@@ -9,9 +9,7 @@ import Maths.Matrix;
  * Date: 16.07.13
  * Time: 17:48
  * To change this template use File | Settings | File Templates.
- * <p/>
- * <p/>
- * <p/>
+ *
  * From: http://www.drama.uga.edu/~jkundert/DRAMA5310/SoundFX/SFX-Dvd1/FM%20Samples/12-03B/Drum%20Styles%20Vol4/ROCK_KIT/reinhard.pdf
  */
 public class ReinhardMapping extends ToneMapping {

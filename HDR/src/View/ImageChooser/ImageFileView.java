@@ -27,13 +27,13 @@
  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */ 
+ */
 
 package View.ImageChooser;
 
-import java.io.File;
 import javax.swing.*;
-import javax.swing.filechooser.*;
+import javax.swing.filechooser.FileView;
+import java.io.File;
 
 /* ImageFileView.java is used by FileChooserDemo2.java. */
 public class ImageFileView extends FileView {
@@ -60,14 +60,14 @@ public class ImageFileView extends FileView {
 
         if (extension != null) {
             if (extension.equals(Utils.jpeg) ||
-                extension.equals(Utils.jpg)) {
+                    extension.equals(Utils.jpg)) {
                 type = "JPEG Image";
-            } else if (extension.equals(Utils.gif)){
+            } else if (extension.equals(Utils.gif)) {
                 type = "GIF Image";
             } else if (extension.equals(Utils.tiff) ||
-                       extension.equals(Utils.tif)) {
+                    extension.equals(Utils.tif)) {
                 type = "TIFF Image";
-            } else if (extension.equals(Utils.png)){
+            } else if (extension.equals(Utils.png)) {
                 type = "PNG Image";
             }
         }
@@ -80,12 +80,12 @@ public class ImageFileView extends FileView {
 
         if (extension != null) {
             if (extension.equals(Utils.jpeg) ||
-                extension.equals(Utils.jpg)) {
+                    extension.equals(Utils.jpg)) {
                 icon = jpgIcon;
             } else if (extension.equals(Utils.gif)) {
                 icon = gifIcon;
             } else if (extension.equals(Utils.tiff) ||
-                       extension.equals(Utils.tif)) {
+                    extension.equals(Utils.tif)) {
                 icon = tiffIcon;
             } else if (extension.equals(Utils.png)) {
                 icon = pngIcon;

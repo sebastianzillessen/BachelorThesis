@@ -1,15 +1,14 @@
-\glossaryentry{LGS?\glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineares Gleichungssystem}{\relax }|setentrycounter[]{page}\glsnumberformat}{5}
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{5}
 \glossaryentry{Salt \& Pepper Rauschen?\glossaryentryfield{SaltAndPepperNoise}{\glsnamefont{Salt \& Pepper Rauschen}}{Das sog. Salt \& Pepper Rauschen beschreibt eine Verkörnung des Bildes, bei Pixel auf weiß oder schwarz gesetzt sind. Dies kann durch Sensor- oder Messfehler entstehen oder durch Übertragungs- oder Abspeicherungsfehler. Salt \& Pepper Rauschen kann künstlich sehr leicht produziert werden, indem einzelne Bildpunkte zufällig auf weiß oder schwarz gesetzt werden. }{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{Monotonie?\glossaryentryfield{Monotonie}{\glsnamefont{Monotonie}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
-\glossaryentry{Salt \& Pepper Rauschen?\glossaryentryfield{SaltAndPepperNoise}{\glsnamefont{Salt \& Pepper Rauschen}}{Das sog. Salt \& Pepper Rauschen beschreibt eine Verkörnung des Bildes, bei Pixel auf weiß oder schwarz gesetzt sind. Dies kann durch Sensor- oder Messfehler entstehen oder durch Übertragungs- oder Abspeicherungsfehler. Salt \& Pepper Rauschen kann künstlich sehr leicht produziert werden, indem einzelne Bildpunkte zufällig auf weiß oder schwarz gesetzt werden. }{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
-\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{11}
-\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
+\glossaryentry{Salt \& Pepper Rauschen?\glossaryentryfield{SaltAndPepperNoise}{\glsnamefont{Salt \& Pepper Rauschen}}{Das sog. Salt \& Pepper Rauschen beschreibt eine Verkörnung des Bildes, bei Pixel auf weiß oder schwarz gesetzt sind. Dies kann durch Sensor- oder Messfehler entstehen oder durch Übertragungs- oder Abspeicherungsfehler. Salt \& Pepper Rauschen kann künstlich sehr leicht produziert werden, indem einzelne Bildpunkte zufällig auf weiß oder schwarz gesetzt werden. }{\relax }|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{RGB-Farbraum?\glossaryentryfield{RGB-Farbraum}{\glsnamefont{RGB-Farbraum}}{test}{\relax }|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{13}
@@ -51,20 +50,34 @@
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{LDR?\glossaryentryfield{LDR}{\glsnamefont{LDR}}{Low Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{19}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{21}
+\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{21}
+\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{21}
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{21}
 \glossaryentry{LDR?\glossaryentryfield{LDR}{\glsnamefont{LDR}}{Low Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{23}
+\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{LDR?\glossaryentryfield{LDR}{\glsnamefont{LDR}}{Low Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{LDR?\glossaryentryfield{LDR}{\glsnamefont{LDR}}{Low Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
+\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
+\glossaryentry{CMOS?\glossaryentryfield{CMOS}{\glsnamefont{CMOS}}{Complementary Metal Oxide Semiconductor}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
+\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
+\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
+\glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{24}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{25}
@@ -77,30 +90,30 @@
 \glossaryentry{LGS?\glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineares Gleichungssystem}{\relax }|setentrycounter[]{page}\glsnumberformat}{27}
 \glossaryentry{Radiance Map?\glossaryentryfield{Radiance Map}{\glsnamefont{Radiance Map}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{27}
 \glossaryentry{Radiance Map?\glossaryentryfield{Radiance Map}{\glsnamefont{Radiance Map}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{27}
-\glossaryentry{Kamera Antwortkurve?\glossaryentryfield{Antwortkurve}{\glsnamefont{Kamera Antwortkurve}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{Radiance Map?\glossaryentryfield{Radiance Map}{\glsnamefont{Radiance Map}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
 \glossaryentry{LGS?\glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineares Gleichungssystem}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
 \glossaryentry{LGS?\glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineares Gleichungssystem}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
 \glossaryentry{LGS?\glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineares Gleichungssystem}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
 \glossaryentry{Radiance Map?\glossaryentryfield{Radiance Map}{\glsnamefont{Radiance Map}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{31}
 \glossaryentry{LGS?\glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineares Gleichungssystem}{\relax }|setentrycounter[]{page}\glsnumberformat}{32}
+\glossaryentry{Pentadiagonal-Matrix?\glossaryentryfield{Pentadiagonal-Matrix}{\glsnamefont{Pentadiagonal-Matrix}}{ist eine (analog zu einer Tridiagonal-Matrix) eine quadratische Matrix, bei der nur die fünf zentralen Diagonalen besetzt sind.}{\relax }|setentrycounter[]{page}\glsnumberformat}{35}
 \glossaryentry{LGS?\glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineares Gleichungssystem}{\relax }|setentrycounter[]{page}\glsnumberformat}{35}
 \glossaryentry{LGS?\glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineares Gleichungssystem}{\relax }|setentrycounter[]{page}\glsnumberformat}{39}
 \glossaryentry{Salt \& Pepper Rauschen?\glossaryentryfield{SaltAndPepperNoise}{\glsnamefont{Salt \& Pepper Rauschen}}{Das sog. Salt \& Pepper Rauschen beschreibt eine Verkörnung des Bildes, bei Pixel auf weiß oder schwarz gesetzt sind. Dies kann durch Sensor- oder Messfehler entstehen oder durch Übertragungs- oder Abspeicherungsfehler. Salt \& Pepper Rauschen kann künstlich sehr leicht produziert werden, indem einzelne Bildpunkte zufällig auf weiß oder schwarz gesetzt werden. }{\relax }|setentrycounter[]{page}\glsnumberformat}{40}
-\glossaryentry{Salt \& Pepper Rauschen?\glossaryentryfield{SaltAndPepperNoise}{\glsnamefont{Salt \& Pepper Rauschen}}{Das sog. Salt \& Pepper Rauschen beschreibt eine Verkörnung des Bildes, bei Pixel auf weiß oder schwarz gesetzt sind. Dies kann durch Sensor- oder Messfehler entstehen oder durch Übertragungs- oder Abspeicherungsfehler. Salt \& Pepper Rauschen kann künstlich sehr leicht produziert werden, indem einzelne Bildpunkte zufällig auf weiß oder schwarz gesetzt werden. }{\relax }|setentrycounter[]{page}\glsnumberformat}{40}
-\glossaryentry{SOR?\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{Salt \& Pepper Rauschen?\glossaryentryfield{SaltAndPepperNoise}{\glsnamefont{Salt \& Pepper Rauschen}}{Das sog. Salt \& Pepper Rauschen beschreibt eine Verkörnung des Bildes, bei Pixel auf weiß oder schwarz gesetzt sind. Dies kann durch Sensor- oder Messfehler entstehen oder durch Übertragungs- oder Abspeicherungsfehler. Salt \& Pepper Rauschen kann künstlich sehr leicht produziert werden, indem einzelne Bildpunkte zufällig auf weiß oder schwarz gesetzt werden. }{\relax }|setentrycounter[]{page}\glsnumberformat}{41}
+\glossaryentry{SOR?\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }|setentrycounter[]{page}\glsnumberformat}{42}
 \glossaryentry{SOR?\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }|setentrycounter[]{page}\glsnumberformat}{44}
-\glossaryentry{LGS?\glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineares Gleichungssystem}{\relax }|setentrycounter[]{page}\glsnumberformat}{44}
-\glossaryentry{SOR?\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }|setentrycounter[]{page}\glsnumberformat}{44}
-\glossaryentry{LGS?\glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineares Gleichungssystem}{\relax }|setentrycounter[]{page}\glsnumberformat}{44}
 \glossaryentry{SOR?\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }|setentrycounter[]{page}\glsnumberformat}{45}
-\glossaryentry{SOR?\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }|setentrycounter[]{page}\glsnumberformat}{45}
-\glossaryentry{SOR?\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }|setentrycounter[]{page}\glsnumberformat}{45}
+\glossaryentry{SOR?\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{SOR?\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{SOR?\glossaryentryfield{SOR}{\glsnamefont{SOR}}{Successive Over-Relaxation (dt. Überrelaxationsverfahren)}{\relax }|setentrycounter[]{page}\glsnumberformat}{46}
 \glossaryentry{GUI?\glossaryentryfield{GUI}{\glsnamefont{GUI}}{grafische Benutzerschnittstelle (engl. graphical user interface)}{\relax }|setentrycounter[]{page}\glsnumberformat}{47}
 \glossaryentry{GUI?\glossaryentryfield{GUI}{\glsnamefont{GUI}}{grafische Benutzerschnittstelle (engl. graphical user interface)}{\relax }|setentrycounter[]{page}\glsnumberformat}{47}
-\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{47}
 \glossaryentry{GUI?\glossaryentryfield{GUI}{\glsnamefont{GUI}}{grafische Benutzerschnittstelle (engl. graphical user interface)}{\relax }|setentrycounter[]{page}\glsnumberformat}{48}
 \glossaryentry{JRE?\glossaryentryfield{JRE}{\glsnamefont{JRE}}{Java Runtime Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{48}
-\glossaryentry{Robustheit?\glossaryentryfield{Robustheit}{\glsnamefont{Robustheit}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{49}
-\glossaryentry{Monotonie?\glossaryentryfield{Monotonie}{\glsnamefont{Monotonie}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{49}
-\glossaryentry{MTB?\glossaryentryfield{MTB}{\glsnamefont{MTB}}{Mean Threshold Bitmap Alignment}{\relax }|setentrycounter[]{page}\glsnumberformat}{64}
+\glossaryentry{MVC?\glossaryentryfield{MVC}{\glsnamefont{MVC}}{Model-View-Controller}{\relax }|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{Robustheit?\glossaryentryfield{Robustheit}{\glsnamefont{Robustheit}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{51}
+\glossaryentry{Monotonie?\glossaryentryfield{Monotonie}{\glsnamefont{Monotonie}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{51}
+\glossaryentry{MTB?\glossaryentryfield{MTB}{\glsnamefont{MTB}}{Mean Threshold Bitmap Alignment}{\relax }|setentrycounter[]{page}\glsnumberformat}{66}

@@ -94,7 +94,7 @@ public class ReinhardMappingTest {
     public void testGetValuesMinMax() throws Exception {
         ReinhardMapping t = new ReinhardMapping(0.72);
         short[][] s = t.getValues(luminance.toArray());
-        new DecimalMatrix(s).toFileSync("calc/values.txt");
+
         assertTrue(max(s) > 200);
         assertEquals(0, min(s));
     }

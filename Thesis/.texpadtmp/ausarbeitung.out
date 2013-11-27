@@ -22,23 +22,24 @@
 \BOOKMARK [1][-]{section.5.2}{5.2 Erweiterung um Monotonie-Eigenschaft}{chapter.5}% 22
 \BOOKMARK [1][-]{section.5.3}{5.3 R\344umlicher Glattheitsterm}{chapter.5}% 23
 \BOOKMARK [1][-]{section.5.4}{5.4 Erweiterung um Robustheit}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.5}{5.5 L\366sung der LGS}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.5}{5.5 L\366sung der Gleichungssysteme}{chapter.5}% 25
 \BOOKMARK [0][]{chapter.6}{6 Implementierung}{}% 26
 \BOOKMARK [1][-]{section.6.1}{6.1 Wahl der Programmier-Sprache}{chapter.6}% 27
-\BOOKMARK [1][-]{section.6.2}{6.2 Architektur}{chapter.6}% 28
-\BOOKMARK [1][-]{section.6.3}{6.3 Algorithmus in Pseudocode}{chapter.6}% 29
-\BOOKMARK [1][-]{section.6.4}{6.4 Ausgew\344hlte Programmabschnitte}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.5}{6.5 Verwendetes Tone-Mapping-Verfahren}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.6}{6.6 Laufzeitanalyse}{chapter.6}% 32
-\BOOKMARK [0][]{chapter.7}{7 Ergebnisse und Resultate}{}% 33
-\BOOKMARK [1][-]{section.7.1}{7.1 Ergebnisse ohne Erweiterungen}{chapter.7}% 34
-\BOOKMARK [1][-]{section.7.2}{7.2 Ergebnisse mit Erweiterungen}{chapter.7}% 35
-\BOOKMARK [1][-]{section.7.3}{7.3 Vergleich der Ergebnisse}{chapter.7}% 36
-\BOOKMARK [1][-]{section.7.4}{7.4 Vergleich zum naiven Ansatz von Debevec und Malik paper}{chapter.7}% 37
-\BOOKMARK [0][]{chapter.8}{8 Zusammenfassung und Ausblick}{}% 38
-\BOOKMARK [0][]{appendix.A}{A Anhang}{}% 39
-\BOOKMARK [1][-]{section.A.1}{A.1 Artikel paper}{appendix.A}% 40
-\BOOKMARK [1][-]{section.A.2}{A.2 Verwendete Algorithmen}{appendix.A}% 41
-\BOOKMARK [1][-]{section.A.3}{A.3 Programmcode}{appendix.A}% 42
-\BOOKMARK [0][]{section*.24}{Glossar und Abk\374rzungsverzeichnis}{}% 43
-\BOOKMARK [0][]{appendix*.26}{Literaturverzeichnis}{}% 44
+\BOOKMARK [1][-]{section.6.2}{6.2 Externe Bibliotheken}{chapter.6}% 28
+\BOOKMARK [1][-]{section.6.3}{6.3 Architektur}{chapter.6}% 29
+\BOOKMARK [1][-]{section.6.4}{6.4 Algorithmus in Pseudocode}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.5}{6.5 Ausgew\344hlte Programmabschnitte}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.6}{6.6 Verwendetes Tone-Mapping-Verfahren}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.7}{6.7 Laufzeitanalyse}{chapter.6}% 33
+\BOOKMARK [0][]{chapter.7}{7 Ergebnisse und Resultate}{}% 34
+\BOOKMARK [1][-]{section.7.1}{7.1 Ergebnisse ohne Erweiterungen}{chapter.7}% 35
+\BOOKMARK [1][-]{section.7.2}{7.2 Ergebnisse mit Erweiterungen}{chapter.7}% 36
+\BOOKMARK [1][-]{section.7.3}{7.3 Vergleich der Ergebnisse}{chapter.7}% 37
+\BOOKMARK [1][-]{section.7.4}{7.4 Vergleich zum naiven Ansatz von Debevec und Malik paper}{chapter.7}% 38
+\BOOKMARK [0][]{chapter.8}{8 Zusammenfassung und Ausblick}{}% 39
+\BOOKMARK [0][]{appendix.A}{A Anhang}{}% 40
+\BOOKMARK [1][-]{section.A.1}{A.1 Artikel paper}{appendix.A}% 41
+\BOOKMARK [1][-]{section.A.2}{A.2 Verwendete Algorithmen}{appendix.A}% 42
+\BOOKMARK [1][-]{section.A.3}{A.3 Programmcode}{appendix.A}% 43
+\BOOKMARK [0][]{section*.28}{Glossar und Abk\374rzungsverzeichnis}{}% 44
+\BOOKMARK [0][]{appendix*.30}{Literaturverzeichnis}{}% 45

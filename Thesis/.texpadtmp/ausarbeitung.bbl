@@ -51,15 +51,26 @@ M.~D. Fairchild, G.~M. Johnson.
   quality.
 \newblock \emph{Journal of Electronic Imaging}, 13:126--138, 2004.
 
+\bibitem[JO12]{Jinno}
+T.~Jinno, M.~Okuda.
+\newblock Multiple Exposure Fusion for High Dynamic Range Image Acquisition.
+\newblock \emph{IEEE Transactions on Image Processing}, 21(1):358--365, 2012.
+
 \bibitem[KYL{\etalchar{+}}07]{tone_mapper_2}
 J.~Kuang, H.~Yamaguchi, C.~Liu, G.~M, M.~D. Fairchild.
 \newblock Evaluating HDR rendering algorithms.
-\newblock \emph{ACM Trans. Appl. Percept}, 2007.
+\newblock \emph{ACM Transactions on Applied Perception}, 4(2), 2007.
 
 \bibitem[Lar98]{logluv}
 G.~W. Larson.
 \newblock LogLuv Encoding for Full-gamut, High-dynamic Range Images.
 \newblock Band~3, S. 15--31. A. K. Peters, Ltd., 1998.
+
+\bibitem[LG03]{Xinqiao}
+X.~C. Liu, A.~E. Gamal.
+\newblock Synthesis of high dynamic range motion blur free image from multiple
+  captures.
+\newblock Band~50, S. 530--539. IEEE Press, 2003.
 
 \bibitem[LZR12]{Jing_Hong_Zheng_Rahardja_2012}
 Z.~G. Li, J.~H. Zheng, S.~Rahardja.
@@ -70,7 +81,7 @@ Z.~G. Li, J.~H. Zheng, S.~Rahardja.
 \bibitem[NM00]{Nayar00highdynamic}
 S.~K. Nayar, T.~Mitsunaga.
 \newblock High dynamic range imaging: Spatially varying pixel exposures.
-\newblock S. 472--479. 2000.
+\newblock S. 472--479. IEEE Press, 2000.
 
 \bibitem[RSD05]{Reinhard05}
 E.~Reinhard, I.~C. Society, K.~Devlin.
@@ -119,5 +130,11 @@ D.~X.~D. Yang, A.~E. Gamal, B.~Fowler, H.~Tian.
 \newblock A 640 512 CMOS image sensor with ultrawide dynamic range
   floating-point pixel-level ADC.
 \newblock \emph{IEEE Journal of Solid-State Circuits}, 34:1821--1834, 1999.
+
+\bibitem[ZBW11]{zimmer}
+H.~Zimmer, A.~Bruhn, J.~Weickert.
+\newblock Freehand HDR Imaging of moving scenes with simultaneous resolution
+  enhancement.
+\newblock Band~30, S. 405--414. 2011.
 
 \end{thebibliography}

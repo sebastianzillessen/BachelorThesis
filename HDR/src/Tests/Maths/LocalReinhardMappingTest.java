@@ -1,6 +1,5 @@
 package Tests.Maths;
 
-import Maths.DecimalMatrix;
 import Maths.Matrix;
 import org.junit.Test;
 import tonemapping.LocalReinhardMapping;
@@ -92,8 +91,8 @@ public class LocalReinhardMappingTest {
     @Test
     public void testGetValuesMinMax() throws Exception {
         for (int i = 1; i < 2; i++) {
-            for (int j = 1; j < 100; j+=10) {
-                for (int k = 1; k < 20; k+=2) {
+            for (int j = 1; j < 100; j += 10) {
+                for (int k = 1; k < 20; k += 2) {
                     for (int l = 1; l < 4; l++) {
                         double saturation = 10. / i;
                         double eps = .5 / k;

@@ -4,29 +4,31 @@
 \backcite {paper}{{7}{(document)}{Doc-Start}}
 \backcite {tellone}{{7}{(document)}{Doc-Start}}
 \backcite {tellone}{{7}{(document)}{Doc-Start}}
+\backcite {tellone}{{7}{(document)}{Doc-Start}}
 \backcite {paper}{{7}{(document)}{Doc-Start}}
 \backcite {Reinhard05}{{7}{(document)}{Doc-Start}}
 \backcite {tellone}{{7}{(document)}{Doc-Start}}
 \backcite {Reinhard}{{7}{(document)}{Doc-Start}}
-\backcite {Reinhard}{{7}{(document)}{Doc-Start}}
+\backcite {Reinhard}{{8}{(document)}{Doc-Start}}
 \backcite {paper}{{9}{1.1}{section.1.1}}
 \backcite {paper}{{9}{\relax 1.1}{figure.caption.7}}
 \backcite {paper}{{10}{1.2}{section.1.2}}
 \backcite {tellone}{{10}{\relax 1.2}{figure.caption.8}}
-\backcite {paper}{{11}{1.3}{section.1.3}}
-\backcite {paper}{{11}{1.3}{section.1.3}}
+\backcite {paper}{{10}{1.3}{section.1.3}}
+\backcite {paper}{{10}{1.3}{section.1.3}}
+\backcite {tellone}{{11}{\relax 1.3}{figure.caption.9}}
 \backcite {Reinhard}{{13}{2}{chapter.2}}
 \backcite {Fairchild04theicam}{{13}{2.1}{section.2.1}}
-\backcite {tellone}{{14}{\relax 2.1}{figure.caption.9}}
-\backcite {Reinhard}{{14}{\relax 2.1}{table.caption.10}}
+\backcite {tellone}{{14}{\relax 2.1}{figure.caption.10}}
+\backcite {Reinhard}{{14}{\relax 2.1}{table.caption.11}}
 \backcite {Yang99a640}{{14}{2.1}{section.2.1}}
-\backcite {Reinhard}{{15}{2.1}{table.caption.10}}
+\backcite {Reinhard}{{15}{2.1}{table.caption.11}}
 \backcite {Reinhard}{{15}{2.2}{section.2.2}}
 \backcite {Klingler_Richter_Strobel_2006}{{15}{2.2}{section.2.2}}
 \backcite {Debevec:2008:RSO:1401132.1401175}{{16}{2.2}{section.2.2}}
 \backcite {Jing_Hong_Zheng_Rahardja_2012}{{16}{2.3.1}{subsection.2.3.1}}
 \backcite {Bloch2012}{{16}{2.3.2}{subsection.2.3.2}}
-\backcite {Reinhard}{{17}{\relax 2.2}{table.caption.11}}
+\backcite {Reinhard}{{17}{\relax 2.2}{table.caption.12}}
 \backcite {Reinhard}{{17}{2.4}{section.2.4}}
 \backcite {Reinhard}{{17}{2.4.1}{subsection.2.4.1}}
 \backcite {adobe:tiff}{{18}{2.4.2}{subsection.2.4.2}}
@@ -37,29 +39,31 @@
 \backcite {Bloch2012}{{19}{2.5.1}{subsection.2.5.1}}
 \backcite {ReinhardToneMapper}{{19}{2.5.1}{subsection.2.5.1}}
 \backcite {ReinhardToneMapper}{{19}{2.5.2}{subsection.2.5.2}}
-\backcite {paper}{{20}{\relax 2.2}{figure.caption.12}}
-\backcite {Reinhard05}{{21}{\relax 2.3}{figure.caption.13}}
-\backcite {tellone}{{21}{\relax 2.3}{figure.caption.13}}
+\backcite {paper}{{20}{\relax 2.2}{figure.caption.13}}
+\backcite {Reinhard05}{{21}{\relax 2.3}{figure.caption.14}}
+\backcite {tellone}{{21}{\relax 2.3}{figure.caption.14}}
 \backcite {Nayar00highdynamic}{{23}{3.2}{section.3.2}}
 \backcite {Jinno}{{24}{3.2}{section.3.2}}
 \backcite {tone_mapper_2}{{24}{3.2}{section.3.2}}
 \backcite {tone_mapper_1}{{24}{3.2}{section.3.2}}
+\backcite {Xinqiao}{{24}{3.2}{section.3.2}}
+\backcite {zimmer}{{24}{3.2}{section.3.2}}
 \backcite {paper}{{25}{4}{chapter.4}}
 \backcite {paper}{{25}{4}{chapter.4}}
 \backcite {paper}{{25}{4.1.1}{subsection.4.1.1}}
-\backcite {paper}{{26}{4.1.3}{subsection.4.1.3}}
+\backcite {paper}{{26}{4.1.2}{equation.4.1.1}}
 \backcite {paper}{{28}{4.4.2}{subsection.4.4.2}}
 \backcite {paper}{{28}{4.4}{section.4.4}}
 \backcite {bruhn06}{{29}{4.4.3}{subsection.4.4.3}}
 \backcite {Westermann2008}{{46}{5.5.2}{equation.5.5.61}}
-\backcite {paper}{{49}{7.4}{section.7.4}}
-\backcite {paper}{{53}{A.1}{section.A.1}}
+\backcite {paper}{{51}{7.4}{section.7.4}}
 \backcite {paper}{{55}{A.1}{section.A.1}}
 \backcite {paper}{{57}{A.1}{section.A.1}}
 \backcite {paper}{{59}{A.1}{section.A.1}}
 \backcite {paper}{{61}{A.1}{section.A.1}}
 \backcite {paper}{{63}{A.1}{section.A.1}}
-\backcite {Ward03fast}{{64}{A.2.1}{subsection.A.2.1}}
-\backcite {Ward03fast}{{64}{A.2.1}{subsection.A.2.1}}
-\backcite {Reinhard}{{64}{A.2.1}{subsection.A.2.1}}
-\backcite {Ward03fast}{{64}{A.2.1}{subsection.A.2.1}}
+\backcite {paper}{{65}{A.1}{section.A.1}}
+\backcite {Ward03fast}{{66}{A.2.1}{subsection.A.2.1}}
+\backcite {Ward03fast}{{66}{A.2.1}{subsection.A.2.1}}
+\backcite {Reinhard}{{66}{A.2.1}{subsection.A.2.1}}
+\backcite {Ward03fast}{{66}{A.2.1}{subsection.A.2.1}}
