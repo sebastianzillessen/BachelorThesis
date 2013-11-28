@@ -35,8 +35,6 @@
 \citation{paper}
 \citation{Reinhard05}
 \citation{tellone}
-\citation{Reinhard}
-\citation{Reinhard}
 \@writefile{brf}{\backcite{paper}{{7}{(document)}{Doc-Start}}}
 \@writefile{brf}{\backcite{tellone}{{7}{(document)}{Doc-Start}}}
 \@writefile{brf}{\backcite{tellone}{{7}{(document)}{Doc-Start}}}
@@ -44,7 +42,9 @@
 \@writefile{brf}{\backcite{paper}{{7}{(document)}{Doc-Start}}}
 \@writefile{brf}{\backcite{Reinhard05}{{7}{(document)}{Doc-Start}}}
 \@writefile{brf}{\backcite{tellone}{{7}{(document)}{Doc-Start}}}
-\@writefile{brf}{\backcite{Reinhard}{{7}{(document)}{Doc-Start}}}
+\citation{Reinhard}
+\citation{Reinhard}
+\@writefile{brf}{\backcite{Reinhard}{{8}{(document)}{Doc-Start}}}
 \@writefile{brf}{\backcite{Reinhard}{{8}{(document)}{Doc-Start}}}
 \citation{paper}
 \citation{paper}
@@ -339,17 +339,27 @@
 \@writefile{toc}{\contentsline {section}{\numberline {6.3}Architektur}{50}{section.6.3}}
 \newlabel{sec:architektur}{{6.3}{50}{Architektur\relax }{section.6.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Komponentendiagramm}{50}{subsection.6.3.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Sequenzdiagramm}{50}{subsection.6.3.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Algorithmus in Pseudocode}{50}{section.6.4}}
-\newlabel{sec:pseudocode}{{6.4}{50}{Algorithmus in Pseudocode\relax }{section.6.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Ausgew\IeC {\"a}hlte Programmabschnitte}{50}{section.6.5}}
-\newlabel{sec:sample-codes}{{6.5}{50}{Ausgewählte Programmabschnitte\relax }{section.6.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Verwendetes \gls {Tone-Mapping}-Verfahren}{50}{section.6.6}}
-\newlabel{sec:tone-mapping}{{6.6}{50}{Verwendetes \gls {Tone-Mapping}-Verfahren\relax }{section.6.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.7}Laufzeitanalyse}{50}{section.6.7}}
-\newlabel{sec:laufzeit}{{6.7}{50}{Laufzeitanalyse\relax }{section.6.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Die Architektur der Software auf Komponentenebene. Hier kann gut die Trennung zwischen den einzelnen Bereichen erkannt werden.\relax }}{51}{figure.caption.25}}
+\newlabel{fig:arch:components}{{\relax 6.2}{51}{Die Architektur der Software auf Komponentenebene. Hier kann gut die Trennung zwischen den einzelnen Bereichen erkannt werden.\relax \relax }{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Die \texttt  {View}-Komponente im Detail. Das Hauptfenster \texttt  {GUIFrame} stellt die Daten dar und importiert dazu die verschiedenen Komponenten. Die \texttt  {Plots} und die \texttt  {ToneMappers} geh\IeC {\"o}ren ebenfalls zu diesem Paket.\relax }}{52}{figure.caption.26}}
+\newlabel{fig:arch:plots}{{\relax 6.3}{52}{Die \texttt {View}-Komponente im Detail. Das Hauptfenster \texttt {GUIFrame} stellt die Daten dar und importiert dazu die verschiedenen Komponenten. Die \texttt {Plots} und die \texttt {ToneMappers} gehören ebenfalls zu diesem Paket.\relax \relax }{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces Die Struktur der verschiedenen grafischen Plots. Die Implementierungen von verschiedenen \gls {Tone-Mapping} Operatoren mittels Vererbung kann hier gut erkannt werden.\relax }}{53}{figure.caption.27}}
+\newlabel{fig:arch:plots}{{\relax 6.4}{53}{Die Struktur der verschiedenen grafischen Plots. Die Implementierungen von verschiedenen \gls {Tone-Mapping} Operatoren mittels Vererbung kann hier gut erkannt werden.\relax \relax }{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces Die Klasse \texttt  {Matrix} und ihre Spezialisierungen \texttt  {BandMatrix} und \texttt  {DefaultMatrix}. Diese beiden Klassen dienen zusammen mit \texttt  {Vector} als ein Kernbestandteil der mathematischen Berechnungen dieses Programmes.\relax }}{54}{figure.caption.28}}
+\newlabel{fig:arch:plots}{{\relax 6.5}{54}{Die Klasse \texttt {Matrix} und ihre Spezialisierungen \texttt {BandMatrix} und \texttt {DefaultMatrix}. Diese beiden Klassen dienen zusammen mit \texttt {Vector} als ein Kernbestandteil der mathematischen Berechnungen dieses Programmes.\relax \relax }{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Sequenzdiagramm}{55}{subsection.6.3.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces Der grunds\IeC {\"a}tzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. \relax }}{55}{figure.caption.29}}
+\newlabel{fig:arch:sequence}{{\relax 6.6}{55}{Der grundsätzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. \relax \relax }{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Algorithmus in Pseudocode}{56}{section.6.4}}
+\newlabel{sec:pseudocode}{{6.4}{56}{Algorithmus in Pseudocode\relax }{section.6.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Ausgew\IeC {\"a}hlte Programmabschnitte}{56}{section.6.5}}
+\newlabel{sec:sample-codes}{{6.5}{56}{Ausgewählte Programmabschnitte\relax }{section.6.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Verwendetes \gls {Tone-Mapping}-Verfahren}{56}{section.6.6}}
+\newlabel{sec:tone-mapping}{{6.6}{56}{Verwendetes \gls {Tone-Mapping}-Verfahren\relax }{section.6.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Laufzeitanalyse}{56}{section.6.7}}
+\newlabel{sec:laufzeit}{{6.7}{56}{Laufzeitanalyse\relax }{section.6.7}{}}
 \citation{paper}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Ergebnisse und Resultate}{51}{chapter.7}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Ergebnisse und Resultate}{57}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
@@ -359,16 +369,16 @@
 \@writefile{code}{\addvspace {10\p@ }}
 \@writefile{loAlgorithmus}{\addvspace {10\p@ }}
 \@writefile{alg}{\addvspace {10\p@ }}
-\newlabel{chap:results}{{7}{51}{Ergebnisse und Resultate\relax }{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Ergebnisse ohne Erweiterungen}{51}{section.7.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Ergebnisse mit Erweiterungen}{51}{section.7.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Ergebnisse mit \glspl {Robustheit}-Term}{51}{subsection.7.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Ergebnisse mit \gls {Monotonie}-Bedingung}{51}{subsection.7.2.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.3}Ergebnisse mit r\IeC {\"a}umlichem Glattheitsterm}{51}{subsection.7.2.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}Vergleich der Ergebnisse}{51}{section.7.3}}
-\@writefile{brf}{\backcite{paper}{{51}{7.4}{section.7.4}}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.4}Vergleich zum naiven Ansatz von Debevec und Malik \cite  {paper}}{51}{section.7.4}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{53}{chapter.8}}
+\newlabel{chap:results}{{7}{57}{Ergebnisse und Resultate\relax }{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Ergebnisse ohne Erweiterungen}{57}{section.7.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Ergebnisse mit Erweiterungen}{57}{section.7.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Ergebnisse mit \glspl {Robustheit}-Term}{57}{subsection.7.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Ergebnisse mit \gls {Monotonie}-Bedingung}{57}{subsection.7.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.3}Ergebnisse mit r\IeC {\"a}umlichem Glattheitsterm}{57}{subsection.7.2.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Vergleich der Ergebnisse}{57}{section.7.3}}
+\@writefile{brf}{\backcite{paper}{{57}{7.4}{section.7.4}}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Vergleich zum naiven Ansatz von Debevec und Malik \cite  {paper}}{57}{section.7.4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{59}{chapter.8}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
@@ -378,9 +388,9 @@
 \@writefile{code}{\addvspace {10\p@ }}
 \@writefile{loAlgorithmus}{\addvspace {10\p@ }}
 \@writefile{alg}{\addvspace {10\p@ }}
-\newlabel{chap:zusfas}{{8}{53}{Zusammenfassung und Ausblick\relax }{chapter.8}{}}
+\newlabel{chap:zusfas}{{8}{59}{Zusammenfassung und Ausblick\relax }{chapter.8}{}}
 \citation{paper}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Anhang}{55}{appendix.A}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Anhang}{61}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
@@ -390,38 +400,38 @@
 \@writefile{code}{\addvspace {10\p@ }}
 \@writefile{loAlgorithmus}{\addvspace {10\p@ }}
 \@writefile{alg}{\addvspace {10\p@ }}
-\@writefile{brf}{\backcite{paper}{{55}{A.1}{section.A.1}}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Artikel \cite  {paper}}{55}{section.A.1}}
-\citation{paper}
-\@writefile{brf}{\backcite{paper}{{57}{A.1}{section.A.1}}}
-\citation{paper}
-\@writefile{brf}{\backcite{paper}{{59}{A.1}{section.A.1}}}
-\citation{paper}
 \@writefile{brf}{\backcite{paper}{{61}{A.1}{section.A.1}}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Artikel \cite  {paper}}{61}{section.A.1}}
 \citation{paper}
 \@writefile{brf}{\backcite{paper}{{63}{A.1}{section.A.1}}}
 \citation{paper}
 \@writefile{brf}{\backcite{paper}{{65}{A.1}{section.A.1}}}
+\citation{paper}
+\@writefile{brf}{\backcite{paper}{{67}{A.1}{section.A.1}}}
+\citation{paper}
+\@writefile{brf}{\backcite{paper}{{69}{A.1}{section.A.1}}}
+\citation{paper}
+\@writefile{brf}{\backcite{paper}{{71}{A.1}{section.A.1}}}
 \citation{Ward03fast}
 \citation{Ward03fast}
 \citation{Reinhard}
 \citation{Ward03fast}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Verwendete Algorithmen}{66}{section.A.2}}
-\@writefile{brf}{\backcite{Ward03fast}{{66}{A.2.1}{subsection.A.2.1}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.1}MTB-Algorithmus, vgl. \cite  [S.9 f]{Ward03fast}}{66}{subsection.A.2.1}}
-\newlabel{subsec:MTB}{{A.2.1}{66}{MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}\relax }{subsection.A.2.1}{}}
-\@writefile{brf}{\backcite{Ward03fast}{{66}{A.2.1}{subsection.A.2.1}}}
-\@writefile{brf}{\backcite{Reinhard}{{66}{A.2.1}{subsection.A.2.1}}}
-\@writefile{brf}{\backcite{Ward03fast}{{66}{A.2.1}{subsection.A.2.1}}}
-\newlabel{lst:MTB:helpers}{{\caption@xref {lst:MTB:helpers}{ on input line 13}}{66}{MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}\relax }{Listing.caption.25}{}}
-\@writefile{code}{\contentsline {Listing}{\numberline {A.1}{\ignorespaces Hilfsfunktionen in C Funktion zur Berechnung der Alignierung\relax }}{66}{Listing.caption.25}}
-\newlabel{lst:MTB:core}{{\caption@xref {lst:MTB:core}{ on input line 38}}{67}{MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}\relax }{Listing.caption.26}{}}
-\@writefile{code}{\contentsline {Listing}{\numberline {A.2}{\ignorespaces Rekursive C Funktion zur Berechnung der notwendigen Verschiebung zwischen den Bildern um diese zu alignieren\relax }}{67}{Listing.caption.26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.2}LU-Zerlegung}{68}{subsection.A.2.2}}
-\@writefile{alg}{\contentsline {Algorithmus}{\numberline {A.1}{\ignorespaces L\IeC {\"o}sen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax }}{68}{Algorithmus.caption.27}}
-\newlabel{alg:LU}{{A.1}{68}{Lösen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax \relax }{Algorithmus.caption.27}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.3}Programmcode}{69}{section.A.3}}
-\@writefile{toc}{\contentsline {chapter}{Glossar und Abk\IeC {\"u}rzungsverzeichnis}{71}{section*.28}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Verwendete Algorithmen}{72}{section.A.2}}
+\@writefile{brf}{\backcite{Ward03fast}{{72}{A.2.1}{subsection.A.2.1}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.1}MTB-Algorithmus, vgl. \cite  [S.9 f]{Ward03fast}}{72}{subsection.A.2.1}}
+\newlabel{subsec:MTB}{{A.2.1}{72}{MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}\relax }{subsection.A.2.1}{}}
+\@writefile{brf}{\backcite{Ward03fast}{{72}{A.2.1}{subsection.A.2.1}}}
+\@writefile{brf}{\backcite{Reinhard}{{72}{A.2.1}{subsection.A.2.1}}}
+\@writefile{brf}{\backcite{Ward03fast}{{72}{A.2.1}{subsection.A.2.1}}}
+\newlabel{lst:MTB:helpers}{{\caption@xref {lst:MTB:helpers}{ on input line 13}}{72}{MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}\relax }{Listing.caption.31}{}}
+\@writefile{code}{\contentsline {Listing}{\numberline {A.1}{\ignorespaces Hilfsfunktionen in C Funktion zur Berechnung der Alignierung\relax }}{72}{Listing.caption.31}}
+\newlabel{lst:MTB:core}{{\caption@xref {lst:MTB:core}{ on input line 38}}{73}{MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}\relax }{Listing.caption.32}{}}
+\@writefile{code}{\contentsline {Listing}{\numberline {A.2}{\ignorespaces Rekursive C Funktion zur Berechnung der notwendigen Verschiebung zwischen den Bildern um diese zu alignieren\relax }}{73}{Listing.caption.32}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2.2}LU-Zerlegung}{74}{subsection.A.2.2}}
+\@writefile{alg}{\contentsline {Algorithmus}{\numberline {A.1}{\ignorespaces L\IeC {\"o}sen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax }}{74}{Algorithmus.caption.33}}
+\newlabel{alg:LU}{{A.1}{74}{Lösen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax \relax }{Algorithmus.caption.33}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}Programmcode}{75}{section.A.3}}
+\@writefile{toc}{\contentsline {chapter}{Glossar und Abk\IeC {\"u}rzungsverzeichnis}{77}{section*.34}}
 \bibstyle{bibliography/IAASde}
 \bibdata{bibliography/bibliography}
 \bibcite{adobe:tiff}{Ado92}
@@ -435,7 +445,7 @@
 \bibcite{tone_mapper_2}{KYL{$^{+}$}07}
 \bibcite{logluv}{Lar98}
 \bibcite{Xinqiao}{LG03}
-\@writefile{toc}{\contentsline {chapter}{Literaturverzeichnis}{73}{appendix*.30}}
+\@writefile{toc}{\contentsline {chapter}{Literaturverzeichnis}{79}{appendix*.36}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}

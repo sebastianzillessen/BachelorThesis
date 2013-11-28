@@ -59,7 +59,10 @@ Für die Implementierung wurden einige bereits bestehenden Komponenten eingesetz
 Für die Eingabe der einzelnen Parameter wird eine Implementierung eines numerischen Textfeldes verwendet. Dieses verhindert ungültige Eingaben und erleichtert das Auslesen der numerischen Parameter.
 
 \subsubsection*{\texttt{metadata-extractor}\footnote{\url{https://code.google.com/p/metadata-extractor/}}}
-Die Bibliothek \texttt{metadata-extractor} wird verwendet um automatisiert aus Bilddateien die Belichtungszeit der Bilder auszulesen. Mit ihm wird auch das von Adobe entwickelte \texttt{XMP} Core \footnote{\url{}}}
+Die Bibliothek \texttt{metadata-extractor} wird verwendet um automatisiert aus Bilddateien die Belichtungszeit der Bilder auszulesen. Mit ihm wird auch das von Adobe entwickelte \texttt{xmp-core}\footnote{\url{http://www.adobe.com/devnet/xmp.html}} mit geliefert. Zusammen genommen ermöglicht die Bibliothek die Belichtungszeiten der Bilder auszulesen und darzustellen.
+
+\subsubsection*{\texttt{JImageChooser} \footnote{\url{http://docs.oracle.com/javase/tutorial/uiswing/examples/components/index.html\#FileChooserDemo2}}} 
+Der verwendete \texttt{JFileChooser} zur Selektion von Bilddateien (und nur diesen) ist inspiriert von dem vorhandenen Tutorial bei Oracle. Er ist in der Lage eine kleine Vorschau der Bilder anzuzeigen.
 
 
 \section{Architektur}
@@ -69,8 +72,60 @@ Bei der Architektur der Software wurde eine \gls{MVC} Struktur eingehalten. Dies
 
 
 \subsection{Komponentendiagramm}
+Die Anwendung lässt sich grundsätzlich in fünf verschiedene Komponenten trennen (siehe \autoref{fig:arch:components}). 
+\begin{description}
+\item{\texttt{View}:} Das Paket \texttt{View} behandelt die gesamte Darstellung der Anwendung und die grafische Auswertung der berechneten Bilder. Es enthält \gls{Tone-Mapping} Operatoren und behandelt die Benutzereingabe.
+\item{\texttt{Model}:} Das \texttt{Model} besteht in erster Linie aus den Beiden Klassen \texttt{Image} und \texttt{HDRResult}. Erstere wird als Repräsentation eines Bildes verwendet und speichert Grauwerte, Belichtungszeiten und weitere Bildrelevante Informationen. Letztere dient als Kommunikationspaket zwischen dem eigentlichen \texttt{Solver} und der restlichen Anwendung und enthält die fertig berechnete Antwortkurve und die \gls{Radiance Map}.
+\item{\texttt{Ctrl}:} Dieses Paket dient zur Steuerung der Anwendung. In diesem werden die Eingaben verarbeitet, an die Algorithmen weiter gegeben und anschließend wieder dargestellt.
+\item{\texttt{Maths}:} Die \texttt{Maths}-Komponente enthält alle notwendigen mathematischen Berechnungen und Repräsentationen, wie z.B. \texttt{Matrix} und \texttt{Vector}.
+\end{description}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{architecture/components}
+    \caption{Die Architektur der Software auf Komponentenebene. Hier kann gut die Trennung zwischen den einzelnen Bereichen erkannt werden.}
+    \label{fig:arch:components}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{architecture/view}
+    \caption{Die \texttt{View}-Komponente im Detail. Das Hauptfenster \texttt{GUIFrame} stellt die Daten dar und importiert dazu die verschiedenen Komponenten. Die \texttt{Plots} und die \texttt{ToneMappers} gehören ebenfalls zu diesem Paket.}
+    \label{fig:arch:plots}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{architecture/plots}
+    \caption{Die Struktur der verschiedenen grafischen Plots. Die Implementierungen von verschiedenen \gls{Tone-Mapping} Operatoren mittels Vererbung kann hier gut erkannt werden.}
+    \label{fig:arch:plots}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=\textwidth]{architecture/matrixes}
+    \caption{Die Klasse \texttt{Matrix} und ihre Spezialisierungen \texttt{BandMatrix} und \texttt{DefaultMatrix}. Diese beiden Klassen dienen zusammen mit \texttt{Vector} als ein Kernbestandteil der mathematischen Berechnungen dieses Programmes.}
+    \label{fig:arch:plots}
+  \end{center}
+\end{figure}
+
 
 \subsection{Sequenzdiagramm}
+Das Programm läuft sehr vielschichtig ab. Als grundsätzliche Architekturüberlegung stand jedoch zu Beginn der Aufbau wie in \autoref{fig:arch:sequence} beschrieben ist. Wichtig dabei ist, dass die grafische Benutzeroberfläche nicht von der Berechnungsdauer des Algorithmus blockiert wird, weshalb besonders zwischen \texttt{Controller} und \texttt{GUIFrame} asynchrone Methodenaufrufe zum Einsatz kommen.
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{architecture/sequence_example}
+    \caption{Der grundsätzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. }
+    \label{fig:arch:sequence}
+  \end{center}
+\end{figure}
+
 \section{Algorithmus in Pseudocode}
 \label{sec:pseudocode}
 \section{Ausgewählte Programmabschnitte}

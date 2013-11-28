@@ -1,9 +1,12 @@
 package Solver;
 
 import Ctrl.Controller;
-import View.Plots.ScatterPlot;
 import Maths.BandMatrix;
-import Maths.DecimalVector;
+import Maths.Vector;
+import Model.HDRResult;
+import Model.Image;
+import Model.WeightMode;
+import View.Plots.ScatterPlot;
 
 import java.util.List;
 
@@ -22,7 +25,7 @@ public class IterativeEnergySolver extends IHDRSolver {
     private final int iterations;
     private final int N;
     private final int P;
-    private WEIGHTNING_MODES weightMode;
+    private WeightMode weightMode;
     private double mu = 50;
     private BandMatrix dt, d, weight;
     private final double lambda;
@@ -33,29 +36,16 @@ public class IterativeEnergySolver extends IHDRSolver {
     private double ln_t[];
 
 
-    /**
-     * Weightning mode for g
-     * <p/>
-     * None:        constant function 1
-     * Default :    Triangle function
-     * Parabel:     Parabel function
-     */
-    public static enum WEIGHTNING_MODES {
-        NONE,
-        DEFAULT,
-        PARABEL
-    }
-
-    ;
-
-
-    public IterativeEnergySolver(List<Image> images, double lambda, int iterations, int updateInterval, int mu, boolean robustnessDataG, boolean robustnessDataE, boolean robustnessSmoothnessE, WEIGHTNING_MODES weightMode, double alpha) {
-        this(images, lambda, iterations, mu, robustnessDataG, robustnessSmoothnessE, weightMode, alpha);
-        energySteps = iterations / updateInterval;
-    }
-
-    public IterativeEnergySolver(List<Image> images, double lambda, int iterations, double mu, boolean robustnessDataG, boolean robustnessSmoothnessE, WEIGHTNING_MODES weightMode, double alpha) {
+    public IterativeEnergySolver(List<Image> images,
+                                 double lambda,
+                                 int iterations,
+                                 double mu,
+                                 boolean robustnessDataG,
+                                 boolean robustnessSmoothnessE,
+                                 WeightMode weightMode,
+                                 double alpha) {
         super(images);
+        this.energySteps = iterations / 3;
         this.lambda = lambda;
         this.alpha = alpha;
         this.N = images.get(0).getImageSize();
@@ -126,17 +116,17 @@ public class IterativeEnergySolver extends IHDRSolver {
     }
 
     @Override
-    public double w(double z) {
-        if (this.weightMode == WEIGHTNING_MODES.NONE)
+    protected double w(double z) {
+        if (this.weightMode == WeightMode.NONE)
             return 1;
-        else if (this.weightMode == WEIGHTNING_MODES.PARABEL)
+        else if (this.weightMode == WeightMode.PARABEL)
             return -(1.0 / 129) * z * z + (127.0 / 64) * z;
         else
             return super.w(z);
     }
 
 
-    protected double w2(int z) {
+    private double w2(int z) {
         return w(z) * w(z);
     }
 
@@ -174,7 +164,7 @@ public class IterativeEnergySolver extends IHDRSolver {
         return d.mult(2 * lambda);
     }
 
-    private DecimalVector calculateG(DecimalVector F, DecimalVector g, int iteration) {
+    private Vector calculateG(Vector F, Vector g, int iteration) {
         int MAX_ITERATIONS = 1;
         if (robustnessDataG || mu > 0) {
             MAX_ITERATIONS = iterations;
@@ -183,8 +173,8 @@ public class IterativeEnergySolver extends IHDRSolver {
             //update_phi_smooth(g);
             update_phi_data(g, F);
             BandMatrix m = buildDerivateMatrix();
-            DecimalVector b = initializeB(F, g);
-            // add on the diagonale the DecimalMatrix with the sums of each grayvalue in the picture.
+            Vector b = initializeB(F, g);
+            // add on the diagonale the DefaultMatrix with the sums of each grayvalue in the picture.
             // Entry (k,k) says how many time the grayvalue k is present overall pictures and
             // is added to the derivate matrix above
             setupDataTerm(m);
@@ -220,7 +210,7 @@ public class IterativeEnergySolver extends IHDRSolver {
     }
 
 
-    private BandMatrix monotonieConstraint(DecimalVector g, BandMatrix m) {
+    private BandMatrix monotonieConstraint(Vector g, BandMatrix m) {
         BandMatrix vwwv = new BandMatrix(256, new int[]{0});
         for (int i = 1; i < g.length(); i++) {
             double diff = g.get(i - 1) - (g.get(i));
@@ -235,9 +225,9 @@ public class IterativeEnergySolver extends IHDRSolver {
         return m.add(mon);
     }
 
-    private DecimalVector initializeB(DecimalVector F, DecimalVector oldG) {
-        DecimalVector b;
-        b = new DecimalVector(oldG.length());
+    private Vector initializeB(Vector F, Vector oldG) {
+        Vector b;
+        b = new Vector(oldG.length());
         for (int k = 0; k < b.length(); k++) {
             double w = (robustnessDataG ? w2(k) : w(k));
             double s = 0;
@@ -257,7 +247,7 @@ public class IterativeEnergySolver extends IHDRSolver {
         return b;
     }
 
-    private DecimalVector calculateF(DecimalVector g, DecimalVector F, int i) {
+    private Vector calculateF(Vector g, Vector F, int i) {
         int MAX_ITERATIONS = 1;
         if (!robustnessDataG) {
             MAX_ITERATIONS = iterations;
@@ -274,7 +264,7 @@ public class IterativeEnergySolver extends IHDRSolver {
         return F;
     }
 
-    private DecimalVector solveFDefault(DecimalVector g, DecimalVector f) {
+    private Vector solveFDefault(Vector g, Vector f) {
         double quot;
         double div;
         double t;
@@ -299,7 +289,7 @@ public class IterativeEnergySolver extends IHDRSolver {
         return f;
     }
 
-    private DecimalVector solveFWithNeighbors(DecimalVector g, DecimalVector oldF, double alpha) {
+    private Vector solveFWithNeighbors(Vector g, Vector oldF, double alpha) {
         return getNeighborMatrix(g, oldF, alpha);
     }
 
@@ -308,8 +298,8 @@ public class IterativeEnergySolver extends IHDRSolver {
     protected HDRResult doInBackground() throws Exception {
         // start value for g, lets assume we just use a linear equotation
         long started = System.currentTimeMillis();
-        DecimalVector g = new DecimalVector(256);
-        DecimalVector F = new DecimalVector(N);
+        Vector g = new Vector(256);
+        Vector F = new Vector(N);
 
         final double[] energy = new double[iterations / energySteps];
         g = initG(g);
@@ -347,14 +337,14 @@ public class IterativeEnergySolver extends IHDRSolver {
     }
 
 
-    private DecimalVector initG(DecimalVector g) {
+    private Vector initG(Vector g) {
         for (int i = 0; i < g.length(); i++)
             g.set(i, -5 + i * 5.0 / 127.0);
         return g;
     }
 
 
-    protected void update_phi_data(DecimalVector g, DecimalVector F) {
+    protected void update_phi_data(Vector g, Vector F) {
         if (robustnessDataG) {
             for (int i = 0; i < F.length(); i++) {
                 for (int j = 0; j < ln_t.length; j++) {
@@ -365,7 +355,7 @@ public class IterativeEnergySolver extends IHDRSolver {
     }
 
     /*
-    protected void update_phi_smooth(DecimalVector g) {
+    protected void update_phi_smooth(Vector g) {
         if (robustnessSmoothnessG) {
             // set boundaries (not required, just to make a well defined state)
             phi_smooth[0] = 1;
@@ -379,8 +369,8 @@ public class IterativeEnergySolver extends IHDRSolver {
      */
 
     protected void process(List<HDRResult> pairs) {
-        DecimalVector g = pairs.get(0).getG();
-        DecimalVector E = pairs.get(0).getE();
+        Vector g = pairs.get(0).getG();
+        Vector E = pairs.get(0).getE();
 
         ScatterPlot p = new ScatterPlot(g);
         p.setXDescription("Grauwert");
@@ -398,9 +388,7 @@ public class IterativeEnergySolver extends IHDRSolver {
      * @param g - the function g (the entry i in the vector represents the value of g(i) )
      * @return the value of the energy functional  SUM(i=1,N,SUM(j=1,P,[g(Z_ij)-ln(E_i)-ln(dt_j)]^2))+lambda*SUM(z=1,254,g''(z)^2)
      */
-    public double calculateEnergy(DecimalVector F, DecimalVector g) {
-
-
+    protected double calculateEnergy(Vector F, Vector g) {
         // data term
         double data = 0.0;
         for (int i = 0; i < F.length(); i++) {
@@ -451,12 +439,12 @@ public class IterativeEnergySolver extends IHDRSolver {
     }
 
 
-    public DecimalVector getNeighborMatrix(DecimalVector g, DecimalVector F, double alpha) {
+    private Vector getNeighborMatrix(Vector g, Vector F, double alpha) {
         int cols = images.get(0).getWidth();
         int rows = images.get(0).getHeight();
 
         BandMatrix res = generateNeighborsBandMatrix(F, alpha, cols, rows);
-        DecimalVector b = new DecimalVector(F.length());
+        Vector b = new Vector(F.length());
         for (int i = 0; i < b.length(); i++) {
             double sum = 0;
             for (int j = 0; j < P; j++) {
@@ -468,7 +456,7 @@ public class IterativeEnergySolver extends IHDRSolver {
     }
 
 
-    private double phi_smoothness_e(DecimalVector F, int i, int j) {
+    private double phi_smoothness_e(Vector F, int i, int j) {
         if (robustnessSmoothnessE) {
             double v = F.get(i) - F.get(j);
             if (v == 0)
@@ -480,7 +468,7 @@ public class IterativeEnergySolver extends IHDRSolver {
     }
 
 
-    private BandMatrix generateNeighborsBandMatrix(DecimalVector F, double alpha, int cols, int rows) {
+    private BandMatrix generateNeighborsBandMatrix(Vector F, double alpha, int cols, int rows) {
         BandMatrix neighborsBandMatrix = new BandMatrix(cols * rows, new int[]{-cols, -1, 0, 1, cols});
         for (int i = 0; i < cols * rows; i++) {
             // weight

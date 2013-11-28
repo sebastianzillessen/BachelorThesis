@@ -1,14 +1,15 @@
 package Ctrl;
 
+import Maths.Vector;
+import Model.WeightMode;
 import View.Plots.ToneMappingPlot;
-import Maths.DecimalVector;
-import Solver.HDRResult;
+import Model.HDRResult;
 import Solver.IHDRSolver;
-import Solver.Image;
+import Model.Image;
 import Solver.IterativeEnergySolver;
 import View.GUIFrame;
-import tonemapping.LocalReinhardMapping;
-import tonemapping.ReinhardMapping;
+import View.ToneMappers.LocalReinhardMapping;
+import View.ToneMappers.ReinhardMapping;
 
 import javax.swing.*;
 import java.beans.PropertyChangeEvent;
@@ -28,7 +29,7 @@ public class Controller {
     private GUIFrame display;
 
     private static Controller ourInstance = new Controller();
-    private SwingWorker<HDRResult, DecimalVector> worker;
+    private SwingWorker<HDRResult, Vector> worker;
     private IHDRSolver solver;
 
     public static Controller getInstance() {
@@ -48,7 +49,7 @@ public class Controller {
         }
     }
 
-    private ArrayList<Solver.Image> images;
+    private ArrayList<Image> images;
 
 
     private Controller() {
@@ -56,7 +57,7 @@ public class Controller {
         display.append("Ready...");
     }
 
-    public void solve(double lambda, final int iterations, double mu, boolean robustnessDataG, boolean robustnessSmoothnessE, IterativeEnergySolver.WEIGHTNING_MODES weight, double alpha) {
+    public void solve(double lambda, final int iterations, double mu, boolean robustnessDataG, boolean robustnessSmoothnessE, WeightMode weight, double alpha) {
 
         if (solver != null && solver.getState() != IHDRSolver.StateValue.DONE) {
             solver.cancel(true);
@@ -88,7 +89,7 @@ public class Controller {
 
     public void readImages(Map<String, Float> imgList, boolean saltAndPepperNoise, double gaussianNoise) throws Exception {
         display.append("Reading files...");
-        images = new ArrayList<Solver.Image>();
+        images = new ArrayList<Image>();
         for (Map.Entry<String, Float> e : imgList.entrySet()) {
             Image image = new Image(e.getKey(), e.getValue());
             images.add(image);

@@ -8,7 +8,7 @@
 \backcite {paper}{{7}{(document)}{Doc-Start}}
 \backcite {Reinhard05}{{7}{(document)}{Doc-Start}}
 \backcite {tellone}{{7}{(document)}{Doc-Start}}
-\backcite {Reinhard}{{7}{(document)}{Doc-Start}}
+\backcite {Reinhard}{{8}{(document)}{Doc-Start}}
 \backcite {Reinhard}{{8}{(document)}{Doc-Start}}
 \backcite {paper}{{9}{1.1}{section.1.1}}
 \backcite {paper}{{9}{\relax 1.1}{figure.caption.7}}
@@ -56,14 +56,14 @@
 \backcite {paper}{{28}{4.4}{section.4.4}}
 \backcite {bruhn06}{{29}{4.4.3}{subsection.4.4.3}}
 \backcite {Westermann2008}{{46}{5.5.2}{equation.5.5.61}}
-\backcite {paper}{{51}{7.4}{section.7.4}}
-\backcite {paper}{{55}{A.1}{section.A.1}}
-\backcite {paper}{{57}{A.1}{section.A.1}}
-\backcite {paper}{{59}{A.1}{section.A.1}}
+\backcite {paper}{{57}{7.4}{section.7.4}}
 \backcite {paper}{{61}{A.1}{section.A.1}}
 \backcite {paper}{{63}{A.1}{section.A.1}}
 \backcite {paper}{{65}{A.1}{section.A.1}}
-\backcite {Ward03fast}{{66}{A.2.1}{subsection.A.2.1}}
-\backcite {Ward03fast}{{66}{A.2.1}{subsection.A.2.1}}
-\backcite {Reinhard}{{66}{A.2.1}{subsection.A.2.1}}
-\backcite {Ward03fast}{{66}{A.2.1}{subsection.A.2.1}}
+\backcite {paper}{{67}{A.1}{section.A.1}}
+\backcite {paper}{{69}{A.1}{section.A.1}}
+\backcite {paper}{{71}{A.1}{section.A.1}}
+\backcite {Ward03fast}{{72}{A.2.1}{subsection.A.2.1}}
+\backcite {Ward03fast}{{72}{A.2.1}{subsection.A.2.1}}
+\backcite {Reinhard}{{72}{A.2.1}{subsection.A.2.1}}
+\backcite {Ward03fast}{{72}{A.2.1}{subsection.A.2.1}}

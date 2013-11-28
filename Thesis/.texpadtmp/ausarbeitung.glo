@@ -2,6 +2,7 @@
 \glossaryentry{Salt \& Pepper Rauschen?\glossaryentryfield{SaltAndPepperNoise}{\glsnamefont{Salt \& Pepper Rauschen}}{Das sog. Salt \& Pepper Rauschen beschreibt eine Verkörnung des Bildes, bei Pixel auf weiß oder schwarz gesetzt sind. Dies kann durch Sensor- oder Messfehler entstehen oder durch Übertragungs- oder Abspeicherungsfehler. Salt \& Pepper Rauschen kann künstlich sehr leicht produziert werden, indem einzelne Bildpunkte zufällig auf weiß oder schwarz gesetzt werden. }{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
+\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{7}
 \glossaryentry{HDR?\glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{Monotonie?\glossaryentryfield{Monotonie}{\glsnamefont{Monotonie}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{10}
@@ -114,6 +115,9 @@
 \glossaryentry{JRE?\glossaryentryfield{JRE}{\glsnamefont{JRE}}{Java Runtime Environment}{\relax }|setentrycounter[]{page}\glsnumberformat}{48}
 \glossaryentry{MVC?\glossaryentryfield{MVC}{\glsnamefont{MVC}}{Model-View-Controller}{\relax }|setentrycounter[]{page}\glsnumberformat}{50}
 \glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{50}
-\glossaryentry{Robustheit?\glossaryentryfield{Robustheit}{\glsnamefont{Robustheit}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{51}
-\glossaryentry{Monotonie?\glossaryentryfield{Monotonie}{\glsnamefont{Monotonie}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{51}
-\glossaryentry{MTB?\glossaryentryfield{MTB}{\glsnamefont{MTB}}{Mean Threshold Bitmap Alignment}{\relax }|setentrycounter[]{page}\glsnumberformat}{66}
+\glossaryentry{Radiance Map?\glossaryentryfield{Radiance Map}{\glsnamefont{Radiance Map}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{50}
+\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{53}
+\glossaryentry{Tone Mapping?\glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone Mapping}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{56}
+\glossaryentry{Robustheit?\glossaryentryfield{Robustheit}{\glsnamefont{Robustheit}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{57}
+\glossaryentry{Monotonie?\glossaryentryfield{Monotonie}{\glsnamefont{Monotonie}}{Test test}{\relax }|setentrycounter[]{page}\glsnumberformat}{57}
+\glossaryentry{MTB?\glossaryentryfield{MTB}{\glsnamefont{MTB}}{Mean Threshold Bitmap Alignment}{\relax }|setentrycounter[]{page}\glsnumberformat}{72}

@@ -25,7 +25,9 @@ public class BandMatrix extends Matrix {
     //less then 2 percent improvement is already done ;)
     private final double ACCEPTED_PERCENTAGE_RESIDUUM_SOR = 0.02;
     private final double OMEGA_SOR = 1.2;
-
+    protected double[] elements;
+    protected int[] bandIndexes;
+    private int size;
 
     /**
      * creates a new BandMatrix out of an existing matrix (can sometimes be good for transformations)
@@ -45,37 +47,21 @@ public class BandMatrix extends Matrix {
         }
     }
 
-    private static int[] extractBands(Matrix m) {
-        Set<Integer> diagonales = new HashSet<Integer>();
-        if (m.rows() != m.cols())
-            throw new IllegalArgumentException("Only Quadratic Matrices allowed");
-        for (int row = 0; row < m.rows(); row++) {
-            for (int col = 0; col < m.cols(); col++) {
-                double v = m.get(row, col);
-                if (v != 0) {
-                    diagonales.add(col - row);
-                }
-            }
-        }
-        return ArrayMaths.TointArray(diagonales);
-    }
-
-
-    protected double[] elements;
-    protected int[] bandIndexes;
-    private int size;
-
-    private BandMatrix(int n) {
-        this.size = n;
-    }
-
-
-    public BandMatrix(int n, int[] bandIndexes) {
-        this(n);
+    /**
+     * generates a new bandmatrix of the size size x size with the specified band indexes.
+     * 0 is the center diagonale from top left to bottom right.
+     * -n is the n-th diagonale below the center.
+     * +n is the n-th diagonele above the center.
+     *
+     * @param size        size of the matrix
+     * @param bandIndexes diagonales which should be able to be set (0 is zenter)
+     */
+    public BandMatrix(int size, int[] bandIndexes) {
+        this(size);
         Arrays.sort(bandIndexes);
         int elementSize = 0;
         for (int i = 0; i < bandIndexes.length; i++) {
-            elementSize += (n - Math.abs(bandIndexes[i]));
+            elementSize += (size - Math.abs(bandIndexes[i]));
         }
         this.elements = new double[elementSize];
         for (int i = 0; i < elementSize; i++) {
@@ -84,30 +70,34 @@ public class BandMatrix extends Matrix {
         this.bandIndexes = bandIndexes;
     }
 
-    public BandMatrix(int size, Set indexes) {
-        this(size, ArrayMaths.TointArray(indexes));
-    }
-
-    public BandMatrix(int size, Integer[] bandIndexes) {
+    /**
+     * generates a new bandmatrix of the size size x size with the specified band indexes.
+     * 0 is the center diagonale from top left to bottom right.
+     * -n is the n-th diagonale below the center.
+     * +n is the n-th diagonele above the center.
+     *
+     * @param size        size of the matrix
+     * @param bandIndexes diagonales which should be able to be set (0 is zenter)
+     */
+    public BandMatrix(int size, Set bandIndexes) {
         this(size, ArrayMaths.TointArray(bandIndexes));
     }
 
 
-    public int getIndex(int row, int col) {
-        int diffToCenterInRow = col - row;
-        int pos = Arrays.binarySearch(bandIndexes, diffToCenterInRow);
-        if (pos < 0)
-            return -1;
-        else {
-            int index = row;
-            for (int i = 0; i < pos; i++) {
-                index += (size - Math.abs(bandIndexes[i]));
-            }
-            if (row > col)
-                index += bandIndexes[pos];
-
-            return index;
-        }
+    /**
+     * Parses a String to a Band Matrix. Entries have to be seperated by space, new lines represent a new row in the matrix.
+     * <p/>
+     * Example:
+     * <p/>
+     * s = "1 2 0 0\n"+
+     * "0 7 8 0 \n"+
+     * "0 0 1 1"+
+     *
+     * @param s space seperated matrix input (new lines for new row)
+     * @return a band matrix corresponding to s
+     */
+    public static BandMatrix parse(String s) {
+        return new BandMatrix(Matrix.parse(s));
     }
 
     @Override
@@ -170,7 +160,6 @@ public class BandMatrix extends Matrix {
         return r;
     }
 
-
     @Override
     public BandMatrix mult(double a) {
         BandMatrix m = new BandMatrix(size, bandIndexes);
@@ -179,7 +168,6 @@ public class BandMatrix extends Matrix {
         }
         return m;
     }
-
 
     @Override
     public void set(int row, int col, double f) {
@@ -221,7 +209,6 @@ public class BandMatrix extends Matrix {
         }
     }
 
-
     public String debug() {
         String s = "";
         for (int i = 0; i < bandIndexes.length; i++) {
@@ -241,32 +228,32 @@ public class BandMatrix extends Matrix {
 
     }
 
-    public DecimalVector solveSOR(DecimalVector b) {
+    public Vector solveSOR(Vector b) {
         return solveSOR(b, OMEGA_SOR, ACCEPTED_PERCENTAGE_RESIDUUM_SOR, ACCEPTED_DIFFERENCE_SOR);
     }
 
-    public DecimalVector solveSOR(DecimalVector right, DecimalVector init) {
+    public Vector solveSOR(Vector right, Vector init) {
         return solveSOR(right, OMEGA_SOR, ACCEPTED_PERCENTAGE_RESIDUUM_SOR, ACCEPTED_DIFFERENCE_SOR, init);
     }
 
-    public DecimalVector solveSOR(DecimalVector right, double omega, double accepted_error, double accepted_diff) {
+    public Vector solveSOR(Vector right, double omega, double accepted_error, double accepted_diff) {
         double[] x = new double[size];
         for (int i = 0; i < size; i++) {
             x[i] = 1;
         }
-        return solveSOR(right, omega, accepted_error, accepted_diff, new DecimalVector(x));
+        return solveSOR(right, omega, accepted_error, accepted_diff, new Vector(x));
     }
 
-    public DecimalVector solveSOR(DecimalVector b, double omega, double accepted_error, double accepted_diff, DecimalVector x) {
+    public Vector solveSOR(Vector b, double omega, double accepted_error, double accepted_diff, Vector x) {
         if (x.length() != size || b.length() != size)
             throw new IllegalArgumentException(String.format("The Vector are of wrong size. Expected: %d, Got for right side (b): %d, and for init: %d", size, b.length(), x.length()));
 
 
-        DecimalVector d = solveSORDouble(b, omega, accepted_error, accepted_diff, x, MAX_ITERATIONS_SOR);
+        Vector d = solveSORDouble(b, omega, accepted_error, accepted_diff, x, MAX_ITERATIONS_SOR);
         return d;
     }
 
-    private DecimalVector solveSORDouble(DecimalVector bV, double omega, double accepted_error, double accepted_diff, DecimalVector xV, int MAX_ITERATIONS) {
+    private Vector solveSORDouble(Vector bV, double omega, double accepted_error, double accepted_diff, Vector xV, int MAX_ITERATIONS) {
         checkSymmetric();
         checkPositiveSemiDefinit();
         double b[] = bV.toArray();
@@ -305,7 +292,7 @@ public class BandMatrix extends Matrix {
             }
             old_x = Arrays.copyOf(x, x.length);
         }
-        return new DecimalVector(x);
+        return new Vector(x);
     }
 
     /**
@@ -331,22 +318,6 @@ public class BandMatrix extends Matrix {
         return true;
     }
 
-    /**
-     * checks if the matrix is symmetric and throws an error if it is not.
-     */
-    private void checkSymmetric() {
-        if (!isSysmmetric())
-            throw new IllegalArgumentException("Matrix is not symmetric.");
-    }
-
-    /**
-     * checks if the matrix is positiv semi-definit and throws an error if it is not.
-     */
-    private void checkPositiveSemiDefinit() {
-        if (!isPositivSemiDefinite())
-            throw new IllegalArgumentException("Matrix is not positive definite");
-    }
-
     @Override
     public BandMatrix transpose() {
         int[] newBandIndexes = Arrays.copyOf(bandIndexes, bandIndexes.length);
@@ -361,22 +332,6 @@ public class BandMatrix extends Matrix {
             }
         }
         return res;
-    }
-
-    /**
-     * Parses a String to a Band Matrix. Entries have to be seperated by space, new lines represent a new row in the matrix.
-     * <p/>
-     * Example:
-     * <p/>
-     * s = "1 2 0 0\n"+
-     * "0 7 8 0 \n"+
-     * "0 0 1 1"+
-     *
-     * @param s space seperated matrix input (new lines for new row)
-     * @return a band matrix corresponding to s
-     */
-    public static BandMatrix parse(String s) {
-        return new BandMatrix(Matrix.parse(s));
     }
 
     /**
@@ -419,10 +374,10 @@ public class BandMatrix extends Matrix {
     }
 
     @Override
-    public DecimalVector mult(final DecimalVector x) {
+    public Vector mult(final Vector x) {
         if (x.length() != this.cols())
             throw new IllegalArgumentException("Matrix * vector: vector must be of size " + cols() + " but was " + x.length());
-        final DecimalVector r = new DecimalVector(this.rows());
+        final Vector r = new Vector(this.rows());
 
         ExecutorService executor = Executors.newFixedThreadPool(7);
         for (int i = 0; i < rows(); i++) {
@@ -446,7 +401,6 @@ public class BandMatrix extends Matrix {
         }
         return r;
     }
-
 
     public boolean isPositivSemiDefinite() {
         for (int row = 0; row < size; row++) {
@@ -498,5 +452,64 @@ public class BandMatrix extends Matrix {
         }
         return success;
 
+    }
+
+    private static int[] extractBands(Matrix m) {
+        Set<Integer> diagonales = new HashSet<Integer>();
+        if (m.rows() != m.cols())
+            throw new IllegalArgumentException("Only Quadratic Matrices allowed");
+        for (int row = 0; row < m.rows(); row++) {
+            for (int col = 0; col < m.cols(); col++) {
+                double v = m.get(row, col);
+                if (v != 0) {
+                    diagonales.add(col - row);
+                }
+            }
+        }
+        return ArrayMaths.TointArray(diagonales);
+    }
+
+    private BandMatrix(int n) {
+        this.size = n;
+    }
+
+    /**
+     * checks if the matrix is symmetric and throws an error if it is not.
+     */
+    private void checkSymmetric() {
+        if (!isSysmmetric())
+            throw new IllegalArgumentException("Matrix is not symmetric.");
+    }
+
+    /**
+     * checks if the matrix is positiv semi-definit and throws an error if it is not.
+     */
+    private void checkPositiveSemiDefinit() {
+        if (!isPositivSemiDefinite())
+            throw new IllegalArgumentException("Matrix is not positive definite");
+    }
+
+    /**
+     * returns the index in the internal array of a given row and col
+     *
+     * @param row row in the matrix
+     * @param col col in the matrix
+     * @return index in the band index array (1D) or -1 if not availble
+     */
+    private int getIndex(int row, int col) {
+        int diffToCenterInRow = col - row;
+        int pos = Arrays.binarySearch(bandIndexes, diffToCenterInRow);
+        if (pos < 0)
+            return -1;
+        else {
+            int index = row;
+            for (int i = 0; i < pos; i++) {
+                index += (size - Math.abs(bandIndexes[i]));
+            }
+            if (row > col)
+                index += bandIndexes[pos];
+
+            return index;
+        }
     }
 }

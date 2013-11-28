@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-532.4254807692307" y="1.0">Model</node>
+    <node x="-310.1298567503925" y="5.0">Ctrl</node>
+    <node x="-317.7260105965463" y="101.5">Solver</node>
+    <node x="-533.0" y="102.0">Maths</node>
+    <node x="-312.2260105965463" y="-80.0">View</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Ctrl" target="Model">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Solver" target="Ctrl">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="View" target="View">
+      <point x="0.0" y="0.0" />
+      <point x="-254.2260105965463" y="-104.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Model" target="Maths">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Ctrl" target="Maths">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="View" target="Model">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Solver" target="Maths">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Ctrl" target="Solver">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Solver" target="Model">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Ctrl" target="View">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="View" target="Ctrl">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Maths" target="Maths">
+      <point x="0.0" y="0.0" />
+      <point x="-470.5" y="77.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="-362.5" y="13.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

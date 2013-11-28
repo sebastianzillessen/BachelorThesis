@@ -1,5 +1,8 @@
 package Solver;
 
+import Model.HDRResult;
+import Model.Image;
+
 import javax.swing.*;
 import java.util.List;
 

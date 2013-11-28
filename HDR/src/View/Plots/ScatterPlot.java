@@ -1,7 +1,7 @@
 package View.Plots;
 
 import Maths.ArrayMaths;
-import Maths.DecimalVector;
+import Maths.Vector;
 
 import java.awt.*;
 
@@ -113,7 +113,7 @@ public class ScatterPlot extends Plot {
         this.plotLine = true;
     }
 
-    public ScatterPlot(DecimalVector y) {
+    public ScatterPlot(Vector y) {
         super();
         setY(y.toArray());
         this.scale = Scale.LINEAR;

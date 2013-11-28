@@ -1,7 +1,7 @@
 package View.Plots;
 
-import Solver.HDRResult;
-import tonemapping.ToneMapping;
+import Model.HDRResult;
+import View.ToneMappers.ToneMapping;
 
 import javax.swing.*;
 import java.awt.*;

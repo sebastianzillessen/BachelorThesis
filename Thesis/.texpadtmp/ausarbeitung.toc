@@ -52,25 +52,25 @@
 \contentsline {section}{\numberline {6.2}Externe Bibliotheken}{48}{section.6.2}
 \contentsline {section}{\numberline {6.3}Architektur}{50}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Komponentendiagramm}{50}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Sequenzdiagramm}{50}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}Algorithmus in Pseudocode}{50}{section.6.4}
-\contentsline {section}{\numberline {6.5}Ausgew\IeC {\"a}hlte Programmabschnitte}{50}{section.6.5}
-\contentsline {section}{\numberline {6.6}Verwendetes \gls {Tone-Mapping}-Verfahren}{50}{section.6.6}
-\contentsline {section}{\numberline {6.7}Laufzeitanalyse}{50}{section.6.7}
-\contentsline {chapter}{\numberline {7}Ergebnisse und Resultate}{51}{chapter.7}
-\contentsline {section}{\numberline {7.1}Ergebnisse ohne Erweiterungen}{51}{section.7.1}
-\contentsline {section}{\numberline {7.2}Ergebnisse mit Erweiterungen}{51}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Ergebnisse mit \glspl {Robustheit}-Term}{51}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Ergebnisse mit \gls {Monotonie}-Bedingung}{51}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}Ergebnisse mit r\IeC {\"a}umlichem Glattheitsterm}{51}{subsection.7.2.3}
-\contentsline {section}{\numberline {7.3}Vergleich der Ergebnisse}{51}{section.7.3}
-\contentsline {section}{\numberline {7.4}Vergleich zum naiven Ansatz von Debevec und Malik \cite {paper}}{51}{section.7.4}
-\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{53}{chapter.8}
-\contentsline {chapter}{\numberline {A}Anhang}{55}{appendix.A}
-\contentsline {section}{\numberline {A.1}Artikel \cite {paper}}{55}{section.A.1}
-\contentsline {section}{\numberline {A.2}Verwendete Algorithmen}{66}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}}{66}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}LU-Zerlegung}{68}{subsection.A.2.2}
-\contentsline {section}{\numberline {A.3}Programmcode}{69}{section.A.3}
-\contentsline {chapter}{Glossar und Abk\IeC {\"u}rzungsverzeichnis}{71}{section*.28}
-\contentsline {chapter}{Literaturverzeichnis}{73}{appendix*.30}
+\contentsline {subsection}{\numberline {6.3.2}Sequenzdiagramm}{55}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}Algorithmus in Pseudocode}{56}{section.6.4}
+\contentsline {section}{\numberline {6.5}Ausgew\IeC {\"a}hlte Programmabschnitte}{56}{section.6.5}
+\contentsline {section}{\numberline {6.6}Verwendetes \gls {Tone-Mapping}-Verfahren}{56}{section.6.6}
+\contentsline {section}{\numberline {6.7}Laufzeitanalyse}{56}{section.6.7}
+\contentsline {chapter}{\numberline {7}Ergebnisse und Resultate}{57}{chapter.7}
+\contentsline {section}{\numberline {7.1}Ergebnisse ohne Erweiterungen}{57}{section.7.1}
+\contentsline {section}{\numberline {7.2}Ergebnisse mit Erweiterungen}{57}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Ergebnisse mit \glspl {Robustheit}-Term}{57}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Ergebnisse mit \gls {Monotonie}-Bedingung}{57}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Ergebnisse mit r\IeC {\"a}umlichem Glattheitsterm}{57}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}Vergleich der Ergebnisse}{57}{section.7.3}
+\contentsline {section}{\numberline {7.4}Vergleich zum naiven Ansatz von Debevec und Malik \cite {paper}}{57}{section.7.4}
+\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{59}{chapter.8}
+\contentsline {chapter}{\numberline {A}Anhang}{61}{appendix.A}
+\contentsline {section}{\numberline {A.1}Artikel \cite {paper}}{61}{section.A.1}
+\contentsline {section}{\numberline {A.2}Verwendete Algorithmen}{72}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}}{72}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}LU-Zerlegung}{74}{subsection.A.2.2}
+\contentsline {section}{\numberline {A.3}Programmcode}{75}{section.A.3}
+\contentsline {chapter}{Glossar und Abk\IeC {\"u}rzungsverzeichnis}{77}{section*.34}
+\contentsline {chapter}{Literaturverzeichnis}{79}{appendix*.36}

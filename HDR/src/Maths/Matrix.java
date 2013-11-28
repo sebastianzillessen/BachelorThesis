@@ -31,10 +31,10 @@ public abstract class Matrix {
     public abstract double get(int row, int col);
 
 
-    public DecimalVector mult(final DecimalVector x) {
+    public Vector mult(final Vector x) {
         if (x.length() != cols())
             throw new IllegalArgumentException("Matrix * vector: vector must be of size " + cols() + " but was " + x.length());
-        final DecimalVector r = new DecimalVector(this.rows());
+        final Vector r = new Vector(this.rows());
         ExecutorService executor = Executors.newFixedThreadPool(8);
         for (int i = 0; i < rows(); i++) {
             final int finalI = i;
@@ -58,15 +58,15 @@ public abstract class Matrix {
         return r;
     }
 
-    public DecimalVector mult(double[] x) {
-        return this.mult(new DecimalVector(x));
+    public Vector mult(double[] x) {
+        return this.mult(new Vector(x));
     }
 
 
     public Matrix mult(Matrix m) {
         if (m.rows() != cols())
             throw new IllegalArgumentException("Not the same rows and colls. Inputs has " + m.rows() + " rows. I have " + cols() + " cols");
-        Matrix c = new DecimalMatrix(rows(), m.cols());
+        Matrix c = new DefaultMatrix(rows(), m.cols());
         for (int i = 0; i < c.rows(); i++) {
             for (int k = 0; k < c.cols(); k++) {
                 double a = 0;
@@ -84,7 +84,7 @@ public abstract class Matrix {
     public Matrix add(Matrix m) {
         if (m.cols() != rows() || m.cols() != cols())
             throw new IllegalArgumentException("Not the same rows and colls");
-        DecimalMatrix r = new DecimalMatrix(rows(), cols());
+        DefaultMatrix r = new DefaultMatrix(rows(), cols());
         for (int i = 0; i < rows(); i++) {
             for (int j = 0; j < cols(); j++) {
                 r.set(i, j, m.get(i, j) + get(i, j));
@@ -94,7 +94,7 @@ public abstract class Matrix {
     }
 
     public Matrix transpose() {
-        Matrix res = new DecimalMatrix(cols(), rows());
+        Matrix res = new DefaultMatrix(cols(), rows());
         for (int r = 0; r < rows(); r++) {
             for (int c = 0; c < cols(); c++) {
                 res.set(c, r, get(r, c));
@@ -107,8 +107,8 @@ public abstract class Matrix {
     public Matrix[] decomposePenta() {
         if (L == null || R == null) {
             final int n = rows();
-            L = new DecimalMatrix(n);
-            R = new DecimalMatrix(n);
+            L = new DefaultMatrix(n);
+            R = new DefaultMatrix(n);
             double[] m = new double[n];
             double[] l = new double[n];
             double[] k = new double[n];
@@ -165,17 +165,17 @@ public abstract class Matrix {
      * @param b the vector on the right sight of the LGS
      * @return the vector x.
      */
-    public DecimalVector solvePentadiagonale(DecimalVector b) {
+    public Vector solvePentadiagonale(Vector b) {
         checkPentadiagonale();
         Matrix[] LU = decomposePenta();
         // forward elimination L*y = b
-        DecimalVector y = forwardElimination(b, LU[0]);
+        Vector y = forwardElimination(b, LU[0]);
         // backward substitution U*g = y
         return backwardSubstitution(LU[1], y);
     }
 
-    public static DecimalVector forwardElimination(DecimalVector b, Matrix l) {
-        DecimalVector y = new DecimalVector(b.length());
+    public static Vector forwardElimination(Vector b, Matrix l) {
+        Vector y = new Vector(b.length());
         y.set(0, b.get(0));
         y.set(1, b.get(1) - l.get(1, 0) * y.get(0));
         for (int i = 2; i < b.length(); i++) {
@@ -184,9 +184,9 @@ public abstract class Matrix {
         return y;
     }
 
-    public static DecimalVector backwardSubstitution(Matrix U, DecimalVector y) {
+    public static Vector backwardSubstitution(Matrix U, Vector y) {
         int n = y.length();
-        DecimalVector g = new DecimalVector(n);
+        Vector g = new Vector(n);
         g.set(n - 1, y.get(n - 1) / U.get(n - 1, n - 1));
         g.set(n - 2, (y.get(n - 2) - U.get(n - 2, n - 1) * g.get(n - 1)) / U.get(n - 2, n - 2));
         for (int i = n - 3; i >= 0; i--) {
@@ -227,7 +227,7 @@ public abstract class Matrix {
     }
 
     public Matrix clone() {
-        Matrix r = new DecimalMatrix(rows(), cols());
+        Matrix r = new DefaultMatrix(rows(), cols());
         for (int row = 0; row < rows(); row++) {
             for (int col = 0; col < cols(); col++) {
                 r.set(row, col, get(row, col));
@@ -257,7 +257,7 @@ public abstract class Matrix {
         int rows = lines.length;
         int cols = lines[0].trim().split(" ").length;
 
-        Matrix m = new DecimalMatrix(rows, cols);
+        Matrix m = new DefaultMatrix(rows, cols);
         for (int row = 0; row < rows; row++) {
             String[] rowElements = lines[row].trim().split(" ");
             for (int col = 0; col < cols; col++) {

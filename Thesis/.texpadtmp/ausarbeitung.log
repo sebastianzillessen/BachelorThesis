@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  27 NOV 2013 23:12
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  28 NOV 2013 01:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1113,6 +1113,12 @@ LaTeX Warning: Label `fig:teezer' multiply defined.
 
 LaTeX Warning: Label `fig:luminance' multiply defined.
 
+
+LaTeX Warning: Label `fig:arch:plots' multiply defined.
+
+
+LaTeX Warning: Label `fig:arch:plots' multiply defined.
+
 )
 \openout1 = `ausarbeitung.aux'.
 
@@ -1302,7 +1308,9 @@ LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10.95> not available
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 8.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-))
+) [7
+
+])
 \tf@lof=\write10
 \openout10 = `ausarbeitung.lof'.
 
@@ -1312,9 +1320,7 @@ Overfull \hbox (10.88788pt too wide) in paragraph at lines 167--167
  []
 
 Package tocbasic Info: character protrusion at lot deactivated on input line 167.
-(/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.lot [7
-
-])
+(/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.lot)
 \tf@lot=\write11
 \openout11 = `ausarbeitung.lot'.
 
@@ -1361,7 +1367,7 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              Support for \float@addtolists may be removed from
 (scrbook)              `scrbook' soon .
 
-<graphics/ImageAquisitionPipeline.png, id=365, 1548.78625pt x 253.94875pt>
+<graphics/ImageAquisitionPipeline.png, id=385, 1548.78625pt x 253.94875pt>
 File: graphics/ImageAquisitionPipeline.png Graphic file (type png)
  <use graphics/ImageAquisitionPipeline.png>
 Package pdftex.def Info: graphics/ImageAquisitionPipeline.png used on input line 12.
@@ -1376,52 +1382,52 @@ Underfull \hbox (badness 1735) in paragraph at lines 24--25
 []\T1/pplj/m/n/10.95 (+20) Diese [][]Im-ple-men-tie-rung[][] soll dann suk-zes-si-ve um ro-bus-te Funk-tio-nen, [][][]Mo-no-to-nie[][]-
  []
 
-<graphics/img/1_6.jpg, id=377, 602.25pt x 401.5pt>
+<graphics/img/1_6.jpg, id=397, 602.25pt x 401.5pt>
 File: graphics/img/1_6.jpg Graphic file (type jpg)
  <use graphics/img/1_6.jpg>
 Package pdftex.def Info: graphics/img/1_6.jpg used on input line 28.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- <graphics/img/1_10.jpg, id=378, 602.25pt x 401.5pt>
+ <graphics/img/1_10.jpg, id=398, 602.25pt x 401.5pt>
 File: graphics/img/1_10.jpg Graphic file (type jpg)
  <use graphics/img/1_10.jpg>
 Package pdftex.def Info: graphics/img/1_10.jpg used on input line 29.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- <graphics/img/1_20.jpg, id=379, 602.25pt x 401.5pt>
+ <graphics/img/1_20.jpg, id=399, 602.25pt x 401.5pt>
 File: graphics/img/1_20.jpg Graphic file (type jpg)
  <use graphics/img/1_20.jpg>
 Package pdftex.def Info: graphics/img/1_20.jpg used on input line 30.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- <graphics/img/1_40.jpg, id=380, 602.25pt x 401.5pt>
+ <graphics/img/1_40.jpg, id=400, 602.25pt x 401.5pt>
 File: graphics/img/1_40.jpg Graphic file (type jpg)
  <use graphics/img/1_40.jpg>
 Package pdftex.def Info: graphics/img/1_40.jpg used on input line 31.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- <graphics/img/1_60.jpg, id=381, 602.25pt x 401.5pt>
+ <graphics/img/1_60.jpg, id=401, 602.25pt x 401.5pt>
 File: graphics/img/1_60.jpg Graphic file (type jpg)
  <use graphics/img/1_60.jpg>
 Package pdftex.def Info: graphics/img/1_60.jpg used on input line 32.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- <graphics/img/1_160.jpg, id=382, 602.25pt x 401.5pt>
+ <graphics/img/1_160.jpg, id=402, 602.25pt x 401.5pt>
 File: graphics/img/1_160.jpg Graphic file (type jpg)
  <use graphics/img/1_160.jpg>
 Package pdftex.def Info: graphics/img/1_160.jpg used on input line 33.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- <graphics/teezer/g_noise_no_robustness.png, id=384, 681.54625pt x 656.4525pt>
+ <graphics/teezer/g_noise_no_robustness.png, id=404, 681.54625pt x 656.4525pt>
 File: graphics/teezer/g_noise_no_robustness.png Graphic file (type png)
  <use graphics/teezer/g_noise_no_robustness.png>
 Package pdftex.def Info: graphics/teezer/g_noise_no_robustness.png used on input line 42.
 (pdftex.def)             Requested size: 199.81383pt x 192.45982pt.
- <graphics/teezer/g_noise_robustness_raum.png, id=386, 681.54625pt x 656.4525pt>
+ <graphics/teezer/g_noise_robustness_raum.png, id=406, 681.54625pt x 656.4525pt>
 File: graphics/teezer/g_noise_robustness_raum.png Graphic file (type png)
  <use graphics/teezer/g_noise_robustness_raum.png>
 Package pdftex.def Info: graphics/teezer/g_noise_robustness_raum.png used on input line 43.
 (pdftex.def)             Requested size: 199.81383pt x 192.45982pt.
- <graphics/teezer/E_noise_no_robustness.png, id=387, 602.25pt x 401.5pt>
+ <graphics/teezer/E_noise_no_robustness.png, id=407, 602.25pt x 401.5pt>
 File: graphics/teezer/E_noise_no_robustness.png Graphic file (type png)
  <use graphics/teezer/E_noise_no_robustness.png>
 Package pdftex.def Info: graphics/teezer/E_noise_no_robustness.png used on input line 44.
 (pdftex.def)             Requested size: 199.81383pt x 133.21219pt.
- <graphics/teezer/E_noise_robustness_raum.png, id=388, 602.25pt x 401.5pt>
+ <graphics/teezer/E_noise_robustness_raum.png, id=408, 602.25pt x 401.5pt>
 File: graphics/teezer/E_noise_robustness_raum.png Graphic file (type png)
  <use graphics/teezer/E_noise_robustness_raum.png>
 Package pdftex.def Info: graphics/teezer/E_noise_robustness_raum.png used on input line 45.
@@ -1435,7 +1441,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 Kapitel 2.
-<graphics/example.jpg, id=438, 602.25pt x 401.5pt>
+<graphics/example.jpg, id=458, 602.25pt x 401.5pt>
 File: graphics/example.jpg Graphic file (type jpg)
  <use graphics/example.jpg>
 Package pdftex.def Info: graphics/example.jpg used on input line 23.
@@ -1467,12 +1473,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--175
 [][][][][]$\T1/cmtt/m/n/9 http : / / www . gimp . org$[][] \T1/pplj/m/n/9 (+20) mit Plu-gin \T1/cmtt/m/n/9 Exposure Blend \T1/pplj/m/n/9 (+20) ([][]$\T1/cmtt/m/n/9 http : / / tir . astro . utoledo . edu / jdsmith / code /
  []
 
-<graphics/Luminance.png, id=585, 1706.375pt x 1469.49pt>
+<graphics/Luminance.png, id=606, 1706.375pt x 1469.49pt>
 File: graphics/Luminance.png Graphic file (type png)
  <use graphics/Luminance.png>
 Package pdftex.def Info: graphics/Luminance.png used on input line 178.
 (pdftex.def)             Requested size: 355.22836pt x 305.9113pt.
- [19] <graphics/BenchGeneratedLuminance.png, id=603, 602.25pt x 401.5pt>
+ [19] <graphics/BenchGeneratedLuminance.png, id=623, 602.25pt x 401.5pt>
 File: graphics/BenchGeneratedLuminance.png Graphic file (type png)
  <use graphics/BenchGeneratedLuminance.png>
 Package pdftex.def Info: graphics/BenchGeneratedLuminance.png used on input line 189.
@@ -1530,7 +1536,7 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 280.
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 ) [38] [39] [40] [41] [42] [43] [44] [45]) (./content/implementierung.tex [46]
 Kapitel 6.
-<graphics/Tool.png, id=1000, 817.0525pt x 859.21pt>
+<graphics/Tool.png, id=1020, 817.0525pt x 859.21pt>
 File: graphics/Tool.png Graphic file (type png)
  <use graphics/Tool.png>
 Package pdftex.def Info: graphics/Tool.png used on input line 48.
@@ -1546,18 +1552,46 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 7.59998pt on input line 58.
 
-./content/implementierung.tex:62: Too many }'s.
-l.62 ...kelte \texttt{XMP} Core \footnote{\url{}}}
-                                                  
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[][][][][]$\T1/cmtt/m/n/9 http : / / docs . oracle . com / javase / tutorial / uiswing / examples / components / index . html #
+ []
 
-[48] [49 <./graphics/Tool.png>]
+[48] [49 <./graphics/Tool.png>] <graphics/architecture/components.jpg, id=1063, 768.8725pt x 556.0775pt>
+File: graphics/architecture/components.jpg Graphic file (type jpg)
+ <use graphics/architecture/components.jpg>
+Package pdftex.def Info: graphics/architecture/components.jpg used on input line 85.
+(pdftex.def)             Requested size: 355.22836pt x 256.91878pt.
+ [50] <graphics/architecture/view.jpg, id=1073, 1326.9575pt x 1061.9675pt>
+File: graphics/architecture/view.jpg Graphic file (type jpg)
+ <use graphics/architecture/view.jpg>
+Package pdftex.def Info: graphics/architecture/view.jpg used on input line 94.
+(pdftex.def)             Requested size: 355.22836pt x 284.28821pt.
+ [51 <./graphics/architecture/components.jpg>] <graphics/architecture/plots.jpg, id=1078, 2242.3775pt x 1891.065pt>
+File: graphics/architecture/plots.jpg Graphic file (type jpg)
+ <use graphics/architecture/plots.jpg>
+Package pdftex.def Info: graphics/architecture/plots.jpg used on input line 103.
+(pdftex.def)             Requested size: 355.22836pt x 299.57564pt.
+ [52 <./graphics/architecture/view.jpg>] <graphics/architecture/matrixes.jpg, id=1084, 2057.6875pt x 2248.4pt>
+File: graphics/architecture/matrixes.jpg Graphic file (type jpg)
+ <use graphics/architecture/matrixes.jpg>
+Package pdftex.def Info: graphics/architecture/matrixes.jpg used on input line 112.
+(pdftex.def)             Requested size: 444.03377pt x 485.18059pt.
+
+Underfull \hbox (badness 6608) in paragraph at lines 113--113
+[][][]|\T1/pplj/m/n/10.95 (+20) Die Klas-se \T1/cmtt/m/n/10.95 Matrix \T1/pplj/m/n/10.95 (+20) und ih-re Spe-zia-li-sie-run-gen \T1/cmtt/m/n/10.95 BandMatrix \T1/pplj/m/n/10.95 (+20) und
+ []
+
+[53 <./graphics/architecture/plots.jpg>] <graphics/architecture/sequence_example.png, id=1090, 593.71812pt x 684.05562pt>
+File: graphics/architecture/sequence_example.png Graphic file (type png)
+ <use graphics/architecture/sequence_example.png>
+Package pdftex.def Info: graphics/architecture/sequence_example.png used on input line 123.
+(pdftex.def)             Requested size: 355.22836pt x 409.28838pt.
+ [54 <./graphics/architecture/matrixes.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gls' on input line 78.
+(hyperref)                removing `\gls' on input line 133.
 
-) (./content/ergebnisse.tex [50]
+) (./content/ergebnisse.tex [55 <./graphics/architecture/sequence_example.png>] [56]
 Kapitel 7.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 9.49997pt on input line 7.
@@ -1569,15 +1603,15 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 20.
 
-) (./content/zusammenfassung_und_ausblick.tex [51
+) (./content/zusammenfassung_und_ausblick.tex [57
 
 
-] [52
+] [58
 
 
 ]
 Kapitel 8.
-) (./content/anhang.tex [53] [54
+) (./content/anhang.tex [59] [60
 
 
 ]
@@ -1586,7 +1620,7 @@ Anhang A.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 2.
 
-[55] <content/attachment/00_Artikel.pdf, id=1079, page=1, 614.295pt x 794.97pt>
+[61] <content/attachment/00_Artikel.pdf, id=1141, page=1, 614.295pt x 794.97pt>
 File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 1>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page1 used on input line 3.
@@ -1607,7 +1641,7 @@ File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 1>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page1 used on input line 3.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [56 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=1129, page=2, 614.295pt x 794.97pt>
+ [62 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=1191, page=2, 614.295pt x 794.97pt>
 File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 2>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page2 used on input line 3.
@@ -1620,7 +1654,7 @@ File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 2>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page2 used on input line 3.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [57 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=1169, page=3, 614.295pt x 794.97pt>
+ [63 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=1230, page=3, 614.295pt x 794.97pt>
 File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 3>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page3 used on input line 3.
@@ -1633,7 +1667,7 @@ File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 3>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page3 used on input line 3.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [58 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=1901, page=4, 614.295pt x 794.97pt>
+ [64 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=1963, page=4, 614.295pt x 794.97pt>
 File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 4>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page4 used on input line 3.
@@ -1646,7 +1680,7 @@ File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 4>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page4 used on input line 3.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [59 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2589, page=5, 614.295pt x 794.97pt>
+ [65 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2650, page=5, 614.295pt x 794.97pt>
 File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 5>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page5 used on input line 3.
@@ -1659,7 +1693,7 @@ File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 5>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page5 used on input line 3.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [60 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2655, page=6, 614.295pt x 794.97pt>
+ [66 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2717, page=6, 614.295pt x 794.97pt>
 File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 6>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page6 used on input line 3.
@@ -1672,7 +1706,7 @@ File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 6>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page6 used on input line 3.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [61 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2840, page=7, 614.295pt x 794.97pt>
+ [67 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2902, page=7, 614.295pt x 794.97pt>
 File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 7>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page7 used on input line 3.
@@ -1685,7 +1719,7 @@ File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 7>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page7 used on input line 3.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [62 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2880, page=8, 614.295pt x 794.97pt>
+ [68 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2942, page=8, 614.295pt x 794.97pt>
 File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
 
 <use content/attachment/00_Artikel.pdf, page 8>
@@ -1699,7 +1733,7 @@ File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 8>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page8 used on input line 3.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [63 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2906, page=9, 614.295pt x 794.97pt>
+ [69 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2968, page=9, 614.295pt x 794.97pt>
 File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 9>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page9 used on input line 3.
@@ -1712,7 +1746,7 @@ File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 9>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page9 used on input line 3.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [64 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2930, page=10, 614.295pt x 794.97pt>
+ [70 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2991, page=10, 614.295pt x 794.97pt>
 File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 10>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page10 used on input line 3.
@@ -1725,28 +1759,28 @@ File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
  <use content/attachment/00_Artikel.pdf, page 10>
 Package pdftex.def Info: content/attachment/00_Artikel.pdf, page10 used on input line 3.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [65 <./content/attachment/00_Artikel.pdf>]
+ [71 <./content/attachment/00_Artikel.pdf>]
 
 Package caption Warning: \label without proper \caption on input line 38.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `lst:MTB:core' on page 66 undefined on input line 10.
+LaTeX Warning: Reference `lst:MTB:core' on page 72 undefined on input line 10.
 
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 17.
 Package hyperref Info: bookmark level for unknown Listing defaults to 0 on input line 33.
-[66] [67]) (/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.gls [68] [69] [70
+[72] [73]) (/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.gls [74] [75] [76
 
 
-] [71
+] [77
 
 
 ]) (/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.bbl (/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.brf)
 \tf@brf=\write14
 \openout14 = `ausarbeitung.brf'.
 
- [72] [73
+ [78] [79
 
 
 ]
@@ -1764,7 +1798,7 @@ Overfull \hbox (62.25186pt too wide) in paragraph at lines 110--110
 \T1/cmtt/m/n/10.95 how-[]to-[]shoot-[]and-[]post-[]process-[]professional-[]hdr-[]photos-[]in-[]one-[]day-[]2-[]-[]photo-[]4102$[][]\T1/pplj/m/n/10.95 (-20) .
  []
 
-) [74] [75
+) [80] [81
 
 
 
@@ -1788,28 +1822,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29527 strings out of 493488
- 501395 string characters out of 3141326
- 755466 words of memory out of 3000000
- 31382 multiletter control sequences out of 15000+200000
+ 29569 strings out of 493488
+ 502476 string characters out of 3141326
+ 758229 words of memory out of 3000000
+ 31408 multiletter control sequences out of 15000+200000
  128288 words of font info for 441 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  77i,28n,87p,1470b,1639s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{glo:MVC} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Algorithmus.caption.28} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Listing.caption.27} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{appendix*.31} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.29} has been referenced but does not exist, replaced by a fixed one
-
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.pdf (76 pages, 3717249 bytes).
+Output written on /Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.pdf (82 pages, 4573718 bytes).
 PDF statistics:
- 3331 PDF objects out of 3580 (max. 8388607)
- 2291 compressed objects within 23 object streams
- 375 named destinations out of 1000 (max. 500000)
- 73724 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 3393 PDF objects out of 3580 (max. 8388607)
+ 2340 compressed objects within 24 object streams
+ 384 named destinations out of 1000 (max. 500000)
+ 73749 words of extra memory for PDF output out of 74296 (max. 10000000)
 

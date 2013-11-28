@@ -1,6 +1,7 @@
 package View.Plots;
 
 import java.awt.*;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 
 /**
@@ -14,7 +15,7 @@ public class ImagePlot extends Plot {
 
     private final int height;
     private final int width;
-    private Solver.Image image;
+    private Model.Image image;
     BufferedImage bi = null;
 
     Thread generating;
@@ -32,14 +33,14 @@ public class ImagePlot extends Plot {
         }
     }
 
-    public void setImage(Solver.Image image) {
+    public void setImage(Model.Image image) {
         System.out.println("Set Image");
         this.image = image;
         startImageCalculation();
     }
 
 
-    public ImagePlot(Solver.Image image) {
+    public ImagePlot(Model.Image image) {
         super();
         this.image = image;
         this.width = image.getWidth();

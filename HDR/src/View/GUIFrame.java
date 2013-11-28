@@ -1,12 +1,14 @@
 package View;
 
 import Ctrl.Controller;
+import Model.Image;
+import Model.WeightMode;
+import View.ImageChooser.JImageChooser;
 import View.ImageTable.ImageTableModel;
 import View.ImageTable.LeftDotTableRenderer;
+import View.NumericTextField.NumericTextField;
 import View.Plots.ImagePlot;
 import View.Plots.Plot;
-import Solver.IterativeEnergySolver;
-import View.ImageChooser.JImageChooser;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -51,7 +53,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
     private double lambda = 50;
     private int iteration = 10;
     private double mu = 5;
-    private IterativeEnergySolver.WEIGHTNING_MODES weightning = IterativeEnergySolver.WEIGHTNING_MODES.DEFAULT;
+    private WeightMode weightning = WeightMode.DEFAULT;
     private long init_time = System.currentTimeMillis() / 1000;
     private boolean robustnessDataG = false;
     private boolean robustnessSmoothnessE = false;
@@ -148,13 +150,13 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
 
     /**
      * sets the progress on the UI.
+     *
      * @param progress Progress (0..100)
      */
     public void setProgress(int progress) {
         progressBar.setEnabled(true);
         progressBar.setValue(progress);
     }
-
 
 
     /**
@@ -179,8 +181,8 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
     @Override
     public void append(Object s) {
         write(s + "\n");
-        if (s instanceof Solver.Image) {
-            final Solver.Image image = (Solver.Image) s;
+        if (s instanceof Model.Image) {
+            final Image image = (Image) s;
             this.addPlot(new ImagePlot(image), "Image");
         }
     }
@@ -197,7 +199,6 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
 
 
     // ------------- PRIVATE METHODS
-
 
 
     /**
@@ -311,7 +312,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
 
     private void buildWightPanel(JPanel btns) {
         btns.add(new JLabel("Weighting function"));
-        String[] list = {IterativeEnergySolver.WEIGHTNING_MODES.NONE.toString(), IterativeEnergySolver.WEIGHTNING_MODES.DEFAULT.toString(), IterativeEnergySolver.WEIGHTNING_MODES.PARABEL.toString()};
+        String[] list = {WeightMode.NONE.toString(), WeightMode.DEFAULT.toString(), WeightMode.PARABEL.toString()};
         JComboBox ws = new JComboBox(list);
         ws.setSelectedIndex(1);
         ws.addActionListener(new ActionListener() {
@@ -319,7 +320,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
             public void actionPerformed(ActionEvent e) {
                 JComboBox cb = (JComboBox) e.getSource();
                 String cmd = (String) cb.getSelectedItem();
-                weightning = IterativeEnergySolver.WEIGHTNING_MODES.valueOf(cmd);
+                weightning = WeightMode.valueOf(cmd);
                 updatePrefix();
             }
         });
@@ -381,7 +382,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         final JLabel l = new JLabel("Standardabweichung Gauss");
         l.setToolTipText(tool);
         btns.add(l);
-        inputDevStd = new NumericTextField(5,format);
+        inputDevStd = new NumericTextField(5, format);
         inputDevStd.setValue(devStd);
         btns.add(inputDevStd);
     }
@@ -391,7 +392,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         final JLabel l = new JLabel("Iterationen= " + alpha);
         l.setToolTipText(tool);
         btns.add(l);
-        inputIterations = new NumericTextField(5,format);
+        inputIterations = new NumericTextField(5, format);
         inputIterations.setValue(iteration);
         btns.add(inputIterations);
     }
@@ -402,7 +403,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         l.setToolTipText(tool);
         btns.add(l);
 
-        lambdaInput = new NumericTextField(5,format);
+        lambdaInput = new NumericTextField(5, format);
         lambdaInput.setValue(lambda);
         btns.add(lambdaInput);
     }
@@ -412,7 +413,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         final JLabel l = new JLabel("Monotonie");
         l.setToolTipText(tool);
         btns.add(l);
-        inputMu = new NumericTextField(5,format);
+        inputMu = new NumericTextField(5, format);
         inputMu.setValue(mu);
         btns.add(inputMu);
     }
@@ -422,7 +423,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         final JLabel l = new JLabel("Räumlicher Glattheitsterm");
         l.setToolTipText(tool);
         btns.add(l);
-        inputAlpha = new NumericTextField(5,format);
+        inputAlpha = new NumericTextField(5, format);
         inputAlpha.setValue(alpha);
         btns.add(inputAlpha);
     }

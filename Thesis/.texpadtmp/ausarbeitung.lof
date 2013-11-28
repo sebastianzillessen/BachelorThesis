@@ -15,6 +15,11 @@
 \contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Einfluss der umliegenden Bildpunkte $F_i$ beim r\IeC {\"a}umlichen Glattheitsterm mit der Erweiterung durch einen subquadratischen Bestrafungsterm\relax }}{43}{figure.caption.19}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Die absichtlich schlicht und pragmatisch gehaltene Benutzereingabe f\IeC {\"u}r die Erzeugung der HDR-Bilder.\relax }}{49}{figure.caption.21}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Die Architektur der Software auf Komponentenebene. Hier kann gut die Trennung zwischen den einzelnen Bereichen erkannt werden.\relax }}{51}{figure.caption.25}
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Die \texttt {View}-Komponente im Detail. Das Hauptfenster \texttt {GUIFrame} stellt die Daten dar und importiert dazu die verschiedenen Komponenten. Die \texttt {Plots} und die \texttt {ToneMappers} geh\IeC {\"o}ren ebenfalls zu diesem Paket.\relax }}{52}{figure.caption.26}
+\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces Die Struktur der verschiedenen grafischen Plots. Die Implementierungen von verschiedenen \gls {Tone-Mapping} Operatoren mittels Vererbung kann hier gut erkannt werden.\relax }}{53}{figure.caption.27}
+\contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces Die Klasse \texttt {Matrix} und ihre Spezialisierungen \texttt {BandMatrix} und \texttt {DefaultMatrix}. Diese beiden Klassen dienen zusammen mit \texttt {Vector} als ein Kernbestandteil der mathematischen Berechnungen dieses Programmes.\relax }}{54}{figure.caption.28}
+\contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces Der grunds\IeC {\"a}tzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. \relax }}{55}{figure.caption.29}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

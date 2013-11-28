@@ -4,11 +4,10 @@ import javax.swing.*;
 import java.io.File;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sebastianzillessen
- * Date: 19.11.13
- * Time: 22:14
- * To change this template use File | Settings | File Templates.
+ * File chooser that allows only to select images and offers a preview for the user.
+ *
+ * @author sebastianzillessen
+ * @see http://docs.oracle.com/javase/tutorial/uiswing/examples/components/index.html#FileChooserDemo2
  */
 public class JImageChooser extends JFileChooser {
     public JImageChooser(String folder) {

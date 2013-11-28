@@ -35,25 +35,15 @@ import javax.swing.*;
 import javax.swing.filechooser.FileView;
 import java.io.File;
 
-/* ImageFileView.java is used by FileChooserDemo2.java. */
+/**
+ * ImageFileView that displays only images in the FileChooser.
+ * Originally taken from http://docs.oracle.com/javase/tutorial/uiswing/examples/components/index.html#FileChooserDemo2.
+ * Small modifications through S. Zillessen.
+ *
+ * @author sebastianzillessen
+ * @see http://docs.oracle.com/javase/tutorial/uiswing/examples/components/index.html#FileChooserDemo2
+ */
 public class ImageFileView extends FileView {
-    ImageIcon jpgIcon = Utils.createImageIcon("images/jpgIcon.gif");
-    ImageIcon gifIcon = Utils.createImageIcon("images/gifIcon.gif");
-    ImageIcon tiffIcon = Utils.createImageIcon("images/tiffIcon.gif");
-    ImageIcon pngIcon = Utils.createImageIcon("images/pngIcon.png");
-
-    public String getName(File f) {
-        return null; //let the L&F FileView figure this out
-    }
-
-    public String getDescription(File f) {
-        return null; //let the L&F FileView figure this out
-    }
-
-    public Boolean isTraversable(File f) {
-        return null; //let the L&F FileView figure this out
-    }
-
     public String getTypeDescription(File f) {
         String extension = Utils.getExtension(f);
         String type = null;
@@ -72,25 +62,5 @@ public class ImageFileView extends FileView {
             }
         }
         return type;
-    }
-
-    public Icon getIcon(File f) {
-        String extension = Utils.getExtension(f);
-        Icon icon = null;
-
-        if (extension != null) {
-            if (extension.equals(Utils.jpeg) ||
-                    extension.equals(Utils.jpg)) {
-                icon = jpgIcon;
-            } else if (extension.equals(Utils.gif)) {
-                icon = gifIcon;
-            } else if (extension.equals(Utils.tiff) ||
-                    extension.equals(Utils.tif)) {
-                icon = tiffIcon;
-            } else if (extension.equals(Utils.png)) {
-                icon = pngIcon;
-            }
-        }
-        return icon;
     }
 }
