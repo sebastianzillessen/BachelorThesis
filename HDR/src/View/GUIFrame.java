@@ -134,9 +134,22 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         addLog();
         addProgressBar();
 
+        addMenuBar();
+
         loadDefaultPictures();
         SwingUtilities.invokeLater(this);
 
+    }
+
+    private void addMenuBar() {
+        JMenuBar menuBar;
+        JMenu menu;
+        menuBar = new JMenuBar();
+        menu = new JMenu("Datei");
+        menuBar.add(menu);
+        menu.add(new JMenuItem("Schließen"));
+        menu.add(new JMenuItem("Information"));
+        this.setJMenuBar(menuBar);
     }
 
     /**
@@ -311,7 +324,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
     }
 
     private void buildWightPanel(JPanel btns) {
-        btns.add(new JLabel("Weighting function"));
+        btns.add(new JLabel("Gewichtungsfunktion"));
         String[] list = {WeightMode.NONE.toString(), WeightMode.DEFAULT.toString(), WeightMode.PARABEL.toString()};
         JComboBox ws = new JComboBox(list);
         ws.setSelectedIndex(1);
@@ -328,15 +341,15 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
     }
 
     private void buildOutputPrefix(JPanel btns) {
-        btns.add(new JLabel("Picture output prefix"));
+        btns.add(new JLabel("Prefix für gespeicherte Bilder"));
         prefix = new JTextField(this.outputPrefix);
         btns.add(prefix);
     }
 
     private void buildRobustnessSelector(JPanel btns) {
 
-        btns.add(new JLabel("Subquadratische Bestrafungsterme (Datenterm g)"));
-        JCheckBox check = new JCheckBox("enable");
+        btns.add(new JLabel("Subquad. Bestrafungsterme (Datenterm g)"));
+        JCheckBox check = new JCheckBox("aktivieren");
         check.setSelected(this.robustnessDataG);
         check.addChangeListener(new ChangeListener() {
             @Override
@@ -348,8 +361,8 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         });
         btns.add(check);
 
-        btns.add(new JLabel("Subquadratische Bestrafungsterme (Glattheitsterm von E)"));
-        JCheckBox check3 = new JCheckBox("enable");
+        btns.add(new JLabel("Subquad. Bestrafungsterme (Glattheitst. E)"));
+        JCheckBox check3 = new JCheckBox("aktivieren");
         check3.setSelected(this.robustnessSmoothnessE);
         check3.addChangeListener(new ChangeListener() {
             @Override
@@ -362,7 +375,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         btns.add(check3);
 
         btns.add(new JLabel("Salt&Pepper (4%)"));
-        JCheckBox saltNPepper = new JCheckBox("enable");
+        JCheckBox saltNPepper = new JCheckBox("aktivieren");
         saltNPepper.setSelected(this.robustnessSmoothnessE);
         saltNPepper.addChangeListener(new ChangeListener() {
             @Override
@@ -389,7 +402,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
 
     private void buildIterationSlider(JPanel btns) {
         String tool = "Bestimmt wie viele Hauptiterationen durchgeführt werden soll.";
-        final JLabel l = new JLabel("Iterationen= " + alpha);
+        final JLabel l = new JLabel("Iterationen");
         l.setToolTipText(tool);
         btns.add(l);
         inputIterations = new NumericTextField(5, format);

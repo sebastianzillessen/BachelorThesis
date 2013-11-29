@@ -7,6 +7,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {Listing}{\numberline {A.1}{\ignorespaces Hilfsfunktionen in C Funktion zur Berechnung der Alignierung\relax }}{72}{Listing.caption.31}
-\contentsline {Listing}{\numberline {A.2}{\ignorespaces Rekursive C Funktion zur Berechnung der notwendigen Verschiebung zwischen den Bildern um diese zu alignieren\relax }}{73}{Listing.caption.32}
+\contentsline {Listing}{\numberline {A.1}{\ignorespaces Hilfsfunktionen in C Funktion zur Berechnung der Registrierung \cite {Ward03fast}\relax }}{82}{Listing.caption.40}
+\contentsline {Listing}{\numberline {A.2}{\ignorespaces Rekursive C Funktion zur Berechnung der notwendigen Verschiebung zwischen den Bildern um diese zu registrieren \cite {Ward03fast}\relax }}{83}{Listing.caption.41}
 \addvspace {10\p@ }

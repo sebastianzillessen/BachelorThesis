@@ -5,9 +5,9 @@
 
 \subsection{MTB-Algorithmus, vgl. \cite[S.9 f]{Ward03fast}}
 \label{subsec:MTB}
-Dem \gls{MTB} Verfahren (vgl. \cite{Ward03fast}) wird eine Serie von $N$ Bildern als Eingabe geliefert. Diese werden zunächst in ein Grauwert-Bild umgerechnet. Aus diesen Bildern wird der Algorithmus dann ausgehend von einem gewähltem Bild $N-1$ Offsets $(x,y)$ ausgeben, sodass die Bilder exakt übereinander gelegt werden können (vgl. \cite[S. 123f]{Reinhard}). Eine Alignierung von rotierten Bildern ist somit mit diesem Verfahren nicht möglich. 
+Dem \gls{MTB} Verfahren (vgl. \cite{Ward03fast}) wird eine Serie von $N$ Bildern als Eingabe geliefert. Diese werden zunächst in ein Grauwert-Bild umgerechnet. Aus diesen Bildern wird der Algorithmus dann ausgehend von einem gewähltem Bild $N-1$ Offsets $(x,y)$ ausgeben, sodass die Bilder exakt übereinander gelegt werden können (vgl. \cite[S. 123f]{Reinhard}). Eine Registrierung von rotierten Bildern ist somit mit diesem Verfahren nicht möglich. 
 
-Das Verfahren arbeitet dabei im Gegensatz zu vielen konventionellen Algorithmen nicht mit Kanten-Detektion im Bild um die Alignierung durchzuführen, da diese sehr anfällig auf unterschiedliche Belichtungswerte in Bildern sind. Es kommt hingegen ein Schwellwert-Verfahren auf einer Bilderpyramide zum Einsatz, dass dann mit schnellen Bit-Operationen die Verschiebung der Bilder berechnet (vgl. \cite{Ward03fast}). Der Code dazu befindet sich im Anhang (siehe \autoref{lst:MTB:core}).
+Das Verfahren arbeitet dabei im Gegensatz zu vielen konventionellen Algorithmen nicht mit Kanten-Detektion im Bild um die Registrierung durchzuführen, da diese sehr anfällig auf unterschiedliche Belichtungswerte in Bildern sind. Es kommt hingegen ein Schwellwert-Verfahren auf einer Bilderpyramide zum Einsatz, dass dann mit schnellen Bit-Operationen die Verschiebung der Bilder berechnet (vgl. \cite{Ward03fast}). 
 
 \begin{Listing}[H]
 \label{lst:MTB:helpers}
@@ -30,7 +30,7 @@ BitmapXOR(const Bitmap *bm1, const Bitmap *bm2, Bitmap *bm_ret)
 /** Compute the sum of all 1 bits in the bitmap. */
 BitmapTotal(const Bitmap *bm)
 \end{lstlisting}
-\caption{Hilfsfunktionen in C Funktion zur Berechnung der Alignierung}
+\caption{Hilfsfunktionen in C Funktion zur Berechnung der Registrierung \cite{Ward03fast}}
 
 \end{Listing}
 
@@ -78,7 +78,7 @@ GetExpShift(const Image *img1, const Image *img2, int shift_bits, int shift_ret[
     BitmapFree(&tb2); BitmapFree(&eb2);
 }
 \end{lstlisting}
-\caption{Rekursive C Funktion zur Berechnung der notwendigen Verschiebung zwischen den Bildern um diese zu alignieren}
+\caption{Rekursive C Funktion zur Berechnung der notwendigen Verschiebung zwischen den Bildern um diese zu registrieren \cite{Ward03fast}}
 \end{Listing}
 
 \subsection{LU-Zerlegung}
@@ -139,6 +139,3 @@ GetExpShift(const Image *img1, const Image *img2, int shift_bits, int shift_ret[
 \end{algorithmic}
 \end{Algorithmus}
 
-
-
-\section{Programmcode}

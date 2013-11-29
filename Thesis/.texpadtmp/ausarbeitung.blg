@@ -16,45 +16,45 @@ Warning--empty booktitle in Xinqiao
 Warning--empty booktitle in Nayar00highdynamic
 Warning--empty booktitle in zimmer
 Warning--can't use both volume and number fields in zimmer
-You've used 22 entries,
+You've used 23 entries,
             3039 wiz_defined-function locations,
-            770 strings with 8940 characters,
-and the built_in function-call counts, 11911 in all, are:
-= -- 984
-> -- 419
+            775 strings with 9027 characters,
+and the built_in function-call counts, 12346 in all, are:
+= -- 1015
+> -- 437
 < -- 19
-+ -- 152
-- -- 149
-* -- 753
-:= -- 1604
-add.period$ -- 73
-call.type$ -- 22
-change.case$ -- 130
-chr.to.int$ -- 22
-cite$ -- 28
-duplicate$ -- 932
-empty$ -- 1000
-format.name$ -- 191
-if$ -- 2479
++ -- 158
+- -- 155
+* -- 782
+:= -- 1665
+add.period$ -- 76
+call.type$ -- 23
+change.case$ -- 136
+chr.to.int$ -- 23
+cite$ -- 29
+duplicate$ -- 969
+empty$ -- 1041
+format.name$ -- 199
+if$ -- 2569
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 194
-newline$ -- 118
-num.names$ -- 66
-pop$ -- 423
+missing$ -- 203
+newline$ -- 123
+num.names$ -- 69
+pop$ -- 441
 preamble$ -- 1
-purify$ -- 164
+purify$ -- 171
 quote$ -- 0
-skip$ -- 389
+skip$ -- 401
 stack$ -- 0
-substring$ -- 558
-swap$ -- 475
+substring$ -- 565
+swap$ -- 491
 text.length$ -- 19
 text.prefix$ -- 8
 top$ -- 0
-type$ -- 164
+type$ -- 168
 warning$ -- 6
-while$ -- 92
-width$ -- 26
-write$ -- 250
+while$ -- 95
+width$ -- 27
+write$ -- 261
 (There were 9 warnings)
