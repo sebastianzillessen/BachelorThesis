@@ -9,11 +9,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Image {
-    protected String fileName;
-    protected float exposureTime;
+    protected String fileName = "";
+    protected double exposureTime = -1;
     protected BufferedImage grayscale;
     protected int[] data;
-    protected int[] histogram;
+    protected int[] histogram = new int[256];
     protected int w;
     protected int h;
 
@@ -28,10 +28,9 @@ public class Image {
     }
 
 
-    public Image(String fileName, float exposureTime) throws Exception {
+    public Image(String fileName, double exposureTime) throws Exception {
         this.fileName = fileName;
         this.exposureTime = exposureTime;
-        this.histogram = new int[256];
         if (!readFile()) {
             throw new Exception("File not found");
         }
@@ -47,6 +46,10 @@ public class Image {
             Graphics g = grayscale.getGraphics();
             g.drawImage(img, 0, 0, null);
             g.dispose();
+            System.out.println(grayscale.getRGB(0, 0));
+            System.out.println(grayscale.getRGB(0, 1));
+            System.out.println(grayscale.getRGB(1, 0));
+            System.out.println(grayscale.getRGB(1, 1));
             readLuminance();
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,24 +59,27 @@ public class Image {
     }
 
 
-    public void save(String filename) {
+    public boolean save(String filename) {
         BufferedImage img = new BufferedImage(w, h, BufferedImage.TYPE_BYTE_GRAY);
-        Graphics g = img.getGraphics();
-        for (int i = 0; i < data.length; i++) {
-            g.setColor(new Color(data[i], data[i], data[i]));
-            g.drawOval(i % getWidth(), i / getWidth(), 1, 1);
+
+        for (int x = 0; x < w; x++) {
+            for (int y = 0; y < h; y++) {
+                int c = data[x + y * w];
+                img.setRGB(x, y, new Color(c, c, c).getRGB());
+            }
         }
-        g.dispose();
         if (!filename.endsWith(".png"))
             filename += ".png";
         try {
             ImageIO.write(img, "png", new File(filename));
+            return true;
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            return false;
         }
     }
 
-    public void readLuminance() {
+    private void readLuminance() {
         data = new int[w * h];
         byte[] pixels = (byte[]) grayscale.getData().getDataElements(0, 0, w,
                 h, null);
@@ -85,10 +91,11 @@ public class Image {
 
 
     public int[] getHistogram() {
+        updateHistogram();
         return this.histogram;
     }
 
-    public float getExposureTime() {
+    public double getExposureTime() {
         return exposureTime;
     }
 
@@ -96,55 +103,28 @@ public class Image {
         if (data != null && i >= 0 && i < w * h) {
             return data[i];
         } else {
-            System.out.println("wrong parameter for #getValue: " + i);
             return -1;
         }
     }
 
     public String toString() {
-        return String.format("Picture '%s' (%4d,%4d) t: %.6fs Max: %3d Min: %3d Median: %3d", fileName, w, h, exposureTime, max, min, getMedian());
+        return String.format("Picture '%s' (%4d,%4d) t: %.6fs Max: %3d Min: %3d Median: %3.0f", fileName, w, h, exposureTime, max, min, getMedian());
     }
 
-    public int getMedian() {
-        int m[] = Arrays.copyOf(histogram, histogram.length);
-        int l = 0;
-        int h = m.length - 1;
-        while (l != h) {
-            if (m[l] > m[h]) {
-                m[l] -= m[h];
-                m[h] = 0;
-                h--;
-            } else {
-                m[h] -= m[l];
-                m[l] = 0;
-                l++;
-            }
-        }
-        return l;
-    }
-
-    public void printHistogram() {
-        String s = "";
-        for (int i = 0; i <= 25; i++) {
-            for (int j = 0; j < 10 && i * 10 + j < 256; j++) {
-                s += String.format("   %3d : %6d  | ", i * 10 + j, histogram[i * 10 + j]);
-            }
-            s += String.format("%n");
-
-        }
-        System.out.println(s);
+    public double getMedian() {
+        int[] sortedArray = Arrays.copyOf(data, data.length);
+        Arrays.sort(sortedArray);
+        System.out.println(Arrays.toString(sortedArray));
+        double median;
+        if (sortedArray.length % 2 == 0)
+            median = ((double) sortedArray[sortedArray.length / 2 - 1] + (double) sortedArray[sortedArray.length / 2]) / 2;
+        else
+            median = (double) sortedArray[sortedArray.length / 2];
+        return median;
     }
 
     public int getImageSize() {
         return data.length;
-    }
-
-    public String getValues() {
-        String s = "";
-        for (int i = 0; i < data.length; i++) {
-            s += data[i] + " ";
-        }
-        return s;
     }
 
     public int getHeight() {
@@ -221,10 +201,12 @@ public class Image {
 
     public void addSaltAndPepper(double percentage) {
         for (int i = 0; i < data.length; i++) {
-            if (Math.random() > 1.0 - percentage) {
-                data[i] = 255;
-            } else if (Math.random() < percentage) {
-                data[i] = 0;
+            // should we add nois?
+            if (Math.random() <= percentage) {
+                if (Math.random() >= .5)
+                    data[i] = 255;
+                else
+                    data[i] = 0;
             }
         }
         updateHistogram();
@@ -253,5 +235,24 @@ public class Image {
             data[i] = c;
         }
         updateHistogram();
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || o instanceof Image) {
+            Image i = (Image) o;
+            if (i.getWidth() != getWidth() || i.getHeight() != getHeight() || i.getExposureTime() != getExposureTime())
+                return false;
+            for (int x = 0; x < getWidth(); x++) {
+                for (int y = 0; y < getHeight(); y++) {
+                    if (i.get(x, y) != get(x, y))
+                        return false;
+                }
+            }
+            return true;
+        } else {
+            return false;
+        }
     }
 }

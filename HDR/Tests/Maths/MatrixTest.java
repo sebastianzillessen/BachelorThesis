@@ -1,12 +1,10 @@
-package Tests.Maths;
+package Maths;
 
-import Maths.DefaultMatrix;
-import Maths.Vector;
-import Maths.Matrix;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertEquals;
+import static Maths.UnitHelper.assertArrayEquals;
+import static junit.framework.Assert.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -46,8 +44,8 @@ public class MatrixTest {
 
     }
 
-    private DefaultMatrix m(int n) {
-        DefaultMatrix d = new DefaultMatrix(n);
+    private Matrix m(int n) {
+        Matrix d = new Matrix(n);
         int[] basis = new int[]{1, -4, 6, -4, 1};
         // first row
         d.set(0, 0, 1);
@@ -82,45 +80,63 @@ public class MatrixTest {
     }
 
     @Test
-    public void testDecomposePenta() throws Exception {
+    public void testDecomposePenta() {
         final int n = 7;
-        DefaultMatrix d = m(n);
-        Matrix[] ms = d.decomposePenta();
-        Matrix L = ms[0];
-        Matrix U = ms[1];
-        assertEquals(Matrix.parse("1 0 0 0 0 0 0\n" +
+        Matrix d = m(n);
+        AbstractMatrix[] ms = d.decomposePenta();
+        AbstractMatrix L = ms[0];
+        AbstractMatrix U = ms[1];
+        assertArrayEquals(AbstractMatrix.parse("1 0 0 0 0 0 0\n" +
                 "-1 1 0 0 0 0 0\n" +
                 "0.5 -0.75 1 0 0 0 0\n" +
                 "0 0.25 -0.7647059 1 0 0 0\n" +
                 "0 0 0.2352941 -0.7586207 1 0 0\n" +
                 "0 0 0 0.2344828 -0.7520000 1 0\n" +
-                "0 0 0 0 0.2320000 -0.3750000 1").toString(), L.toString());
-        assertEquals(Matrix.parse("2 -2 1 0 0 0 0\n" +
+                "0 0 0 0 0.2320000 -0.3750000 1").toArray(), L.toArray(), 0.001);
+        assertArrayEquals(AbstractMatrix.parse("2 -2 1 0 0 0 0\n" +
                 "0 4 -3 1 0 0 0\n" +
                 "0 0 4.25 -3.25 1 0 0\n" +
                 "0 0 0 4.264706 -3.235294 1 0\n" +
                 "0 0 0 0 4.310345 -3.241379 1\n" +
                 "0 0 0 0 0 3.328000 -1.248000\n" +
-                "0 0 0 0 0 0 1.300000").toString()
-                , U.toString());
-        System.out.println("U = " + U);
-        System.out.println("L = " + L);
+                "0 0 0 0 0 0 1.300000").toArray()
+                , U.toArray(), 0.0001);
     }
 
     @Test
-    public void solvePenta() throws Exception {
-        DefaultMatrix d = m(7);
+    public void solvePenta() {
+        Matrix d = m(7);
         Vector b = new Vector(new double[]{
                 4, 5, 12, 3, 1, 2, 4
         });
-        Vector r = d.solvePentadiagonale(b);
-        System.out.println("b = " + b);
-        System.out.println("r = " + r);
+
+        Vector r = null;
+        try {
+            r = EquotationSolver.solve(d, b, EquotationSolverAlgorithm.LU);
+        } catch (EquotationSolverException e) {
+            fail();
+        }
+
+    }
+
+
+    @Test
+    public void shouldFailToSolveWithSOR() {
+        Matrix d = m(7);
+        Vector b = new Vector(new double[]{
+                4, 5, 12, 3, 1, 2, 4
+        });
+        try {
+            EquotationSolver.solve(d, b, EquotationSolverAlgorithm.SOR);
+            fail();
+        } catch (EquotationSolverException e) {
+            assertTrue(e.getMessage().length() > 0);
+        }
     }
 
     @Test
     public void mult() throws Exception {
-        DefaultMatrix n = new DefaultMatrix(3);
+        Matrix n = new Matrix(3);
         // 1 0 0     1 1 1      1 1 1
         // 0 2 0  *  2 2 2  =   4 4 4
         // 0 0 3     3 3 3      9 9 9
@@ -128,8 +144,8 @@ public class MatrixTest {
         n.set(0, 0, 1);
         n.set(1, 1, 2);
         n.set(2, 2, 3);
-        DefaultMatrix m = new DefaultMatrix(3);
-        DefaultMatrix r = new DefaultMatrix(3);
+        Matrix m = new Matrix(3);
+        Matrix r = new Matrix(3);
 
         for (int i = 0; i < 3; i++) {
             m.set(0, i, 1);
@@ -149,7 +165,7 @@ public class MatrixTest {
 
     @Test
     public void add() throws Exception {
-        DefaultMatrix n = new DefaultMatrix(3);
+        Matrix n = new Matrix(3);
         // 1 0 0     0 0 0      1 0 0
         // 0 2 0  +  0 0 0  =   0 2 0
         // 0 0 3     0 0 0      0 3 0
@@ -157,20 +173,20 @@ public class MatrixTest {
         n.set(0, 0, 1);
         n.set(1, 1, 2);
         n.set(2, 2, 3);
-        DefaultMatrix m = new DefaultMatrix(3);
+        Matrix m = new Matrix(3);
         assertEquals(n, n.add(m));
     }
 
     @Test
     public void multA() throws Exception {
-        DefaultMatrix n = new DefaultMatrix(3);
+        Matrix n = new Matrix(3);
         // 1 0 0     1 1 1      1 1 1
         // 0 0 0  *  2 2 2  =   0 0 0
         // 0 0 0     3 3 3      0 0 0
 
         n.set(0, 0, 1);
-        DefaultMatrix m = new DefaultMatrix(3);
-        DefaultMatrix r = new DefaultMatrix(3);
+        Matrix m = new Matrix(3);
+        Matrix r = new Matrix(3);
 
         for (int i = 0; i < 3; i++) {
             m.set(0, i, 1);
@@ -187,15 +203,15 @@ public class MatrixTest {
 
     @Test
     public void addA() throws Exception {
-        DefaultMatrix n = new DefaultMatrix(3);
+        Matrix n = new Matrix(3);
         // 1 0 0     1 1 1      2 1 1
         // 0 0 0  +  2 2 2  =   2 2 2
         // 0 0 1     3 3 3      3 3 4
 
         n.set(0, 0, 1);
         n.set(2, 2, 1);
-        DefaultMatrix m = new DefaultMatrix(3);
-        DefaultMatrix r = new DefaultMatrix(3);
+        Matrix m = new Matrix(3);
+        Matrix r = new Matrix(3);
 
         for (int i = 0; i < 3; i++) {
             m.set(0, i, 1);
@@ -218,14 +234,14 @@ public class MatrixTest {
 
     @Test
     public void transposeBasic() {
-        DefaultMatrix m = m(4);
+        Matrix m = m(4);
         assertEquals(m, m.transpose().transpose());
     }
 
 
     @Test
     public void transpose2x4() {
-        DefaultMatrix m = new DefaultMatrix(2, 4);
+        Matrix m = new Matrix(2, 4);
         assertEquals(4, m.cols());
         assertEquals(2, m.rows());
         assertEquals(2, m.transpose().cols());
@@ -234,7 +250,7 @@ public class MatrixTest {
 
     @Test
     public void transpose2x4Value() {
-        DefaultMatrix m = new DefaultMatrix(2, 4);
+        Matrix m = new Matrix(2, 4);
         m.set(1, 0, 4);
         assertEquals(0, m.transpose().get(1, 0), 0.00001);
         assertEquals(4, m.transpose().get(0, 1), 0.00001);
@@ -242,9 +258,9 @@ public class MatrixTest {
 
     @Test
     public void multMatrix() {
-        DefaultMatrix a = new DefaultMatrix(3, 4);
-        DefaultMatrix b = new DefaultMatrix(4, 3);
-        DefaultMatrix r = new DefaultMatrix(3, 3);
+        Matrix a = new Matrix(3, 4);
+        Matrix b = new Matrix(4, 3);
+        Matrix r = new Matrix(3, 3);
         for (int i = 0; i < 12; i++) {
             a.set(i / 4, i % 4, i + 1);
         }
@@ -277,7 +293,7 @@ public class MatrixTest {
 
     @Test
     public void MatrixMultVector() {
-        DefaultMatrix a = (DefaultMatrix) Matrix.parse(
+        Matrix a = (Matrix) AbstractMatrix.parse(
                 "1 3 4 5\n" +
                         "2 0 9 1\n" +
                         "-3 2 0 0\n"
@@ -295,8 +311,155 @@ public class MatrixTest {
         System.out.println(b);
         System.out.println(res);
         assertEquals(res, n);
+    }
 
+    @Test
+    public void multFail() {
+        Vector v = new Vector(2);
+        Matrix d = new Matrix(2, 3);
+        try {
+            d.mult(v);
+        } catch (IllegalArgumentException e) {
+            return;
+        }
+        fail("Multiplikation should have failed.");
 
     }
 
+    @Test
+    public void multSuccess() {
+        Matrix d = new Matrix(2, 3);
+        BandMatrix d2 = new BandMatrix(3, new int[]{});
+        AbstractMatrix m = d.mult(d2);
+        for (int r = 0; r < m.rows(); r++) {
+            for (int c = 0; c < m.cols(); c++) {
+                assertEquals(0, m.get(r, c), 0.000);
+            }
+        }
+    }
+
+    @Test
+    public void multFailMatrixMatrix() {
+        Matrix d = new Matrix(2, 3);
+        BandMatrix d2 = new BandMatrix(2, new int[]{});
+        try {
+            d.mult(d2);
+        } catch (IllegalArgumentException e) {
+            return;
+        }
+        fail(" Mutliplikation should have failed");
+    }
+
+    @Test
+    public void addFail() {
+        Matrix d = new Matrix(2, 3);
+        Matrix d1 = new Matrix(3, 3);
+        try {
+            d.add(d1);
+        } catch (IllegalArgumentException e) {
+            return;
+        }
+        fail("addition should have failed.");
+
+    }
+
+    @Test
+    public void Penta() {
+        Matrix m = new Matrix(6);
+        assertTrue(m.isPentadiagonale());
+        for (int i = 0; i < 6; i++) {
+            m.set(i, i, 1);
+        }
+        assertTrue(m.isPentadiagonale());
+        for (int i = 0; i < 6; i++) {
+            for (int j = -2; j < 3; j++) {
+                if (j + i > 0 && j + i < 6) {
+                    m.set(i, i + j, 1);
+                }
+            }
+        }
+        assertTrue(m.isPentadiagonale());
+        m.set(0, 5, 1);
+        assertFalse(m.isPentadiagonale());
+    }
+
+    @Test
+    public void cloneTest() {
+        Matrix d = new Matrix(2, 3);
+        AbstractMatrix clone = d.clone();
+        assertEquals(d, clone);
+        clone.set(1, 1, 1);
+        assertNotSame(d, clone);
+        assertEquals(0, d.get(1, 1), 0);
+        assertEquals(1, clone.get(1, 1), 0);
+    }
+
+    @Test
+    public void EqualTest() {
+        Matrix d = new Matrix(3, 3);
+        BandMatrix d1 = new BandMatrix(3, new int[]{0});
+        Matrix d2 = new Matrix(3, 2);
+        assertFalse(d.equals(new Object()));
+        assertFalse(d.equals(d2));
+        assertFalse(d2.equals(d));
+        assertTrue(d.equals(d));
+        assertSame(d, d);
+        assertTrue(d1.equals(d));
+        d1.set(1, 1, 1);
+        assertFalse(d1.equals(d));
+    }
+
+    @Test
+    public void toFile() {
+        Matrix d = new Matrix(3, 3);
+        try {
+            d.toFile("test.txt");
+        } catch (Exception e) {
+            fail();
+        }
+    }
+
+    @Test
+    public void toFileAsync() {
+        Matrix d = new Matrix(3, 3);
+        try {
+            assertTrue(d.toFileSync("test.txt"));
+        } catch (Exception e) {
+            fail();
+        }
+    }
+
+    @Test
+    public void setinfinit() {
+        Matrix d = new Matrix(3);
+        try {
+            d.set(0, 0, Double.NaN);
+            fail();
+        } catch (Exception e) {
+        }
+        try {
+            d.set(0, 0, Double.NEGATIVE_INFINITY);
+            fail();
+        } catch (Exception e) {
+        }
+    }
+
+
+    @Test
+    public void testConstrShort() {
+        Matrix d = new Matrix(new short[][]{{1, 2}, {3, 4}});
+        assertEquals(1, d.get(0, 0), 0);
+        assertEquals(2, d.get(0, 1), 0);
+        assertEquals(3, d.get(1, 0), 0);
+        assertEquals(4, d.get(1, 1), 0);
+    }
+
+    @Test
+    public void testConstrInt() {
+        Matrix d = new Matrix(new int[][]{{1, 2}, {3, 4}});
+        assertEquals(1, d.get(0, 0), 0);
+        assertEquals(2, d.get(0, 1), 0);
+        assertEquals(3, d.get(1, 0), 0);
+        assertEquals(4, d.get(1, 1), 0);
+    }
 }

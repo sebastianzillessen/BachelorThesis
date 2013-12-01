@@ -227,7 +227,6 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
             alpha = inputAlpha.getDoubleValue().doubleValue();
             devStd = inputDevStd.getDoubleValue().doubleValue();
         } catch (Exception e) {
-            System.out.println(e);
             JOptionPane.showMessageDialog(this, "Fehlerhafter Input", "Die Parameter waren nicht gültig.", JOptionPane.OK_CANCEL_OPTION);
             return false;
         }
@@ -274,7 +273,6 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
                 btnStart.setEnabled(true);
             }
         } catch (Exception e) {
-            System.out.println("Loading default pictures failed. " + e.getMessage());
         }
     }
 

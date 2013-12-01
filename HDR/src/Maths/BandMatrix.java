@@ -16,15 +16,9 @@ import java.util.concurrent.Executors;
  *
  * @author sebastianzillessen
  */
-public class BandMatrix extends Matrix {
+public class BandMatrix extends AbstractMatrix {
 
 
-    private final int MAX_ITERATIONS_SOR = 100;
-    //If we only have a change of 1 promille it is already fine!
-    private final double ACCEPTED_DIFFERENCE_SOR = 0.001;
-    //less then 2 percent improvement is already done ;)
-    private final double ACCEPTED_PERCENTAGE_RESIDUUM_SOR = 0.02;
-    private final double OMEGA_SOR = 1.2;
     protected double[] elements;
     protected int[] bandIndexes;
     private int size;
@@ -34,7 +28,7 @@ public class BandMatrix extends Matrix {
      *
      * @param m
      */
-    public BandMatrix(Matrix m) {
+    public BandMatrix(AbstractMatrix m) {
         this(m.cols(), extractBands(m));
         // init values
         for (int row = 0; row < rows(); row++) {
@@ -57,7 +51,8 @@ public class BandMatrix extends Matrix {
      * @param bandIndexes diagonales which should be able to be set (0 is zenter)
      */
     public BandMatrix(int size, int[] bandIndexes) {
-        this(size);
+        this.size = size;
+
         Arrays.sort(bandIndexes);
         int elementSize = 0;
         for (int i = 0; i < bandIndexes.length; i++) {
@@ -97,11 +92,11 @@ public class BandMatrix extends Matrix {
      * @return a band matrix corresponding to s
      */
     public static BandMatrix parse(String s) {
-        return new BandMatrix(Matrix.parse(s));
+        return new BandMatrix(AbstractMatrix.parse(s));
     }
 
     @Override
-    public BandMatrix add(Matrix m) {
+    public BandMatrix add(AbstractMatrix m) {
 
         if (m.cols() != size || m.rows() != size)
             throw new IllegalArgumentException("The both matrices to add are not of the same size");
@@ -228,95 +223,6 @@ public class BandMatrix extends Matrix {
 
     }
 
-    public Vector solveSOR(Vector b) {
-        return solveSOR(b, OMEGA_SOR, ACCEPTED_PERCENTAGE_RESIDUUM_SOR, ACCEPTED_DIFFERENCE_SOR);
-    }
-
-    public Vector solveSOR(Vector right, Vector init) {
-        return solveSOR(right, OMEGA_SOR, ACCEPTED_PERCENTAGE_RESIDUUM_SOR, ACCEPTED_DIFFERENCE_SOR, init);
-    }
-
-    public Vector solveSOR(Vector right, double omega, double accepted_error, double accepted_diff) {
-        double[] x = new double[size];
-        for (int i = 0; i < size; i++) {
-            x[i] = 1;
-        }
-        return solveSOR(right, omega, accepted_error, accepted_diff, new Vector(x));
-    }
-
-    public Vector solveSOR(Vector b, double omega, double accepted_error, double accepted_diff, Vector x) {
-        if (x.length() != size || b.length() != size)
-            throw new IllegalArgumentException(String.format("The Vector are of wrong size. Expected: %d, Got for right side (b): %d, and for init: %d", size, b.length(), x.length()));
-
-
-        Vector d = solveSORDouble(b, omega, accepted_error, accepted_diff, x, MAX_ITERATIONS_SOR);
-        return d;
-    }
-
-    private Vector solveSORDouble(Vector bV, double omega, double accepted_error, double accepted_diff, Vector xV, int MAX_ITERATIONS) {
-        checkSymmetric();
-        checkPositiveSemiDefinit();
-        double b[] = bV.toArray();
-        double x[] = xV.toArray();
-        // abbruch kriteriumg von http://www.home.hs-karlsruhe.de/~weth0002/buecher/mathe/downloads/kap21.pdf, S 143
-        double first_res = -1;
-        double old_x[] = new double[x.length];
-        for (int iterations = 0; iterations <= MAX_ITERATIONS; iterations++) {
-            for (int row = 0; row < size; row++) {
-                double phi = 0;
-                for (int i = 0; i < bandIndexes.length; i++) {
-                    int col = row + bandIndexes[i];
-                    if (col >= 0 && col < size && col != row) {
-                        phi += get(row, col) * x[col];
-                    }
-                }
-                x[row] = x[row] + omega * ((b[row] - phi) / get(row, row) - x[row]);
-            }
-
-            if (iterations % 10 == 0) {
-                // Abbruch?
-                try {
-                    double max_abs_res = this.mult(x).subtract(bV).absMax();
-                    if (first_res == -1)
-                        first_res = max_abs_res;
-                    max_abs_res /= first_res;
-                    double max_diff = ArrayMaths.diffMax(x, old_x);
-                    //System.out.printf(" %3d Max-Abs-res: %7.5f  Diff-Max: %7.5f%n", iterations, max_abs_res, max_diff);
-                    if (max_abs_res < accepted_error && max_diff < accepted_diff) {
-                        //System.out.println("-> Accuracy matched.");
-                        break;
-                    }
-                } catch (ArithmeticException e) {
-                    System.out.println("We have an error in calculation of the iteration criteria. Do not stop");
-                }
-            }
-            old_x = Arrays.copyOf(x, x.length);
-        }
-        return new Vector(x);
-    }
-
-    /**
-     * Checks if this matrix is symmetrix
-     *
-     * @return true if the matrix is symmetric. False otherwise.
-     */
-    public boolean isSysmmetric() {
-        for (int i = 0; i < this.bandIndexes.length / 2; i++) {
-            if (bandIndexes[i] != -bandIndexes[bandIndexes.length - 1 - i]) {
-                System.out.println(bandIndexes[i] + "!=" + bandIndexes[bandIndexes.length - 1 - i]);
-                return false;
-            }
-        }
-        for (int row = 0; row < size; row++) {
-            for (int i = 0; i < this.bandIndexes.length / 2; i++) {
-                int col = row + bandIndexes[i];
-                if (col >= 0 && col < size / 2 && get(row, col) != get(col, row)) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
 
     @Override
     public BandMatrix transpose() {
@@ -341,7 +247,7 @@ public class BandMatrix extends Matrix {
      *
      * @param m other band matrix
      * @return Result of this * m as matrix multiplication
-     * @see Matrix#mult(Matrix)
+     * @see AbstractMatrix#mult(AbstractMatrix)
      */
     public BandMatrix mult(BandMatrix m) {
         // Multiply column wise, because second matrix is only middle diagonale
@@ -402,7 +308,8 @@ public class BandMatrix extends Matrix {
         return r;
     }
 
-    public boolean isPositivSemiDefinite() {
+    @Override
+    public boolean isPositiveSemiDefinit() {
         for (int row = 0; row < size; row++) {
             double sum = 0;
             for (int i = 0; i < bandIndexes.length; i++) {
@@ -454,7 +361,39 @@ public class BandMatrix extends Matrix {
 
     }
 
-    private static int[] extractBands(Matrix m) {
+    @Override
+    public String debugString() {
+        return String.format("Band Matrix: (%d x %d) Bands: %s", rows(), cols(), Arrays.toString(bandIndexes));
+    }
+
+    @Override
+    public boolean isSymmetric() {
+        for (int i = 0; i < this.bandIndexes.length / 2; i++) {
+            if (bandIndexes[i] != -bandIndexes[bandIndexes.length - 1 - i]) {
+                return false;
+            }
+        }
+        for (int row = 0; row < size; row++) {
+            for (int i = 0; i < this.bandIndexes.length / 2; i++) {
+                int col = row + bandIndexes[i];
+                if (col >= 0 && col < size / 2 && get(row, col) != get(col, row)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public boolean isPentadiagonale() {
+        for (int i = 0; i < bandIndexes.length; i++) {
+            if (bandIndexes[i] < -2 || bandIndexes[i] > 2)
+                return false;
+        }
+        return true;
+    }
+
+    private static int[] extractBands(AbstractMatrix m) {
         Set<Integer> diagonales = new HashSet<Integer>();
         if (m.rows() != m.cols())
             throw new IllegalArgumentException("Only Quadratic Matrices allowed");
@@ -467,26 +406,6 @@ public class BandMatrix extends Matrix {
             }
         }
         return ArrayMaths.TointArray(diagonales);
-    }
-
-    private BandMatrix(int n) {
-        this.size = n;
-    }
-
-    /**
-     * checks if the matrix is symmetric and throws an error if it is not.
-     */
-    private void checkSymmetric() {
-        if (!isSysmmetric())
-            throw new IllegalArgumentException("Matrix is not symmetric.");
-    }
-
-    /**
-     * checks if the matrix is positiv semi-definit and throws an error if it is not.
-     */
-    private void checkPositiveSemiDefinit() {
-        if (!isPositivSemiDefinite())
-            throw new IllegalArgumentException("Matrix is not positive definite");
     }
 
     /**

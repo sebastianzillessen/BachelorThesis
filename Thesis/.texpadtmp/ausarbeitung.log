@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  29 NOV 2013 11:05
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  1 DEC 2013 12:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1140,9 +1140,6 @@ LaTeX Warning: Label `fig:teezer' multiply defined.
 
 LaTeX Warning: Label `fig:luminance' multiply defined.
 
-
-LaTeX Warning: Label `fig:raum:1' multiply defined.
-
 )
 \openout1 = `ausarbeitung.aux'.
 
@@ -1329,15 +1326,17 @@ Overfull \hbox (10.88788pt too wide) in paragraph at lines 165--165
 
 Package tocbasic Info: character protrusion at lof deactivated on input line 165.
 (/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.lof
-
-LaTeX Warning: Reference `sec:tone-mapping' on page 7 undefined on input line 4.
-
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 8.
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1cmtt.fd
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ) [7
 
-])
+]
+Underfull \hbox (badness 1122) in paragraph at lines 27--27
+ [][] [][][]\T1/pplj/m/n/10.95 (+20) Einfluss der Monotonie-Forderung: Be-lich-tungs-se-rie (Be-lich-tungs-zei-ten: 
+ []
+
+)
 \tf@lof=\write10
 \openout10 = `ausarbeitung.lof'.
 
@@ -1347,7 +1346,7 @@ Overfull \hbox (10.88788pt too wide) in paragraph at lines 167--167
  []
 
 Package tocbasic Info: character protrusion at lot deactivated on input line 167.
-(/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.lot)
+(/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.lot [8])
 \tf@lot=\write11
 \openout11 = `ausarbeitung.lot'.
 
@@ -1364,7 +1363,7 @@ Overfull \hbox (10.88788pt too wide) in paragraph at lines 173--173
 [][]  
  []
 
-(/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.code [8])
+(/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.code)
 \tf@code=\write12
 \openout12 = `ausarbeitung.code'.
 
@@ -1397,7 +1396,7 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              Support for \float@addtolists may be removed from
 (scrbook)              `scrbook' soon .
 
-<graphics/ImageAquisitionPipeline.png, id=412, 1548.78625pt x 253.94875pt>
+<graphics/ImageAquisitionPipeline.png, id=426, 1548.78625pt x 253.94875pt>
 File: graphics/ImageAquisitionPipeline.png Graphic file (type png)
  <use graphics/ImageAquisitionPipeline.png>
 Package pdftex.def Info: graphics/ImageAquisitionPipeline.png used on input line 12.
@@ -1405,87 +1404,71 @@ Package pdftex.def Info: graphics/ImageAquisitionPipeline.png used on input line
  [11
 
 
- <./graphics/ImageAquisitionPipeline.png>]
-Underfull \hbox (badness 1735) in paragraph at lines 24--25
-[]\T1/pplj/m/n/10.95 (+20) Diese [][]Im-ple-men-tie-rung[][] soll dann suk-zes-si-ve um ro-bus-te Funk-tio-nen, [][][]Mo-no-to-nie[][]-
- []
-
-<graphics/teezer/g_noise_no_robustness.png, id=424, 681.54625pt x 627.34375pt>
-File: graphics/teezer/g_noise_no_robustness.png Graphic file (type png)
- <use graphics/teezer/g_noise_no_robustness.png>
-Package pdftex.def Info: graphics/teezer/g_noise_no_robustness.png used on input line 28.
-(pdftex.def)             Requested size: 199.81383pt x 183.92567pt.
- <graphics/teezer/g_noise_robustness_raum.png, id=426, 681.54625pt x 628.3475pt>
-File: graphics/teezer/g_noise_robustness_raum.png Graphic file (type png)
- <use graphics/teezer/g_noise_robustness_raum.png>
-Package pdftex.def Info: graphics/teezer/g_noise_robustness_raum.png used on input line 29.
-(pdftex.def)             Requested size: 199.81383pt x 184.21996pt.
- <graphics/teezer/E_noise_no_robustness.png, id=427, 602.25pt x 401.5pt>
+ <./graphics/ImageAquisitionPipeline.png>] <graphics/teezer/E_noise_no_robustness.png, id=438, 602.25pt x 401.5pt>
 File: graphics/teezer/E_noise_no_robustness.png Graphic file (type png)
  <use graphics/teezer/E_noise_no_robustness.png>
-Package pdftex.def Info: graphics/teezer/E_noise_no_robustness.png used on input line 32.
-(pdftex.def)             Requested size: 199.81383pt x 133.21219pt.
- <graphics/teezer/E_noise_robustness_raum.png, id=428, 602.25pt x 401.5pt>
+Package pdftex.def Info: graphics/teezer/E_noise_no_robustness.png used on input line 28.
+(pdftex.def)             Requested size: 213.13431pt x 142.08932pt.
+ <graphics/teezer/g_noise_no_robustness.png, id=439, 681.54625pt x 627.34375pt>
+File: graphics/teezer/g_noise_no_robustness.png Graphic file (type png)
+ <use graphics/teezer/g_noise_no_robustness.png>
+Package pdftex.def Info: graphics/teezer/g_noise_no_robustness.png used on input line 29.
+(pdftex.def)             Requested size: 56.9055pt x 52.37105pt.
+ <graphics/teezer/E_noise_robustness_raum.png, id=441, 602.25pt x 401.5pt>
 File: graphics/teezer/E_noise_robustness_raum.png Graphic file (type png)
  <use graphics/teezer/E_noise_robustness_raum.png>
-Package pdftex.def Info: graphics/teezer/E_noise_robustness_raum.png used on input line 33.
-(pdftex.def)             Requested size: 199.81383pt x 133.21219pt.
+Package pdftex.def Info: graphics/teezer/E_noise_robustness_raum.png used on input line 31.
+(pdftex.def)             Requested size: 213.13431pt x 142.08932pt.
+ <graphics/teezer/g_noise_robustness_raum.png, id=442, 681.54625pt x 628.3475pt>
+File: graphics/teezer/g_noise_robustness_raum.png Graphic file (type png)
+ <use graphics/teezer/g_noise_robustness_raum.png>
+Package pdftex.def Info: graphics/teezer/g_noise_robustness_raum.png used on input line 32.
+(pdftex.def)             Requested size: 56.9055pt x 52.45483pt.
+ [12 <./graphics/teezer/E_noise_no_robustness.png (PNG copy)> <./graphics/teezer/g_noise_no_robustness.png> <./graphics/teezer/E_noise_robustness_raum.png (PNG copy)> <./graphics/teezer/g_noise_robustness_raum.png>]
 
-
-LaTeX Warning: Reference `sec:tone-mapping' on page 12 undefined on input line 34.
-
-
-LaTeX Warning: Reference `sec:tone-mapping' on page 12 undefined on input line 40.
-
-[12 <./graphics/teezer/g_noise_no_robustness.png> <./graphics/teezer/g_noise_robustness_raum.png> <./graphics/teezer/E_noise_no_robustness.png (PNG copy)> <./graphics/teezer/E_noise_robustness_raum.png (PNG copy)>]
-
-LaTeX Warning: Reference `sec:laufzeit' on page 13 undefined on input line 55.
+LaTeX Warning: Reference `sec:sample-codes' on page 13 undefined on input line 55.
 
 ) (./content/grundlagen.tex [13] [14
 
 
 ]
 Kapitel 2.
-<graphics/example.jpg, id=476, 602.25pt x 401.5pt>
+<graphics/example.jpg, id=490, 602.25pt x 401.5pt>
 File: graphics/example.jpg Graphic file (type jpg)
  <use graphics/example.jpg>
 Package pdftex.def Info: graphics/example.jpg used on input line 23.
-(pdftex.def)             Requested size: 444.03377pt x 296.03322pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[15] <graphics/img/1_6.jpg, id=504, 602.25pt x 401.5pt>
+(pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
+ [15 <./graphics/example.jpg>] <graphics/img/1_6.jpg, id=514, 602.25pt x 401.5pt>
 File: graphics/img/1_6.jpg Graphic file (type jpg)
  <use graphics/img/1_6.jpg>
 Package pdftex.def Info: graphics/img/1_6.jpg used on input line 62.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- <graphics/img/1_10.jpg, id=505, 602.25pt x 401.5pt>
+ <graphics/img/1_10.jpg, id=515, 602.25pt x 401.5pt>
 File: graphics/img/1_10.jpg Graphic file (type jpg)
  <use graphics/img/1_10.jpg>
 Package pdftex.def Info: graphics/img/1_10.jpg used on input line 63.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- <graphics/img/1_20.jpg, id=506, 602.25pt x 401.5pt>
+ <graphics/img/1_20.jpg, id=516, 602.25pt x 401.5pt>
 File: graphics/img/1_20.jpg Graphic file (type jpg)
  <use graphics/img/1_20.jpg>
 Package pdftex.def Info: graphics/img/1_20.jpg used on input line 64.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- <graphics/img/1_40.jpg, id=507, 602.25pt x 401.5pt>
+ <graphics/img/1_40.jpg, id=517, 602.25pt x 401.5pt>
 File: graphics/img/1_40.jpg Graphic file (type jpg)
  <use graphics/img/1_40.jpg>
 Package pdftex.def Info: graphics/img/1_40.jpg used on input line 65.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- <graphics/img/1_60.jpg, id=508, 602.25pt x 401.5pt>
+ <graphics/img/1_60.jpg, id=518, 602.25pt x 401.5pt>
 File: graphics/img/1_60.jpg Graphic file (type jpg)
  <use graphics/img/1_60.jpg>
 Package pdftex.def Info: graphics/img/1_60.jpg used on input line 66.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- <graphics/img/1_160.jpg, id=509, 602.25pt x 401.5pt>
+ <graphics/img/1_160.jpg, id=519, 602.25pt x 401.5pt>
 File: graphics/img/1_160.jpg Graphic file (type jpg)
  <use graphics/img/1_160.jpg>
 Package pdftex.def Info: graphics/img/1_160.jpg used on input line 67.
 (pdftex.def)             Requested size: 56.9055pt x 37.93459pt.
- [16 <./graphics/example.jpg>]
+ [16 <./graphics/img/1_6.jpg> <./graphics/img/1_10.jpg> <./graphics/img/1_20.jpg> <./graphics/img/1_40.jpg> <./graphics/img/1_60.jpg> <./graphics/img/1_160.jpg>]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 9.37807pt on input line 90.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -1498,36 +1481,32 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 90.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 90.
- [17 <./graphics/img/1_6.jpg> <./graphics/img/1_10.jpg> <./graphics/img/1_20.jpg> <./graphics/img/1_40.jpg> <./graphics/img/1_60.jpg> <./graphics/img/1_160.jpg>]
+ [17]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 11.39996pt on input line 102.
- [18] [19] [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 191--191
+ [18] [19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
 [][][][][]$\T1/cmtt/m/n/9 http : / / www . gimp . org$[][] \T1/pplj/m/n/9 (+20) mit Plu-gin \T1/cmtt/m/n/9 Exposure Blend \T1/pplj/m/n/9 (+20) ([][]$\T1/cmtt/m/n/9 http : / / tir . astro . utoledo . edu / jdsmith / code /
  []
 
-<graphics/Luminance.png, id=652, 1706.375pt x 1469.49pt>
+<graphics/Luminance.png, id=655, 1706.375pt x 1469.49pt>
 File: graphics/Luminance.png Graphic file (type png)
  <use graphics/Luminance.png>
-Package pdftex.def Info: graphics/Luminance.png used on input line 194.
+Package pdftex.def Info: graphics/Luminance.png used on input line 198.
 (pdftex.def)             Requested size: 355.22836pt x 305.9113pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<graphics/BenchGeneratedLuminance.png, id=660, 602.25pt x 401.5pt>
+ [21] <graphics/BenchGeneratedLuminance.png, id=672, 602.25pt x 401.5pt>
 File: graphics/BenchGeneratedLuminance.png Graphic file (type png)
  <use graphics/BenchGeneratedLuminance.png>
-Package pdftex.def Info: graphics/BenchGeneratedLuminance.png used on input line 205.
-(pdftex.def)             Requested size: 355.22836pt x 236.8278pt.
-) (./content/verwandteArbeiten.tex [22] [23 <./graphics/Luminance.png>] [24 <./graphics/BenchGeneratedLuminance.png>]
+Package pdftex.def Info: graphics/BenchGeneratedLuminance.png used on input line 209.
+(pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
+ [22 <./graphics/Luminance.png>]) (./content/verwandteArbeiten.tex [23 <./graphics/BenchGeneratedLuminance.png>] [24
+
+
+]
 Kapitel 3.
-[25
-
-
-]) (./content/algorithmus.tex [26]
+[25]) (./content/algorithmus.tex [26]
 Kapitel 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1555,15 +1534,6 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 [33] [34] [35] [36] [37] [38]
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 220.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 220.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 220.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 220.
-
 Overfull \hbox (12.37898pt too wide) in paragraph at lines 233--233
 [] 
  []
@@ -1574,219 +1544,227 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 280.
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 ) [40] [41] [42] [43] [44] [45] [46] [47]) (./content/implementierung.tex [48]
 Kapitel 6.
+LaTeX Font Info:    Try loading font information for OMS+pplj on input line 19.
+LaTeX Font Info:    No file OMSpplj.fd. on input line 19.
+
+LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 19.
+
 [49
 
 
-]
+] [50] [51] <graphics/Tool.png, id=1134, 817.0525pt x 881.2925pt>
+File: graphics/Tool.png Graphic file (type png)
+ <use graphics/Tool.png>
+Package pdftex.def Info: graphics/Tool.png used on input line 148.
+(pdftex.def)             Requested size: 222.01688pt x 239.47171pt.
+ [52] <graphics/tonemapped.png, id=1152, 817.0525pt x 881.2925pt>
+File: graphics/tonemapped.png Graphic file (type png)
+ <use graphics/tonemapped.png>
+Package pdftex.def Info: graphics/tonemapped.png used on input line 179.
+(pdftex.def)             Requested size: 222.01688pt x 239.47171pt.
+ [53 <./graphics/Tool.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 51.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 193.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 51.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 193.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.59998pt on input line 51.
- [50]
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
+(Font)              scaled to size 7.59998pt on input line 193.
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 [][][][][]$\T1/cmtt/m/n/9 http : / / docs . oracle . com / javase / tutorial / uiswing / examples / components / index . html #
  []
 
-[51] <graphics/architecture/components.jpg, id=1117, 768.8725pt x 556.0775pt>
+[54 <./graphics/tonemapped.png>] [55] <graphics/architecture/components.jpg, id=1197, 768.8725pt x 556.0775pt>
 File: graphics/architecture/components.jpg Graphic file (type jpg)
  <use graphics/architecture/components.jpg>
-Package pdftex.def Info: graphics/architecture/components.jpg used on input line 95.
+Package pdftex.def Info: graphics/architecture/components.jpg used on input line 244.
 (pdftex.def)             Requested size: 266.42296pt x 192.68697pt.
- <graphics/architecture/view.jpg, id=1118, 1326.9575pt x 1061.9675pt>
+ <graphics/architecture/view.jpg, id=1198, 1326.9575pt x 1061.9675pt>
 File: graphics/architecture/view.jpg Graphic file (type jpg)
  <use graphics/architecture/view.jpg>
-Package pdftex.def Info: graphics/architecture/view.jpg used on input line 104.
-(pdftex.def)             Requested size: 399.62767pt x 319.82423pt.
- [52 <./graphics/architecture/components.jpg>] <graphics/architecture/plots.jpg, id=1125, 2242.3775pt x 1891.065pt>
+Package pdftex.def Info: graphics/architecture/view.jpg used on input line 253.
+(pdftex.def)             Requested size: 266.42296pt x 213.21616pt.
+ <graphics/architecture/plots.jpg, id=1199, 2242.3775pt x 1891.065pt>
 File: graphics/architecture/plots.jpg Graphic file (type jpg)
  <use graphics/architecture/plots.jpg>
-Package pdftex.def Info: graphics/architecture/plots.jpg used on input line 113.
-(pdftex.def)             Requested size: 444.03377pt x 374.45511pt.
- [53 <./graphics/architecture/view.jpg>] <graphics/architecture/matrixes.jpg, id=1132, 2057.6875pt x 2248.4pt>
+Package pdftex.def Info: graphics/architecture/plots.jpg used on input line 262.
+(pdftex.def)             Requested size: 355.22836pt x 299.57564pt.
+ <graphics/architecture/matrixes.jpg, id=1202, 2057.6875pt x 2248.4pt>
 File: graphics/architecture/matrixes.jpg Graphic file (type jpg)
  <use graphics/architecture/matrixes.jpg>
-Package pdftex.def Info: graphics/architecture/matrixes.jpg used on input line 123.
-(pdftex.def)             Requested size: 444.03377pt x 485.18059pt.
+Package pdftex.def Info: graphics/architecture/matrixes.jpg used on input line 272.
+(pdftex.def)             Requested size: 355.22836pt x 388.12389pt.
 
-Underfull \hbox (badness 6608) in paragraph at lines 124--124
+Underfull \hbox (badness 6608) in paragraph at lines 273--273
 [][][]|\T1/pplj/m/n/10.95 (+20) Die Klas-se \T1/cmtt/m/n/10.95 Matrix \T1/pplj/m/n/10.95 (+20) und ih-re Spe-zia-li-sie-run-gen \T1/cmtt/m/n/10.95 BandMatrix \T1/pplj/m/n/10.95 (+20) und
  []
 
-[54 <./graphics/architecture/plots.jpg>] <graphics/architecture/vector.jpg, id=1139, 1250.6725pt x 1204.5pt>
+<graphics/architecture/vector.jpg, id=1203, 1250.6725pt x 1204.5pt>
 File: graphics/architecture/vector.jpg Graphic file (type jpg)
  <use graphics/architecture/vector.jpg>
-Package pdftex.def Info: graphics/architecture/vector.jpg used on input line 132.
-(pdftex.def)             Requested size: 256.0748pt x 246.61165pt.
- [55 <./graphics/architecture/matrixes.jpg>] <graphics/architecture/sequence_example.png, id=1145, 593.71812pt x 684.05562pt>
+Package pdftex.def Info: graphics/architecture/vector.jpg used on input line 281.
+(pdftex.def)             Requested size: 222.01688pt x 213.80484pt.
+ <graphics/architecture/sequence_example.png, id=1205, 593.71812pt x 684.05562pt>
 File: graphics/architecture/sequence_example.png Graphic file (type png)
  <use graphics/architecture/sequence_example.png>
-Package pdftex.def Info: graphics/architecture/sequence_example.png used on input line 143.
-(pdftex.def)             Requested size: 355.22836pt x 409.28838pt.
- [56 <./graphics/architecture/vector.jpg>] <graphics/Tool.png, id=1152, 817.0525pt x 881.2925pt>
-File: graphics/Tool.png Graphic file (type png)
- <use graphics/Tool.png>
-Package pdftex.def Info: graphics/Tool.png used on input line 155.
-(pdftex.def)             Requested size: 444.03377pt x 478.94342pt.
- [57 <./graphics/architecture/sequence_example.png>] [58 <./graphics/Tool.png>] <graphics/images.png, id=1164, 586.19pt x 466.74374pt>
-File: graphics/images.png Graphic file (type png)
- <use graphics/images.png>
-Package pdftex.def Info: graphics/images.png used on input line 169.
-(pdftex.def)             Requested size: 266.42296pt x 212.13371pt.
- <graphics/tonemapped.png, id=1168, 817.0525pt x 881.2925pt>
-File: graphics/tonemapped.png Graphic file (type png)
- <use graphics/tonemapped.png>
-Package pdftex.def Info: graphics/tonemapped.png used on input line 182.
-(pdftex.def)             Requested size: 266.42296pt x 287.37143pt.
-) (./content/ergebnisse.tex [59 <./graphics/images.png>] [60 <./graphics/tonemapped.png>]
+Package pdftex.def Info: graphics/architecture/sequence_example.png used on input line 292.
+(pdftex.def)             Requested size: 222.01688pt x 255.80002pt.
+ [56 <./graphics/architecture/components.jpg>]) (./content/ergebnisse.tex [57 <./graphics/architecture/view.jpg>] [58 <./graphics/architecture/plots.jpg>] [59 <./graphics/architecture/matrixes.jpg>] [60 <./graphics/architecture/vector.jpg> <./graphics/architecture/sequence_example.png>]
 Kapitel 7.
-<graphics/results/g1.png, id=1182, 681.54625pt x 627.34375pt>
-File: graphics/results/g1.png Graphic file (type png)
- <use graphics/results/g1.png>
-Package pdftex.def Info: graphics/results/g1.png used on input line 26.
-(pdftex.def)             Requested size: 170.71892pt x 142.26622pt.
- <graphics/results/E1.png, id=1183, 602.25pt x 401.5pt>
+<graphics/results/E1.png, id=1235, 602.25pt x 401.5pt>
 File: graphics/results/E1.png Graphic file (type png)
  <use graphics/results/E1.png>
-Package pdftex.def Info: graphics/results/E1.png used on input line 27.
-(pdftex.def)             Requested size: 213.4005pt x 142.26378pt.
- <graphics/results/g1_external.png, id=1184, 487.8225pt x 381.425pt>
-File: graphics/results/g1_external.png Graphic file (type png)
- <use graphics/results/g1_external.png>
-Package pdftex.def Info: graphics/results/g1_external.png used on input line 29.
-(pdftex.def)             Requested size: 170.7181pt x 142.25995pt.
- <graphics/results/E1_external.png, id=1185, 601.24625pt x 402.50375pt>
+Package pdftex.def Info: graphics/results/E1.png used on input line 28.
+(pdftex.def)             Requested size: 213.13431pt x 142.08932pt.
+ <graphics/results/g1.png, id=1236, 681.54625pt x 627.34375pt>
+File: graphics/results/g1.png Graphic file (type png)
+ <use graphics/results/g1.png>
+Package pdftex.def Info: graphics/results/g1.png used on input line 29.
+(pdftex.def)             Requested size: 56.9055pt x 52.37105pt.
+ <graphics/results/E1_external.png, id=1237, 601.24625pt x 402.50375pt>
 File: graphics/results/E1_external.png Graphic file (type png)
  <use graphics/results/E1_external.png>
-Package pdftex.def Info: graphics/results/E1_external.png used on input line 30.
-(pdftex.def)             Requested size: 212.50354pt x 142.26378pt.
- <graphics/sample_2/1.jpg, id=1189, 867.24pt x 1300.86pt>
+Package pdftex.def Info: graphics/results/E1_external.png used on input line 31.
+(pdftex.def)             Requested size: 213.13431pt x 142.68408pt.
+ <graphics/results/g1_external.png, id=1238, 487.8225pt x 381.425pt>
+File: graphics/results/g1_external.png Graphic file (type png)
+ <use graphics/results/g1_external.png>
+Package pdftex.def Info: graphics/results/g1_external.png used on input line 32.
+(pdftex.def)             Requested size: 56.9055pt x 44.4886pt.
+ [61
+
+
+ <./graphics/results/E1.png (PNG copy)> <./graphics/results/g1.png> <./graphics/results/E1_external.png> <./graphics/results/g1_external.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gls' on input line 44.
+
+<graphics/sample_2/1.jpg, id=1251, 867.24pt x 1300.86pt>
 File: graphics/sample_2/1.jpg Graphic file (type jpg)
  <use graphics/sample_2/1.jpg>
-Package pdftex.def Info: graphics/sample_2/1.jpg used on input line 45.
-(pdftex.def)             Requested size: 133.21147pt x 199.80505pt.
- <graphics/sample_2/2.jpg, id=1190, 867.24pt x 1300.86pt>
+Package pdftex.def Info: graphics/sample_2/1.jpg used on input line 50.
+(pdftex.def)             Requested size: 66.38995pt x 99.58464pt.
+ <graphics/sample_2/2.jpg, id=1252, 867.24pt x 1300.86pt>
 File: graphics/sample_2/2.jpg Graphic file (type jpg)
  <use graphics/sample_2/2.jpg>
-Package pdftex.def Info: graphics/sample_2/2.jpg used on input line 46.
-(pdftex.def)             Requested size: 133.21147pt x 199.80505pt.
- <graphics/sample_2/3.jpg, id=1191, 867.24pt x 1300.86pt>
+Package pdftex.def Info: graphics/sample_2/2.jpg used on input line 51.
+(pdftex.def)             Requested size: 66.38995pt x 99.58464pt.
+ <graphics/sample_2/3.jpg, id=1253, 867.24pt x 1300.86pt>
 File: graphics/sample_2/3.jpg Graphic file (type jpg)
  <use graphics/sample_2/3.jpg>
-Package pdftex.def Info: graphics/sample_2/3.jpg used on input line 47.
-(pdftex.def)             Requested size: 133.21147pt x 199.80505pt.
- <graphics/sample_2/g_no_mon.png, id=1192, 602.25pt x 557.08125pt>
+Package pdftex.def Info: graphics/sample_2/3.jpg used on input line 52.
+(pdftex.def)             Requested size: 66.38995pt x 99.58464pt.
+ <graphics/sample_2/g_no_mon.png, id=1254, 602.25pt x 557.08125pt>
 File: graphics/sample_2/g_no_mon.png Graphic file (type png)
  <use graphics/sample_2/g_no_mon.png>
-Package pdftex.def Info: graphics/sample_2/g_no_mon.png used on input line 48.
-(pdftex.def)             Requested size: 199.81383pt x 184.83192pt.
- <graphics/sample_2/g_mon.png, id=1193, 602.25pt x 557.08125pt>
+Package pdftex.def Info: graphics/sample_2/g_no_mon.png used on input line 53.
+(pdftex.def)             Requested size: 107.65596pt x 99.58464pt.
+ <graphics/sample_2/g_mon.png, id=1255, 602.25pt x 557.08125pt>
 File: graphics/sample_2/g_mon.png Graphic file (type png)
  <use graphics/sample_2/g_mon.png>
-Package pdftex.def Info: graphics/sample_2/g_mon.png used on input line 49.
-(pdftex.def)             Requested size: 199.81383pt x 184.83192pt.
-
-
-LaTeX Warning: Reference `fig:raum:2' on page 61 undefined on input line 59.
-
-[61
-
-
-] <graphics/raum/E_ohne.png, id=1202, 602.25pt x 401.5pt>
+Package pdftex.def Info: graphics/sample_2/g_mon.png used on input line 54.
+(pdftex.def)             Requested size: 107.65596pt x 99.58464pt.
+ <graphics/raum/E_ohne.png, id=1260, 602.25pt x 401.5pt>
 File: graphics/raum/E_ohne.png Graphic file (type png)
  <use graphics/raum/E_ohne.png>
-Package pdftex.def Info: graphics/raum/E_ohne.png used on input line 66.
+Package pdftex.def Info: graphics/raum/E_ohne.png used on input line 71.
 (pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
- <graphics/raum/g_ohne.png, id=1203, 681.54625pt x 656.4525pt>
+ <graphics/raum/g_ohne.png, id=1261, 681.54625pt x 656.4525pt>
 File: graphics/raum/g_ohne.png Graphic file (type png)
  <use graphics/raum/g_ohne.png>
-Package pdftex.def Info: graphics/raum/g_ohne.png used on input line 67.
-(pdftex.def)             Requested size: 85.35826pt x 82.2066pt.
- <graphics/raum/E_mit.png, id=1204, 602.25pt x 401.5pt>
+Package pdftex.def Info: graphics/raum/g_ohne.png used on input line 72.
+(pdftex.def)             Requested size: 71.13188pt x 68.50383pt.
+ <graphics/raum/E_mit.png, id=1262, 602.25pt x 401.5pt>
 File: graphics/raum/E_mit.png Graphic file (type png)
  <use graphics/raum/E_mit.png>
-Package pdftex.def Info: graphics/raum/E_mit.png used on input line 75.
+Package pdftex.def Info: graphics/raum/E_mit.png used on input line 80.
 (pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
- <graphics/raum/g_mit.png, id=1205, 681.54625pt x 627.34375pt>
+ <graphics/raum/g_mit.png, id=1263, 681.54625pt x 627.34375pt>
 File: graphics/raum/g_mit.png Graphic file (type png)
  <use graphics/raum/g_mit.png>
-Package pdftex.def Info: graphics/raum/g_mit.png used on input line 76.
-(pdftex.def)             Requested size: 85.35826pt x 78.56136pt.
- <graphics/raum/E_gauss_ohne.png, id=1208, 602.25pt x 401.5pt>
+Package pdftex.def Info: graphics/raum/g_mit.png used on input line 81.
+(pdftex.def)             Requested size: 71.13188pt x 65.4662pt.
+ <graphics/raum/E_gauss_ohne.png, id=1266, 602.25pt x 401.5pt>
 File: graphics/raum/E_gauss_ohne.png Graphic file (type png)
  <use graphics/raum/E_gauss_ohne.png>
-Package pdftex.def Info: graphics/raum/E_gauss_ohne.png used on input line 90.
+Package pdftex.def Info: graphics/raum/E_gauss_ohne.png used on input line 95.
 (pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
- <graphics/raum/g_gauss_ohne.png, id=1209, 681.54625pt x 626.34pt>
+ <graphics/raum/g_gauss_ohne.png, id=1267, 681.54625pt x 626.34pt>
 File: graphics/raum/g_gauss_ohne.png Graphic file (type png)
  <use graphics/raum/g_gauss_ohne.png>
-Package pdftex.def Info: graphics/raum/g_gauss_ohne.png used on input line 91.
-(pdftex.def)             Requested size: 85.35826pt x 78.43565pt.
- <graphics/raum/E_gauss_mit.png, id=1210, 602.25pt x 401.5pt>
+Package pdftex.def Info: graphics/raum/g_gauss_ohne.png used on input line 96.
+(pdftex.def)             Requested size: 71.13188pt x 65.36145pt.
+ <graphics/raum/E_gauss_mit.png, id=1268, 602.25pt x 401.5pt>
 File: graphics/raum/E_gauss_mit.png Graphic file (type png)
  <use graphics/raum/E_gauss_mit.png>
-Package pdftex.def Info: graphics/raum/E_gauss_mit.png used on input line 99.
+Package pdftex.def Info: graphics/raum/E_gauss_mit.png used on input line 104.
 (pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
- <graphics/raum/g_gauss_mit.png, id=1211, 681.54625pt x 628.3475pt>
+ <graphics/raum/g_gauss_mit.png, id=1269, 681.54625pt x 628.3475pt>
 File: graphics/raum/g_gauss_mit.png Graphic file (type png)
  <use graphics/raum/g_gauss_mit.png>
-Package pdftex.def Info: graphics/raum/g_gauss_mit.png used on input line 100.
-(pdftex.def)             Requested size: 85.35826pt x 78.68706pt.
- [62 <./graphics/results/g1.png> <./graphics/results/E1.png (PNG copy)> <./graphics/results/g1_external.png> <./graphics/results/E1_external.png>]
+Package pdftex.def Info: graphics/raum/g_gauss_mit.png used on input line 105.
+(pdftex.def)             Requested size: 71.13188pt x 65.57095pt.
+ [62 <./graphics/sample_2/1.jpg> <./graphics/sample_2/2.jpg> <./graphics/sample_2/3.jpg> <./graphics/sample_2/g_no_mon.png> <./graphics/sample_2/g_mon.png>]
 File: graphics/results/E1.png Graphic file (type png)
  <use graphics/results/E1.png>
-Package pdftex.def Info: graphics/results/E1.png used on input line 121.
+Package pdftex.def Info: graphics/results/E1.png used on input line 127.
 (pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
 File: graphics/results/g1.png Graphic file (type png)
  <use graphics/results/g1.png>
-Package pdftex.def Info: graphics/results/g1.png used on input line 122.
+Package pdftex.def Info: graphics/results/g1.png used on input line 128.
 (pdftex.def)             Requested size: 71.13188pt x 65.4662pt.
- <graphics/robust/E_mit_robust.png, id=1225, 602.25pt x 401.5pt>
+ <graphics/robust/E_mit_robust.png, id=1282, 602.25pt x 401.5pt>
 File: graphics/robust/E_mit_robust.png Graphic file (type png)
  <use graphics/robust/E_mit_robust.png>
-Package pdftex.def Info: graphics/robust/E_mit_robust.png used on input line 130.
+Package pdftex.def Info: graphics/robust/E_mit_robust.png used on input line 136.
 (pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
- <graphics/robust/g_mit_robust.png, id=1226, 681.54625pt x 627.34375pt>
+ <graphics/robust/g_mit_robust.png, id=1283, 681.54625pt x 627.34375pt>
 File: graphics/robust/g_mit_robust.png Graphic file (type png)
  <use graphics/robust/g_mit_robust.png>
-Package pdftex.def Info: graphics/robust/g_mit_robust.png used on input line 131.
+Package pdftex.def Info: graphics/robust/g_mit_robust.png used on input line 137.
 (pdftex.def)             Requested size: 71.13188pt x 65.4662pt.
- <graphics/robust/E_mit_robust_pepper.png, id=1227, 602.25pt x 401.5pt>
+File: graphics/raum/E_ohne.png Graphic file (type png)
+ <use graphics/raum/E_ohne.png>
+Package pdftex.def Info: graphics/raum/E_ohne.png used on input line 151.
+(pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
+File: graphics/raum/g_ohne.png Graphic file (type png)
+ <use graphics/raum/g_ohne.png>
+Package pdftex.def Info: graphics/raum/g_ohne.png used on input line 152.
+(pdftex.def)             Requested size: 71.13188pt x 68.50383pt.
+ <graphics/robust/E_mit_robust_pepper.png, id=1284, 602.25pt x 401.5pt>
 File: graphics/robust/E_mit_robust_pepper.png Graphic file (type png)
  <use graphics/robust/E_mit_robust_pepper.png>
-Package pdftex.def Info: graphics/robust/E_mit_robust_pepper.png used on input line 138.
+Package pdftex.def Info: graphics/robust/E_mit_robust_pepper.png used on input line 159.
 (pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
- <graphics/robust/g_mit_robust_pepper.png, id=1228, 681.54625pt x 627.34375pt>
+ <graphics/robust/g_mit_robust_pepper.png, id=1285, 681.54625pt x 627.34375pt>
 File: graphics/robust/g_mit_robust_pepper.png Graphic file (type png)
  <use graphics/robust/g_mit_robust_pepper.png>
-Package pdftex.def Info: graphics/robust/g_mit_robust_pepper.png used on input line 139.
+Package pdftex.def Info: graphics/robust/g_mit_robust_pepper.png used on input line 160.
 (pdftex.def)             Requested size: 71.13188pt x 65.4662pt.
-File: graphics/results/E1.png Graphic file (type png)
- <use graphics/results/E1.png>
-Package pdftex.def Info: graphics/results/E1.png used on input line 154.
+ <graphics/robust/E_raum.png, id=1287, 602.25pt x 401.5pt>
+File: graphics/robust/E_raum.png Graphic file (type png)
+ <use graphics/robust/E_raum.png>
+Package pdftex.def Info: graphics/robust/E_raum.png used on input line 176.
 (pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
-File: graphics/results/g1.png Graphic file (type png)
- <use graphics/results/g1.png>
-Package pdftex.def Info: graphics/results/g1.png used on input line 155.
-(pdftex.def)             Requested size: 71.13188pt x 65.4662pt.
-File: graphics/robust/E_mit_robust.png Graphic file (type png)
- <use graphics/robust/E_mit_robust.png>
-Package pdftex.def Info: graphics/robust/E_mit_robust.png used on input line 163.
+
+<graphics/robust/g_raum.png, id=1288, 681.54625pt x 656.4525pt>
+File: graphics/robust/g_raum.png Graphic file (type png)
+ <use graphics/robust/g_raum.png>
+Package pdftex.def Info: graphics/robust/g_raum.png used on input line 177.
+(pdftex.def)             Requested size: 71.13188pt x 68.50383pt.
+ <graphics/robust/E_raum_robust.png, id=1289, 602.25pt x 401.5pt>
+File: graphics/robust/E_raum_robust.png Graphic file (type png)
+ <use graphics/robust/E_raum_robust.png>
+Package pdftex.def Info: graphics/robust/E_raum_robust.png used on input line 184.
 (pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
-File: graphics/robust/g_mit_robust.png Graphic file (type png)
- <use graphics/robust/g_mit_robust.png>
-Package pdftex.def Info: graphics/robust/g_mit_robust.png used on input line 164.
-(pdftex.def)             Requested size: 71.13188pt x 65.4662pt.
-File: graphics/robust/E_mit_robust_pepper.png Graphic file (type png)
- <use graphics/robust/E_mit_robust_pepper.png>
-Package pdftex.def Info: graphics/robust/E_mit_robust_pepper.png used on input line 171.
-(pdftex.def)             Requested size: 222.01688pt x 148.01355pt.
-File: graphics/robust/g_mit_robust_pepper.png Graphic file (type png)
- <use graphics/robust/g_mit_robust_pepper.png>
-Package pdftex.def Info: graphics/robust/g_mit_robust_pepper.png used on input line 172.
-(pdftex.def)             Requested size: 71.13188pt x 65.4662pt.
-) (./content/zusammenfassung_und_ausblick.tex [63 <./graphics/sample_2/1.jpg> <./graphics/sample_2/2.jpg> <./graphics/sample_2/3.jpg> <./graphics/sample_2/g_no_mon.png> <./graphics/sample_2/g_mon.png>] [64 <./graphics/raum/E_ohne.png (PNG copy)> <./graphics/raum/g_ohne.png> <./graphics/raum/E_mit.png (PNG copy)> <./graphics/raum/g_mit.png>] [65 <./graphics/raum/E_gauss_ohne.png (PNG copy)> <./graphics/raum/g_gauss_ohne.png> <./graphics/raum/E_gauss_mit.png (PNG copy)> <./graphics/raum/g_gauss_mit.png>] [66 <./graphics/robust/E_mit_robust.png (PNG copy)> <./graphics/robust/g_mit_robust.png> <./graphics/robust/E_mit_robust_pepper.png (PNG copy)> <./graphics/robust/g_mit_robust_pepper.png>] [67] [68
+ <graphics/robust/g_raum_robust.png, id=1290, 681.54625pt x 656.4525pt>
+File: graphics/robust/g_raum_robust.png Graphic file (type png)
+ <use graphics/robust/g_raum_robust.png>
+Package pdftex.def Info: graphics/robust/g_raum_robust.png used on input line 185.
+(pdftex.def)             Requested size: 71.13188pt x 68.50383pt.
+) (./content/zusammenfassung_und_ausblick.tex [63 <./graphics/raum/E_ohne.png (PNG copy)> <./graphics/raum/g_ohne.png> <./graphics/raum/E_mit.png (PNG copy)> <./graphics/raum/g_mit.png>] [64 <./graphics/raum/E_gauss_ohne.png (PNG copy)> <./graphics/raum/g_gauss_ohne.png> <./graphics/raum/E_gauss_mit.png (PNG copy)> <./graphics/raum/g_gauss_mit.png>] [65 <./graphics/robust/E_mit_robust.png (PNG copy)> <./graphics/robust/g_mit_robust.png>] [66 <./graphics/robust/E_mit_robust_pepper.png (PNG copy)> <./graphics/robust/g_mit_robust_pepper.png>] [67 <./graphics/robust/E_raum.png (PNG copy)> <./graphics/robust/g_raum.png> <./graphics/robust/E_raum_robust.png (PNG copy)> <./graphics/robust/g_raum_robust.png>] [68
 
 
 ]
@@ -1796,163 +1774,20 @@ Kapitel 8.
 
 ]
 Anhang A.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 2.
-
-[71] <content/attachment/00_Artikel.pdf, id=1283, page=1, 614.295pt x 794.97pt>
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 1>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page1 used on input line 3.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 1>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page1 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 1>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page1 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 1>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page1 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 1>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page1 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [72 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=1334, page=2, 614.295pt x 794.97pt>
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 2>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page2 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 2>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page2 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 2>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page2 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [73 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=1373, page=3, 614.295pt x 794.97pt>
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 3>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page3 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 3>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page3 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 3>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page3 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [74 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2106, page=4, 614.295pt x 794.97pt>
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 4>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page4 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 4>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page4 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 4>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page4 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [75 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2793, page=5, 614.295pt x 794.97pt>
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 5>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page5 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 5>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page5 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 5>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page5 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [76 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=2859, page=6, 614.295pt x 794.97pt>
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 6>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page6 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 6>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page6 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 6>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page6 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [77 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=3044, page=7, 614.295pt x 794.97pt>
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 7>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page7 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 7>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page7 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 7>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page7 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [78 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=3085, page=8, 614.295pt x 794.97pt>
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
-
-<use content/attachment/00_Artikel.pdf, page 8>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page8 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 8>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page8 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 8>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page8 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [79 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=3111, page=9, 614.295pt x 794.97pt>
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 9>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page9 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 9>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page9 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 9>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page9 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [80 <./content/attachment/00_Artikel.pdf>] <content/attachment/00_Artikel.pdf, id=3134, page=10, 614.295pt x 794.97pt>
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 10>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page10 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 10>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page10 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
-File: content/attachment/00_Artikel.pdf Graphic file (type pdf)
- <use content/attachment/00_Artikel.pdf, page 10>
-Package pdftex.def Info: content/attachment/00_Artikel.pdf, page10 used on input line 3.
-(pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [81 <./content/attachment/00_Artikel.pdf>]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 17.
-Package hyperref Info: bookmark level for unknown Listing defaults to 0 on input line 33.
- [82] [83]) (/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.gls [84] [85
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 15.
+Package hyperref Info: bookmark level for unknown Listing defaults to 0 on input line 31.
+[71] [72]) (/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.gls [73] [74
 
 
+] [75
 
 
 ]) (/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.bbl (/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.brf)
 \tf@brf=\write14
 \openout14 = `ausarbeitung.brf'.
 
- [86] [87
+ [76] [77
 
 
 ]
@@ -1970,7 +1805,7 @@ Overfull \hbox (62.25186pt too wide) in paragraph at lines 115--115
 \T1/cmtt/m/n/10.95 how-[]to-[]shoot-[]and-[]post-[]process-[]professional-[]hdr-[]photos-[]in-[]one-[]day-[]2-[]-[]photo-[]4102$[][]\T1/pplj/m/n/10.95 (-20) .
  []
 
-) [88] [89
+) [78] [79
 
 
 
@@ -1984,7 +1819,10 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 243.
 Package rerunfilecheck Info: File `ausarbeitung.out' has not changed.
 (rerunfilecheck)             Checksum: 851444447B792C283F600EB50A634E93;3757.
 Package rerunfilecheck Info: File `ausarbeitung.brf' has not changed.
-(rerunfilecheck)             Checksum: AAB5DF3B612E7EC24DC23E921D89A75D;1466.
+(rerunfilecheck)             Checksum: <no file>.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
@@ -1994,18 +1832,24 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 30049 strings out of 493488
- 512496 string characters out of 3141326
- 789138 words of memory out of 3000000
- 31848 multiletter control sequences out of 15000+200000
- 121911 words of font info for 433 fonts, out of 3000000 for 9000
+ 30118 strings out of 493488
+ 512792 string characters out of 3141326
+ 790141 words of memory out of 3000000
+ 31882 multiletter control sequences out of 15000+200000
+ 125890 words of font info for 457 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  77i,28n,87p,1470b,1639s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.pdf (90 pages, 8039704 bytes).
+pdfTeX warning (dest): name{Hfootnote.27} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.25} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.24} has been referenced but does not exist, replaced by a fixed one
+
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfit0800.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on /Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/Thesis/.texpadtmp/ausarbeitung.pdf (80 pages, 6399962 bytes).
 PDF statistics:
- 3537 PDF objects out of 3580 (max. 8388607)
- 2437 compressed objects within 25 object streams
- 396 named destinations out of 1000 (max. 500000)
- 65629 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1724 PDF objects out of 1728 (max. 8388607)
+ 1536 compressed objects within 16 object streams
+ 395 named destinations out of 1000 (max. 500000)
+ 74816 words of extra memory for PDF output out of 89155 (max. 10000000)
 

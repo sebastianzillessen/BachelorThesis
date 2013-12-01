@@ -39,6 +39,13 @@ public class Vector {
         }
     }
 
+    public Vector(int rows, double initialization) {
+        this(rows);
+        for (int i = 0; i < rows; i++) {
+            v[i] = initialization;
+        }
+    }
+
     public Vector add(Vector v) {
         if (v.length() == length()) {
             Vector r = new Vector(length());
@@ -89,10 +96,6 @@ public class Vector {
             v.set(i, Math.exp(get(i)));
         }
         return v;
-    }
-
-    public Vector add(BigDecimal d) {
-        return this.add(d.doubleValue());
     }
 
     public void set(int i, BigDecimal f) {
@@ -195,28 +198,6 @@ public class Vector {
     }
 
 
-    public void setRandom(double percentage, double lower, double upper) {
-        int set = 0;
-        if (percentage < 0 || percentage > 1) {
-            throw new IllegalArgumentException("Percentage should be between 0 and 1");
-        }
-        if (lower >= upper) {
-            throw new IllegalArgumentException("Lower must be lower then upper!");
-        }
-        while (set * 1.0 / (length()) < percentage) {
-            int c = (int) Math.floor(Math.random() * length());
-            double v = Math.random() * (upper - lower) + lower;
-            try {
-                if (get(c) == 0) {
-                    set(c, v);
-                    set++;
-                }
-            } catch (IndexOutOfBoundsException e) {
-
-            }
-        }
-    }
-
     public void toFile(final String filename) {
         new Thread(new Runnable() {
             @Override
@@ -236,5 +217,9 @@ public class Vector {
                 }
             }
         }).start();
+    }
+
+    public String debugString() {
+        return null;
     }
 }

@@ -4,73 +4,222 @@
 %\setchapterpreamble[u]{%
 %\dictum[Albert Einstein]{Probleme kann man niemals mit derselben Denkweise lösen, durch die sie entstanden sind.}
 %}
-\chapter{Implementierung}
+\chapter{Realisierung}
 \label{chap:impl}
-Neben der mathematischen Ausarbeitung (siehe \autoref{chap:maths}) beschäftigt sich diese Arbeit auch mit der eigentlichen Implementierung des erarbeiteten Verfahrens, für welche folgende grundlegenden Anforderungen bestanden:
+Neben der mathematischen Ausarbeitung (siehe \autoref{chap:maths}) beschäftigt sich diese Arbeit auch mit der eigentlichen Implementierung des erarbeiteten Verfahrens. In diesem Kapitel werden die Anforderungen an die Software sowie das Vorgehen bei der Wahl der Programmiersprache beschrieben. Anschließend werden die Installation und Bedienung kurz erklärt. Es folgt eine Auflistung der externen Bibliotheken die zum Einsatz kamen und eine Beschreibung der Architektur der Software.
 
+%------------------------------------------------------------------------------------------------------------------------------------
+\section{Anforderungen}
+Die Anforderungen an die Realisierung der Arbeit lassen sich zum Einen aus der Aufgabenbeschreibung der Bachelor-Arbeit entnehmen und sind zum Anderen während der Bearbeitung des theoretischen Ansatzes entstanden. Diese lassen sich in funktionale und nichtfunktionale Anforderungen unterscheiden  \cite[S. 369f]{ludewig}.
+\subsection{Funktionale Anforderungen}
+\label{fa}
 \begin{description}
-\item[Portierbarkeit:] In der Aufgabenstellung war bereits gefordert, dass die Implementierung auf verschiedenen Systemen portierbar sein soll. Aus diesem Grund kamen bereits nur einige wenige Programmiersprachen in Frage.
-\item[Evaluation der Daten:] Da die entstehenden Daten auch evaluiert und grafisch dargestellt werden sollten, war eine weitere Anforderung an die Software, dass sie eine \gls{GUI} besitzt oder Bild-Formate exportieren kann.
-\item[Funktionalität:] Die Funktionalität der Implementierung stand primär im Vordergrund. An die Performanz der Implementierung und das Design der \gls{GUI} wurden keine besonderen Anforderungen gestellt.
-\item[Software-Qualität:] Da diese Arbeit eine Bachelor-Arbeit der Fachrichtung \textit{Softwaretechnik} ist, bestand eine gewisse Anforderung an die Qualität des Quellcodes. Diese beinhaltet u.a. automatisierte Tests, objektorientierte Programmierung und Modulare Strukturen.
+\item[Evaluation der Daten:] Die entstehenden Daten sollen evaluiert und grafisch dargestellt werden. Dazu muss die Software in der Lage sein folgende Aufgaben zu übernehmen: 
+    \begin{itemize}
+        \item Anpassung der Parameter für die Berechnung des \gls{HDR}-Bildes
+        \item Darstellen der Antwortkurve $\b g$ als grafischen Plot
+        \item Anzeigen des \gls{HDR}-Bildes mit verschiedenen \gls{Tone-Mapping}-Operatoren
+        \item Ändern der Parameter der \gls{Tone-Mapping}-Operatoren
+    \end{itemize}
+    
+\item[Mathematische Korrektheit:] Bei dieser Implementierung handelt es sich um eine interdisziplinäre Aufgabe. Die Berechnung des \gls{HDR}-Bildes muss mathematisch korrekt ablaufen und soll der mathematischen Ausarbeitung (siehe \autoref{chap:maths}) entsprechen. Die Formulierung des Optimierungsproblems in effektiven Programmcode stellt deswegen eine besondere Herausforderung dar. Um die mathematische Korrektheit zu gewährleisten, sind umfassende Tests der mathematischen Klassen und Hilfsmethoden notwendig.
+
+\item[Reproduzierbarkeit:] Die Berechnungen des Programms sollen reproduzierbar sein. Dadurch ist eine Evaluation der Daten unter verschiedenen Eingaben möglich.
+
 \end{description}
 
-Von einer Laufzeitanalyse des Programmes wurde absichtlich abgesehen. Diese Arbeit ist in erster Linie eine Machbarkeitsstudie und erhebt nicht den Anspruch die gestellten Aufgaben in optimaler Zeit zu lösen.
 
+\subsection{Nichtfunktionale Anforderungen}
+\label{nfa}
+\begin{description}
+    \item[Portierbarkeit:] Die Implementierung der Software soll auf verschiedene Systeme portierbar sein. Dazu gehören \texttt{Windows}, \texttt{MacOS} und \texttt{Linux}-Derivate. Die eingesetzte Programmiersprache soll dies ohne weitere Probleme ermöglichen.
+    
+    \item[Performanz:] An die Performanz der Implementierung wurden keine besonderen Anforderungen gestellt. Die Umsetzbarkeit und die Ausgabe des Programms stehen im Vordergrund. Aus diesem Grund wurde von einer Laufzeitanalyse des Programmes abgesehen.
+    
+    \item[Software-Qualität:] Da diese Arbeit eine Bachelor-Arbeit der Fachrichtung \textit{Softwaretechnik} ist, bestand eine gewisse Anforderung an die Qualität des Quellcodes. Diese beinhaltet die folgenden Aspekte.
+    \begin{itemize}
+        \item Automatisierte Modul-Tests (Zielwert: 90\% Anweisungsüberdeckung für das Paket \texttt{Maths})
+        \item \gls{OOP}
+        \item Die Module und \texttt{public} Funktionen werden gemäß dem offiziellem Javadoc Style Guide\footnote{\url{http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html}} kommentiert
+        \item Erstellung einer Software-Dokumentation (z.B. \texttt{JavaDoc})
+    \end{itemize}
+    \item[\Gls{GUI}:] Die \gls{GUI} soll es dem Benutzer erlauben, dem Algorithmus Bildserien und die benötigten Parameter für die Generierung eines \gls{HDR}-Bildes einzugeben. Dazu gehören folgende Aspekte:
+    \begin{itemize}
+        \item Eingabe der Bildserie
+        \item Eingabe der Parameter für die Bildgenerierung
+        \item Eine Einweisung soll nicht erforderlich sein
+        \item Validierung der Eingaben des Benutzers
+        \item Gliederung des Programms in Pakete
+    \end{itemize}
+
+    Darüber hinaus soll der Benutzer über den Stand der Berechnung informiert werden und Zwischenergebnisse sehen können. 
+    
+    \item[Robustheit:] Bei Fehlern oder Problemen in der Software soll eine adäquate Fehlerbeschreibung geliefert werden. Das betrifft sowohl fehlerhafte Eingaben, als auch Programmfehler während der Berechnung.
+\end{description}
+
+
+
+
+%------------------------------------------------------------------------------------------------------------------------------------
 \section{Wahl der Programmiersprache}
 \label{sec:language}
-Aus den oben beschriebenen Anforderungen ließen sich insgesamt drei mögliche Programmiersprachen ableiten, aus denen eine gewählt werden musste. In die engere Auswahl kamen dabei \texttt{C}, \texttt{C\#} und \texttt{Java}. Aus \autoref{tab:languages} geht hervor, dass alle diese drei Programmiersprachen für den Einsatzzweck dieser Arbeit geeignet wären. Keine der Sprachen erfüllt ein Kriterium gar nicht oder sticht in einem Bereich besonders hervor. Lediglich \texttt{C} verliert durch die wenige Unterstützung von Software-Qualitätsmerkmalen (wie objektorientierte Programmierung, Modularität, Klassen, etc.) an Punkten.
+Für die Implementierung des Programms wurde eine Analyse verschiedener Programmiersprachen durchgeführt. Eine Übersicht der untersuchten Sprachen ist in \autoref{tab:languages} zu finden. Der Vergleich zeigt, dass \texttt{Go} und \texttt{C} aufgrund der fehlenden Möglichkeit zur \gls{OOP} ausscheiden. Die verbleibenden drei Sprachen \texttt{Java}, \texttt{C++} und \texttt{Free Pascal} unterscheiden sich dann nur noch kaum. Lediglich die Erstellung einer \gls{GUI} und die integration von automatisierten Tests werden von den beiden zuletzt genannten Sprachen nur über zusätzliche Bibliotheken unterstützt. \texttt{Java} schließt nur in Punkto nativem Systemzugriff und damit der Performance schlechter ab, als die anderen Sprachen im Test. Da jedoch an die Performanz der Software (siehe \autoref{nfa}) keine besonderen Anforderungen gestellt waren, ist dieser Punkt zu vernachlässigen. 
 
-\begin{table}
+\begin{table}[H]
   \begin{center}
-    \begin{tabular}{l|c|c|c|}
+    \begin{tabular}{l|c|c|c|c|c|c}
 	\toprule
-      Sprache & \texttt{Java} & \texttt{C} & \texttt{C\#} \\ 
+      Sprache 
+          & \texttt{Java} 
+          & \texttt{C} 
+          & \texttt{C\#} 
+          & \texttt{C++} 
+          & \texttt{Object Pascal\footnote{Implementierung: \texttt{Free Pascal}}} 
+          & \texttt{Go}\\ 
       \midrule
-      Portierbarkeit & \checkmark & \checkmark & \checkmark \footnote{Mono (\url{http://www.mono-project.com}) ist eine portierbare Version von C\# die auch auf Unix kompiliert}\\
-      \gls{GUI} & \checkmark & \checkmark\footnote{Durch Libraries (z.B. GTK+ \url{http://www.gtk.org}) können in C auch grafische Benutzeroberflächen entwickelt werden } & \checkmark\\
-      Objektorientierte Programmierung & \checkmark & $\times$\footnote{Obwohl C keine objektorientierte Sprache ist, ist es grundsätzlich natürlich trotzdem möglich ähnliche Konstrukte zu erzeugen.}  & \checkmark\\
-      Automatisierte Tests & \checkmark & \checkmark\footnote{Nicht direkt unterstützt, aber es gibt Testframeworks wie z.B. \url{http://check.sourceforge.net}} & \checkmark\\
-      Nativer Systemzugriff\footnote{Der Zugriff auf native Systemfunktionen ermöglicht häufig einen Performance-Gewinn}& $\times$\footnote{Java läuft im sog. \gls{JRE} und hat damit nicht direkt Zugriff auf native Funktionen} & \checkmark & \checkmark\\
+      
+      Portierbarkeit 
+          & \checkmark 
+          & \checkmark 
+          & (\checkmark)\footnote{Plattformunabhängige Realisierung mit \texttt{Mono} (siehe \url{http://www.mono-project.com})} 
+          & \checkmark 
+          & \checkmark
+          &\checkmark \\
+      
+      \gls{GUI} 
+          & \checkmark 
+          & (\checkmark)\footnote{z.B. \texttt{GTK+} (\url{http://www.gtk.org})} 
+          & \checkmark 
+          & (\checkmark)\footnote{z.B. \texttt{Qt} (\url{http://qt-project.org})}
+          & (\checkmark)\footnote{z.B. \texttt{fpGui} (\url{http://wiki.freepascal.org/fpGUI})} 
+          & (\checkmark)\footnote{z.B. \texttt{go-gtk} (\url{http://mattn.github.io/go-gtk/})}\\
+      
+      \gls{OOP}
+          & \checkmark 
+          & $\times$  
+          & \checkmark 
+          & \checkmark 
+          & \checkmark 
+          & $\times$\\
+      
+      Automatisierte Tests 
+          & \checkmark 
+          & (\checkmark)\footnote{z.B. \texttt{Check} (\url{http://check.sourceforge.net})} 
+          & \checkmark 
+          & (\checkmark)\footnote{z.B. \texttt{CppUnit} (\url{http://cppunit.sourceforge.net})}
+          & (\checkmark)\footnote{z.B. \texttt{FPCUnit} (\url{http://wiki.freepascal.org/fpcunit})}
+          & \checkmark \\
+      
+      Nativer Systemzugriff
+          & $\times$\footnote{Virtuelle Maschine (\gls{JRE})} 
+          & \checkmark 
+          & \checkmark 
+          & \checkmark
+          & \checkmark
+          & \checkmark
+          \\
 	\bottomrule
     \end{tabular}
-    \caption{Vergleich der Programmiersprachen \texttt{Java}, \texttt{C} und \texttt{C\#} mit den Anforderungen.}
+    \caption{Vergleich der Programmiersprachen mit den Anforderungen. (\checkmark: \textit{out of the box}, (\checkmark): zusätzliche Bibliotheke oder Erweiterung benötigt, $\times$ keine Unterstützung)}
     \label{tab:languages}
   \end{center}
 \end{table}
 
-Aufgrund meiner in universitären Projekte erlangten Vorkenntnissen in \texttt{Java}, wird die Entwicklung der Software für diese Arbeit in derselbigen Sprache geschehen.
 
-Für die grafische Evaluation der Ergebnisse wurde in der vorliegende Arbeit eine \texttt{SWING}-Oberfläche, die sowohl die Eingabe der Parameter und Daten sowie die Ausgabe der verschiedenen Diagramme und Bilder ermöglichen soll.
+Aufgrund meiner in universitären Projekte erlangten Vorkenntnissen in \texttt{Java} und des besseren Abschneidens im Vergleich mit den anderen hier genannten Sprachen, wird die Software in \texttt{Java} realisiert.
 
-Die \autoref{fig:tool} zeigt die einfach gehaltene Oberfläche mit den möglichen Einstellungen.
 
+\section{Programmvorstellung und Benutzeroberfläche}
+
+Für die Realisierung der \gls{GUI} und der grafische Evaluation der Ergebnisse wurde in der vorliegende Arbeit eine \texttt{Swing}-Oberfläche (siehe \autoref{fig:tool}) implementiert, die sowohl die Eingabe der Parameter und Daten als auch die Ausgabe der verschiedenen Diagramme und Bilder ermöglichen soll. In der nachfolgenden Beschreibung sind die umgesetzten Anforderungen zu erkennen.
+
+Über den Button \enquote{Bilder wählen} können die Eingabebilder gewählt werden. Im dafür entwickelten Datei-Fenster steht dem Benutzer eine Vorschau der Bilder zur Verfügung. Aus Gründen der Robustheit (siehe \autoref{nfa}) können nur Bilddateien ausgewählt werden.  Eine Registrierung der Bilder wird nicht unterstützt. Dies bedeutet, dass die Bilder vorab von Hand oder mit einem Algorithmus registriert werden müssen. Der Nutzer erhält diesbezüglich einen Hinweis bei der Auswahl der Bilder.
+
+In der Tabelle im unteren Bereich des Fensters werden die Bilder mit ihren Belichtungszeiten aufgeführt. Falls die Bibliothek \texttt{metadate-extractor} die Belichtungszeiten nicht auslesen konnte müssen diese händisch eingegeben werden. Auch hierzu erhält der Benutzer ggf. einen optischen Hinweis.
+
+Die Verwendung der Komponente \texttt{NumericTextField} (siehe \autoref{externals}) bei der Eingabe der Parameter stellt sicher, dass der Benutzer nur sinnvolle Daten angibt. Bei Falscheingaben ertönt ein akustisches Warnsignal. Die \enquote{Start} Schaltfläche wird bei fehlenden oder fehlerhaften Angaben deaktiviert. Die Eingabemöglichkeiten werden deaktiviert sobald der Berechnungsprozess gestartet wird. Dies verhindert ungültige Benutzerinteraktionen. Das Anwendungsfenster verfügt zudem über eine Fortschrittsanzeige im unteren Bereich. Detaillierte Informationen über den Fortgang der Berechnung können im \texttt{LOG}-Reiter der Anwendung eingesehen werden.
+
+\subsection{Installation}
+
+Die Anwendung kann unter \url{https://github.com/sebastianzillessen/hdr-generator} heruntergeladen werden. Dazu wird ein installiertes \gls{JRE} der Version 6 oder höher benötigt (siehe \url{http://www.java.com/de/download/}). Im Unterordner \texttt{bin} befindet sich eine ausführbare Version des Programms als \texttt{.jar} Datei. 
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{Tool}
+    \caption{Die Benutzereingabe für die Erzeugung der HDR-Bilder ist absichtlich schlicht und einfach gehalten.}
+    \label{fig:tool}
+  \end{center}
+\end{figure}
+
+
+\subsection{Erste Schritte}
+Nach dem Öffnen der Anwendung erscheint das Hauptfenster (siehe \autoref{fig:tool}). Folgende Schritte sind notwendig um ein \gls{HDR}-Bild zu erzeugen:
+
+\begin{enumerate}
+    \item Wahl der Belichtungsserie über die Schaltfläche \enquote{Bilder wählen}.
+    \item Eingabe der Belichtungszeiten in der Tabelle (falls notwendig).
+    \item Veränderung der Parameter für die Bilderzeugung (falls gewünscht). Dazu gehören:
+    \begin{itemize}
+        \item Gewichtung der Glattheitsforderung $\lambda$ von $\b g$
+        \item Monotonie-Forderung durch die Eingabe des Gewichtes $\mu$
+        \item Anzahl der Haupt- und Inneniterationen (siehe \autoref{alg:alternierend:extended})
+        \item Aktivierung des Räumlichen Glattheitsterms 
+        \item Aktivierung der subquadratischen Bestrafungsterme für $\b g$ und $\b E$, sowie für den räumlichen Glattheitsterm
+        \item Bildstörungen (\gls{SaltAndPepperNoise} oder additives Gauss-Rauschen) auf den Eingabebildern (zu Testzwecken)
+        \item Änderung des Prefix für den Export von Bildern
+    \end{itemize}
+
+    \item Bestätigung der Generierung mittels der Schaltfläche \enquote{Start}.
+\end{enumerate}
+
+Dadurch wird das \gls{HDR}-Bild erzeugt. Der Fortschritt wird im unteren Bereich dargestellt. Die Ausgabe (auch der Zwischenresultate) erfolgt über die verschiedenen Reiter des Fensters. Bei der Darstellung des \gls{HDR}-Bilds mit den verschiedenen \gls{Tone-Mapping}-Operatoren können die Parameter in der Oberfläche verändert werden (siehe \autoref{fig:app:tone}). Der Export der generierten Bilder und Kurven erfolgt über die Schaltfläche \enquote{Speichern}.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{tonemapped}
+    \caption{Vorschau des Tone-Mapped Resultats mit der Möglichkeit der Veränderung der Variablen für diesen Tone-Mapper (globaler \gls{Tone-Mapping}-Operator von Reinhard).}
+    \label{fig:app:tone}
+  \end{center}
+\end{figure}
+
+
+
+
+%------------------------------------------------------------------------------------------------------------------------------------
 \section{Externe Bibliotheken}
-Für die Implementierung wurden einige bereits bestehenden Komponenten eingesetzt. Diese werden hier kurz beschrieben.
-
-\subsubsection*{\texttt{NumericTextField}\footnote{\url{http://www.java2s.com/Code/Java/Swing-JFC/NumericTextField.htm}}}
+\label{externals}
+Für die Implementierung wurden einige externen Komponenten verwendet. Diese werden hier kurz beschrieben.
+\begin{description}
+\item[\texttt{NumericTextField}\footnote{\url{http://www.java2s.com/Code/Java/Swing-JFC/NumericTextField.htm}}]
 Für die Eingabe der einzelnen Parameter wird eine Implementierung eines numerischen Textfeldes verwendet. Dieses verhindert ungültige Eingaben und erleichtert das Auslesen der numerischen Parameter.
 
-\subsubsection*{\texttt{metadata-extractor}\footnote{\url{https://code.google.com/p/metadata-extractor/}}}
+\item[\texttt{metadata-extractor}\footnote{\url{https://code.google.com/p/metadata-extractor/}}]
 Die Bibliothek \texttt{metadata-extractor} wird verwendet um automatisiert aus Bilddateien die Belichtungszeit der Bilder auszulesen. Mit dieser wird auch das von Adobe entwickelte \texttt{xmp-core}\footnote{\url{http://www.adobe.com/devnet/xmp.html}} mit geliefert. Zusammen ermöglichen es die Bibliotheken die Belichtungszeiten der Bilder auszulesen und darzustellen.
 
-\subsubsection*{\texttt{JImageChooser} \footnote{\url{http://docs.oracle.com/javase/tutorial/uiswing/examples/components/index.html\#FileChooserDemo2}}} 
+\item[\texttt{JImageChooser} \footnote{\url{http://docs.oracle.com/javase/tutorial/uiswing/examples/components/index.html\#FileChooserDemo2}}]
 Der verwendete \texttt{JFileChooser} zur Selektion der Bilddateien ist inspiriert von dem vorhandenen Tutorial bei Oracle. Er ist in der Lage eine kleine Vorschau der Bilder anzuzeigen.
+\end{description}
 
+
+
+
+
+
+
+
+%------------------------------------------------------------------------------------------------------------------------------------
 
 \section{Architektur}
 \label{sec:architektur}
-Bei der Architektur der Software wurde eine \gls{MVC} Struktur eingehalten. Dieses Pattern beschreibt eine klare Trennung zwischen Datendarstellung, -verarbeitung und -repräsentation. Diese Teilung in drei Schichten sorgt dafür, dass die einzelnen Komponenten gut getestet werden können und beliebig austauschbar sind. Dadurch besteht ein hoher Grad an Erweiterbarkeit, da die Kopplung zwischen den Modulen möglichst gering gehalten wird \cite[S.~413]{ludewig}.
+Bei der Architektur der Software wurde eine \gls{MVC} Struktur eingehalten. Dieses Muster beschreibt eine klare Trennung zwischen Datendarstellung, -verarbeitung und -repräsentation. Diese Teilung in drei Schichten sorgt dafür, dass die einzelnen Komponenten gut getestet werden können und beliebig austauschbar sind. Dadurch besteht ein hoher Grad an Erweiterbarkeit, da die Kopplung zwischen den Modulen gering ist \cite[S.~413]{ludewig}.
 
-In allen Klassen wurde grundsätzlich das Prinzip des Information Hiding angewandt. Dadurch kann die innere Arbeit der Klassen und Module möglichst unabhängig ablaufen, was eine Erweiterbarkeit vereinfacht.
-
-
+In allen Klassen wurde grundsätzlich das Prinzip des \textit{information hiding} angewandt, wodurch eine verbesserte Erweiterbarkeit durch klare Schnittstellen gegeben ist.
 
 \begin{ieee}{information hiding}
 A software development technique in which each module's interfaces reveal a s little a s possible about the module's inner workings and other modules are prevented from using information about the module that is not in the module's interface specification.
 \end{ieee}
 
-\subsection{Komponentendiagramm}
+\subsection{Paketdiagramm}
 Die Anwendung lässt sich grundsätzlich in fünf verschiedene Komponenten trennen (siehe \autoref{fig:arch:components}). 
 \begin{description}
 
@@ -90,7 +239,7 @@ Nachfolgend wird nun auf die einzelnen Komponenten und Klassen näher eingegange
 
 Darin enthalten sind auch die verschiedenen \texttt{ToneMappers}, die zur Darstellung der \gls{Radiance Map} verwendet werden. Zusammen mit dem Paket \texttt{Plots} wird eine detailliertere Ansicht auf die beteiligten Klassen in \autoref{fig:arch:plots} dargestellt.
 
-\begin{figure}[H]
+\begin{figure}
   \begin{center}
     \includegraphics[width=0.6\textwidth]{architecture/components}
     \caption{Die Architektur der Software auf Komponentenebene. Die Trennung zwischen den einzelnen Bereichen ist hier deutlich erkennbar.}
@@ -99,18 +248,18 @@ Darin enthalten sind auch die verschiedenen \texttt{ToneMappers}, die zur Darste
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{architecture/view}
+    \includegraphics[width=0.6\textwidth]{architecture/view}
     \caption{Die \texttt{View}-Komponente im Detail. Das Hauptfenster \texttt{GUIFrame} stellt die Daten dar und importiert dazu die verschiedenen Komponenten. Die \texttt{Plots} und die \texttt{ToneMappers} gehören ebenfalls zu diesem Paket.}
     \label{fig:arch:view}
   \end{center}
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}
   \begin{center}
-    \includegraphics[width=\textwidth]{architecture/plots}
+    \includegraphics[width=0.8\textwidth]{architecture/plots}
     \caption{Die Struktur der verschiedenen grafischen Plots. Die verschiedenen \gls{Tone-Mapping}-Operatoren wurden mittels Vererbung implementiert.}
     \label{fig:arch:plots}
   \end{center}
@@ -118,18 +267,18 @@ Darin enthalten sind auch die verschiedenen \texttt{ToneMappers}, die zur Darste
 
 Einige der mathematischen Aufgaben (wie z.B. die LU-Zerlegung oder das SOR-Verfahren, siehe \autoref{sec:solvers}) sind im Paket \texttt{Maths} ausgelagert. Die abstrakte Klasse \textit{Matrix} stellt die Basisfunktionalität zur Verfügung und kennt die beiden Implementierungen \texttt{BandMatrix} und \texttt{DefaultMatrix}. Erstere ist eine spezielle Repräsentation von dünnbesetzten Diagonalmatrixen mit beliebig vielen Bändern. Die hier häufig beschriebenen pentadiagonal Matrizen werden mit dieser Implementierung dargestellt. Der Vorteil dieser ist, dass auch große sehr dünn besetzte Matrizen abgespeichert werden können (in einem zweidimensionalen Array würden diese zu viel Speicherplatz verbrauchen). Die \texttt{DefaultMatrix} ist die zweite Implementierung der Matrizen und arbeitet intern mit einem zweidimensionalen Array.
 
-\begin{figure}[H]
+\begin{figure}
   \begin{center}
-    \includegraphics[width=\textwidth]{architecture/matrixes}
+    \includegraphics[width=0.8\textwidth]{architecture/matrixes}
     \caption{Die Klasse \texttt{Matrix} und ihre Spezialisierungen \texttt{BandMatrix} und \texttt{DefaultMatrix}. Diese beiden Klassen dienen zusammen mit \texttt{Vector} als ein Kernbestandteil der mathematischen Berechnungen dieses Programms.}
     \label{fig:arch:matrix}
   \end{center}
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}
   \begin{center}
-    \includegraphics[width=9cm]{architecture/vector}
+    \includegraphics[width=0.5\textwidth]{architecture/vector}
     \caption{Die Klasse \texttt{Vector} dient zur Kapselung von Funktionen mit Vektoren und Matrizen.}
     \label{fig:arch:vector}
   \end{center}
@@ -138,52 +287,17 @@ Einige der mathematischen Aufgaben (wie z.B. die LU-Zerlegung oder das SOR-Verfa
 
 \subsection{Sequenzdiagramm}
 Das Programm läuft sehr vielschichtig ab. Als grundsätzlicher Informationsfluss dient der Aufbau wie er in \autoref{fig:arch:sequence} beschrieben. Wichtig dabei ist, dass die grafische Benutzeroberfläche nicht von der Berechnungsdauer des Algorithmus blockiert wird, weshalb besonders zwischen \texttt{Controller} und \texttt{GUIFrame} asynchrone Methodenaufrufe eingesetzt werden.
-\begin{figure}[H]
+\begin{figure}
   \begin{center}
-    \includegraphics[width=0.8\textwidth]{architecture/sequence_example}
+    \includegraphics[width=0.5\textwidth]{architecture/sequence_example}
     \caption{Der grundsätzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. }
     \label{fig:arch:sequence}
   \end{center}
 \end{figure}
 
-\section{Programmvorstellung}
-\label{sec:sample-codes}
-Die gesamte implementierte Anwendung befindet sich auf der beigefügten CD-Rom zu dieser Arbeit oder kann unter \url{https://github.com/sebastianzillessen/hdr-generator} heruntergeladen werden. Das \texttt{JAR}-Archiv kann dann einfach ausgeführt werden.
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=\textwidth]{Tool}
-    \caption{Die Benutzereingabe für die Erzeugung der HDR-Bilder ist absichtlich schlicht und einfach gehalten.}
-    \label{fig:tool}
-  \end{center}
-\end{figure}
-
-Die Software unterstützt bisher keine Registrierung der Bilder. D.h. die Bilder müssen vorab von Hand oder mit einem Algorithmus registriert werden und können dann mit diesem Programm verwendet werden.
-
-Zunächst müssen über den Button \enquote{Bilder wählen} die Eingabebilder gewählt werden (siehe \autoref{fig:images}). Sobald die Bilder geladen wurden, erscheinen diese in der unteren Auflistung. Die Belichtungszeit wird in der Tabelle mit angegeben, falls durch die Bibliothek \texttt{metadate-extractor} diese Information bereits ausgelesen wurde. Ansonsten müssen diese händisch eingegeben werden.
-
-Die Eingabemöglichkeiten im oberen Bereich des Fensters dienen der Parametrisierung  der Anwendung. Hier können insbesondere die Einstellungen zur Monotonie-Forderung, dem räumlichen Glattheitsterm oder den robusten Bestrafungsfunktionen vorgenommen werden.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.6\textwidth]{images}
-    \caption{Auswahl der Belichtungsserie incl. Vorschau.}
-    \label{fig:images}
-  \end{center}
-\end{figure}
-
-Außerdem können zu Testzwecken Bildstörungen (\gls{SaltAndPepperNoise} oder additives Gauss-Rauschen) aktiviert werden, wodurch die verschiedenen Verfahren verglichen werden können. Die Ausgabe (auch der Zwischenresultate) erfolgt über die verschiedenen Reiter des Fensters. Darüber hinaus werden die Resultate (globaler und lokaler Reinhard \gls{Tone-Mapping}-Operator) in diesen ausgegeben (siehe \autoref{fig:app:tone}). Der Fortschritt des Verfahrens wird im unteren Bereich der Anwendung dargestellt.
-
-Jeder der verschiedenen Graphen oder Plots kann gespeichert werden. Dazu steht ein Speichern-Button zur Verfügung. 
-Der Funktionsumfang der Anwendung wurde absichtlich schmal gehalten, da der Fokus auf der Erweiterung des Ansatzes und nicht auf der Erstellung einer High-End-Software lag.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.6\textwidth]{tonemapped}
-    \caption{Vorschau des Tone-Mapped Resultats mit der Möglichkeit der Veränderung der Variablen für diesen Tone-Mapper (globaler \gls{Tone-Mapping}-Operator von Reinhard).}
-    \label{fig:app:tone}
-  \end{center}
-\end{figure}
-
+%------------------------------------------------------------------------------------------------------------------------------------
 
 \section{Herausforderungen während der Programmierung}
+
+\texttt{T.B.D, ggf. rauslassen}

@@ -20,8 +20,8 @@ Diese drei bzw. vier Kanäle werden in der Regel mittels eines Bytes repräsenti
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[width=\textwidth]{example}
-    \caption{Beispielhaftes \gls{HDR}-Bild mit bereits angewandtem \gls{Tone-Mapping}-Verfahren (siehe \cite{tellone}) }
+    \includegraphics[width=0.5\textwidth]{example}
+    \caption{Beispielhaftes \gls{HDR}-Bild mit bereits angewandtem \gls{Tone-Mapping}-Verfahren (siehe \cite{tellone}). }
     \label{fig:teezer}
   \end{center}
 \end{figure}
@@ -118,8 +118,10 @@ Ein performanter Ansatz um Bilder zu registrieren ist der \gls{MTB} Ansatz (sieh
 
 Für die Abspeicherung der \gls{HDR}-Bilder werden in \autoref{tab:formats} die drei gängigsten Formate mit den dazu gängigen Codierungen verglichen (vgl. \cite{Reinhard}). Die Speicherung der erzeugten Daten war kein zentraler Bestandteil dieser Arbeit und wird vom Programm auch nicht unterstützt. Dennoch sollen hier die bekanntesten Kodierungen zur Abspeicherung vorgestellt werden.
 
+
 \begin{table}
   \begin{center}
+    \small
     \begin{tabularx}{\textwidth}{l|XXXX}
 	\toprule
 	Format & Kodierung & Kompression & Metadaten & Lizenz \\
@@ -134,10 +136,12 @@ Für die Abspeicherung der \gls{HDR}-Bilder werden in \autoref{tab:formats} die 
 	EXR & Half RGB & Wavelet, ZIP & Kallibrierung, \newline Farbraum \newline+ Fensterfunktion \newline + benutzerdef. Daten & Open source library (\textit{OpenEXR})\\
 	\bottomrule
     \end{tabularx}
+    \normalsize
     \caption{Verbreitete HDR-Bildformate in der Übersicht \cite[S.89]{Reinhard}}
     \label{tab:formats}
   \end{center}
 \end{table}
+
 
 \subsection{RGBE -- Das .hdr Format}
 
@@ -178,7 +182,7 @@ L_d(x, y) =\frac{L(x,y)}{1+ L(x,y)}
 \subsection{Lokale \gls{Tone-Mapping}-Operatoren}
 \label{sub:tone:local}
 
-Lokale \gls{Tone-Mapping}-Operatoren können bei der Zuordnung eines Wertes aus dem \gls{HDR}- in das \gls{LDR}- Bild auch die lokale Umgebung eines jeden Bildpunktes berücksichtigen. Damit erreichen Sie besonders in sehr dynamischen Bildern bessere Ergebnisse und können mehr Details in Bildern hervorheben. Auch hier gibt es eine Vielzahl verschiedener Operatoren, die alle ihre Vor- und Nachteile haben. Da keine Analyse der \gls{Tone-Mapping}-Operatoren im Fokus der Arbeit stand, wurde hier ebenfalls ein Operator gewählt\footnote{TODO: Wahl Operator}.
+Lokale \gls{Tone-Mapping}-Operatoren können bei der Zuordnung eines Wertes aus dem \gls{HDR}- in das \gls{LDR}- Bild auch die lokale Umgebung eines jeden Bildpunktes berücksichtigen. Damit erreichen Sie besonders in sehr dynamischen Bildern bessere Ergebnisse und können mehr Details in Bildern hervorheben. Auch hier gibt es eine Vielzahl verschiedener Operatoren, die alle ihre Vor- und Nachteile haben. Da keine Analyse der \gls{Tone-Mapping}-Operatoren im Fokus der Arbeit stand, wurde hier ebenfalls ein Operator gewählt. Die Wahl dieses Operators wurde nach ersten Recherchen getroffen, da dieser in verschiedenen Veröffentlichungen \cite{tone_mapper_1,tone_mapper_2} gut abgeschnitten hat.
  
 Reinhard et al. \cite{ReinhardToneMapper} stellen in ihrer Ausarbeitung auch einen weitaus komplexeren Operator vor, der die lokalen Eigenschaften des Bildes mit analysiert und entsprechend den Operator anpasst. Bei diesem handelt es sich um einen lokalen \gls{Tone-Mapping}-Operator, der dodging-and-burning (dt. abwedeln) zur Berechnung verwendet. Dieses Verfahren ist eine Technik, die aus der analogen Fotografie stammt. Dabei wird die Belichtungszeit in einzelnen Bereichen des Bildes verändert, um dies bei der Entwicklung des Filmmaterials differenziert zu behandeln. Die Wahl der einzelnen Bereiche geschieht im technischen Ansatz durch die Berechnung des lokalen Kontrastes im Bild. Die Reichweite des Einflusses der umliegenden Bildpunkte wird über diese Bereiche gesteuert.
 
@@ -202,7 +206,7 @@ Darüber hinaus gibt es verschiedene Programme, die speziell auf die Erzeugung v
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.8\textwidth]{BenchGeneratedLuminance}
+    \includegraphics[width=0.5\textwidth]{BenchGeneratedLuminance}
     \caption{Ein mögliches Ergebnis des \gls{HDR}-Bildes. Erstellt mit \texttt{Luminance HDR} und dem \gls{Tone-Mapping}-Operator \texttt{Reinhard'05} \cite{Reinhard05}. Bildserie siehe \cite{tellone}.}
     \label{fig:luminance}
   \end{center}

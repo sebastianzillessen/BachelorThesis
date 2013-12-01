@@ -35,12 +35,11 @@ public class ToneMappingPlot extends ImagePlot {
         if (vars.length == 0)
             return;
         JPanel pnl = new JPanel(new GridLayout(Math.max(vars.length + 1, 10), 2));
-        pnl.add(new JLabel("Settings"));
-        JButton doit = new JButton("Make it so!");
+        pnl.add(new JLabel("Parameter"));
+        JButton doit = new JButton("Parameter übernehmen");
         doit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("------ A C T I O N --------");
                 boolean error = false;
                 for (int i = 0; i < vars.length; i++) {
 
@@ -51,7 +50,6 @@ public class ToneMappingPlot extends ImagePlot {
                         inputs[i].setBorder(BorderFactory.createLineBorder(Color.gray));
                     }
                 }
-                System.out.println("ACTION DONE" + error);
                 if (!error) {
                     ToneMappingPlot.super.setImage(mapping.getImage(r.getWidth(), r.getHeight(), r.getE().toArray()));
                     redraw();

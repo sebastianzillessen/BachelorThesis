@@ -48,7 +48,6 @@ public class SpatiallyUniformMapping extends ToneMapping {
         }
         Arrays.sort(r);
         double res = r[(int) (r.length * 0.8)];
-        System.out.println("res = " + res);
         return res;
 
     }

@@ -1,8 +1,7 @@
 package Solver;
 
 import Ctrl.Controller;
-import Maths.BandMatrix;
-import Maths.Vector;
+import Maths.*;
 import Model.HDRResult;
 import Model.Image;
 import Model.WeightMode;
@@ -174,7 +173,7 @@ public class IterativeEnergySolver extends IHDRSolver {
             update_phi_data(g, F);
             BandMatrix m = buildDerivateMatrix();
             Vector b = initializeB(F, g);
-            // add on the diagonale the DefaultMatrix with the sums of each grayvalue in the picture.
+            // add on the diagonale the Matrix with the sums of each grayvalue in the picture.
             // Entry (k,k) says how many time the grayvalue k is present overall pictures and
             // is added to the derivate matrix above
             setupDataTerm(m);
@@ -182,10 +181,16 @@ public class IterativeEnergySolver extends IHDRSolver {
             if (mu > 0) {
                 m = monotonieConstraint(g, m);
             }
-            g = m.solvePentadiagonale(b);
-            if (true || (iteration == 0 && iterations == 0)) {
-                g = g.subtract(g.get(127));
+
+
+            try {
+                g = EquotationSolver.solve(m, b, EquotationSolverAlgorithm.LU);
+            } catch (EquotationSolverException e) {
+                Controller.getInstance().getDisplay().append("Error on calculation of g in iteration " + iteration + ". Skipping this iteration and processing to next one. " + e.getMessage());
             }
+            // fix g to be zero at grey value 127
+            g = g.subtract(g.get(127));
+
         }
         return g;
     }
@@ -290,12 +295,17 @@ public class IterativeEnergySolver extends IHDRSolver {
     }
 
     private Vector solveFWithNeighbors(Vector g, Vector oldF, double alpha) {
-        return getNeighborMatrix(g, oldF, alpha);
+        try {
+            return getNeighborMatrix(g, oldF, alpha);
+        } catch (EquotationSolverException e) {
+            Controller.getInstance().getDisplay().append("Exception detected during calculation of the neighbor matrix. Swapping to default algorithm. " + e.getMessage());
+            return solveFDefault(g, oldF);
+        }
     }
 
 
     @Override
-    protected HDRResult doInBackground() throws Exception {
+    protected HDRResult doInBackground() {
         // start value for g, lets assume we just use a linear equotation
         long started = System.currentTimeMillis();
         Vector g = new Vector(256);
@@ -354,20 +364,6 @@ public class IterativeEnergySolver extends IHDRSolver {
         }
     }
 
-    /*
-    protected void update_phi_smooth(Vector g) {
-        if (robustnessSmoothnessG) {
-            // set boundaries (not required, just to make a well defined state)
-            phi_smooth[0] = 1;
-            phi_smooth[phi_smooth.length - 1] = 1;
-            for (int k = 1; k < phi_smooth.length - 1; k++) {
-                double v = g.get(k - 1) - 2 * g.get(k) + g.get(k + 1);
-                phi_smooth[k] = Math.sqrt(Math.pow(v, 2) + EPSILON_2);
-            }
-        }
-    }
-     */
-
     protected void process(List<HDRResult> pairs) {
         Vector g = pairs.get(0).getG();
         Vector E = pairs.get(0).getE();
@@ -415,10 +411,7 @@ public class IterativeEnergySolver extends IHDRSolver {
             if (g1 < 0)
                 monotonie += w(z) * g1 * g1;
         }
-
-        System.out.println("Energy " + data + ", " + lambda * smoothing + ", " + mu * monotonie);
         return data + lambda * smoothing + mu * monotonie;
-
     }
 
 
@@ -439,7 +432,7 @@ public class IterativeEnergySolver extends IHDRSolver {
     }
 
 
-    private Vector getNeighborMatrix(Vector g, Vector F, double alpha) {
+    private Vector getNeighborMatrix(Vector g, Vector F, double alpha) throws EquotationSolverException {
         int cols = images.get(0).getWidth();
         int rows = images.get(0).getHeight();
 
@@ -452,7 +445,7 @@ public class IterativeEnergySolver extends IHDRSolver {
             }
             b.set(i, sum);
         }
-        return res.solveSOR(b, F);
+        return EquotationSolver.solve(res, b, EquotationSolverAlgorithm.SOR);//res.solveSOR(b, F);
     }
 
 
@@ -505,6 +498,7 @@ public class IterativeEnergySolver extends IHDRSolver {
             neighborsBandMatrix.set(i, i, sum + alpha * d);
 
         }
+        //neighborsBandMatrix.toFileSync("calc/neighbors_"+System.currentTimeMillis()+".txt");
         return neighborsBandMatrix;
     }
 }

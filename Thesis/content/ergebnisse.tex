@@ -20,41 +20,46 @@ In den nachfolgenden Beschreibungen werden folgende Symbole mit den angegebenen 
 \item[$\sigma$]: Standardabweichung des additiven Gauss-Rauschen, Standard: 0
 \end{description}
 
+Um die Bilder einheitlich zu vergleichen, wurde bei allen Resultaten der globale \gls{Tone-Mapping}-Operator von Reinhard (siehe \autoref{sub:tone:global}, \cite{ReinhardToneMapper}) verwendet.
+
 
 \begin{figure}
   \begin{center}
-    \includegraphics[height=5cm, width=6cm]{results/g1}
-    \includegraphics[height=5cm]{results/E1}
-    \\ \vspace{5pt}
-    \includegraphics[height=5cm, width=6cm]{results/g1_external}
-    \includegraphics[height=5cm]{results/E1_external}
-    \caption{Verfahren der Berechnung der Antwortkurve (li.) und dem dazugehörigen Resultat (re.) \textbf{oben:} Unser Verfahren, \textbf{unten:} Implementierung von Mathias Eitz, siehe \autoref{sec:implementations}  (keine Erweiterungen aktiviert)}
+        \begin{overpic}[width=0.48\textwidth]{results/E1}
+                \put(-0,0){\includegraphics[width=2cm]{results/g1}}
+        \end{overpic}
+        \begin{overpic}[width=0.48\textwidth]{results/E1_external}
+            \put(-0,0){\includegraphics[width=2cm]{results/g1_external}}
+        \end{overpic}
+    \caption{Verfahren der Berechnung der Antwortkurve und dem dazugehörigen Resultat (re.) \textbf{links:} Unser Verfahren, \textbf{rechts:} Implementierung von Mathias Eitz, siehe \autoref{sec:implementations}}
     \label{fig:res:1}
   \end{center}
 \end{figure}
 
-\section{Ergebnisse mit Erweiterungen}
-Die in dieser Arbeit vorgestellten Erweiterungen sollen die Resultate noch weiter verbessern. Dazu werden Stück für Stück die Veränderungen in der Antwortkurve gezeigt.
+Die in dieser Arbeit vorgestellten Erweiterungen werden auf die Belichtungsserie von \cite{tellone} angewandt um deren Effekte zu zeigen.
 
-\subsection{Ergebnisse mit \gls{Monotonie}-Bedingung}
+
+
+
+\section{Ergebnisse mit \gls{Monotonie}-Bedingung}
 
 Bei den meisten Bildern ist die Antwortkurve $\b g$ bereits von sich aus monoton steigend. Um eine Bildserie zu erhalten, bei der die Kurve diese Eigenschaft nicht bereits durch das Standard-Verfahren erhält, wurden eigene Bilder aufgenommen (siehe \autoref{fig:mon:1}). Diese Belichtungsserie liefert zunächst eine recht unförmige Antwortkurve, welche auch durch mehr Iterationen nicht weiter konvergiert. Durch die Erweiterung der Monotonie kann die Kurve entsprechend begradigt und verbessert werden.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{sample_2/1}
-    \includegraphics[width=0.3\textwidth]{sample_2/2}
-    \includegraphics[width=0.3\textwidth]{sample_2/3}\\ \vspace{5pt}
-    \includegraphics[width=0.45\textwidth]{sample_2/g_no_mon} \hspace{1pt}
-    \includegraphics[width=0.45\textwidth]{sample_2/g_mon}
-    \caption{\textbf{oben:} Belichtungsserie, Belichtungszeit: 1/8000, 1/640, 1/100 (v.l.), \textbf{u.l.:} Antwortkurve ohne Monotonie-Forderung, \textbf{u.r.:} Antwortkurve mit Monotonie-Forderung}
+    \includegraphics[height=3.5cm]{sample_2/1}
+    \includegraphics[height=3.5cm]{sample_2/2}
+    \includegraphics[height=3.5cm]{sample_2/3}
+    \includegraphics[height=3.5cm]{sample_2/g_no_mon}
+    \includegraphics[height=3.5cm]{sample_2/g_mon}
+    \caption{Einfluss der Monotonie-Forderung: Belichtungsserie (Belichtungszeiten: 1/8000, 1/640, 1/100),  Antwortkurve ohne Monotonie-Forderung, Antwortkurve mit Monotonie-Forderung  (v.l.n.r.).}
     \label{fig:mon:1}
   \end{center}
 \end{figure}
 
 
 
-\subsection{Ergebnisse mit räumlichem Glattheitsterm}
+\section{Ergebnisse mit räumlichem Glattheitsterm}
 
 Die Erweiterung des räumlichen Glattheitsterms sorgt dafür, dass die benachbarten Pixel bei der Berechnung der \gls{Radiance Map} berücksichtigt werden. Wie in \autoref{fig:raum:1} zu sehen, hat dies insbesondere bei Messfehlern (hier 4\% \gls{SaltAndPepperNoise}) einen enormen Vorteil gegenüber dem herkömmlichen Verfahren. Auch durch Störungen wir das additive Gauss-Rauschen ($\sigma=10$, siehe \autoref{fig:raum:2}) sind die Ergebnisse schärfer und das Rauschen auf den Eingangsbildern wird reduziert.
 
@@ -64,7 +69,7 @@ Die Erweiterung des räumlichen Glattheitsterms sorgt dafür, dass die benachbar
     \begin{tikzpicture}[spy using outlines={circle,red,magnification=3,size=4cm, connect spies}]
         \node {
             \begin{overpic}[width=0.5\textwidth]{raum/E_ohne}
-                \put(-0,0){\includegraphics[width=3cm]{raum/g_ohne}}
+                \put(-0,0){\includegraphics[width=2.5cm]{raum/g_ohne}}
             \end{overpic}
         };
         \spy on (1.4,-1.3) in node [left] at (9.5,0);
@@ -73,7 +78,7 @@ Die Erweiterung des räumlichen Glattheitsterms sorgt dafür, dass die benachbar
     \begin{tikzpicture}[spy using outlines={circle,red,magnification=3,size=4cm, connect spies}]
         \node {
             \begin{overpic}[width=0.5\textwidth]{raum/E_mit}
-                \put(-0,0){\includegraphics[width=3cm]{raum/g_mit}}
+                \put(-0,0){\includegraphics[width=2.5cm]{raum/g_mit}}
             \end{overpic}
         };
         \spy on (1.4,-1.3) in node [left] at (9.5,0);
@@ -88,7 +93,7 @@ Die Erweiterung des räumlichen Glattheitsterms sorgt dafür, dass die benachbar
     \begin{tikzpicture}[spy using outlines={circle,red,magnification=3,size=4cm, connect spies}]
         \node {
             \begin{overpic}[width=0.5\textwidth]{raum/E_gauss_ohne}
-                \put(-0,0){\includegraphics[width=3cm]{raum/g_gauss_ohne}}
+                \put(-0,0){\includegraphics[width=2.5cm]{raum/g_gauss_ohne}}
             \end{overpic}
         };
         \spy on (1.4,-1.3) in node [left] at (9.5,0);
@@ -97,21 +102,22 @@ Die Erweiterung des räumlichen Glattheitsterms sorgt dafür, dass die benachbar
     \begin{tikzpicture}[spy using outlines={circle,red,magnification=3,size=4cm, connect spies}]
         \node {
             \begin{overpic}[width=0.5\textwidth]{raum/E_gauss_mit}
-                \put(-0,0){\includegraphics[width=3cm]{raum/g_gauss_mit}}
+                \put(-0,0){\includegraphics[width=2.5cm]{raum/g_gauss_mit}}
             \end{overpic}
         };
         \spy on (1.4,-1.3) in node [left] at (9.5,0);
     \end{tikzpicture}
     \caption{Einfluss des räumlichen Glattheitsterms auf verrauschte Bilder (additives Gauss-Rauschen mit $\sigma = 10$): \textbf{oben:} Antwortkurve und zugehöriges HDR Bild ohne räumlichen Glattheitsterm, \textbf{unten:} Antwortkurve mit räumlichem Glattheitsterm ($\alpha = 1$) und zugehöriges HDR-Bild.}
-    \label{fig:raum:1}
+    \label{fig:raum:2}
   \end{center}
 \end{figure}
 
-\subsection{Ergebnisse mit Robustheits-Term}
+\section{Ergebnisse mit subquadratischen Bestrafungstermen}
 
-Besonders die Erweiterung mit subquadratischen Bestrafungsfunktionen liefert unter normalen Umständen kaum eine Verbesserung (siehe \autoref{fig:robust:1}), lediglich der Kontrast und die Konturenschärfe wird etwas verbessert. Wird hingegen auch noch Rauschen (hier \gls{SaltAndPepperNoise}) simuliert, dann ist dies im Ausgabebild quasi nicht mehr zu erkennen. 
+Die Erweiterung mit subquadratischen Bestrafungsfunktionen liefert unter normalen Umständen kaum eine Verbesserung (siehe \autoref{fig:robust:1}), lediglich der Kontrast und die Konturenschärfe wird etwas verbessert. Wird hingegen auch noch Rauschen (hier \gls{SaltAndPepperNoise}, siehe \autoref{fig:robust:2}) simuliert, dann ist dies im Ausgabebild quasi nicht mehr zu erkennen und es kann eine eindeutige Verbesserung erzielt werden. Dieser Effekt entsteht durch die geringere Gewichtung der Ausreißer (dem Salt \& Pepper) bei der Berechnung von $\b g$ und $\b E$.
 
-Insbesondere wirken sich die robusten Bestrafungsfunktionen auch positiv bei der Verwendung der räumlichen Glattheitsforderung aus. Hier fließen die Kanten durch die Verwendung der subquadratischen Terme weniger stark in die räumliche Glattheit ein. Dies sorgt dafür, dass Kanten im Bild besser erhalten bleiben (siehe \autoref{fig:robust:kanten}).
+
+Von der Erweiterung des räumlichen Glattheitsterms um robuste Funktionen wurde eine Verbesserung der Kantenerhaltung erwartet. Diese Erwartung wurde jedoch, wie in \autoref{fig:robust:kanten} zu erkennen ist, nicht erfüllt. Die Verbesserungen sind trotz hoher Gewichtung so minimal, dass sie kaum zu erkennen sind.
 
 
 \begin{figure}
@@ -133,40 +139,22 @@ Insbesondere wirken sich die robusten Bestrafungsfunktionen auch positiv bei der
         };
         \spy on (1.4,-1.3) in node [left] at (9.5,0);
     \end{tikzpicture}
-        \begin{tikzpicture}[spy using outlines={circle,red,magnification=3,size=4cm, connect spies}]
-        \node {
-            \begin{overpic}[width=0.5\textwidth]{robust/E_mit_robust_pepper}
-                \put(-0,0){\includegraphics[width=2.5cm]{robust/g_mit_robust_pepper}}
-            \end{overpic}
-        };
-        \spy on (1.4,-1.3) in node [left] at (9.5,0);
-    \end{tikzpicture}
-
-    \caption{Einfluss der subquadratischen Bestrafungsfunktionen: \textbf{oben:} Standardverfahren, \textbf{mitte:} Subquadratischer Bestrafungsterm $\varphi(s^2)=\sqrt{s^2+\epsilon^2}$ für $\b g$ und $\b E$, die Kanten sind schärfer und der Kontrast besser, \textbf{unten:} Zusätzliches \gls{SaltAndPepperNoise} ist quasi nicht mehr zu erkennen.}
+    \caption{Einfluss der subquadratischen Bestrafungsfunktionen: \textbf{oben:} Standardverfahren, \textbf{unten:} Subquadratischer Bestrafungsterm $\varphi(s^2)=\sqrt{s^2+\epsilon^2}$ für $\b g$ und $\b E$, die Kanten sind schärfer und der Kontrast besser}
     \label{fig:robust:1}
   \end{center}
 \end{figure}
 
 \begin{figure}
   \begin{center}
-    \begin{tikzpicture}[spy using outlines={circle,red,magnification=3,size=4cm, connect spies}]
+\begin{tikzpicture}[spy using outlines={circle,red,magnification=3,size=4cm, connect spies}]
         \node {
-            \begin{overpic}[width=0.5\textwidth]{results/E1}
-                \put(-0,0){\includegraphics[width=2.5cm]{results/g1}}
+            \begin{overpic}[width=0.5\textwidth]{raum/E_ohne}
+                \put(-0,0){\includegraphics[width=2.5cm]{raum/g_ohne}}
             \end{overpic}
         };
         \spy on (1.4,-1.3) in node [left] at (9.5,0);
     \end{tikzpicture}
-    
     \begin{tikzpicture}[spy using outlines={circle,red,magnification=3,size=4cm, connect spies}]
-        \node {
-            \begin{overpic}[width=0.5\textwidth]{robust/E_mit_robust}
-                \put(-0,0){\includegraphics[width=2.5cm]{robust/g_mit_robust}}
-            \end{overpic}
-        };
-        \spy on (1.4,-1.3) in node [left] at (9.5,0);
-    \end{tikzpicture}
-        \begin{tikzpicture}[spy using outlines={circle,red,magnification=3,size=4cm, connect spies}]
         \node {
             \begin{overpic}[width=0.5\textwidth]{robust/E_mit_robust_pepper}
                 \put(-0,0){\includegraphics[width=2.5cm]{robust/g_mit_robust_pepper}}
@@ -174,8 +162,33 @@ Insbesondere wirken sich die robusten Bestrafungsfunktionen auch positiv bei der
         };
         \spy on (1.4,-1.3) in node [left] at (9.5,0);
     \end{tikzpicture}
+    
+    \caption{Einfluss der subquadratischen Bestrafungsfunktionen: \textbf{oben:} Standardverfahren mit \gls{SaltAndPepperNoise}, \textbf{unten:} Subquadratischer Bestrafungsterm $\varphi(s^2)=\sqrt{s^2+\epsilon^2}$ für $\b g$ und $\b E$, das Rauschen ist quasi nicht mehr zu erkennen.}
+    \label{fig:robust:2}
+  \end{center}
+\end{figure}
 
-    \caption{Einfluss der subquadratischen Bestrafungsfunktionen auf den räumlichen Glattheitsterm: \textbf{oben:} Standardverfahren, \textbf{mitte:} Subquadratischer Bestrafungsterm $\varphi(s^2)=\sqrt{s^2+\epsilon^2}$ für $\b g$ und $\b E$, die Kanten sind schärfer und der Kontrast besser, \textbf{unten:} Zusätzliches \gls{SaltAndPepperNoise} ist quasi nicht mehr zu erkennen.}
+
+\begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[spy using outlines={circle,red,magnification=3,size=4cm, connect spies}]
+        \node {
+            \begin{overpic}[width=0.5\textwidth]{robust/E_raum}
+                \put(-0,0){\includegraphics[width=2.5cm]{robust/g_raum}}
+            \end{overpic}
+        };
+        \spy on (1.4,-1.3) in node [left] at (9.5,0);
+    \end{tikzpicture}
+        \begin{tikzpicture}[spy using outlines={circle,red,magnification=3,size=4cm, connect spies}]
+        \node {
+            \begin{overpic}[width=0.5\textwidth]{robust/E_raum_robust}
+                \put(-0,0){\includegraphics[width=2.5cm]{robust/g_raum_robust}}
+            \end{overpic}
+        };
+        \spy on (1.4,-1.3) in node [left] at (9.5,0);
+    \end{tikzpicture}
+
+    \caption{Einfluss der subquadratischen Bestrafungsfunktionen auf den räumlichen Glattheitsterm bei \gls{SaltAndPepperNoise}  ($\alpha = 100$): \textbf{oben:} Ohne subquadratische Bestrafungsfunktionen, \textbf{unten:} Mit subquadratischen Bestrafungsfunktionen. Die Kanten sind nur minimal besser erhalten. }
     \label{fig:robust:kanten}
   \end{center}
 \end{figure}

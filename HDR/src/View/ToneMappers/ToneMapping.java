@@ -18,11 +18,9 @@ public abstract class ToneMapping {
 
     protected void invalidateMapping() {
         this.image = null;
-        System.out.println("invalidate image");
     }
 
     public short[][] getValues(double[][] e) {
-        System.out.println("GETVALUES");
         minMax(e);
         e = mapToRange(e, 0, 1);
         minMax(e);
@@ -108,9 +106,7 @@ public abstract class ToneMapping {
     }
 
     public Image getImage(int width, int height, double[] doubles) {
-        System.out.println("GetImage");
         if (image == null) {
-            System.out.println("=> NEW IMAGE");
             image = new Image(width, height);
             double[][] d = new double[width][height];
             for (int w = 0; w < width; w++) {

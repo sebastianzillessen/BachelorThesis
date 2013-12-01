@@ -32,10 +32,8 @@ public class ArrayMaths {
      */
     public static int[] TointArray(Integer[] indexes) {
         int[] r = new int[indexes.length];
-
         for (int i = 0; i < r.length; i++)
             r[i] = indexes[i].intValue();
-
         return r;
     }
 

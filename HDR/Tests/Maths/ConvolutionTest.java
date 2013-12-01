@@ -1,9 +1,5 @@
-package Tests.Maths;
+package Maths;
 
-import Maths.ArrayAssertHelper;
-import Maths.Convolution;
-import Maths.DefaultMatrix;
-import Maths.Matrix;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -50,7 +46,7 @@ public class ConvolutionTest {
     @Test
     public void convolution2D() {
 
-        Matrix m = Matrix.parse(
+        AbstractMatrix m = AbstractMatrix.parse(
                 "8.2257 0.0000 -5.0876 4.4050 0.3241 -8.6348 0.0000 0.0000 -5.0900 0.6847\n" +
                         "2.0567 8.2741 9.3821 1.3325 -7.3518 1.6772 -9.2738 1.5473 -0.5456 -6.4957\n" +
                         "8.7106 9.7430 -6.4342 -9.6503 -5.7576 -0.7078 3.6786 0.0000 0.0000 9.7825\n" +
@@ -63,15 +59,15 @@ public class ConvolutionTest {
                         "7.6927 7.1806 9.9243 -3.0519 -4.4386 1.5277 -0.0831 -5.2062 0.0000 -3.0693");
         System.out.println(m);
         double[][] gaussianKernel2D = Convolution.getGaussianKernel2D(2, 0.8);
-        ArrayAssertHelper.assertArrayEquals(Matrix.parse(
+        UnitHelper.assertArrayEquals(AbstractMatrix.parse(
                 " 0.0005 0.0050 0.0109 0.0050 0.0005\n" +
                         " 0.0050 0.0522 0.1141 0.0522 0.0050\n" +
                         " 0.0109 0.1141 0.2491 0.1141 0.0109\n" +
                         " 0.0050 0.0522 0.1141 0.0522 0.0050\n" +
                         " 0.0005 0.0050 0.0109 0.0050 0.0005").toArray(), gaussianKernel2D, 0.001);
         double[][] conv = Convolution.convolute(m.toArray(), gaussianKernel2D);
-        System.out.println(new DefaultMatrix(conv));
-        Matrix c = Matrix.parse(
+        System.out.println(new Matrix(conv));
+        AbstractMatrix c = AbstractMatrix.parse(
                 " 2.8482 2.0672 0.8052 0.6050 -1.2544 -2.7511 -1.9320 -1.0052 -1.5062 -1.0645\n" +
                         " 4.0092 4.7260 2.3206 -0.8300 -2.9556 -2.6627 -2.1433 -0.9511 -0.9593 -0.8276\n" +
                         " 4.7825 3.9460 -0.3976 -3.6051 -3.8470 -1.6247 -0.1939 -0.9030 -0.7865 0.6708\n" +
@@ -82,7 +78,7 @@ public class ConvolutionTest {
                         " 0.1578 -0.8050 -1.1479 -1.7080 1.0037 3.3505 4.0763 2.7289 -0.5580 -2.4110\n" +
                         " 0.8393 -0.5881 -0.4334 -0.6650 1.3283 2.1350 1.6604 2.3597 0.8783 -1.5490\n" +
                         " 2.6837 2.8464 2.3694 -0.0416 -0.2634 0.5176 -0.1434 -0.1964 -0.0517 -1.0320");
-        assertEquals(c.toString(), new DefaultMatrix(conv).toString());
+        assertEquals(c.toString(), new Matrix(conv).toString());
     }
 
 

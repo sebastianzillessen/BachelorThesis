@@ -1,6 +1,6 @@
 package View.ToneMappers;
 
-import Maths.DefaultMatrix;
+import Maths.AbstractMatrix;
 import Maths.Matrix;
 
 /**
@@ -9,7 +9,7 @@ import Maths.Matrix;
  * Date: 16.07.13
  * Time: 17:48
  * To change this template use File | Settings | File Templates.
- *
+ * <p/>
  * From: http://www.drama.uga.edu/~jkundert/DRAMA5310/SoundFX/SFX-Dvd1/FM%20Samples/12-03B/Drum%20Styles%20Vol4/ROCK_KIT/reinhard.pdf
  */
 public class ReinhardMapping extends ToneMapping {
@@ -31,22 +31,15 @@ public class ReinhardMapping extends ToneMapping {
                 sum += Math.log(e[i][j] + delta);
             }
         }
-        System.out.println(Math.exp(1.0 / numPixels));
         double key = Math.exp((1.0 / numPixels) * sum);
-        Matrix m = new DefaultMatrix(e).mult(a / key);
+        AbstractMatrix m = new Matrix(e).mult(a / key);
 
         double[][] scaledLuminance = m.toArray();
 
         double[][] r = new double[e.length][e[0].length];
-        int count = 0;
         for (int i = 0; i < r.length; i++) {
             for (int j = 0; j < r[i].length; j++) {
                 double v = scaledLuminance[i][j] / (scaledLuminance[i][j] + 1) * 255.0;
-
-                if (v < 0 || v > 255) {
-                    count++;
-                    System.out.println("exited range: " + v + " " + count);
-                }
                 scaledLuminance[i][j] = v;
                 r[i][j] = v;
 
@@ -75,7 +68,6 @@ public class ReinhardMapping extends ToneMapping {
     }
 
     public boolean setVar(String var, String value) {
-        System.out.println("SetVars in Reinhard");
         try {
             Double d = Double.valueOf(value);
             if (d.isNaN())

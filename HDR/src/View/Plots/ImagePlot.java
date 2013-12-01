@@ -34,7 +34,6 @@ public class ImagePlot extends Plot {
     }
 
     public void setImage(Model.Image image) {
-        System.out.println("Set Image");
         this.image = image;
         startImageCalculation();
     }
@@ -50,7 +49,6 @@ public class ImagePlot extends Plot {
 
     @Override
     protected void redraw() {
-        System.out.println("Redraw in Image Plot");
         bi = null;
         startImageCalculation();
         super.redraw();
@@ -61,7 +59,6 @@ public class ImagePlot extends Plot {
         if (bi == null) {
             g.drawString("Image processing in Progress", 100, 100);
             if (bi == null) {
-                System.out.println("Regenerate pircuter");
                 this.startImageCalculation();
                 try {
                     generating.join();
@@ -76,16 +73,11 @@ public class ImagePlot extends Plot {
         //if (w < 1 || h < 1) {
         double d = Math.min(Math.min(w, h), 1);
         g.drawImage(bi.getScaledInstance((int) (d * image.getWidth()), (int) (d * image.getHeight()), Image.SCALE_REPLICATE), 0, 0, null);
-        /*} else {
-            g.drawImage(bi, 0, 0, null);
-        } */
-
     }
 
 
     @Override
     public void saveGraphic(String filename) {
-        System.out.println("SaveGraphics in ImagePlot");
         BufferedImage bufferedImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
         bufferedImage.getGraphics().drawImage(bi.getScaledInstance(image.getWidth(), image.getHeight(), Image.SCALE_REPLICATE), 0, 0, null);
         saveGraphic(filename, bufferedImage);

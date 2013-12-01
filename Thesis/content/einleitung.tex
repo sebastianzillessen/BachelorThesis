@@ -25,19 +25,19 @@ Diese \nameref{chap:impl} soll dann sukzessive um robuste Funktionen, \gls{Monot
 
 \begin{figure}[H]
   \begin{center}
-    \includegraphics[width=0.45\textwidth]{teezer/g_noise_no_robustness}
-    \includegraphics[width=0.45\textwidth]{teezer/g_noise_robustness_raum}
-    \\
-    \vspace{3pt}
-    \includegraphics[width=0.45\textwidth]{teezer/E_noise_no_robustness}
-    \includegraphics[width=0.45\textwidth]{teezer/E_noise_robustness_raum}
-    \caption{Geschätzte Antwortkurven und zugehöriges HDR-Bild für die Bilderserie \cite{tellone} mit \gls{SaltAndPepperNoise}. \textbf{o.l.}: ohne robuste Bestrafungsterme. \textbf{o.r.}: mit robusten Bestrafungstermen und räumlicher Glattheitsforderung. \textbf{unten}: Das HDR-Bild wurde mittels lokalem Reinhard-Tone-Mapper (vgl. \autoref{sec:tone-mapping}) erstellt.}
+      \begin{overpic}[width=0.48\textwidth]{teezer/E_noise_no_robustness}
+                \put(-0,0){\includegraphics[width=2cm]{teezer/g_noise_no_robustness}}
+        \end{overpic}
+        \begin{overpic}[width=0.48\textwidth]{teezer/E_noise_robustness_raum}
+            \put(-0,0){\includegraphics[width=2cm]{teezer/g_noise_robustness_raum}}
+        \end{overpic}
+    \caption{Geschätzte Antwortkurven und zugehöriges HDR-Bild für die Bilderserie \cite{tellone} mit \gls{SaltAndPepperNoise}. Das HDR-Bild wurde mittels lokalem Reinhard-Tone-Mapper (vgl. \autoref{subsec:ToneMapping}) erstellt. \textbf{links}: ohne robuste Bestrafungsterme. \textbf{rechts}: mit robusten Bestrafungstermen und räumlicher Glattheitsforderung.}
     \label{fig:teezer}
   \end{center}
 \end{figure}
 
 
-Neben der Modellierung und Implementierung der einzelnen Erweiterungen soll auch eine geeignete visuelle Evaluation der Ergebnisse erfolgen. Hierzu sollen \gls{Tone-Mapping}-Verfahren (siehe \autoref{sec:tone-mapping}) aus bereits existierender Forschung verwendet werden. 
+Neben der Modellierung und Implementierung der einzelnen Erweiterungen soll auch eine geeignete visuelle Evaluation der Ergebnisse erfolgen. Hierzu sollen \gls{Tone-Mapping}-Verfahren (siehe \autoref{subsec:ToneMapping}) aus bereits existierender Forschung verwendet werden. 
 
 
 \section{Gliederung}
@@ -52,7 +52,7 @@ Die Arbeit ist in folgender Weise gegliedert:
 
 \item[\autoref{chap:maths} -- \nameref{chap:maths}:] Der theoretische Ansatz aus \autoref{chap:maths} wird hier mathematisch umgesetzt und diskutiert. Außerdem werden die Erweiterungen des Algorithmus beschrieben und formal spezifiziert.
 
-\item[\autoref{chap:impl} -- \nameref{chap:impl}:] Die Implementierung der in Kapitel \autoref{chap:algo} und \autoref{chap:maths} beschriebenen Modelle wird hier erläutert. Darüber hinaus werden einzelne Programm-Passagen (siehe \autoref{sec:sample-codes}) genauer beleuchtet und die Laufzeit der Anwendung (siehe \autoref{sec:laufzeit}) analysiert.
+\item[\autoref{chap:impl} -- \nameref{chap:impl}:] Die Implementierung der in Kapitel \autoref{chap:algo} und \autoref{chap:maths} beschriebenen Modelle wird hier erläutert. Darüber hinaus werden einzelne Programm-Passagen (siehe \autoref{sec:sample-codes}) genauer betrachtet.
 
 \item[\autoref{chap:results} -- \nameref{chap:results}:] Anschließend werden die Resultate und Einflüsse der unterschiedlichen Erweiterungen vorgestellt und diskutiert.
 

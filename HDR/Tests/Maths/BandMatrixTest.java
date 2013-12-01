@@ -3,8 +3,6 @@ package Maths;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 import static org.junit.Assert.assertArrayEquals;
@@ -86,12 +84,12 @@ public class BandMatrixTest {
     public void testDecomposePenta() throws Exception {
         final int n = 7;
         BandMatrix d = m(n);
-        Matrix[] ms = d.decomposePenta();
-        Matrix L = ms[0];
-        Matrix U = ms[1];
+        AbstractMatrix[] ms = d.decomposePenta();
+        AbstractMatrix L = ms[0];
+        AbstractMatrix U = ms[1];
 
 
-        Matrix eL = Matrix.parse("1 0 0 0 0 0 0\n" +
+        AbstractMatrix eL = AbstractMatrix.parse("1 0 0 0 0 0 0\n" +
                 "-1 1 0 0 0 0 0\n" +
                 "0.5 -0.75 1 0 0 0 0\n" +
                 "0 0.25 -0.7647059 1 0 0 0\n" +
@@ -99,7 +97,7 @@ public class BandMatrixTest {
                 "0 0 0 0.2344828 -0.7519999 1 0\n" +
                 "0 0 0 0 0.2320000 -0.3750000 1");
         assertEquals(eL.toString(), L.toString());
-        Matrix eR = Matrix.parse("2 -2 1 0 0 0 0\n" +
+        AbstractMatrix eR = AbstractMatrix.parse("2 -2 1 0 0 0 0\n" +
                 "0 4 -3 1 0 0 0\n" +
                 "0 0 4.25 -3.25 1 0 0\n" +
                 "0 0 0 4.264706 -3.235294 1 0\n" +
@@ -113,7 +111,7 @@ public class BandMatrixTest {
     @Test
     public void checkLUDecomp() {
         BandMatrix d = m(7);
-        Matrix[] LU = d.decomposePenta();
+        AbstractMatrix[] LU = d.decomposePenta();
 
         BandMatrix L = BandMatrix.parse(
                 " 1 0 0 0 0 0 0\n" +
@@ -136,57 +134,22 @@ public class BandMatrixTest {
     }
 
     @Test
-    public void TestForwardElimination() {
-        Vector b = new Vector(new double[]{
-                4, 5, 12, 3, 1, 2, 4
-        });
-
-        BandMatrix L = BandMatrix.parse(
-                " 1 0 0 0 0 0 0\n" +
-                        " -1 1 0 0 0 0 0\n" +
-                        " 0.5000 -0.7500 1 0 0 0 0\n" +
-                        " 0 0.2500 -0.7647 1 0 0 0\n" +
-                        " 0 0 0.2353 -0.7586 1 0 0\n" +
-                        " 0 0 0 0.2345 -0.7520 1 0\n" +
-                        " 0 0 0 0 0.2320 -0.3750 1");
-        Vector y = Matrix.forwardElimination(b, L);
-        assertArrayEquals(new double[]{4.0000, 9.0000, 16.7500, 13.5588, 7.3448, 4.3440, 3.9250}, y.toArray(), 0.001);
-    }
-
-
-    @Test
-    public void Backwardsubstitution() {
-        BandMatrix U = BandMatrix.parse(" 2 -2 1 0 0 0 0\n" +
-                " 0 4 -3 1 0 0 0\n" +
-                " 0 0 4.2500 -3.2500 1 0 0\n" +
-                " 0 0 0 4.2647 -3.2353 1 0\n" +
-                " 0 0 0 0 4.3103 -3.2414 1 \n" +
-                " 0 0 0 0 0 3.3280 -1.2480\n" +
-                " 0 0 0 0 0 0 1.3000");
-        Vector y = new Vector(new double[]{4.0000, 9.0000, 16.7500, 13.5588, 7.3448, 4.3440, 3.9250});
-        Vector x = Matrix.backwardSubstitution(U, y);
-        System.out.println(x);
-        System.out.println(Arrays.toString(new double[]{4.788460, 6.245192, 6.913459, 4.759616, 2.836539, 2.437500, 3.019231}));
-        assertArrayEquals(new double[]{4.788460, 6.245192, 6.913459, 4.759616, 2.836539, 2.437500, 3.019231}, x.toArray(), 0.0001);
-    }
-
-    @Test
     public void solvePenta() throws Exception {
         BandMatrix d = m(7);
         Vector b = new Vector(new double[]{
                 4, 5, 12, 3, 1, 2, 4
         });
-        Vector r = d.solvePentadiagonale(b);
+        Vector r = EquotationSolver.solve(d, b, EquotationSolverAlgorithm.LU);
         assertArrayEquals(new double[]{4.788460, 6.245192, 6.913459, 4.759616, 2.836539, 2.437500, 3.019231}, r.toArray(), 0.00001);
     }
 
     @Test
-    public void solveSOR() {
+    public void solveSOR() throws EquotationSolverException {
         BandMatrix d = m(7);
         Vector b = new Vector(new double[]{
                 4, 5, 12, 3, 1, 2, 4
         });
-        Vector r = d.solveSOR(b);
+        Vector r = EquotationSolver.solve(d, b, EquotationSolverAlgorithm.SOR);
         Vector s = new Vector(new double[]{4.788461, 6.245192, 6.913462, 4.759616, 2.836539, 2.437500, 3.019231});
         s.setPrecision(4);
         r.setPrecision(4);
@@ -204,8 +167,8 @@ public class BandMatrixTest {
         n.set(0, 0, 1);
         n.set(1, 1, 2);
         n.set(2, 2, 3);
-        Matrix m = new DefaultMatrix(3);
-        Matrix r = new DefaultMatrix(3);
+        AbstractMatrix m = new Matrix(3);
+        AbstractMatrix r = new Matrix(3);
 
         for (int i = 0; i < 3; i++) {
             m.set(0, i, 1);
@@ -242,8 +205,8 @@ public class BandMatrixTest {
         // 0 0 0   3 3 3   0 0 0
 
         n.set(0, 0, 1);
-        Matrix m = new DefaultMatrix(3);
-        Matrix r = new DefaultMatrix(3);
+        AbstractMatrix m = new Matrix(3);
+        AbstractMatrix r = new Matrix(3);
 
         for (int i = 0; i < 3; i++) {
             m.set(0, i, 1);
@@ -261,13 +224,13 @@ public class BandMatrixTest {
         // 0 0 0 + 2 2 2 =  2 2 2
         // 0 0 1   3 3 3   3 3 4
 
-        DefaultMatrix n = (DefaultMatrix) DefaultMatrix.parse("1 0 0\n" +
+        Matrix n = (Matrix) Matrix.parse("1 0 0\n" +
                 "0 0 0\n" +
                 "0 0 1");
-        DefaultMatrix m = (DefaultMatrix) DefaultMatrix.parse("1 1 1\n" +
+        Matrix m = (Matrix) Matrix.parse("1 1 1\n" +
                 "2 2 2\n" +
                 "3 3 3");
-        DefaultMatrix r = (DefaultMatrix) DefaultMatrix.parse("2 1 1\n" +
+        Matrix r = (Matrix) Matrix.parse("2 1 1\n" +
                 "2 2 2\n" +
                 "3 3 4");
 
@@ -316,7 +279,7 @@ public class BandMatrixTest {
     }
 
     @Test
-    public void solveLargeMatrix() {
+    public void solveLargeMatrix() throws EquotationSolverException {
         BandMatrix m = BandMatrix.parse(
                 "6 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0\n" +
                         "1 7 1 0 0 1 0 0 0 0 0 0 0 0 0 0\n" +
@@ -345,7 +308,7 @@ public class BandMatrixTest {
 
         System.out.println(m);
         System.out.println(b);
-        Vector res = m.solveSOR(b);
+        Vector res = EquotationSolver.solve(m, b, EquotationSolverAlgorithm.SOR);
         assertArrayEquals(r.toArray(), res.toArray(), 0.0001);
     }
 
@@ -417,15 +380,15 @@ public class BandMatrixTest {
 
         BandMatrix inner = (BandMatrix) v.mult(dtd);
 
-        ArrayAssertHelper.assertArrayEquals(BandMatrix.parse("2 -1 0 0 0 0 0\n" +
+        UnitHelper.assertArrayEquals(BandMatrix.parse("2 -1 0 0 0 0 0\n" +
                 "0 0 0 0 0 0 0\n" +
                 "0 -1 2 -1 0 0 0\n" +
                 "0 0 0 0 0 0 0\n" +
                 "0 0 0 -1 2 -1 0\n" +
                 "0 0 0 0 0 0 0\n" +
                 "0 0 0 0 0 -1 1"
-        ).toArray(), inner.toArray(),0.001);
-        Matrix m = ddt.mult(inner);
+        ).toArray(), inner.toArray(), 0.001);
+        AbstractMatrix m = ddt.mult(inner);
 
         assertEquals(BandMatrix.parse(
                 " 2 -1 0 0 0 0 0\n" +

@@ -28,7 +28,6 @@ public class LocalReinhardMapping extends ToneMapping {
     @Override
     public double[][] getValuesIntern(double[][] luminance) {
 
-        System.out.printf("GetValues intern with saturation=%f, eps=%f, phi=%f, key=%f", saturation, eps, phi, key);
         double[][] luminanceNormalized = mapToRange(luminance, 0.0, 1.0);
         /*Implements the Reinhard local View.ToneMappers operator
 
@@ -69,7 +68,6 @@ public class LocalReinhardMapping extends ToneMapping {
                 double[][] conv = Convolution.convolute(luminanceNormalized, gaussianKernel2D);
                 v1[scale] = conv;
             } else {
-                System.out.println("=> MaxScale reached because of image size... " + maxScale);
                 break;
             }
         }
@@ -123,7 +121,7 @@ public class LocalReinhardMapping extends ToneMapping {
         //
         // idx = find(sm == 0);
         // sm(idx) = 8;
-        //new DefaultMatrix(sm).toFileSync("calc/sm_before.txt");
+        //new Matrix(sm).toFileSync("calc/sm_before.txt");
         for (int i = 0; i < sm.length; i++) {
             for (int j = 0; j < sm[i].length; j++) {
                 if (sm[i][j] == -1) {
@@ -131,7 +129,7 @@ public class LocalReinhardMapping extends ToneMapping {
                 }
             }
         }
-        //new DefaultMatrix(sm).toFileSync("calc/sm_after.txt");
+        //new Matrix(sm).toFileSync("calc/sm_after.txt");
 
         double[][] v1Final = new double[luminanceNormalized.length][luminanceNormalized[0].length];
 
@@ -157,8 +155,6 @@ public class LocalReinhardMapping extends ToneMapping {
         for (int i = 0; i < luminanceNormalized.length; i++) {
             for (int j = 0; j < luminanceNormalized[i].length; j++) {
                 double l = luminanceNormalized[i][j] * 255.0 / (1.0 + v1Final[i][j]);
-                if (l < 0 || l > 255)
-                    System.out.println("luminance value out of range: " + l);
                 luminanceCompressed[i][j] = l;
             }
         }
