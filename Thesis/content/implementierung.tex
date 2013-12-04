@@ -10,16 +10,16 @@ Neben der mathematischen Ausarbeitung (siehe \autoref{chap:maths}) beschäftigt 
 
 %------------------------------------------------------------------------------------------------------------------------------------
 \section{Anforderungen}
-Die Anforderungen an die Realisierung der Arbeit lassen sich zum Einen aus der Aufgabenbeschreibung der Bachelor-Arbeit entnehmen und sind zum Anderen während der Bearbeitung des theoretischen Ansatzes entstanden. Diese lassen sich in funktionale und nichtfunktionale Anforderungen unterscheiden  \cite[S. 369f]{ludewig}.
+Die Anforderungen an die Realisierung der Arbeit lassen sich zum einen aus der Aufgabenbeschreibung der Bachelor-Arbeit entnehmen und sind zum anderen während der Bearbeitung des theoretischen Ansatzes entstanden. Diese lassen sich in funktionale und nichtfunktionale Anforderungen gliedern  \cite[S. 369f]{ludewig}.
 \subsection{Funktionale Anforderungen}
 \label{fa}
 \begin{description}
 \item[Evaluation der Daten:] Die entstehenden Daten sollen evaluiert und grafisch dargestellt werden. Dazu muss die Software in der Lage sein folgende Aufgaben zu übernehmen: 
     \begin{itemize}
         \item Anpassung der Parameter für die Berechnung des \gls{HDR}-Bildes
-        \item Darstellen der Antwortkurve $\b g$ als grafischen Plot
+        \item Darstellung der Antwortkurve $\b g$ als grafischen Plot
         \item Anzeigen des \gls{HDR}-Bildes mit verschiedenen \gls{Tone-Mapping}-Operatoren
-        \item Ändern der Parameter der \gls{Tone-Mapping}-Operatoren
+        \item Änderung der Parameter der \gls{Tone-Mapping}-Operatoren
     \end{itemize}
     
 \item[Mathematische Korrektheit:] Bei dieser Implementierung handelt es sich um eine interdisziplinäre Aufgabe. Die Berechnung des \gls{HDR}-Bildes muss mathematisch korrekt ablaufen und soll der mathematischen Ausarbeitung (siehe \autoref{chap:maths}) entsprechen. Die Formulierung des Optimierungsproblems in effektiven Programmcode stellt deswegen eine besondere Herausforderung dar. Um die mathematische Korrektheit zu gewährleisten, sind umfassende Tests der mathematischen Klassen und Hilfsmethoden notwendig.
@@ -36,12 +36,13 @@ Die Anforderungen an die Realisierung der Arbeit lassen sich zum Einen aus der A
     
     \item[Performanz:] An die Performanz der Implementierung wurden keine besonderen Anforderungen gestellt. Die Umsetzbarkeit und die Ausgabe des Programms stehen im Vordergrund. Aus diesem Grund wurde von einer Laufzeitanalyse des Programmes abgesehen.
     
-    \item[Software-Qualität:] Da diese Arbeit eine Bachelor-Arbeit der Fachrichtung \textit{Softwaretechnik} ist, bestand eine gewisse Anforderung an die Qualität des Quellcodes. Diese beinhaltet die folgenden Aspekte.
+    \item[Software-Qualität:] Da diese Arbeit eine Bachelor-Arbeit der Fachrichtung \textit{Softwaretechnik} ist, bestehen Anforderungen an die Qualität des Quellcodes. Diese beinhaltet die folgenden Aspekte.
     \begin{itemize}
-        \item Automatisierte Modul-Tests (Zielwert: 90\% Anweisungsüberdeckung für das Paket \texttt{Maths})
+        \item Automatisierte Modul-Tests (Zielwert: 90\% Anweisungsüberdeckung für das Paket \texttt{Maths}, 80\% Anweisungsüberdeckung für das Paket \texttt{Solve}, 90\% Anweisungsüberdeckung für das Paket \texttt{Model}, für die Pakete \texttt{View} und \texttt{Ctrl} besteht keine Anforderung)
         \item \gls{OOP}
         \item Die Module und \texttt{public} Funktionen werden gemäß dem offiziellem Javadoc Style Guide\footnote{\url{http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html}} kommentiert
         \item Erstellung einer Software-Dokumentation (z.B. \texttt{JavaDoc})
+        \item Gliederung des Programms in Pakete
     \end{itemize}
     \item[\Gls{GUI}:] Die \gls{GUI} soll es dem Benutzer erlauben, dem Algorithmus Bildserien und die benötigten Parameter für die Generierung eines \gls{HDR}-Bildes einzugeben. Dazu gehören folgende Aspekte:
     \begin{itemize}
@@ -49,7 +50,6 @@ Die Anforderungen an die Realisierung der Arbeit lassen sich zum Einen aus der A
         \item Eingabe der Parameter für die Bildgenerierung
         \item Eine Einweisung soll nicht erforderlich sein
         \item Validierung der Eingaben des Benutzers
-        \item Gliederung des Programms in Pakete
     \end{itemize}
 
     Darüber hinaus soll der Benutzer über den Stand der Berechnung informiert werden und Zwischenergebnisse sehen können. 
@@ -63,7 +63,7 @@ Die Anforderungen an die Realisierung der Arbeit lassen sich zum Einen aus der A
 %------------------------------------------------------------------------------------------------------------------------------------
 \section{Wahl der Programmiersprache}
 \label{sec:language}
-Für die Implementierung des Programms wurde eine Analyse verschiedener Programmiersprachen durchgeführt. Eine Übersicht der untersuchten Sprachen ist in \autoref{tab:languages} zu finden. Der Vergleich zeigt, dass \texttt{Go} und \texttt{C} aufgrund der fehlenden Möglichkeit zur \gls{OOP} ausscheiden. Die verbleibenden drei Sprachen \texttt{Java}, \texttt{C++} und \texttt{Free Pascal} unterscheiden sich dann nur noch kaum. Lediglich die Erstellung einer \gls{GUI} und die integration von automatisierten Tests werden von den beiden zuletzt genannten Sprachen nur über zusätzliche Bibliotheken unterstützt. \texttt{Java} schließt nur in Punkto nativem Systemzugriff und damit der Performance schlechter ab, als die anderen Sprachen im Test. Da jedoch an die Performanz der Software (siehe \autoref{nfa}) keine besonderen Anforderungen gestellt waren, ist dieser Punkt zu vernachlässigen. 
+Für die Implementierung des Programms wurde eine Analyse verschiedener Programmiersprachen durchgeführt. Eine Übersicht der untersuchten Sprachen ist in \autoref{tab:languages} zu finden. Der Vergleich zeigt, dass \texttt{Go} und \texttt{C} aufgrund der fehlenden Möglichkeit zur \gls{OOP} ausscheiden. Die verbleibenden vier Sprachen \texttt{Java}, \texttt{C++}, \texttt{C\#}  und \texttt{Free Pascal} unterscheiden sich dann nur noch kaum. Lediglich die Erstellung einer \gls{GUI} und die integration von automatisierten Tests werden von den beiden zuletzt genannten Sprachen nur über zusätzliche Bibliotheken unterstützt. \texttt{Java} schließt nur in Punkto nativem Systemzugriff und damit der Performance schlechter ab, als die anderen Sprachen im Test. Da jedoch an die Performanz der Software (siehe \autoref{nfa}) keine besonderen Anforderungen gestellt waren, ist dieser Punkt zu vernachlässigen. 
 
 \begin{table}[H]
   \begin{center}
@@ -91,7 +91,7 @@ Für die Implementierung des Programms wurde eine Analyse verschiedener Programm
           & (\checkmark)\footnote{z.B. \texttt{GTK+} (\url{http://www.gtk.org})} 
           & \checkmark 
           & (\checkmark)\footnote{z.B. \texttt{Qt} (\url{http://qt-project.org})}
-          & (\checkmark)\footnote{z.B. \texttt{fpGui} (\url{http://wiki.freepascal.org/fpGUI})} 
+          & \checkmark\footnote{z.B. Integration in der IDE \texttt{Lazarus} (\url{http://www.lazarus.freepascal.org})} 
           & (\checkmark)\footnote{z.B. \texttt{go-gtk} (\url{http://mattn.github.io/go-gtk/})}\\
       
       \gls{OOP}
@@ -186,22 +186,6 @@ Dadurch wird das \gls{HDR}-Bild erzeugt. Der Fortschritt wird im unteren Bereich
 
 
 %------------------------------------------------------------------------------------------------------------------------------------
-\section{Externe Bibliotheken}
-\label{externals}
-Für die Implementierung wurden einige externen Komponenten verwendet. Diese werden hier kurz beschrieben.
-\begin{description}
-\item[\texttt{NumericTextField}\footnote{\url{http://www.java2s.com/Code/Java/Swing-JFC/NumericTextField.htm}}]
-Für die Eingabe der einzelnen Parameter wird eine Implementierung eines numerischen Textfeldes verwendet. Dieses verhindert ungültige Eingaben und erleichtert das Auslesen der numerischen Parameter.
-
-\item[\texttt{metadata-extractor}\footnote{\url{https://code.google.com/p/metadata-extractor/}}]
-Die Bibliothek \texttt{metadata-extractor} wird verwendet um automatisiert aus Bilddateien die Belichtungszeit der Bilder auszulesen. Mit dieser wird auch das von Adobe entwickelte \texttt{xmp-core}\footnote{\url{http://www.adobe.com/devnet/xmp.html}} mit geliefert. Zusammen ermöglichen es die Bibliotheken die Belichtungszeiten der Bilder auszulesen und darzustellen.
-
-\item[\texttt{JImageChooser} \footnote{\url{http://docs.oracle.com/javase/tutorial/uiswing/examples/components/index.html\#FileChooserDemo2}}]
-Der verwendete \texttt{JFileChooser} zur Selektion der Bilddateien ist inspiriert von dem vorhandenen Tutorial bei Oracle. Er ist in der Lage eine kleine Vorschau der Bilder anzuzeigen.
-\end{description}
-
-
-
 
 
 
@@ -220,29 +204,31 @@ A software development technique in which each module's interfaces reveal a s li
 \end{ieee}
 
 \subsection{Paketdiagramm}
-Die Anwendung lässt sich grundsätzlich in fünf verschiedene Komponenten trennen (siehe \autoref{fig:arch:components}). 
+Die Anwendung lässt sich in fünf verschiedene Pakete trennen (siehe \autoref{fig:arch:components}). Die Zuordnung zu den drei Schichten ist in den (\textit{\texttt{Klammern}}) angegeben.
 \begin{description}
 
-\item{\texttt{View}:} Das Paket \texttt{View} behandelt die gesamte Darstellung der Anwendung und die grafische Auswertung der berechneten Bilder. Es enthält \gls{Tone-Mapping}-Operatoren und behandelt die Benutzereingabe.
 
-\item{\texttt{Model}:} Das \texttt{Model} besteht in erster Linie aus den beiden Klassen \texttt{Image} und \texttt{HDRResult} und ist damit ein Datentypmodul \cite[S. 412]{ludewig}. Erstere wird als Repräsentation eines Bildes verwendet und speichert Grauwerte, Belichtungszeiten und weitere bildrelevante Informationen. Letztere dient als Kommunikationspaket zwischen dem eigentlichen \texttt{Solver} und der restlichen Anwendung und enthält die fertig berechnete Antwortkurve und die \gls{Radiance Map}.
 
-\item{\texttt{Solver}:} Der \texttt{Solver} ist der eigentliche Kern des Programms. In diesem Paket wird die Bestimmung der Antwortkurve $\b g$ sowie die Berechnung der \gls{Radiance Map} behandelt. Hier fließen die mathematischen Erkenntnisse aus \autoref{chap:maths} ein.
+\item{\texttt{View} (\textit{\texttt{View}}):} Das Paket \texttt{View} behandelt die gesamte Darstellung der Anwendung und die grafische Auswertung der berechneten Bilder. Es enthält \gls{Tone-Mapping}-Operatoren und behandelt die Benutzereingabe.
 
-\item{\texttt{Ctrl}:} Dieses Paket dient zur Steuerung der Anwendung. In diesem werden die Eingaben verarbeitet, an die Algorithmen übergeben und anschließend wieder dargestellt.
+\item{\texttt{Ctrl} (\textit{\texttt{Controller}}):} Dieses Paket dient zur Steuerung der Anwendung. Es werden die Eingaben verarbeitet, an die Algorithmen übergeben und an die \texttt{View} zurückgegeben.
 
-\item{\texttt{Maths}:} Die \texttt{Maths}-Komponente ist ein Funktionales Modul \cite[S. 412]{ludewig}. Es enthält alle notwendigen mathematischen Berechnungen und Repräsentationen, wie z.B. \texttt{Matrix} und \texttt{Vector}.
+\item{\texttt{Model} (\textit{\texttt{Model}}):} Das \texttt{Model} besteht in erster Linie aus den beiden Klassen \texttt{Image} und \texttt{HDRResult} und ist damit ein Datentypmodul \cite[S. 412]{ludewig}. Erstere wird als Repräsentation eines Bildes verwendet und speichert Grauwerte, Belichtungszeiten und weitere bildrelevante Informationen. Letztere dient als Kommunikationspaket zwischen dem eigentlichen \texttt{Solver} und der restlichen Anwendung und enthält die fertig berechnete Antwortkurve und die \gls{Radiance Map}. 
+
+\item{\texttt{Solver} (\textit{\texttt{Model}}):} Der \texttt{Solver} ist der eigentliche Kern des Programms. In diesem Paket wird die Bestimmung der Antwortkurve $\b g$ sowie die Berechnung der \gls{Radiance Map} behandelt. Hier fließen die mathematischen Erkenntnisse aus \autoref{chap:maths} ein. 
+
+\item{\texttt{Maths} (\textit{\texttt{Model}}):} Die \texttt{Maths}-Komponente ist ein Funktionales Modul \cite[S. 412]{ludewig}. Es enthält alle notwendigen mathematischen Berechnungen und Repräsentationen, wie z.B. \texttt{Matrix} und \texttt{Vector}.
 \end{description}
 
 
-Nachfolgend wird nun auf die einzelnen Komponenten und Klassen näher eingegangen (siehe \autoref{fig:arch:view}). Die \texttt{View} besteht in erster Linie aus der Klasse \texttt{GuiFrame}. Diese ist das eigentliche Fenster des Programms und übernimmt die Schnittstelle zwischen Anwender und Programm. 
+Nachfolgend wird nun auf die einzelnen Pakete und Klassen näher eingegangen (siehe \autoref{fig:arch:view}). Die \texttt{View} besteht in erster Linie aus der Klasse \texttt{GuiFrame}. Diese ist das eigentliche Fenster des Programms und übernimmt die Schnittstelle zwischen Anwender und Programm. 
 
-Darin enthalten sind auch die verschiedenen \texttt{ToneMappers}, die zur Darstellung der \gls{Radiance Map} verwendet werden. Zusammen mit dem Paket \texttt{Plots} wird eine detailliertere Ansicht auf die beteiligten Klassen in \autoref{fig:arch:plots} dargestellt.
+Darin enthalten sind auch die verschiedenen \texttt{ToneMappers}, die zur Darstellung der \gls{Radiance Map} verwendet werden ( Paket \texttt{Plots}).
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.6\textwidth]{architecture/components}
-    \caption{Die Architektur der Software auf Komponentenebene. Die Trennung zwischen den einzelnen Bereichen ist hier deutlich erkennbar.}
+    \caption{Die Architektur der Software auf Paketebene. Die fünf Hauptpakete sind \texttt{Solver}, \texttt{View},\texttt{Ctrl}, \texttt{Model}, \texttt{Maths} (hier fett dargestellt).  Die übrigen fünf Pakete (\texttt{ToneMappers}, \texttt{ImageChooser}, \texttt{ImageTable}, \texttt{Plots} und \texttt{NumericTextField} sind im Paket \texttt{View} enthalten und werden hier für einen besseren Überblick ebenfalls dargestellt.}
     \label{fig:arch:components}
   \end{center}
 \end{figure}
@@ -250,53 +236,50 @@ Darin enthalten sind auch die verschiedenen \texttt{ToneMappers}, die zur Darste
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.6\textwidth]{architecture/view}
-    \caption{Die \texttt{View}-Komponente im Detail. Das Hauptfenster \texttt{GUIFrame} stellt die Daten dar und importiert dazu die verschiedenen Komponenten. Die \texttt{Plots} und die \texttt{ToneMappers} gehören ebenfalls zu diesem Paket.}
+    \includegraphics[width=0.8\textwidth]{architecture/view}
+    \caption{Das \texttt{View}-Paket im Detail. Das Hauptfenster \texttt{GUIFrame} stellt die zentrale Klasse für die Darstellung dar und importiert dazu die verschiedenen Komponenten. Die \texttt{Plots} und die \texttt{ToneMappers} gehören ebenfalls zu diesem Paket.}
     \label{fig:arch:view}
   \end{center}
 \end{figure}
 
+Alle rein mathematischen Aufgaben (wie z.B. die LU-Zerlegung oder das SOR-Verfahren, siehe \autoref{sec:solvers}) sind im Paket \texttt{Maths} ausgelagert, da dieses Paket die gesamte mathematische Logik enthalten soll. So kann -- bei Bedarf -- auf eine andere Bibliothek für das Lösen der mathematischen Probleme (in aller erster Linie der Gleichungssysteme) gewechselt werden, ohne die Logik des erarbeiten Lösungsalgorithmus zu verändern. 
 
+Die abstrakte Klasse \textit{\texttt{AbstractMatrix}} stellt die Basisfunktionalität im Umgang mit Matrizen zur Verfügung und kennt die beiden Implementierungen \texttt{BandMatrix} und \texttt{Matrix}. Erstere ist eine spezielle Repräsentation von dünnbesetzten Diagonalmatrizen mit beliebig vielen Bändern. Die hier häufig beschriebenen pentadiagonal Matrizen werden mit dieser Implementierung dargestellt. Der Vorteil dieser ist, dass auch große sehr dünn besetzte Matrizen abgespeichert werden können (in einem zweidimensionalen Array würden diese zu viel Speicherplatz verbrauchen). Die \texttt{Matrix} ist die zweite Implementierung der Matrizen und arbeitet intern mit einem zweidimensionalen Array.
+
+Die Klasse \texttt{EquationSolver} (Paket \texttt{Maths}) übernimmt das Lösen eines \gls{LGS}. Das \gls{SOR}- und das LU-Verfahren werden unterstützt. Die beiden Hilfsklassen \texttt{Convolution} und \texttt{ArrayMaths} bieten weitere Berechnungsfunktionalitäten, die z.B. in den \gls{Tone-Mapping}-Verfahren verwendet werden. 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.8\textwidth]{architecture/plots}
-    \caption{Die Struktur der verschiedenen grafischen Plots. Die verschiedenen \gls{Tone-Mapping}-Operatoren wurden mittels Vererbung implementiert.}
-    \label{fig:arch:plots}
-  \end{center}
-\end{figure}
-
-Einige der mathematischen Aufgaben (wie z.B. die LU-Zerlegung oder das SOR-Verfahren, siehe \autoref{sec:solvers}) sind im Paket \texttt{Maths} ausgelagert. Die abstrakte Klasse \textit{Matrix} stellt die Basisfunktionalität zur Verfügung und kennt die beiden Implementierungen \texttt{BandMatrix} und \texttt{DefaultMatrix}. Erstere ist eine spezielle Repräsentation von dünnbesetzten Diagonalmatrixen mit beliebig vielen Bändern. Die hier häufig beschriebenen pentadiagonal Matrizen werden mit dieser Implementierung dargestellt. Der Vorteil dieser ist, dass auch große sehr dünn besetzte Matrizen abgespeichert werden können (in einem zweidimensionalen Array würden diese zu viel Speicherplatz verbrauchen). Die \texttt{DefaultMatrix} ist die zweite Implementierung der Matrizen und arbeitet intern mit einem zweidimensionalen Array.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.8\textwidth]{architecture/matrixes}
-    \caption{Die Klasse \texttt{Matrix} und ihre Spezialisierungen \texttt{BandMatrix} und \texttt{DefaultMatrix}. Diese beiden Klassen dienen zusammen mit \texttt{Vector} als ein Kernbestandteil der mathematischen Berechnungen dieses Programms.}
+    \includegraphics[width=0.9\textwidth]{architecture/maths}
+    \caption{Überblick über das Paket \texttt{Maths}. Auf die Darstellung der Assoziationen zu den restlichen Klassen und Paketen wurde aus Gründen der Übersichtlichkeit verzichtet.}
     \label{fig:arch:matrix}
   \end{center}
 \end{figure}
 
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.5\textwidth]{architecture/vector}
-    \caption{Die Klasse \texttt{Vector} dient zur Kapselung von Funktionen mit Vektoren und Matrizen.}
-    \label{fig:arch:vector}
-  \end{center}
-\end{figure}
-
-
 \subsection{Sequenzdiagramm}
-Das Programm läuft sehr vielschichtig ab. Als grundsätzlicher Informationsfluss dient der Aufbau wie er in \autoref{fig:arch:sequence} beschrieben. Wichtig dabei ist, dass die grafische Benutzeroberfläche nicht von der Berechnungsdauer des Algorithmus blockiert wird, weshalb besonders zwischen \texttt{Controller} und \texttt{GUIFrame} asynchrone Methodenaufrufe eingesetzt werden.
+Das Programm läuft sehr vielschichtig ab. Als grundsätzlicher Informationsfluss dient der Aufbau wie er in \autoref{fig:arch:sequence} beschrieben. Wichtig dabei ist, dass die grafische Benutzeroberfläche nicht von der Berechnungsdauer des Algorithmus blockiert wird, da so die Zwischenresultate des Algorithmus bereits analysiert werden können und der Prozess ggf. früher beendet werden kann um Parameter zu verändern. Deshalb bestehen besonders zwischen \texttt{Controller} und \texttt{GUIFrame} asynchrone Methodenaufrufe. Das Sequenzdiagramm ist nur beispielhaft zu verstehen. Es wurden einige Aufrufe und Zwischenschritte vereinfacht oder weggelassen.
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.5\textwidth]{architecture/sequence_example}
-    \caption{Der grundsätzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. }
+    \includegraphics[width=\textwidth]{architecture/sequence_example}
+    \caption{Der grundsätzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. Zwischenschritte und tiefer verschachtelte Aufrufe werden nicht dargestellt. }
     \label{fig:arch:sequence}
   \end{center}
 \end{figure}
 
 
 %------------------------------------------------------------------------------------------------------------------------------------
+\section{Externe Bibliotheken}
+\label{externals}
+Für die Implementierung wurden einige externen Komponenten verwendet. Diese werden hier kurz beschrieben.
+\begin{description}
+\item[\texttt{NumericTextField}\footnote{\url{http://www.java2s.com/Code/Java/Swing-JFC/NumericTextField.htm}}]
+Für die Eingabe der einzelnen Parameter wird eine Implementierung eines numerischen Textfeldes verwendet. Dieses verhindert ungültige Eingaben und erleichtert das Auslesen der numerischen Parameter. Diese Komponente verwendet mehrere Klassen und wurde deshalb in den nachfolgenden Diagrammen zu einem Paket gebündelt.
+
+\item[\texttt{metadata-extractor}\footnote{\url{https://code.google.com/p/metadata-extractor/}}]
+Die Bibliothek \texttt{metadata-extractor} wird verwendet um automatisiert aus Bilddateien die Belichtungszeit der Bilder auszulesen. Mit dieser wird auch das von Adobe entwickelte \texttt{xmp-core}\footnote{\url{http://www.adobe.com/devnet/xmp.html}} mit geliefert. Zusammen ermöglichen es die Bibliotheken die Belichtungszeiten der Bilder auszulesen und darzustellen.
+
+\item[\texttt{JImageChooser} \footnote{\url{http://docs.oracle.com/javase/tutorial/uiswing/examples/components/index.html\#FileChooserDemo2}}]
+Der verwendete \texttt{JFileChooser} zur Selektion der Bilddateien ist inspiriert von dem vorhandenen Tutorial bei Oracle. Er ist in der Lage eine kleine Vorschau der Bilder anzuzeigen.
+\end{description}
 
 \section{Herausforderungen während der Programmierung}
 

@@ -1,7 +1,14 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 2.1}{\ignorespaces Beleuchtungsst\IeC {\"a}rken in verschiedenen Umgebungen \cite [S.~6]{Reinhard}\relax }}{12}{table.caption.8}
+\contentsline {table}{\numberline {\relax 2.1}{\ignorespaces Belichtungsst\IeC {\"a}rken in verschiedenen Umgebungen \cite [S.~6]{Reinhard}\relax }}{16}{table.caption.10}
+\contentsline {table}{\numberline {\relax 2.2}{\ignorespaces Verbreitete HDR-Bildformate in der \IeC {\"U}bersicht \cite [S.89]{Reinhard}\relax }}{19}{table.caption.12}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {\relax 6.1}{\ignorespaces Vergleich der Programmiersprachen mit den Anforderungen. (\text {$\mathsurround \z@ \mathchar "458$}: \textit {out of the box}, (\text {$\mathsurround \z@ \mathchar "458$}): zus\IeC {\"a}tzliche Bibliotheke oder Erweiterung ben\IeC {\"o}tigt, $\times $ keine Unterst\IeC {\"u}tzung)\relax }}{51}{table.caption.20}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

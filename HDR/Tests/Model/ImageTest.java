@@ -169,6 +169,8 @@ public class ImageTest {
     public void testAddGaussian() throws Exception {
         Image i = new Image(10, 20);
         i.set(5, 5, 100);
+        i.set(5, 6, 100);
+        i.set(5, 7, 100);
         i.addGaussian(5);
         assertNotSame(100, i.get(5, 5));
     }

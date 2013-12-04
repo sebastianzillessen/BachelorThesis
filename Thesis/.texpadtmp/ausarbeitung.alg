@@ -9,5 +9,5 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {Algorithmus}{\numberline {A.1}{\ignorespaces L\IeC {\"o}sen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax }}{73}{Algorithmus.caption.39}
+\contentsline {Algorithmus}{\numberline {A.1}{\ignorespaces L\IeC {\"o}sen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax }}{73}{Algorithmus.caption.37}
 \addvspace {10\p@ }

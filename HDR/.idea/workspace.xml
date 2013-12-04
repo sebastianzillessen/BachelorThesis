@@ -81,14 +81,8 @@
       <file leaf-file-name="Image.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Image.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="204" column="32" selection-start="5666" selection-end="5666" vertical-scroll-proportion="-8.84" vertical-offset="2779" max-vertical-offset="3885">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2764#2765#0" expanded="true" />
-                <element signature="e#2799#2800#0" expanded="true" />
-                <element signature="e#3673#3674#0" expanded="true" />
-                <element signature="e#3707#3708#0" expanded="true" />
-              </folding>
+            <state line="204" column="32" selection-start="5666" selection-end="5666" vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3945">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,7 +90,7 @@
       <file leaf-file-name="Formatter.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Formatter.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="357" column="0" selection-start="15891" selection-end="15891" vertical-scroll-proportion="0.0" vertical-offset="4830" max-vertical-offset="5430">
+            <state line="357" column="0" selection-start="15564" selection-end="15564" vertical-scroll-proportion="0.0" vertical-offset="5355" max-vertical-offset="5445">
               <folding />
             </state>
           </provider>
@@ -105,7 +99,7 @@
       <file leaf-file-name="ImageTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/Model/ImageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="26" selection-start="4611" selection-end="4611" vertical-scroll-proportion="0.0" vertical-offset="2252" max-vertical-offset="2865">
+            <state line="172" column="18" selection-start="4603" selection-end="4603" vertical-scroll-proportion="0.0" vertical-offset="2580" max-vertical-offset="2970">
               <folding />
             </state>
           </provider>
@@ -123,22 +117,34 @@
       <file leaf-file-name="AbstractMatrix.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Maths/AbstractMatrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4785">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1269#1660#0" expanded="true" />
-                <element signature="e#1645#1646#0" expanded="true" />
-                <element signature="e#6698#6850#0" expanded="true" />
-                <element signature="e#6839#6840#0" expanded="true" />
-              </folding>
+            <state line="16" column="25" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="4785">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatrixTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MatrixTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/Maths/MatrixTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="440" column="48" selection-start="11134" selection-end="11134" vertical-scroll-proportion="0.69491524" vertical-offset="6130" max-vertical-offset="7005">
+            <state line="440" column="48" selection-start="11134" selection-end="11134" vertical-scroll-proportion="0.0" vertical-offset="6600" max-vertical-offset="7065">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GUIFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/GUIFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="110" column="51" selection-start="3922" selection-end="3922" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="6795">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Ctrl/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="128" selection-start="1576" selection-end="1661" vertical-scroll-proportion="0.17190775" vertical-offset="556" max-vertical-offset="1515">
               <folding />
             </state>
           </provider>
@@ -147,7 +153,7 @@
       <file leaf-file-name="Matrix.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Maths/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="19" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1605">
+            <state line="9" column="19" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1605">
               <folding />
             </state>
           </provider>
@@ -156,7 +162,7 @@
       <file leaf-file-name="IterativeEnergySolver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="53" selection-start="5516" selection-end="5516" vertical-scroll-proportion="0.0" vertical-offset="577" max-vertical-offset="7545">
+            <state line="174" column="53" selection-start="5516" selection-end="5516" vertical-scroll-proportion="0.0" vertical-offset="2610" max-vertical-offset="7650">
               <folding />
             </state>
           </provider>
@@ -219,7 +225,6 @@
         <option value="$PROJECT_DIR$/Tests/LocalReinhardMappingTest.java" />
         <option value="$PROJECT_DIR$/src/Maths/BandMatrix.java" />
         <option value="$PROJECT_DIR$/src/Maths/EquotationSolver.java" />
-        <option value="$PROJECT_DIR$/src/View/GUIFrame.java" />
         <option value="$PROJECT_DIR$/src/View/Plots/ImagePlot.java" />
         <option value="$PROJECT_DIR$/src/View/Plots/ToneMappingPlot.java" />
         <option value="$PROJECT_DIR$/src/View/ToneMappers/LocalReinhardMapping.java" />
@@ -232,12 +237,13 @@
         <option value="$PROJECT_DIR$/Tests/Tests/Model/HDRResultTest.java" />
         <option value="$PROJECT_DIR$/Tests/Model/WeightModeTest.java" />
         <option value="$PROJECT_DIR$/src/Model/Image.java" />
-        <option value="$PROJECT_DIR$/Tests/Model/ImageTest.java" />
         <option value="$PROJECT_DIR$/src/Maths/Matrix.java" />
         <option value="$PROJECT_DIR$/src/Maths/DefaultMatrix.java" />
         <option value="$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java" />
         <option value="$PROJECT_DIR$/src/Maths/AbstractMatrix.java" />
         <option value="$PROJECT_DIR$/Tests/Maths/MatrixTest.java" />
+        <option value="$PROJECT_DIR$/src/View/GUIFrame.java" />
+        <option value="$PROJECT_DIR$/Tests/Model/ImageTest.java" />
       </list>
     </option>
   </component>
@@ -327,6 +333,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -395,10 +402,45 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ctrl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -848,7 +890,8 @@
       <workItem from="1385728220405" duration="225000" />
       <workItem from="1385728512705" duration="115000" />
       <workItem from="1385829912141" duration="13281000" />
-      <workItem from="1385891695864" duration="6608000" />
+      <workItem from="1385891695864" duration="8301000" />
+      <workItem from="1385979731731" duration="26000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented some more functions to solve a lgs&#10;">
       <created>1372517704706</created>
@@ -914,7 +957,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70756000" />
+    <option name="totallyTimeSpent" value="72475000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -938,54 +981,54 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1125" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="106" y="147" width="1720" height="925" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670778" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39402986" sideWeight="0.19316968" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39402986" sideWeight="0.19316968" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.178762" sideWeight="0.16915423" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33778015" sideWeight="0.6706468" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14781217" sideWeight="0.60597014" order="1" side_tool="false" content_ui="tabs" x="738" y="247" width="463" height="674" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22518677" sideWeight="0.60597014" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36218905" sideWeight="0.8068303" order="2" side_tool="false" content_ui="tabs" x="203" y="417" width="1513" height="335" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36218905" sideWeight="0.8068303" order="2" side_tool="false" content_ui="tabs" x="203" y="417" width="1513" height="335" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670778" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.178762" sideWeight="0.16915423" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3243781" sideWeight="0.49786553" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14781217" sideWeight="0.60597014" order="1" side_tool="false" content_ui="tabs" x="738" y="247" width="463" height="674" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670778" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="106" y="147" width="1720" height="925" />
       <window_info id="simpleUML" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924226" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33778015" sideWeight="0.6706468" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3243781" sideWeight="0.49786553" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670778" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="106" y="147" width="1720" height="925" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="106" y="147" width="1720" height="925" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39402986" sideWeight="0.19316968" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1006,8 +1049,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.178762" sideWeight="0.16915423" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3243781" sideWeight="0.49786553" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14781217" sideWeight="0.60597014" order="1" side_tool="false" content_ui="tabs" x="738" y="247" width="463" height="674" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -1154,8 +1197,8 @@
             <node x="" y="">View.Plots</node>
             <node x="" y="">View.GUIFrame</node>
             <node x="" y="">View.ToneMappers</node>
-            <node x="" y="">View.ImageTable</node>
             <node x="" y="">View.ImageChooser</node>
+            <node x="" y="">View.ImageTable</node>
             <node x="" y="">View.Log</node>
             <node x="" y="">View.NumericTextField</node>
           </nodes>
@@ -1179,14 +1222,14 @@
           <ID>JAVA</ID>
           <OriginalElement>Maths</OriginalElement>
           <nodes>
-            <node x="" y="">Maths.BandMatrix</node>
             <node x="" y="">Maths.Convolution</node>
+            <node x="" y="">Maths.BandMatrix</node>
             <node x="" y="">Maths.ArrayAssertHelper</node>
             <node x="" y="">Maths.DecimalMatrix</node>
             <node x="" y="">Maths.Matrix</node>
-            <node x="" y="">Maths.ArrayMaths</node>
-            <node x="" y="">Maths.DecimalVector</node>
             <node x="" y="">Maths.BandMatrixTest</node>
+            <node x="" y="">Maths.DecimalVector</node>
+            <node x="" y="">Maths.ArrayMaths</node>
           </nodes>
           <notes />
           <edges />
@@ -1222,25 +1265,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ctrl/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="38" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.08805031" vertical-offset="891" max-vertical-offset="1845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/HighContrast.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="0.23584905" vertical-offset="0" max-vertical-offset="954">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="0.23584905" vertical-offset="0" max-vertical-offset="954" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/Plots/Plot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="16" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="1440">
-          <folding />
-        </state>
+        <state line="38" column="16" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="1440" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/View .uml">
@@ -1265,16 +1297,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maths/EquotationSolverException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="73" selection-start="345" selection-end="345" vertical-scroll-proportion="0.27918783" vertical-offset="0" max-vertical-offset="591">
-          <folding />
-        </state>
+        <state line="11" column="73" selection-start="345" selection-end="345" vertical-scroll-proportion="0.27918783" vertical-offset="0" max-vertical-offset="591" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maths/EquotationSolverAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="25" selection-start="128" selection-end="128" vertical-scroll-proportion="0.2284264" vertical-offset="0" max-vertical-offset="591">
-          <folding />
-        </state>
+        <state line="9" column="25" selection-start="128" selection-end="128" vertical-scroll-proportion="0.2284264" vertical-offset="0" max-vertical-offset="591" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/Maths/ConvolutionTest.java">
@@ -1295,16 +1323,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/LocalReinhardMapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="16" selection-start="6486" selection-end="6486" vertical-scroll-proportion="0.35440612" vertical-offset="2170" max-vertical-offset="3675">
-          <folding />
-        </state>
+        <state line="157" column="16" selection-start="6486" selection-end="6486" vertical-scroll-proportion="0.35440612" vertical-offset="2170" max-vertical-offset="3675" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/ReinhardMapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="8" selection-start="1940" selection-end="1940" vertical-scroll-proportion="0.38899803" vertical-offset="837" max-vertical-offset="1425">
-          <folding />
-        </state>
+        <state line="70" column="8" selection-start="1940" selection-end="1940" vertical-scroll-proportion="0.38899803" vertical-offset="837" max-vertical-offset="1425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/LocalReinhardMappingTest.java">
@@ -1326,28 +1350,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maths/EquotationSolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="20" selection-start="5583" selection-end="5583" vertical-scroll-proportion="0.5854484" vertical-offset="1619" max-vertical-offset="2220">
-          <folding />
-        </state>
+        <state line="131" column="20" selection-start="5583" selection-end="5583" vertical-scroll-proportion="0.5854484" vertical-offset="1619" max-vertical-offset="2220" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maths/ArrayMaths.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="32" selection-start="1818" selection-end="1825" vertical-scroll-proportion="1.3282572" vertical-offset="250" max-vertical-offset="1275">
-          <folding />
-        </state>
+        <state line="69" column="32" selection-start="1818" selection-end="1825" vertical-scroll-proportion="1.3282572" vertical-offset="250" max-vertical-offset="1275" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/Maths/ArrayMathsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="14" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.56852794" vertical-offset="204" max-vertical-offset="795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/GUIFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="12" selection-start="6944" selection-end="6944" vertical-scroll-proportion="0.30116472" vertical-offset="2954" max-vertical-offset="6255">
           <folding />
         </state>
       </provider>
@@ -1366,9 +1379,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/Plots/ImagePlot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="8" selection-start="852" selection-end="852" vertical-scroll-proportion="0.32612312" vertical-offset="239" max-vertical-offset="1260">
-          <folding />
-        </state>
+        <state line="36" column="8" selection-start="852" selection-end="852" vertical-scroll-proportion="0.32612312" vertical-offset="239" max-vertical-offset="1260" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/Maths/VectorTest.java">
@@ -1382,25 +1393,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maths/BandMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="9" selection-start="1154" selection-end="1155" vertical-scroll-proportion="-3.798479" vertical-offset="2538" max-vertical-offset="6435">
-          <folding />
-        </state>
+        <state line="44" column="9" selection-start="1154" selection-end="1155" vertical-scroll-proportion="-3.798479" vertical-offset="2538" max-vertical-offset="6435" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/WeightMode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="210" selection-end="210" vertical-scroll-proportion="0.31914893" vertical-offset="0" max-vertical-offset="564">
-          <folding />
-        </state>
+        <state line="12" column="16" selection-start="210" selection-end="210" vertical-scroll-proportion="0.31914893" vertical-offset="0" max-vertical-offset="564" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/Tests/Model/HDRResultTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="5" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.8606272" vertical-offset="211" max-vertical-offset="825">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="47" column="5" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.8606272" vertical-offset="211" max-vertical-offset="825" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/Model/WeightModeTest.java">
@@ -1410,53 +1413,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maths/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="11" selection-start="447" selection-end="447" vertical-scroll-proportion="0.32998326" vertical-offset="58" max-vertical-offset="3315">
-          <folding />
-        </state>
+        <state line="20" column="11" selection-start="447" selection-end="447" vertical-scroll-proportion="0.32998326" vertical-offset="58" max-vertical-offset="3315" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/HDRResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="11" selection-start="357" selection-end="357" vertical-scroll-proportion="0.42211056" vertical-offset="33" max-vertical-offset="630">
-          <folding />
-        </state>
+        <state line="19" column="11" selection-start="357" selection-end="357" vertical-scroll-proportion="0.42211056" vertical-offset="33" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Collections.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="68" selection-start="969" selection-end="969" vertical-scroll-proportion="0.33278957" vertical-offset="126" max-vertical-offset="15225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+        <state line="23" column="68" selection-start="969" selection-end="969" vertical-scroll-proportion="0.33278957" vertical-offset="126" max-vertical-offset="15225" />
       </provider>
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Formatter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="357" column="0" selection-start="15891" selection-end="15891" vertical-scroll-proportion="0.0" vertical-offset="4830" max-vertical-offset="5430">
+        <state line="357" column="0" selection-start="15564" selection-end="15564" vertical-scroll-proportion="0.0" vertical-offset="5355" max-vertical-offset="5445">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Image.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="204" column="32" selection-start="5666" selection-end="5666" vertical-scroll-proportion="-8.84" vertical-offset="2779" max-vertical-offset="3885">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2764#2765#0" expanded="true" />
-            <element signature="e#2799#2800#0" expanded="true" />
-            <element signature="e#3673#3674#0" expanded="true" />
-            <element signature="e#3707#3708#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Model/ImageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="26" selection-start="4611" selection-end="4611" vertical-scroll-proportion="0.0" vertical-offset="2252" max-vertical-offset="2865">
+        <state line="204" column="32" selection-start="5666" selection-end="5666" vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3945">
           <folding />
         </state>
       </provider>
@@ -1471,13 +1450,7 @@
     <entry file="file://$PROJECT_DIR$/src/Maths/AbstractMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="25" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4785">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1269#1660#0" expanded="true" />
-            <element signature="e#1645#1646#0" expanded="true" />
-            <element signature="e#6698#6850#0" expanded="true" />
-            <element signature="e#6839#6840#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1497,9 +1470,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/Maths/MatrixTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="440" column="48" selection-start="11134" selection-end="11134" vertical-scroll-proportion="0.69491524" vertical-offset="6130" max-vertical-offset="7005">
+        <state line="440" column="48" selection-start="11134" selection-end="11134" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7005">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Model/ImageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="172" column="18" selection-start="4603" selection-end="4603" vertical-scroll-proportion="0.0" vertical-offset="2215" max-vertical-offset="2895">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/GUIFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="51" selection-start="3922" selection-end="3922" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="6795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ctrl/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="128" selection-start="1576" selection-end="1661" vertical-scroll-proportion="0.17190775" vertical-offset="556" max-vertical-offset="1515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>

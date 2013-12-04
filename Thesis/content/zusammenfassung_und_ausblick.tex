@@ -1,6 +1,22 @@
 \chapter{Zusammenfassung und Ausblick}
 \label{chap:zusfas}
-\texttt{T.B.D}
+Die Verwendung von \gls{HDR}-Bildern ermöglicht eine dichtere Informationsdarstellung und kann dadurch in vielen Anwendungsgebieten eingesetzt werden. Besonders im Bereich der digitalen Fotografie sind \gls{HDR}-Bilde) Neuland für den Normalanwender, denn HDR-Kameras haben sich noch nicht auf dem Markt durchgesetzt. 
+
+Der von Debevec und Malik beschriebene Algorithmus \cite{paper} zur Generierung von \gls{HDR}-Bildern aus einer Belichtungsserie stellt eine Alternative dar. Besonders attraktiv ist dabei, dass das Verfahren keine Kenntnisse über die kameraspezifische Antwortkurve benötigt, sondern lediglich die Belichtungszeit der einzelnen Bilder als Eingabeparameter verwendet. In modernen Digitalkameras wird diese Information im Bild gespeichert und ist somit verfügbar.
+
+Durch die in der Arbeit beschriebenen Erweiterungen konnten Verbesserungen in der Ausgabe erzielt werden:
+
+Die Monotonie-Forderung an die geschätzte Antwortkurve $\b g$ ermöglicht eine schnellere Konvergenz des Verfahrens sowie aus physikalischer Sicht akzeptablere Resultate. Sie hat jedoch keine signifikanten Auswirkungen auf die resultierende \gls{Radiance Map}. 
+
+Subquadratische Bestrafungsfunktionen machen das Verfahren besonders im Bezug auf Störungen in den Aufnahmen (wie z.B. \gls{SaltAndPepperNoise}) robust. Dadurch können Ausreißer das resultierende Bild weniger stark beeinträchtigen und die Fehler werden in der \gls{Radiance Map} reduziert.
+
+Das Einführen des räumlichen Glattheitsterms für die \gls{Radiance Map} birgt die größte Veränderung zum Algorithmus von Debevec und Malik. Durch diese Beschränkung müssen bei der Berechnung des \gls{HDR}-Bildes alle Bildpunkte betrachtet werden. Dies führt zu einem Anstieg der Komplexität des Algorithmus und damit zu verlängerten Laufzeiten. Allerdings liefert diese Erweiterung (besonders bei Signalstörungen) verbesserte Ergebnisse. Durch die Kombination mit subquadratischen Bestrafungstermen kann das Verfahren robuster im Bezug auf den Erhalt von Strukturen (wie z.B. Kanten) werden.
 
 \section*{Ausblick}
-\texttt{T.B.D}
+
+
+Das zu dieser Ausarbeitung entstandene Programm ist eine Machbarkeitsstudie. Es ist nicht für einen produktiven Einsatz oder die Erzeugung von ansprechenden \gls{HDR}-Bildern gedacht, sondern dient der Untersuchung des Einflusses der Erweiterungen.
+
+Die bisherige Implementierung und Ausarbeitung unterstützt nur Grauwert-Bilder. Im Artikel \cite{paper} wird hierzu empfohlen, die Antwortkurven der Kanäle für Rot, Grün und Blau separat zu bestimmen und diese dann bei der Wiederherstellung der \gls{Radiance Map} zu verwenden. Die Erweiterungen für das Verfahren können bei dieser Strategie ebenfalls zum Einsatz kommen. 
+
+Durch die modulare Struktur der Realisierung ist z.B. eine Erweiterung durch andere \gls{Tone-Mapping}-Operatoren denkbar. Kern der Arbeit war jedoch nicht der Vergleich von \gls{Tone-Mapping}-Verfahren, weshalb auf die Untersuchung der Ergebnisse mit weiteren Operatoren verzichtet wurde.

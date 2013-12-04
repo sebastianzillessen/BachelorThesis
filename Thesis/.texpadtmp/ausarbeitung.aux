@@ -41,9 +41,9 @@
 \citation{Reinhard}
 \citation{Reinhard}
 \@writefile{brf}{\backcite{Reinhard}{{8}{(document)}{Doc-Start}}}
+\@writefile{brf}{\backcite{Reinhard}{{8}{(document)}{Doc-Start}}}
 \citation{Ward03fast}
 \citation{Ward03fast}
-\@writefile{brf}{\backcite{Reinhard}{{9}{(document)}{Doc-Start}}}
 \@writefile{brf}{\backcite{Ward03fast}{{9}{(document)}{Doc-Start}}}
 \@writefile{brf}{\backcite{Ward03fast}{{9}{(document)}{Doc-Start}}}
 \citation{paper}
@@ -362,20 +362,16 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Paketdiagramm}{55}{subsection.6.5.1}}
 \@writefile{brf}{\backcite{ludewig}{{55}{6.5.1}{subsection.6.5.1}}}
 \@writefile{brf}{\backcite{ludewig}{{55}{6.5.1}{subsection.6.5.1}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Die Architektur der Software auf Komponentenebene. Die Trennung zwischen den einzelnen Bereichen ist hier deutlich erkennbar.\relax }}{56}{figure.caption.23}}
-\newlabel{fig:arch:components}{{\relax 6.3}{56}{Die Architektur der Software auf Komponentenebene. Die Trennung zwischen den einzelnen Bereichen ist hier deutlich erkennbar.\relax \relax }{figure.caption.23}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Sequenzdiagramm}{56}{subsection.6.5.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces Die \texttt  {View}-Komponente im Detail. Das Hauptfenster \texttt  {GUIFrame} stellt die Daten dar und importiert dazu die verschiedenen Komponenten. Die \texttt  {Plots} und die \texttt  {ToneMappers} geh\IeC {\"o}ren ebenfalls zu diesem Paket.\relax }}{57}{figure.caption.24}}
-\newlabel{fig:arch:view}{{\relax 6.4}{57}{Die \texttt {View}-Komponente im Detail. Das Hauptfenster \texttt {GUIFrame} stellt die Daten dar und importiert dazu die verschiedenen Komponenten. Die \texttt {Plots} und die \texttt {ToneMappers} gehören ebenfalls zu diesem Paket.\relax \relax }{figure.caption.24}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Herausforderungen w\IeC {\"a}hrend der Programmierung}{57}{section.6.6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces Die Struktur der verschiedenen grafischen Plots. Die verschiedenen \gls {Tone-Mapping}-Operatoren wurden mittels Vererbung implementiert.\relax }}{58}{figure.caption.25}}
-\newlabel{fig:arch:plots}{{\relax 6.5}{58}{Die Struktur der verschiedenen grafischen Plots. Die verschiedenen \gls {Tone-Mapping}-Operatoren wurden mittels Vererbung implementiert.\relax \relax }{figure.caption.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces Die Klasse \texttt  {Matrix} und ihre Spezialisierungen \texttt  {BandMatrix} und \texttt  {DefaultMatrix}. Diese beiden Klassen dienen zusammen mit \texttt  {Vector} als ein Kernbestandteil der mathematischen Berechnungen dieses Programms.\relax }}{59}{figure.caption.26}}
-\newlabel{fig:arch:matrix}{{\relax 6.6}{59}{Die Klasse \texttt {Matrix} und ihre Spezialisierungen \texttt {BandMatrix} und \texttt {DefaultMatrix}. Diese beiden Klassen dienen zusammen mit \texttt {Vector} als ein Kernbestandteil der mathematischen Berechnungen dieses Programms.\relax \relax }{figure.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.7}{\ignorespaces Die Klasse \texttt  {Vector} dient zur Kapselung von Funktionen mit Vektoren und Matrizen.\relax }}{60}{figure.caption.27}}
-\newlabel{fig:arch:vector}{{\relax 6.7}{60}{Die Klasse \texttt {Vector} dient zur Kapselung von Funktionen mit Vektoren und Matrizen.\relax \relax }{figure.caption.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.8}{\ignorespaces Der grunds\IeC {\"a}tzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. \relax }}{60}{figure.caption.28}}
-\newlabel{fig:arch:sequence}{{\relax 6.8}{60}{Der grundsätzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. \relax \relax }{figure.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Die Architektur der Software auf Paketebene. Die f\IeC {\"u}nf Hauptpakete sind \texttt  {Solver}, \texttt  {View},\texttt  {Ctrl}, \texttt  {Model}, \texttt  {Maths} (hier fett dargestellt). Die \IeC {\"u}brigen f\IeC {\"u}nf Pakete (\texttt  {ToneMappers}, \texttt  {ImageChooser}, \texttt  {ImageTable}, \texttt  {Plots} und \texttt  {NumericTextField} sind im Paket \texttt  {View} enthalten und werden hier f\IeC {\"u}r einen besseren \IeC {\"U}berblick ebenfalls dargestellt.\relax }}{56}{figure.caption.23}}
+\newlabel{fig:arch:components}{{\relax 6.3}{56}{Die Architektur der Software auf Paketebene. Die fünf Hauptpakete sind \texttt {Solver}, \texttt {View},\texttt {Ctrl}, \texttt {Model}, \texttt {Maths} (hier fett dargestellt). Die übrigen fünf Pakete (\texttt {ToneMappers}, \texttt {ImageChooser}, \texttt {ImageTable}, \texttt {Plots} und \texttt {NumericTextField} sind im Paket \texttt {View} enthalten und werden hier für einen besseren Überblick ebenfalls dargestellt.\relax \relax }{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces Das \texttt  {View}-Paket im Detail. Das Hauptfenster \texttt  {GUIFrame} stellt die zentrale Klasse f\IeC {\"u}r die Darstellung dar und importiert dazu die verschiedenen Komponenten. Die \texttt  {Plots} und die \texttt  {ToneMappers} geh\IeC {\"o}ren ebenfalls zu diesem Paket.\relax }}{57}{figure.caption.24}}
+\newlabel{fig:arch:view}{{\relax 6.4}{57}{Das \texttt {View}-Paket im Detail. Das Hauptfenster \texttt {GUIFrame} stellt die zentrale Klasse für die Darstellung dar und importiert dazu die verschiedenen Komponenten. Die \texttt {Plots} und die \texttt {ToneMappers} gehören ebenfalls zu diesem Paket.\relax \relax }{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces \IeC {\"U}berblick \IeC {\"u}ber das Paket \texttt  {Maths}. Auf die Darstellung der Assoziationen zu den restlichen Klassen und Paketen wurde aus Gr\IeC {\"u}nden der \IeC {\"U}bersichtlichkeit verzichtet.\relax }}{58}{figure.caption.25}}
+\newlabel{fig:arch:matrix}{{\relax 6.5}{58}{Überblick über das Paket \texttt {Maths}. Auf die Darstellung der Assoziationen zu den restlichen Klassen und Paketen wurde aus Gründen der Übersichtlichkeit verzichtet.\relax \relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Sequenzdiagramm}{58}{subsection.6.5.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Herausforderungen w\IeC {\"a}hrend der Programmierung}{58}{section.6.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces Der grunds\IeC {\"a}tzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. Zwischenschritte und tiefer verschachtelte Aufrufe werden nicht dargestellt. \relax }}{59}{figure.caption.26}}
+\newlabel{fig:arch:sequence}{{\relax 6.6}{59}{Der grundsätzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. Zwischenschritte und tiefer verschachtelte Aufrufe werden nicht dargestellt. \relax \relax }{figure.caption.26}{}}
 \citation{ReinhardToneMapper}
 \citation{tellone}
 \@writefile{toc}{\contentsline {chapter}{\numberline {7}Ergebnisse und Resultate}{61}{chapter.7}}
@@ -390,24 +386,26 @@
 \@writefile{alg}{\addvspace {10\p@ }}
 \newlabel{chap:results}{{7}{61}{Ergebnisse und Resultate\relax }{chapter.7}{}}
 \@writefile{brf}{\backcite{ReinhardToneMapper}{{61}{7}{chapter.7}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Verfahren der Berechnung der Antwortkurve und dem dazugeh\IeC {\"o}rigen Resultat (re.) \textbf  {links:} Unser Verfahren, \textbf  {rechts:} Implementierung von Mathias Eitz, siehe \autoref  {sec:implementations}\relax }}{61}{figure.caption.29}}
-\newlabel{fig:res:1}{{\relax 7.1}{61}{Verfahren der Berechnung der Antwortkurve und dem dazugehörigen Resultat (re.) \textbf {links:} Unser Verfahren, \textbf {rechts:} Implementierung von Mathias Eitz, siehe \autoref {sec:implementations}\relax \relax }{figure.caption.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Einfluss der Monotonie-Forderung: Belichtungsserie (Belichtungszeiten: 1/8000, 1/640, 1/100), Antwortkurve ohne Monotonie-Forderung, Antwortkurve mit Monotonie-Forderung (v.l.n.r.).\relax }}{62}{figure.caption.30}}
-\newlabel{fig:mon:1}{{\relax 7.2}{62}{Einfluss der Monotonie-Forderung: Belichtungsserie (Belichtungszeiten: 1/8000, 1/640, 1/100), Antwortkurve ohne Monotonie-Forderung, Antwortkurve mit Monotonie-Forderung (v.l.n.r.).\relax \relax }{figure.caption.30}{}}
-\@writefile{brf}{\backcite{tellone}{{62}{7}{figure.caption.29}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces Verfahren der Berechnung der Antwortkurve und dem dazugeh\IeC {\"o}rigen Resultat (re.) \textbf  {links:} Unser Verfahren, \textbf  {rechts:} Implementierung von Mathias Eitz, siehe \autoref  {sec:implementations}\relax }}{61}{figure.caption.27}}
+\newlabel{fig:res:1}{{\relax 7.1}{61}{Verfahren der Berechnung der Antwortkurve und dem dazugehörigen Resultat (re.) \textbf {links:} Unser Verfahren, \textbf {rechts:} Implementierung von Mathias Eitz, siehe \autoref {sec:implementations}\relax \relax }{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.2}{\ignorespaces Einfluss der Monotonie-Forderung: Belichtungsserie (Belichtungszeiten: 1/8000, 1/640, 1/100), Antwortkurve ohne Monotonie-Forderung, Antwortkurve mit Monotonie-Forderung (v.l.n.r.).\relax }}{62}{figure.caption.28}}
+\newlabel{fig:mon:1}{{\relax 7.2}{62}{Einfluss der Monotonie-Forderung: Belichtungsserie (Belichtungszeiten: 1/8000, 1/640, 1/100), Antwortkurve ohne Monotonie-Forderung, Antwortkurve mit Monotonie-Forderung (v.l.n.r.).\relax \relax }{figure.caption.28}{}}
+\@writefile{brf}{\backcite{tellone}{{62}{7}{figure.caption.27}}}
 \@writefile{toc}{\contentsline {section}{\numberline {7.1}Ergebnisse mit \gls {Monotonie}-Bedingung}{62}{section.7.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {7.2}Ergebnisse mit r\IeC {\"a}umlichem Glattheitsterm}{62}{section.7.2}}
 \@writefile{toc}{\contentsline {section}{\numberline {7.3}Ergebnisse mit subquadratischen Bestrafungstermen}{62}{section.7.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.3}{\ignorespaces Einfluss des r\IeC {\"a}umlichen Glattheitsterms auf verrauschte Bilder (4\% \gls {SaltAndPepperNoise}): \textbf  {oben:} Antwortkurve und zugeh\IeC {\"o}roges HDR Bild ohne r\IeC {\"a}umlichen Glattheitsterm, \textbf  {unten:} Antwortkurve mit r\IeC {\"a}umlichem Glattheitsterm ($\alpha = 1$) und zugeh\IeC {\"o}riges HDR-Bild. Das \gls {SaltAndPepperNoise} ist im unteren Bild quasi nicht mehr zu erkennen.\relax }}{63}{figure.caption.31}}
-\newlabel{fig:raum:1}{{\relax 7.3}{63}{Einfluss des räumlichen Glattheitsterms auf verrauschte Bilder (4\% \gls {SaltAndPepperNoise}): \textbf {oben:} Antwortkurve und zugehöroges HDR Bild ohne räumlichen Glattheitsterm, \textbf {unten:} Antwortkurve mit räumlichem Glattheitsterm ($\alpha = 1$) und zugehöriges HDR-Bild. Das \gls {SaltAndPepperNoise} ist im unteren Bild quasi nicht mehr zu erkennen.\relax \relax }{figure.caption.31}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.4}{\ignorespaces Einfluss des r\IeC {\"a}umlichen Glattheitsterms auf verrauschte Bilder (additives Gauss-Rauschen mit $\sigma = 10$): \textbf  {oben:} Antwortkurve und zugeh\IeC {\"o}riges HDR Bild ohne r\IeC {\"a}umlichen Glattheitsterm, \textbf  {unten:} Antwortkurve mit r\IeC {\"a}umlichem Glattheitsterm ($\alpha = 1$) und zugeh\IeC {\"o}riges HDR-Bild.\relax }}{64}{figure.caption.32}}
-\newlabel{fig:raum:2}{{\relax 7.4}{64}{Einfluss des räumlichen Glattheitsterms auf verrauschte Bilder (additives Gauss-Rauschen mit $\sigma = 10$): \textbf {oben:} Antwortkurve und zugehöriges HDR Bild ohne räumlichen Glattheitsterm, \textbf {unten:} Antwortkurve mit räumlichem Glattheitsterm ($\alpha = 1$) und zugehöriges HDR-Bild.\relax \relax }{figure.caption.32}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.5}{\ignorespaces Einfluss der subquadratischen Bestrafungsfunktionen: \textbf  {oben:} Standardverfahren, \textbf  {unten:} Subquadratischer Bestrafungsterm $\varphi (s^2)=\sqrt  {s^2+\epsilon ^2}$ f\IeC {\"u}r $\mathbf  g$ und $\mathbf  E$, die Kanten sind sch\IeC {\"a}rfer und der Kontrast besser\relax }}{65}{figure.caption.33}}
-\newlabel{fig:robust:1}{{\relax 7.5}{65}{Einfluss der subquadratischen Bestrafungsfunktionen: \textbf {oben:} Standardverfahren, \textbf {unten:} Subquadratischer Bestrafungsterm $\varphi (s^2)=\sqrt {s^2+\epsilon ^2}$ für $\b g$ und $\b E$, die Kanten sind schärfer und der Kontrast besser\relax \relax }{figure.caption.33}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.6}{\ignorespaces Einfluss der subquadratischen Bestrafungsfunktionen: \textbf  {oben:} Standardverfahren mit \gls {SaltAndPepperNoise}, \textbf  {unten:} Subquadratischer Bestrafungsterm $\varphi (s^2)=\sqrt  {s^2+\epsilon ^2}$ f\IeC {\"u}r $\mathbf  g$ und $\mathbf  E$, das Rauschen ist quasi nicht mehr zu erkennen.\relax }}{66}{figure.caption.34}}
-\newlabel{fig:robust:2}{{\relax 7.6}{66}{Einfluss der subquadratischen Bestrafungsfunktionen: \textbf {oben:} Standardverfahren mit \gls {SaltAndPepperNoise}, \textbf {unten:} Subquadratischer Bestrafungsterm $\varphi (s^2)=\sqrt {s^2+\epsilon ^2}$ für $\b g$ und $\b E$, das Rauschen ist quasi nicht mehr zu erkennen.\relax \relax }{figure.caption.34}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.7}{\ignorespaces Einfluss der subquadratischen Bestrafungsfunktionen auf den r\IeC {\"a}umlichen Glattheitsterm bei \gls {SaltAndPepperNoise} ($\alpha = 100$): \textbf  {oben:} Ohne subquadratische Bestrafungsfunktionen, \textbf  {unten:} Mit subquadratischen Bestrafungsfunktionen. Die Kanten sind nur minimal besser erhalten. \relax }}{67}{figure.caption.35}}
-\newlabel{fig:robust:kanten}{{\relax 7.7}{67}{Einfluss der subquadratischen Bestrafungsfunktionen auf den räumlichen Glattheitsterm bei \gls {SaltAndPepperNoise} ($\alpha = 100$): \textbf {oben:} Ohne subquadratische Bestrafungsfunktionen, \textbf {unten:} Mit subquadratischen Bestrafungsfunktionen. Die Kanten sind nur minimal besser erhalten. \relax \relax }{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.3}{\ignorespaces Einfluss des r\IeC {\"a}umlichen Glattheitsterms auf verrauschte Bilder (4\% \gls {SaltAndPepperNoise}): \textbf  {oben:} Antwortkurve und zugeh\IeC {\"o}roges HDR Bild ohne r\IeC {\"a}umlichen Glattheitsterm, \textbf  {unten:} Antwortkurve mit r\IeC {\"a}umlichem Glattheitsterm ($\alpha = 1$) und zugeh\IeC {\"o}riges HDR-Bild. Das \gls {SaltAndPepperNoise} ist im unteren Bild quasi nicht mehr zu erkennen.\relax }}{63}{figure.caption.29}}
+\newlabel{fig:raum:1}{{\relax 7.3}{63}{Einfluss des räumlichen Glattheitsterms auf verrauschte Bilder (4\% \gls {SaltAndPepperNoise}): \textbf {oben:} Antwortkurve und zugehöroges HDR Bild ohne räumlichen Glattheitsterm, \textbf {unten:} Antwortkurve mit räumlichem Glattheitsterm ($\alpha = 1$) und zugehöriges HDR-Bild. Das \gls {SaltAndPepperNoise} ist im unteren Bild quasi nicht mehr zu erkennen.\relax \relax }{figure.caption.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.4}{\ignorespaces Einfluss des r\IeC {\"a}umlichen Glattheitsterms auf verrauschte Bilder (additives Gauss-Rauschen mit $\sigma = 10$): \textbf  {oben:} Antwortkurve und zugeh\IeC {\"o}riges HDR Bild ohne r\IeC {\"a}umlichen Glattheitsterm, \textbf  {unten:} Antwortkurve mit r\IeC {\"a}umlichem Glattheitsterm ($\alpha = 1$) und zugeh\IeC {\"o}riges HDR-Bild.\relax }}{64}{figure.caption.30}}
+\newlabel{fig:raum:2}{{\relax 7.4}{64}{Einfluss des räumlichen Glattheitsterms auf verrauschte Bilder (additives Gauss-Rauschen mit $\sigma = 10$): \textbf {oben:} Antwortkurve und zugehöriges HDR Bild ohne räumlichen Glattheitsterm, \textbf {unten:} Antwortkurve mit räumlichem Glattheitsterm ($\alpha = 1$) und zugehöriges HDR-Bild.\relax \relax }{figure.caption.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.5}{\ignorespaces Einfluss der subquadratischen Bestrafungsfunktionen: \textbf  {oben:} Standardverfahren, \textbf  {unten:} Subquadratischer Bestrafungsterm $\varphi (s^2)=\sqrt  {s^2+\epsilon ^2}$ f\IeC {\"u}r $\mathbf  g$ und $\mathbf  E$, die Kanten sind sch\IeC {\"a}rfer und der Kontrast besser\relax }}{65}{figure.caption.31}}
+\newlabel{fig:robust:1}{{\relax 7.5}{65}{Einfluss der subquadratischen Bestrafungsfunktionen: \textbf {oben:} Standardverfahren, \textbf {unten:} Subquadratischer Bestrafungsterm $\varphi (s^2)=\sqrt {s^2+\epsilon ^2}$ für $\b g$ und $\b E$, die Kanten sind schärfer und der Kontrast besser\relax \relax }{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.6}{\ignorespaces Einfluss der subquadratischen Bestrafungsfunktionen: \textbf  {oben:} Standardverfahren mit \gls {SaltAndPepperNoise}, \textbf  {unten:} Subquadratischer Bestrafungsterm $\varphi (s^2)=\sqrt  {s^2+\epsilon ^2}$ f\IeC {\"u}r $\mathbf  g$ und $\mathbf  E$, das Rauschen ist quasi nicht mehr zu erkennen.\relax }}{66}{figure.caption.32}}
+\newlabel{fig:robust:2}{{\relax 7.6}{66}{Einfluss der subquadratischen Bestrafungsfunktionen: \textbf {oben:} Standardverfahren mit \gls {SaltAndPepperNoise}, \textbf {unten:} Subquadratischer Bestrafungsterm $\varphi (s^2)=\sqrt {s^2+\epsilon ^2}$ für $\b g$ und $\b E$, das Rauschen ist quasi nicht mehr zu erkennen.\relax \relax }{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 7.7}{\ignorespaces Einfluss der subquadratischen Bestrafungsfunktionen auf den r\IeC {\"a}umlichen Glattheitsterm bei \gls {SaltAndPepperNoise} ($\alpha = 100$): \textbf  {oben:} Ohne subquadratische Bestrafungsfunktionen, \textbf  {unten:} Mit subquadratischen Bestrafungsfunktionen. Die Kanten sind nur minimal besser erhalten. \relax }}{67}{figure.caption.33}}
+\newlabel{fig:robust:kanten}{{\relax 7.7}{67}{Einfluss der subquadratischen Bestrafungsfunktionen auf den räumlichen Glattheitsterm bei \gls {SaltAndPepperNoise} ($\alpha = 100$): \textbf {oben:} Ohne subquadratische Bestrafungsfunktionen, \textbf {unten:} Mit subquadratischen Bestrafungsfunktionen. Die Kanten sind nur minimal besser erhalten. \relax \relax }{figure.caption.33}{}}
+\citation{paper}
+\citation{paper}
 \@writefile{toc}{\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{69}{chapter.8}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -419,6 +417,8 @@
 \@writefile{loAlgorithmus}{\addvspace {10\p@ }}
 \@writefile{alg}{\addvspace {10\p@ }}
 \newlabel{chap:zusfas}{{8}{69}{Zusammenfassung und Ausblick\relax }{chapter.8}{}}
+\@writefile{brf}{\backcite{paper}{{69}{8}{chapter.8}}}
+\@writefile{brf}{\backcite{paper}{{70}{8}{section*.34}}}
 \citation{Ward03fast}
 \citation{Ward03fast}
 \citation{Reinhard}
@@ -444,16 +444,16 @@
 \@writefile{brf}{\backcite{Ward03fast}{{71}{A.1.1}{subsection.A.1.1}}}
 \@writefile{brf}{\backcite{Reinhard}{{71}{A.1.1}{subsection.A.1.1}}}
 \@writefile{brf}{\backcite{Ward03fast}{{71}{A.1.1}{subsection.A.1.1}}}
-\@writefile{brf}{\backcite{Ward03fast}{{71}{A.1}{Listing.caption.37}}}
-\newlabel{lst:MTB:helpers}{{\caption@xref {lst:MTB:helpers}{ on input line 11}}{71}{MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}\relax }{Listing.caption.37}{}}
-\@writefile{code}{\contentsline {Listing}{\numberline {A.1}{\ignorespaces Hilfsfunktionen in C Funktion zur Berechnung der Registrierung \cite  {Ward03fast}\relax }}{71}{Listing.caption.37}}
-\@writefile{brf}{\backcite{Ward03fast}{{72}{A.2}{Listing.caption.38}}}
-\newlabel{lst:MTB:core}{{\caption@xref {lst:MTB:core}{ on input line 36}}{72}{MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}\relax }{Listing.caption.38}{}}
-\@writefile{code}{\contentsline {Listing}{\numberline {A.2}{\ignorespaces Rekursive C Funktion zur Berechnung der notwendigen Verschiebung zwischen den Bildern um diese zu registrieren \cite  {Ward03fast}\relax }}{72}{Listing.caption.38}}
+\@writefile{brf}{\backcite{Ward03fast}{{71}{A.1}{Listing.caption.35}}}
+\newlabel{lst:MTB:helpers}{{\caption@xref {lst:MTB:helpers}{ on input line 11}}{71}{MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}\relax }{Listing.caption.35}{}}
+\@writefile{code}{\contentsline {Listing}{\numberline {A.1}{\ignorespaces Hilfsfunktionen in C Funktion zur Berechnung der Registrierung \cite  {Ward03fast}\relax }}{71}{Listing.caption.35}}
+\@writefile{brf}{\backcite{Ward03fast}{{72}{A.2}{Listing.caption.36}}}
+\newlabel{lst:MTB:core}{{\caption@xref {lst:MTB:core}{ on input line 36}}{72}{MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}\relax }{Listing.caption.36}{}}
+\@writefile{code}{\contentsline {Listing}{\numberline {A.2}{\ignorespaces Rekursive C Funktion zur Berechnung der notwendigen Verschiebung zwischen den Bildern um diese zu registrieren \cite  {Ward03fast}\relax }}{72}{Listing.caption.36}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A.1.2}LU-Zerlegung}{73}{subsection.A.1.2}}
-\@writefile{alg}{\contentsline {Algorithmus}{\numberline {A.1}{\ignorespaces L\IeC {\"o}sen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax }}{73}{Algorithmus.caption.39}}
-\newlabel{alg:LU}{{A.1}{73}{Lösen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax \relax }{Algorithmus.caption.39}{}}
-\@writefile{toc}{\contentsline {chapter}{Glossar und Abk\IeC {\"u}rzungsverzeichnis}{75}{section*.40}}
+\@writefile{alg}{\contentsline {Algorithmus}{\numberline {A.1}{\ignorespaces L\IeC {\"o}sen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax }}{73}{Algorithmus.caption.37}}
+\newlabel{alg:LU}{{A.1}{73}{Lösen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)\relax \relax }{Algorithmus.caption.37}{}}
+\@writefile{toc}{\contentsline {chapter}{Glossar und Abk\IeC {\"u}rzungsverzeichnis}{75}{section*.38}}
 \bibstyle{bibliography/IAASde}
 \bibdata{bibliography/bibliography}
 \bibcite{adobe:tiff}{Ado92}
@@ -467,7 +467,7 @@
 \bibcite{tone_mapper_2}{KYL{$^{+}$}07}
 \bibcite{logluv}{Lar98}
 \bibcite{Xinqiao}{LG03}
-\@writefile{toc}{\contentsline {chapter}{Literaturverzeichnis}{77}{appendix*.42}}
+\@writefile{toc}{\contentsline {chapter}{Literaturverzeichnis}{77}{appendix*.40}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}

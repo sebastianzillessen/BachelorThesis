@@ -6,6 +6,8 @@
 	<TreeState name="DiagramNavigator" viewX="0" viewY="0">
 		<ExpandedPath>DiagramNavigator</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,UML Diagrams</ExpandedPath>
+		<ExpandedPath>ClassDiagram</ExpandedPath>
+		<ExpandedPath>PackageDiagram</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,Requirements Capturing</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,Database Modeling</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,Business Modeling</ExpandedPath>
@@ -14,9 +16,17 @@
 		<ExpandedPath>DiagramNavigator,SoaML</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,Impact Analysis</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,Others</ExpandedPath>
+		<SelectedPath>ClassDiagram,MursdUKGAqAA3wzQ</SelectedPath>
 	</TreeState>
 	<TreeState name="ClassBrowser" viewX="0" viewY="0">
 		<ExpandedPath>ClassBrowser</ExpandedPath>
+		<ExpandedPath>ClassBrowser,ClassBrowser</ExpandedPath>
+		<ExpandedPath>ClassBrowser,Instant Reverse</ExpandedPath>
+		<ExpandedPath>ClassBrowser,Instant Reverse,/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/HDR</ExpandedPath>
+		<ExpandedPath>ClassBrowser,Instant Reverse,/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/HDR,src</ExpandedPath>
+		<ExpandedPath>ClassBrowser,Instant Reverse,/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/HDR,src,Ctrl</ExpandedPath>
+		<ExpandedPath>ClassBrowser,Instant Reverse,/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/HDR,src,Solver</ExpandedPath>
+		<SelectedPath>ClassBrowser,Instant Reverse,/Users/sebastianzillessen/Dropbox/Uni/2013_SoSe/Bachelorarbeit/HDR,src,Ctrl,Controller.java</SelectedPath>
 	</TreeState>
 	<TreeState name="LogicalView" viewX="0" viewY="0"/>
 </ProjectTreeState>

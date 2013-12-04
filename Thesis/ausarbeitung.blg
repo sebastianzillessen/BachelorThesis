@@ -3,45 +3,58 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ausarbeitung.aux
 The style file: bibliography/IAASde.bst
 Database file #1: bibliography/bibliography.bib
+Warning--entry type for "tellone" isn't style-file defined
+--line 116 of file bibliography/bibliography.bib
+Warning--entry type for "adobe:tiff" isn't style-file defined
+--line 124 of file bibliography/bibliography.bib
+Warning--entry type for "tone_mapper_1" isn't style-file defined
+--line 155 of file bibliography/bibliography.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 11 entries,
+Warning--empty booktitle in logluv
+Warning--can't use both volume and number fields in logluv
+Warning--empty booktitle in Xinqiao
+Warning--empty booktitle in Nayar00highdynamic
+Warning--empty booktitle in zimmer
+Warning--can't use both volume and number fields in zimmer
+You've used 23 entries,
             3039 wiz_defined-function locations,
-            704 strings with 7141 characters,
-and the built_in function-call counts, 5842 in all, are:
-= -- 473
-> -- 199
-< -- 8
-+ -- 73
-- -- 70
-* -- 373
-:= -- 798
-add.period$ -- 36
-call.type$ -- 11
-change.case$ -- 67
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 464
-empty$ -- 503
-format.name$ -- 91
-if$ -- 1210
+            775 strings with 9021 characters,
+and the built_in function-call counts, 12346 in all, are:
+= -- 1015
+> -- 437
+< -- 19
++ -- 158
+- -- 155
+* -- 782
+:= -- 1665
+add.period$ -- 76
+call.type$ -- 23
+change.case$ -- 136
+chr.to.int$ -- 23
+cite$ -- 29
+duplicate$ -- 969
+empty$ -- 1041
+format.name$ -- 199
+if$ -- 2569
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 97
-newline$ -- 64
-num.names$ -- 33
-pop$ -- 197
+missing$ -- 203
+newline$ -- 123
+num.names$ -- 69
+pop$ -- 441
 preamble$ -- 1
-purify$ -- 81
+purify$ -- 171
 quote$ -- 0
-skip$ -- 180
+skip$ -- 401
 stack$ -- 0
-substring$ -- 285
-swap$ -- 229
-text.length$ -- 8
-text.prefix$ -- 5
+substring$ -- 565
+swap$ -- 491
+text.length$ -- 19
+text.prefix$ -- 8
 top$ -- 0
-type$ -- 76
-warning$ -- 0
-while$ -- 43
-width$ -- 13
-write$ -- 131
+type$ -- 168
+warning$ -- 6
+while$ -- 95
+width$ -- 27
+write$ -- 261
+(There were 9 warnings)

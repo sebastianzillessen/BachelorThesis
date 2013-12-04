@@ -189,7 +189,7 @@ Scanning input file ausarbeitung.tex...
 !! Input index error (file = ausarbeitung.tex, line = 109):
    -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 110):
-   -- Missing arguments -- need two (premature LFD).
+   -- Unknown index keyword \textbf.
 !! Input index error (file = ausarbeitung.tex, line = 111):
    -- Missing arguments -- need two (premature LFD).
 !! Input index error (file = ausarbeitung.tex, line = 113):

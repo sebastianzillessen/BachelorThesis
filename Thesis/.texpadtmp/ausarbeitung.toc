@@ -58,8 +58,8 @@
 \contentsline {section}{\numberline {6.4}Externe Bibliotheken}{54}{section.6.4}
 \contentsline {section}{\numberline {6.5}Architektur}{55}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}Paketdiagramm}{55}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Sequenzdiagramm}{56}{subsection.6.5.2}
-\contentsline {section}{\numberline {6.6}Herausforderungen w\IeC {\"a}hrend der Programmierung}{57}{section.6.6}
+\contentsline {subsection}{\numberline {6.5.2}Sequenzdiagramm}{58}{subsection.6.5.2}
+\contentsline {section}{\numberline {6.6}Herausforderungen w\IeC {\"a}hrend der Programmierung}{58}{section.6.6}
 \contentsline {chapter}{\numberline {7}Ergebnisse und Resultate}{61}{chapter.7}
 \contentsline {section}{\numberline {7.1}Ergebnisse mit \gls {Monotonie}-Bedingung}{62}{section.7.1}
 \contentsline {section}{\numberline {7.2}Ergebnisse mit r\IeC {\"a}umlichem Glattheitsterm}{62}{section.7.2}
@@ -69,5 +69,5 @@
 \contentsline {section}{\numberline {A.1}Verwendete Algorithmen}{71}{section.A.1}
 \contentsline {subsection}{\numberline {A.1.1}MTB-Algorithmus, vgl. \cite [S.9 f]{Ward03fast}}{71}{subsection.A.1.1}
 \contentsline {subsection}{\numberline {A.1.2}LU-Zerlegung}{73}{subsection.A.1.2}
-\contentsline {chapter}{Glossar und Abk\IeC {\"u}rzungsverzeichnis}{75}{section*.40}
-\contentsline {chapter}{Literaturverzeichnis}{77}{appendix*.42}
+\contentsline {chapter}{Glossar und Abk\IeC {\"u}rzungsverzeichnis}{75}{section*.38}
+\contentsline {chapter}{Literaturverzeichnis}{77}{appendix*.40}

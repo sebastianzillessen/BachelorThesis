@@ -18,9 +18,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.text.DecimalFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.List;
 
 
 /**
@@ -46,8 +45,10 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
     private NumericTextField inputMu;
     private NumericTextField inputAlpha;
     private NumericTextField inputDevStd;
-    private final DecimalFormat format = new DecimalFormat("###.###");
 
+    private final DecimalFormat format = new DecimalFormat("###.###");
+    private NumericTextField[] nums = new NumericTextField[5];
+    private Controller ctrl = Controller.getInstance();
 
     // Parameters
     private double lambda = 50;
@@ -61,7 +62,9 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
     private double devStd = 0;
     private double alpha = 0;
 
+    private List<Plot> plots = new ArrayList<Plot>();
     private String outputPrefix = "output_" + new Date().toString();
+    private JImageChooser chooser;
 
     private enum ACTIONS {
         CHOOSE_FILE,
@@ -80,7 +83,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         switch (a) {
             case CHOOSE_FILE:
                 // create JFileChooser-Object
-                JImageChooser chooser = new JImageChooser(".");
+                chooser = new JImageChooser(".");
                 //Show it.
                 int returnVal = chooser.showDialog(this,
                         "Öffnen");
@@ -179,6 +182,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
      * @param name Headline in the tap
      */
     public void addPlot(Plot p, String name) {
+        plots.add(p);
         tabs.addTab(name, p);
         p.setOutputFileName(this.outputPrefix + "_" + name + "_" + init_time);
     }

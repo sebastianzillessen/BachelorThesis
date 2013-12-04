@@ -7,7 +7,7 @@
 \backcite {Reinhard05}{{7}{(document)}{Doc-Start}}
 \backcite {tellone}{{7}{(document)}{Doc-Start}}
 \backcite {Reinhard}{{8}{(document)}{Doc-Start}}
-\backcite {Reinhard}{{9}{(document)}{Doc-Start}}
+\backcite {Reinhard}{{8}{(document)}{Doc-Start}}
 \backcite {Ward03fast}{{9}{(document)}{Doc-Start}}
 \backcite {Ward03fast}{{9}{(document)}{Doc-Start}}
 \backcite {paper}{{11}{1.1}{section.1.1}}
@@ -62,10 +62,12 @@
 \backcite {ludewig}{{55}{6.5.1}{subsection.6.5.1}}
 \backcite {ludewig}{{55}{6.5.1}{subsection.6.5.1}}
 \backcite {ReinhardToneMapper}{{61}{7}{chapter.7}}
-\backcite {tellone}{{62}{7}{figure.caption.29}}
+\backcite {tellone}{{62}{7}{figure.caption.27}}
+\backcite {paper}{{69}{8}{chapter.8}}
+\backcite {paper}{{70}{8}{section*.34}}
 \backcite {Ward03fast}{{71}{A.1.1}{subsection.A.1.1}}
 \backcite {Ward03fast}{{71}{A.1.1}{subsection.A.1.1}}
 \backcite {Reinhard}{{71}{A.1.1}{subsection.A.1.1}}
 \backcite {Ward03fast}{{71}{A.1.1}{subsection.A.1.1}}
-\backcite {Ward03fast}{{71}{A.1}{Listing.caption.37}}
-\backcite {Ward03fast}{{72}{A.2}{Listing.caption.38}}
+\backcite {Ward03fast}{{71}{A.1}{Listing.caption.35}}
+\backcite {Ward03fast}{{72}{A.2}{Listing.caption.36}}
