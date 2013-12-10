@@ -158,29 +158,12 @@ public class LocalReinhardMapping extends ToneMapping {
                 luminanceCompressed[i][j] = l;
             }
         }
-        /** COLOR STUFF, Not needed
-         *   ldrPic = zeros(size(hdr));
-
-         //re - apply color according to Fattals paper "Gradient Domain High Dynamic
-         // Range Compression "
-
-         for i = 1:3
-
-         // (hdr(:,:,i)./luminance)MUST be between 0 an 1 !!!!
-         //...but hdr often contains bigger values than luminance !!! ???
-         //so the resulting ldr pic needs to be clamped
-
-         ldrPic(:,:,i)=((hdr(:,:,i)./luminanceMap).^saturation).*luminanceCompressed;
-         end
-
-         // clamp ldrPic to 1
-         indices = find(ldrPic > 1);
-         ldrPic(indices) = 1;
-         */
-
         return luminanceCompressed;
     }
 
+    /**
+     * Our parameters
+     */
     protected enum VARS {
         PHI, EPS, SATURATION, KEY
     }

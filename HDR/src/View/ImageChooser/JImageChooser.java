@@ -1,6 +1,7 @@
 package View.ImageChooser;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
 
 /**
@@ -18,5 +19,19 @@ public class JImageChooser extends JFileChooser {
         setAccessory(new ImagePreview(this));
         setCurrentDirectory(new File(folder));
         setMultiSelectionEnabled(true);
+        setName("Bilder wählen");
+        addRegistrationHint();
+    }
+
+    private void addRegistrationHint() {
+        JPanel hint = new JPanel(new BorderLayout(5, 5));
+        hint.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+
+        JLabel lbl = new JLabel("Hinweis:");
+        lbl.setForeground(Color.red);
+        hint.add(lbl, BorderLayout.NORTH);
+        hint.add(new JLabel("<html>Die hier ausgewählten Bilder müssen registriert sein, damit der Algorithmus korrekt arbeitet. Bei nicht registrierten Bildern kann es zu Problemen bei der Erstellung des HDR-Bildes kommen.</html>"), BorderLayout.CENTER);
+
+        add(hint);
     }
 }

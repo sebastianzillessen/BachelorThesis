@@ -1,0 +1,6 @@
+\section*{Kurzfassung}
+Die Fusionierung von Einzelaufnahmen einer Belichtungsserie zu einem \gls{HDR} Bild ermöglicht es -- auch ohne spezielle Hardware -- Bilder mit erweitertem \gls{Dynamikumfang} zu erzeugen. Debevec und Malik schlagen vor, gleichzeitig auch die Antwortkurve des Bildaufnahmeprozesses mit zu schätzen \cite{paper}. Zur Berechnung des \gls{HDR}-Bildes und der Antwortkurve wird ein Energiefunktional verwendet. 
+
+Die vorliegende Arbeit stellt ein alternierendes Lösungsverfahren vor, durch das die Verwendung aller Bildpunkte der Belichtungsserie bei der Berechnung des \gls{HDR}-Bildes möglich ist. Darüber hinaus werden drei Erweiterungen des Energiefunktionals vorgestellt: Das Einführen einer Forderung von Monotonie der Antwortkurve soll die physikalische Korrektheit verbessern. Die Berechnung der \gls{Radiance Map} wird um einen (räumlichen) Glattheitsterm erweitert, der insbesondere bei Rauschen zu einer verbesserten Ausgabe führen soll. Zudem werden die quadratischen Bestrafungsterme des Ausgangsverfahrens durch subquadratische Funktionen ersetzt. Dies soll zu einer Verbesserung des Verfahrens bezüglich der Robustheit gegenüber Fehlmessungen und Ausreißern führen.
+
+Neben der theoretischen Ausarbeitung der Erweiterungen des Verfahrens stellt die vorliegende Arbeit darüber hinaus eine Realisierung in \texttt{Java} vor.

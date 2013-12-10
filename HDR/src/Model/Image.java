@@ -8,6 +8,13 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * Class which is used to store an image and to read it from a file resource.
+ * <p/>
+ * It supports only grey scale images.
+ *
+ * @author sebastianzillessen
+ */
 public class Image {
     protected String fileName = "";
     protected double exposureTime = -1;
@@ -21,6 +28,12 @@ public class Image {
     private int max = -1;
 
 
+    /**
+     * Constructor to create an image which has no pixels set.
+     *
+     * @param w width of the image
+     * @param h height of the image
+     */
     public Image(int w, int h) {
         this.w = w;
         this.h = h;
@@ -28,6 +41,13 @@ public class Image {
     }
 
 
+    /**
+     * Constructor to import a image from a file and specify a exposure time.
+     *
+     * @param fileName     file name
+     * @param exposureTime exposure time
+     * @throws Exception if the file could not be read an exception will be thrown
+     */
     public Image(String fileName, double exposureTime) throws Exception {
         this.fileName = fileName;
         this.exposureTime = exposureTime;
@@ -37,6 +57,11 @@ public class Image {
     }
 
 
+    /**
+     * Reads the image with the given filename.
+     *
+     * @return true if import succeeded
+     */
     private boolean readFile() {
         try {
             BufferedImage img = ImageIO.read(new File(this.fileName));
@@ -46,10 +71,6 @@ public class Image {
             Graphics g = grayscale.getGraphics();
             g.drawImage(img, 0, 0, null);
             g.dispose();
-            System.out.println(grayscale.getRGB(0, 0));
-            System.out.println(grayscale.getRGB(0, 1));
-            System.out.println(grayscale.getRGB(1, 0));
-            System.out.println(grayscale.getRGB(1, 1));
             readLuminance();
         } catch (IOException e) {
             e.printStackTrace();
@@ -59,6 +80,12 @@ public class Image {
     }
 
 
+    /**
+     * Saves an image to a file with the given file name
+     *
+     * @param filename the filename where to store it.
+     * @return true if the image was saved.
+     */
     public boolean save(String filename) {
         BufferedImage img = new BufferedImage(w, h, BufferedImage.TYPE_BYTE_GRAY);
 
@@ -90,15 +117,31 @@ public class Image {
     }
 
 
+    /**
+     * Gets the histogram of this image.
+     *
+     * @return histogram of the grey values.
+     */
     public int[] getHistogram() {
         updateHistogram();
         return this.histogram;
     }
 
+    /**
+     * gets the exposure time of a picture.
+     *
+     * @return expposure time (set in constructor)
+     */
     public double getExposureTime() {
         return exposureTime;
     }
 
+    /**
+     * returns grey value of this picture in a given index.
+     *
+     * @param i
+     * @return
+     */
     public int getValue(int i) {
         if (data != null && i >= 0 && i < w * h) {
             return data[i];
@@ -107,14 +150,21 @@ public class Image {
         }
     }
 
+    /**
+     * @return string representation of this image
+     */
     public String toString() {
         return String.format("Picture '%s' (%4d,%4d) t: %.6fs Max: %3d Min: %3d Median: %3.0f", fileName, w, h, exposureTime, max, min, getMedian());
     }
 
+    /**
+     * gets the median of the image.
+     *
+     * @return Median of the image
+     */
     public double getMedian() {
         int[] sortedArray = Arrays.copyOf(data, data.length);
         Arrays.sort(sortedArray);
-        System.out.println(Arrays.toString(sortedArray));
         double median;
         if (sortedArray.length % 2 == 0)
             median = ((double) sortedArray[sortedArray.length / 2 - 1] + (double) sortedArray[sortedArray.length / 2]) / 2;
@@ -123,34 +173,32 @@ public class Image {
         return median;
     }
 
+    /**
+     * @return image size (width*height)
+     */
     public int getImageSize() {
         return data.length;
     }
 
+    /**
+     * @return height of this image
+     */
     public int getHeight() {
         return h;
     }
 
+    /**
+     * @return width of this image
+     */
     public int getWidth() {
         return w;
     }
 
-
-    public Image downsample() {
-        if (this.w > 1 && this.h > 1) {
-            Image img = new Image(this.w / 2, this.h / 2);
-            for (int i = 0; i < img.getWidth(); i++) {
-                for (int j = 0; j < img.getHeight(); j++) {
-                    img.set(i, j, get(i * 2, j * 2));
-                }
-            }
-            img.updateHistogram();
-            return img;
-        }
-        return this.copy();
-
-    }
-
+    /**
+     * Copies an image
+     *
+     * @return exact copy of this image
+     */
     public Image copy() {
         Image r = new Image(w, h);
         r.data = this.data.clone();
@@ -158,14 +206,32 @@ public class Image {
         return r;
     }
 
+    /**
+     * sets a pixel to a given grey value
+     *
+     * @param x     x coordinate
+     * @param y     y coordinate
+     * @param value grey value
+     */
     public void set(int x, int y, int value) {
         data[x + y * w] = value;
     }
 
+
+    /**
+     * returns a pixel value at a given point
+     *
+     * @param x x coordinate
+     * @param y y coordinate
+     * @return greyvalue at this position
+     */
     public int get(int x, int y) {
         return getValue(x + y * w);
     }
 
+    /**
+     * Recalculates the histogram
+     */
     private void updateHistogram() {
         histogram = new int[256];
         if (data.length > 0) {
@@ -180,25 +246,11 @@ public class Image {
     }
 
 
-    public Image shiftedInstance(int xs, int ys) {
-        Image res = new Image(w, h);
-        for (int x = 0; x < w; x++) {
-            for (int y = 0; y < h; y++) {
-                res.set(x, y, 0);
-            }
-        }
-        for (int x = 0; x < w; x++) {
-            for (int y = 0; y < h; y++) {
-
-                if (x + xs >= 0 && x + xs < w && y + ys >= 0 && y + ys < h) {
-                    res.set(x + xs, y + ys, get(x, y));
-                }
-            }
-        }
-        res.updateHistogram();
-        return res;
-    }
-
+    /**
+     * Adds salt and pepper noise in percentage pixels.
+     *
+     * @param percentage the percentage of pixels where to add salt and pepper noise (1 is 100%)
+     */
     public void addSaltAndPepper(double percentage) {
         for (int i = 0; i < data.length; i++) {
             // should we add nois?
@@ -212,6 +264,11 @@ public class Image {
         updateHistogram();
     }
 
+    /**
+     * Gets this image as Buffered image
+     *
+     * @return buffered image of this image
+     */
     public BufferedImage getBufferedImage() {
         BufferedImage bi = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_BYTE_GRAY);
         for (int x = 0; x < getWidth(); x++) {
@@ -223,6 +280,11 @@ public class Image {
         return bi;
     }
 
+    /**
+     * Adds additive gaussian noise
+     *
+     * @param devStd gauss derivate.
+     */
     public void addGaussian(double devStd) {
         Random r = new Random();
         for (int i = 0; i < data.length; i++) {
@@ -238,6 +300,12 @@ public class Image {
     }
 
 
+    /**
+     * checks if two images are exactly the same.
+     *
+     * @param o other image
+     * @return true if the images are equal.
+     */
     @Override
     public boolean equals(Object o) {
         if (o == null || o instanceof Image) {

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cd42bff0-ab5d-4dc0-84b5-c455bb2abeef" name="Default" comment="" />
     <ignored path="HDR.iws" />
@@ -16,7 +19,7 @@
     <SUITE FILE_PATH="coverage/HDR$MatrixTest_EqualTest.coverage" NAME="MatrixTest.EqualTest Coverage Results" MODIFIED="1385850809181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Maths.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/HDR$All_Tests.coverage" NAME="All Tests Coverage Results" MODIFIED="1385897068236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/HDR$All_Tests.coverage" NAME="All Tests Coverage Results" MODIFIED="1386510209331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Ctrl.*</FILTER>
       <FILTER>Maths.*</FILTER>
       <FILTER>Model.*</FILTER>
@@ -78,64 +81,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Image.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Image.java">
+      <file leaf-file-name="LocalReinhardMapping.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/LocalReinhardMapping.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="204" column="32" selection-start="5666" selection-end="5666" vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3945">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Formatter.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Formatter.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="357" column="0" selection-start="15564" selection-end="15564" vertical-scroll-proportion="0.0" vertical-offset="5355" max-vertical-offset="5445">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/Model/ImageTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="18" selection-start="4603" selection-end="4603" vertical-scroll-proportion="0.0" vertical-offset="2580" max-vertical-offset="2970">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Convolution.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Maths/Convolution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="1021" max-vertical-offset="1650">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractMatrix.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Maths/AbstractMatrix.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="4785">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MatrixTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/Maths/MatrixTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="440" column="48" selection-start="11134" selection-end="11134" vertical-scroll-proportion="0.0" vertical-offset="6600" max-vertical-offset="7065">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GUIFrame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/GUIFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="51" selection-start="3922" selection-end="3922" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="6795">
+            <state line="16" column="48" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3420">
               <folding />
             </state>
           </provider>
@@ -144,17 +93,32 @@
       <file leaf-file-name="Controller.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Ctrl/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="128" selection-start="1576" selection-end="1661" vertical-scroll-proportion="0.17190775" vertical-offset="556" max-vertical-offset="1515">
+            <state line="90" column="16" selection-start="3081" selection-end="3081" vertical-scroll-proportion="-0.13298792" vertical-offset="1112" max-vertical-offset="3045">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Matrix.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Maths/Matrix.java">
+      <file leaf-file-name="GUIFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/GUIFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="19" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1605">
-              <folding />
+            <state line="52" column="4" selection-start="1615" selection-end="1615" vertical-scroll-proportion="-7.5" vertical-offset="585" max-vertical-offset="7890">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2095#2101#0" expanded="true" />
+                <element signature="e#3663#3678#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControllerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/Ctrl/ControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="8" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="990">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,16 +126,62 @@
       <file leaf-file-name="IterativeEnergySolver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="53" selection-start="5516" selection-end="5516" vertical-scroll-proportion="0.0" vertical-offset="2610" max-vertical-offset="7650">
-              <folding />
+            <state line="555" column="19" selection-start="20118" selection-end="20118" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="6000">
+              <folding>
+                <element signature="docComment;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="docComment;method#IterativeEnergySolver#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="method#IterativeEnergySolver#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="docComment;method#run#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="method#run#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="docComment;method#toString#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="method#toString#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="docComment;method#w#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="method#w#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="docComment;method#initPhiData#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="method#initPhiData#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="docComment;method#initDerivativeMatrices#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="method#initDerivativeMatrices#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="docComment;method#initWeightMatrix#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="method#initWeightMatrix#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="docComment;method#generateOverallHistogramm#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="method#generateOverallHistogramm#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="docComment;method#initLnT#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="method#initLnT#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="docComment;method#w2#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="method#w2#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="method#calculateG#0;class#IterativeEnergySolver#0" expanded="false" />
+                <element signature="e#10384#10466#0" expanded="false" />
+                <element signature="method#calculateEnergy#0;class#IterativeEnergySolver#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="ScatterPlot.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/Plots/ScatterPlot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="109" column="8" selection-start="2559" selection-end="2559" vertical-scroll-proportion="0.0" vertical-offset="1223" max-vertical-offset="3405">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5706#5707#0" expanded="true" />
+                <element signature="e#5741#5742#0" expanded="true" />
+                <element signature="e#5780#5781#0" expanded="true" />
+                <element signature="e#5815#5816#0" expanded="true" />
+                <element signature="e#5871#5872#0" expanded="true" />
+                <element signature="e#5919#5920#0" expanded="true" />
+                <element signature="e#5975#5976#0" expanded="true" />
+                <element signature="e#6023#6024#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/Model/ImageTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="137" column="22" selection-start="3532" selection-end="3532" vertical-scroll-proportion="0.0" vertical-offset="1845" max-vertical-offset="2460">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -193,57 +203,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Solver/IWeight.java" />
-        <option value="$PROJECT_DIR$/src/Solver/IHDRSolver.java" />
-        <option value="$PROJECT_DIR$/src/Tests/ReinhardMappingTest.java" />
-        <option value="$PROJECT_DIR$/src/tonemapping/LocalReinhardMapping.java" />
-        <option value="$PROJECT_DIR$/src/View/Log.java" />
-        <option value="$PROJECT_DIR$/src/Solver/Image.java" />
-        <option value="$PROJECT_DIR$/src/Maths/Convolution.java" />
-        <option value="$PROJECT_DIR$/src/Solver/HDRResult.java" />
-        <option value="$PROJECT_DIR$/src/View/ImageChooser/ImageFilter.java" />
-        <option value="$PROJECT_DIR$/src/View/ImageChooser/JImageChooser.java" />
-        <option value="$PROJECT_DIR$/src/View/ImageChooser/ImageFileView.java" />
-        <option value="$PROJECT_DIR$/src/tonemapping/ToneMapping.java" />
-        <option value="$PROJECT_DIR$/src/Model/WeightMode.java" />
-        <option value="$PROJECT_DIR$/src/Ctrl/Controller.java" />
-        <option value="$PROJECT_DIR$/Tests/Helper.java" />
-        <option value="$PROJECT_DIR$/Tests/Maths/ConvolutionTest.java" />
-        <option value="$PROJECT_DIR$/src/View/tonemapping/ToneMapping.java" />
-        <option value="$PROJECT_DIR$/src/Maths/DecimalMatrix.java" />
-        <option value="$PROJECT_DIR$/src/Maths/EquotationSolverException.java" />
-        <option value="$PROJECT_DIR$/Tests/Maths/ArrayAssertHelper.java" />
-        <option value="$PROJECT_DIR$/Tests/Maths/UnitHelper.java" />
-        <option value="$PROJECT_DIR$/Tests/UnitHelper.java" />
-        <option value="$PROJECT_DIR$/src/Maths/Tests/ConvolutionTest.java" />
-        <option value="$PROJECT_DIR$/src/Maths/Tests/MatrixTest.java" />
-        <option value="$PROJECT_DIR$/src/Maths/Tests/BandMatrixTest.java" />
-        <option value="$PROJECT_DIR$/Tests/Maths/BandMatrixTest.java" />
         <option value="$PROJECT_DIR$/src/Maths/ArrayMaths.java" />
         <option value="$PROJECT_DIR$/src/Maths/SolverAlgorithm.java" />
         <option value="$PROJECT_DIR$/src/Maths/EquotationSolverAlgorithm.java" />
         <option value="$PROJECT_DIR$/Tests/LocalReinhardMappingTest.java" />
-        <option value="$PROJECT_DIR$/src/Maths/BandMatrix.java" />
         <option value="$PROJECT_DIR$/src/Maths/EquotationSolver.java" />
-        <option value="$PROJECT_DIR$/src/View/Plots/ImagePlot.java" />
-        <option value="$PROJECT_DIR$/src/View/Plots/ToneMappingPlot.java" />
-        <option value="$PROJECT_DIR$/src/View/ToneMappers/LocalReinhardMapping.java" />
-        <option value="$PROJECT_DIR$/src/View/ToneMappers/ReinhardMapping.java" />
         <option value="$PROJECT_DIR$/src/View/ToneMappers/SpatiallyUniformMapping.java" />
-        <option value="$PROJECT_DIR$/src/View/ToneMappers/ToneMapping.java" />
         <option value="$PROJECT_DIR$/Tests/Maths/ArrayMathsTest.java" />
-        <option value="$PROJECT_DIR$/src/Maths/Vector.java" />
         <option value="$PROJECT_DIR$/Tests/Maths/VectorTest.java" />
         <option value="$PROJECT_DIR$/Tests/Tests/Model/HDRResultTest.java" />
         <option value="$PROJECT_DIR$/Tests/Model/WeightModeTest.java" />
-        <option value="$PROJECT_DIR$/src/Model/Image.java" />
-        <option value="$PROJECT_DIR$/src/Maths/Matrix.java" />
         <option value="$PROJECT_DIR$/src/Maths/DefaultMatrix.java" />
-        <option value="$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java" />
-        <option value="$PROJECT_DIR$/src/Maths/AbstractMatrix.java" />
         <option value="$PROJECT_DIR$/Tests/Maths/MatrixTest.java" />
-        <option value="$PROJECT_DIR$/src/View/GUIFrame.java" />
+        <option value="$PROJECT_DIR$/src/View/Log.java" />
+        <option value="$PROJECT_DIR$/src/View/GuiFrame2.form" />
+        <option value="$PROJECT_DIR$/src/View/GUIFrame2.form" />
+        <option value="$PROJECT_DIR$/src/View/ImageTable/InvalidInputListener.java" />
+        <option value="$PROJECT_DIR$/src/View/InvalidInputListener.java" />
+        <option value="$PROJECT_DIR$/src/View/NumericTextField/NumericTextField.java" />
+        <option value="$PROJECT_DIR$/src/View/ImageChooser/JImageChooser.java" />
+        <option value="$PROJECT_DIR$/Tests/Maths/BandMatrixTest.java" />
+        <option value="$PROJECT_DIR$/src/Maths/BandMatrix.java" />
+        <option value="$PROJECT_DIR$/src/Maths/Convolution.java" />
+        <option value="$PROJECT_DIR$/src/Maths/EquationSolver.java" />
+        <option value="$PROJECT_DIR$/src/Maths/EquationSolverAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/Maths/EquationSolverException.java" />
+        <option value="$PROJECT_DIR$/src/Maths/AbstractMatrix.java" />
+        <option value="$PROJECT_DIR$/src/Maths/Matrix.java" />
+        <option value="$PROJECT_DIR$/src/Maths/Vector.java" />
+        <option value="$PROJECT_DIR$/src/Model/HDRResult.java" />
         <option value="$PROJECT_DIR$/Tests/Model/ImageTest.java" />
+        <option value="$PROJECT_DIR$/src/Model/Image.java" />
+        <option value="$PROJECT_DIR$/src/Model/WeightMode.java" />
+        <option value="$PROJECT_DIR$/src/Ctrl/IterativeSolverUpdater.java" />
+        <option value="$PROJECT_DIR$/src/Solver/IterativeSolverUpdater.java" />
+        <option value="$PROJECT_DIR$/src/Solver/HDRSolverUpdateListener.java" />
+        <option value="$PROJECT_DIR$/src/Solver/IHDRSolver.java" />
+        <option value="$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java" />
+        <option value="$PROJECT_DIR$/src/View/EventListener/InvalidInputListener.java" />
+        <option value="$PROJECT_DIR$/src/View/ImageTable/HighlightEmptyRenderer.java" />
+        <option value="$PROJECT_DIR$/src/View/ImageTable/ImageTableModel.java" />
+        <option value="$PROJECT_DIR$/src/View/ImageTable/LeftDotTableRenderer.java" />
+        <option value="$PROJECT_DIR$/src/View/Plots/ImagePlot.java" />
+        <option value="$PROJECT_DIR$/src/View/Plots/Plot.java" />
+        <option value="$PROJECT_DIR$/src/View/Plots/ToneMappingPlot.java" />
+        <option value="$PROJECT_DIR$/src/View/ToneMappers/ToneMapping.java" />
+        <option value="$PROJECT_DIR$/src/View/ToneMappers/LocalReinhardMapping.java" />
+        <option value="$PROJECT_DIR$/src/View/ToneMappers/ReinhardMapping.java" />
+        <option value="$PROJECT_DIR$/src/View/Plots/ScatterPlot.java" />
+        <option value="$PROJECT_DIR$/src/View/GUIFrame.java" />
+        <option value="$PROJECT_DIR$/Tests/Ctrl/ControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/Ctrl/Controller.java" />
       </list>
     </option>
   </component>
@@ -320,6 +330,12 @@
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
+  <component name="ProjectStructureProblems">
+    <ignored-problems>
+      <problem id="library-invalid-classes-path(library:project:jheader-0.1)" />
+      <problem id="unused-library(library:project:HDR)" />
+    </ignored-problems>
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
@@ -333,7 +349,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -402,6 +417,20 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="View" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -418,6 +447,134 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ToneMappers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Plots" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageTable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventListener" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maths" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -439,12 +596,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HDR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="63" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="65" />
@@ -476,7 +648,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="appearance" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
@@ -487,15 +659,15 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Ctrl" />
       <recent name="Model" />
       <recent name="Tests.Model" />
       <recent name="tonemapping" />
       <recent name="Tests.Maths" />
-      <recent name="Maths" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Maths" />
@@ -506,17 +678,20 @@
       <recent name="Maths" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="View.ImageTable" />
       <recent name="View.ImageChooser" />
       <recent name="Display" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/View" />
+      <recent name="$PROJECT_DIR$/src/View/images" />
+      <recent name="$PROJECT_DIR$/Libs" />
+      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Maths" />
       <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Libs" />
-      <recent name="$PROJECT_DIR$/src/Display" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All Tests">
@@ -892,6 +1067,8 @@
       <workItem from="1385829912141" duration="13281000" />
       <workItem from="1385891695864" duration="8301000" />
       <workItem from="1385979731731" duration="26000" />
+      <workItem from="1386183678058" duration="2553000" />
+      <workItem from="1386237948212" duration="30200000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented some more functions to solve a lgs&#10;">
       <created>1372517704706</created>
@@ -957,7 +1134,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72475000" />
+    <option name="totallyTimeSpent" value="105228000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -984,37 +1161,37 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.670778" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="106" y="147" width="1720" height="925" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670778" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39402986" sideWeight="0.19316968" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.178762" sideWeight="0.16915423" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3375932" sideWeight="0.6706468" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14781217" sideWeight="0.60597014" order="1" side_tool="false" content_ui="tabs" x="738" y="247" width="463" height="674" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22518677" sideWeight="0.60597014" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36218905" sideWeight="0.8068303" order="2" side_tool="false" content_ui="tabs" x="203" y="417" width="1513" height="335" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22470714" sideWeight="0.60597014" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670778" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="106" y="147" width="1720" height="925" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36146972" sideWeight="0.8068303" order="2" side_tool="false" content_ui="tabs" x="203" y="417" width="1513" height="335" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21618743" sideWeight="0.670778" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32770607" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39920557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.178762" sideWeight="0.16915423" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32373387" sideWeight="0.49786553" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14749734" sideWeight="0.60597014" order="1" side_tool="false" content_ui="tabs" x="738" y="247" width="463" height="674" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="simpleUML" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924226" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33778015" sideWeight="0.6706468" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3243781" sideWeight="0.49786553" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1094,313 +1271,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/Libs/metadata-extractor-2.6.4.jar!/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="55" selection-start="678" selection-end="722" vertical-scroll-proportion="0.45373666" vertical-offset="0" max-vertical-offset="562" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ImageTable/ImageTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="563" selection-end="563" vertical-scroll-proportion="-2.0427046" vertical-offset="1463" max-vertical-offset="2025" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ImageTable/LeftDotTableRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="297" selection-end="297" vertical-scroll-proportion="0.25444838" vertical-offset="22" max-vertical-offset="810" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/ReinhardMappingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="8" selection-start="11697" selection-end="11697" vertical-scroll-proportion="0.81238616" vertical-offset="904" max-vertical-offset="1515" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ImageChooser/ImageFileView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="87" selection-start="2804" selection-end="2804" vertical-scroll-proportion="0.8114374" vertical-offset="0" max-vertical-offset="647" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ImageChooser/JImageChooser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="43" selection-start="119" selection-end="119" vertical-scroll-proportion="0.11591963" vertical-offset="0" max-vertical-offset="647" />
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Override.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="44" selection-start="318" selection-end="318" vertical-scroll-proportion="0.12578617" vertical-offset="0" max-vertical-offset="954" />
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/com/sun/tools/corba/se/idl/toJavaPortable/Helper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="184" selection-end="184" vertical-scroll-proportion="0.120192304" vertical-offset="0" max-vertical-offset="1215" />
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/Solver">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Solver</OriginalElement>
-          <nodes>
-            <node x="" y="">Solver.IHDRSolver</node>
-            <node x="" y="">Solver.IterativeEnergySolver</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="408.0" y="140.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>public</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Solver/IHDRSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="13" selection-start="1267" selection-end="1276" vertical-scroll-proportion="1.3474576" vertical-offset="0" max-vertical-offset="945" />
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes>
-            <node x="" y="">Maths</node>
-            <node x="" y="">View</node>
-            <node x="" y="">Model</node>
-            <node x="" y="">Ctrl</node>
-            <node x="" y="">Solver</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="160.0" y="55.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>Project Files</SCOPE>
-          <VISIBILITY>public</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/View">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>View</OriginalElement>
-          <nodes>
-            <node x="" y="">View.Plots</node>
-            <node x="" y="">View.GUIFrame</node>
-            <node x="" y="">View.ToneMappers</node>
-            <node x="" y="">View.ImageChooser</node>
-            <node x="" y="">View.ImageTable</node>
-            <node x="" y="">View.Log</node>
-            <node x="" y="">View.NumericTextField</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="311.0" y="265.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>public</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/Maths">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Maths</OriginalElement>
-          <nodes>
-            <node x="" y="">Maths.Convolution</node>
-            <node x="" y="">Maths.BandMatrix</node>
-            <node x="" y="">Maths.ArrayAssertHelper</node>
-            <node x="" y="">Maths.DecimalMatrix</node>
-            <node x="" y="">Maths.Matrix</node>
-            <node x="" y="">Maths.BandMatrixTest</node>
-            <node x="" y="">Maths.DecimalVector</node>
-            <node x="" y="">Maths.ArrayMaths</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.3505578391074574" x="893.0" y="722.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>public</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maths.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="486.0" y="224.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>Project Files</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/HighContrast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="342" selection-end="342" vertical-scroll-proportion="0.23584905" vertical-offset="0" max-vertical-offset="954" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Plots/Plot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="16" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="1440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View .uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement />
-          <nodes />
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="256.0" y="42.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-          </Categories>
-          <SCOPE>Project Files</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maths/EquotationSolverException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="73" selection-start="345" selection-end="345" vertical-scroll-proportion="0.27918783" vertical-offset="0" max-vertical-offset="591" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maths/EquotationSolverAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="25" selection-start="128" selection-end="128" vertical-scroll-proportion="0.2284264" vertical-offset="0" max-vertical-offset="591" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Maths/ConvolutionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="15" selection-start="2451" selection-end="2451" vertical-scroll-proportion="0.8527919" vertical-offset="411" max-vertical-offset="1365">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Maths/UnitHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="159" selection-end="159" vertical-scroll-proportion="0.17100978" vertical-offset="0" max-vertical-offset="614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/LocalReinhardMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="16" selection-start="6486" selection-end="6486" vertical-scroll-proportion="0.35440612" vertical-offset="2170" max-vertical-offset="3675" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/ReinhardMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="8" selection-start="1940" selection-end="1940" vertical-scroll-proportion="0.38899803" vertical-offset="837" max-vertical-offset="1425" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/LocalReinhardMappingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="24" selection-start="12204" selection-end="12204" vertical-scroll-proportion="0.5855856" vertical-offset="1145" max-vertical-offset="1710">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/ToneMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="8" selection-start="3027" selection-end="3027" vertical-scroll-proportion="0.99119717" vertical-offset="1072" max-vertical-offset="1980" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/SpatiallyUniformMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="8" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.35229358" vertical-offset="558" max-vertical-offset="1305" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maths/EquotationSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="20" selection-start="5583" selection-end="5583" vertical-scroll-proportion="0.5854484" vertical-offset="1619" max-vertical-offset="2220" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maths/ArrayMaths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="32" selection-start="1818" selection-end="1825" vertical-scroll-proportion="1.3282572" vertical-offset="250" max-vertical-offset="1275" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Maths/ArrayMathsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="14" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.56852794" vertical-offset="204" max-vertical-offset="795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Maths/BandMatrixTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="325" column="49" selection-start="10031" selection-end="10031" vertical-scroll-proportion="0.72212976" vertical-offset="4366" max-vertical-offset="6225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Plots/ToneMappingPlot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="37" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.252443" vertical-offset="310" max-vertical-offset="1155" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Plots/ImagePlot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="8" selection-start="852" selection-end="852" vertical-scroll-proportion="0.32612312" vertical-offset="239" max-vertical-offset="1260" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Maths/VectorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="4" selection-start="4013" selection-end="4013" vertical-scroll-proportion="0.8534202" vertical-offset="2101" max-vertical-offset="2745">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maths/BandMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="9" selection-start="1154" selection-end="1155" vertical-scroll-proportion="-3.798479" vertical-offset="2538" max-vertical-offset="6435" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/WeightMode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="210" selection-end="210" vertical-scroll-proportion="0.31914893" vertical-offset="0" max-vertical-offset="564" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/Tests/Model/HDRResultTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="5" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.8606272" vertical-offset="211" max-vertical-offset="825" />
@@ -1411,94 +1281,502 @@
         <state line="13" column="5" selection-start="271" selection-end="271" vertical-scroll-proportion="0.3321976" vertical-offset="0" max-vertical-offset="587" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maths/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="11" selection-start="447" selection-end="447" vertical-scroll-proportion="0.32998326" vertical-offset="58" max-vertical-offset="3315" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/HDRResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="11" selection-start="357" selection-end="357" vertical-scroll-proportion="0.42211056" vertical-offset="33" max-vertical-offset="630" />
-      </provider>
-    </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Collections.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="68" selection-start="969" selection-end="969" vertical-scroll-proportion="0.33278957" vertical-offset="126" max-vertical-offset="15225" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Maths/MatrixTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="440" column="48" selection-start="11134" selection-end="11134" vertical-scroll-proportion="0.5240532" vertical-offset="6088" max-vertical-offset="7065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Formatter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="357" column="0" selection-start="15564" selection-end="15564" vertical-scroll-proportion="0.0" vertical-offset="5355" max-vertical-offset="5445">
+        <state line="357" column="0" selection-start="16056" selection-end="16056" vertical-scroll-proportion="0.906639" vertical-offset="4481" max-vertical-offset="5445" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="39" selection-start="598" selection-end="598" vertical-scroll-proportion="0.39918116" vertical-offset="0" max-vertical-offset="977">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Image.java">
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/GridLayout.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="204" column="32" selection-start="5666" selection-end="5666" vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3945">
+        <state line="17" column="11" selection-start="471" selection-end="471" vertical-scroll-proportion="0.33333334" vertical-offset="35" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java">
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Map.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="53" selection-start="5516" selection-end="5516" vertical-scroll-proportion="0.0" vertical-offset="577" max-vertical-offset="7545">
+        <state line="17" column="6" selection-start="343" selection-end="343" vertical-scroll-proportion="0.3323124" vertical-offset="23" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maths/AbstractMatrix.java">
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/swing/table/AbstractTableModel.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4785">
+        <state line="29" column="16" selection-start="1180" selection-end="1180" vertical-scroll-proportion="0.56355286" vertical-offset="52" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/event/ActionListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="65" selection-start="214" selection-end="275" vertical-scroll-proportion="0.14285715" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/swing/table/TableCellRenderer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="164" selection-end="164" vertical-scroll-proportion="0.1266892" vertical-offset="0" max-vertical-offset="592">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/swing/table/DefaultTableCellRenderer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="102" selection-start="249" selection-end="249" vertical-scroll-proportion="-0.17736487" vertical-offset="180" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/swing/JFileChooser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="154" selection-end="154" vertical-scroll-proportion="-3.9780405" vertical-offset="2430" max-vertical-offset="3600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ImageChooser/ImagePreview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="13" selection-start="1836" selection-end="1836" vertical-scroll-proportion="0.17736487" vertical-offset="0" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ImageChooser/JImageChooser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="8" selection-start="437" selection-end="522" vertical-scroll-proportion="0.38860103" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/IterativEnergySolverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="220" selection-end="220" vertical-scroll-proportion="0.2787162" vertical-offset="0" max-vertical-offset="592">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/NumericTextField/NumericTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="13" selection-start="4168" selection-end="4168" vertical-scroll-proportion="0.31707317" vertical-offset="1995" max-vertical-offset="6405">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#801#823#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maths/ArrayMaths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="29" selection-start="146" selection-end="146" vertical-scroll-proportion="0.17073171" vertical-offset="0" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Maths/BandMatrixTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="402" column="43" selection-start="12777" selection-end="12777" vertical-scroll-proportion="1.1528455" vertical-offset="5246" max-vertical-offset="6225">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maths/Convolution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="316" max-vertical-offset="1650">
+        <state line="12" column="21" selection-start="295" selection-end="295" vertical-scroll-proportion="0.12195122" vertical-offset="0" max-vertical-offset="615">
+          <folding>
+            <element signature="docComment;class#Convolution#0" expanded="false" />
+            <element signature="method#Convolution#0;class#Convolution#0" expanded="false" />
+            <element signature="docComment;method#getGaussianKernel1D#0;class#Convolution#0" expanded="false" />
+            <element signature="method#getGaussianKernel1D#0;class#Convolution#0" expanded="false" />
+            <element signature="docComment;method#getGaussianKernel2D#0;class#Convolution#0" expanded="false" />
+            <element signature="method#getGaussianKernel2D#0;class#Convolution#0" expanded="false" />
+            <element signature="docComment;method#singlePixelConvolution#0;class#Convolution#0" expanded="false" />
+            <element signature="method#singlePixelConvolution#0;class#Convolution#0" expanded="false" />
+            <element signature="docComment;method#convolute#0;class#Convolution#0" expanded="false" />
+            <element signature="method#convolute#0;class#Convolution#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maths/BandMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="477" column="87" selection-start="15718" selection-end="15801" vertical-scroll-proportion="0.63414633" vertical-offset="945" max-vertical-offset="1665">
+          <folding>
+            <element signature="docComment;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#BandMatrix#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#BandMatrix#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#BandMatrix#1;class#BandMatrix#0" expanded="false" />
+            <element signature="method#BandMatrix#1;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#BandMatrix#2;class#BandMatrix#0" expanded="false" />
+            <element signature="method#BandMatrix#2;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#parse#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#parse#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#add#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#add#1;class#BandMatrix#0" expanded="false" />
+            <element signature="method#add#1;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#clone#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#clone#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#mult#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#mult#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#set#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#set#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#cols#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#cols#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#rows#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#rows#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#get#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#get#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#debugString#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#debugString#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#transpose#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#transpose#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#mult#1;class#BandMatrix#0" expanded="false" />
+            <element signature="method#mult#1;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#mult#2;class#BandMatrix#0" expanded="false" />
+            <element signature="method#mult#2;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#isPositiveSemiDefinit#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#isPositiveSemiDefinit#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#toFileSync#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#toFileSync#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#isSymmetric#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#isSymmetric#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#isPentadiagonale#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#isPentadiagonale#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#getIndex#0;class#BandMatrix#0" expanded="false" />
+            <element signature="docComment;method#extractBands#0;class#BandMatrix#0" expanded="false" />
+            <element signature="method#extractBands#0;class#BandMatrix#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maths/EquationSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="34" selection-start="5356" selection-end="5356" vertical-scroll-proportion="1.097561" vertical-offset="1335" max-vertical-offset="2685">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/HDRResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="21" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.8780488" vertical-offset="465" max-vertical-offset="1185">
+          <folding>
+            <element signature="e#1117#1118#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+            <element signature="e#1298#1299#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1424#1425#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1554#1555#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Image.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="306" column="44" selection-start="7922" selection-end="7922" vertical-scroll-proportion="0.3902439" vertical-offset="4260" max-vertical-offset="4875">
+          <folding>
+            <element signature="e#3642#3643#0" expanded="true" />
+            <element signature="e#3677#3678#0" expanded="true" />
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+            <element signature="e#4942#4943#0" expanded="true" />
+            <element signature="e#4966#4967#0" expanded="true" />
+            <element signature="e#5046#5047#0" expanded="true" />
+            <element signature="e#5070#5071#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/WeightMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="1" selection-start="46" selection-end="46" vertical-scroll-proportion="0.09756097" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maths/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="337" column="44" selection-start="8832" selection-end="8832" vertical-scroll-proportion="0.68292683" vertical-offset="4590" max-vertical-offset="5205">
+          <folding>
+            <element signature="e#7662#7663#0" expanded="true" />
+            <element signature="e#7704#7705#0" expanded="true" />
+            <element signature="e#7886#7887#0" expanded="true" />
+            <element signature="e#7918#7919#0" expanded="true" />
+            <element signature="e#8110#8762#0" expanded="true" />
+            <element signature="e#8751#8752#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Maths/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1605">
+        <state line="163" column="72" selection-start="4660" selection-end="4660" vertical-scroll-proportion="0.7804878" vertical-offset="1965" max-vertical-offset="2580">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/Maths/MatrixTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Maths/EquationSolverException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="440" column="48" selection-start="11134" selection-end="11134" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7005">
+        <state line="5" column="30" selection-start="150" selection-end="150" vertical-scroll-proportion="0.12195122" vertical-offset="0" max-vertical-offset="615">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maths/EquationSolverAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="76" selection-start="96" selection-end="96" vertical-scroll-proportion="0.07317073" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maths/AbstractMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="7" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.23577236" vertical-offset="635" max-vertical-offset="6705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/swing/SwingWorker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="37" selection-start="1010" selection-end="1013" vertical-scroll-proportion="-0.3704319" vertical-offset="553" max-vertical-offset="1425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solver/IHDRSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="38" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.4699187" vertical-offset="251" max-vertical-offset="1020">
+          <folding>
+            <element signature="docComment;class#IHDRSolver#0" expanded="false" />
+            <element signature="method#IHDRSolver#1;class#IHDRSolver#0" expanded="false" />
+            <element signature="method#Z#0;class#IHDRSolver#0" expanded="false" />
+            <element signature="docComment;method#t#0;class#IHDRSolver#0" expanded="false" />
+            <element signature="method#t#0;class#IHDRSolver#0" expanded="false" />
+            <element signature="docComment;method#w#0;class#IHDRSolver#0" expanded="false" />
+            <element signature="method#w#0;class#IHDRSolver#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solver/HDRSolverUpdateListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="28" selection-start="836" selection-end="848" vertical-scroll-proportion="0.58536583" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/EventListener/InvalidInputListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="74" selection-start="346" selection-end="346" vertical-scroll-proportion="0.31707317" vertical-offset="0" max-vertical-offset="615">
+          <folding>
+            <marker date="1386506316000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ImageChooser/ImageFileView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="13" selection-start="2100" selection-end="2100" vertical-scroll-proportion="0.34146342" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ImageTable/HighlightEmptyRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="28" selection-start="1667" selection-end="1667" vertical-scroll-proportion="0.8780488" vertical-offset="285" max-vertical-offset="1050">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#553#575#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ImageTable/ImageTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="32" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.68292683" vertical-offset="915" max-vertical-offset="1605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ImageTable/LeftDotTableRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="30" selection-start="913" selection-end="913" vertical-scroll-proportion="0.24390244" vertical-offset="165" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Plots/ImagePlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="4" selection-start="1558" selection-end="1558" vertical-scroll-proportion="-0.048780486" vertical-offset="900" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Plots/Plot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="38" selection-start="1872" selection-end="1872" vertical-scroll-proportion="0.29268292" vertical-offset="675" max-vertical-offset="1890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Plots/ToneMappingPlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="42" selection-start="2046" selection-end="2046" vertical-scroll-proportion="-0.68292683" vertical-offset="1275" max-vertical-offset="1890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/ReinhardMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="29" selection-start="1641" selection-end="1641" vertical-scroll-proportion="-0.12195122" vertical-offset="1005" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/ToneMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.09756097" vertical-offset="0" max-vertical-offset="1020">
+          <folding>
+            <element signature="method#ToneMapping#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#invalidateMapping#0;class#ToneMapping#0" expanded="false" />
+            <element signature="method#invalidateMapping#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#getValues#0;class#ToneMapping#0" expanded="false" />
+            <element signature="method#getValues#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#getValuesIntern#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#getVars#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#getVar#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#setVar#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#minMax#0;class#ToneMapping#0" expanded="false" />
+            <element signature="method#minMax#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#mapToRange#0;class#ToneMapping#0" expanded="false" />
+            <element signature="method#mapToRange#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#mapToRange#1;class#ToneMapping#0" expanded="false" />
+            <element signature="method#mapToRange#1;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#mapToShort#0;class#ToneMapping#0" expanded="false" />
+            <element signature="method#mapToShort#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#getImage#0;class#ToneMapping#0" expanded="false" />
+            <element signature="method#getImage#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#max#0;class#ToneMapping#0" expanded="false" />
+            <element signature="method#max#0;class#ToneMapping#0" expanded="false" />
+            <element signature="docComment;method#min#0;class#ToneMapping#0" expanded="false" />
+            <element signature="method#min#0;class#ToneMapping#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ToneMappers/LocalReinhardMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="48" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Plots/ScatterPlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="8" selection-start="2559" selection-end="2559" vertical-scroll-proportion="0.0" vertical-offset="1223" max-vertical-offset="3405">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5706#5707#0" expanded="true" />
+            <element signature="e#5741#5742#0" expanded="true" />
+            <element signature="e#5780#5781#0" expanded="true" />
+            <element signature="e#5815#5816#0" expanded="true" />
+            <element signature="e#5871#5872#0" expanded="true" />
+            <element signature="e#5919#5920#0" expanded="true" />
+            <element signature="e#5975#5976#0" expanded="true" />
+            <element signature="e#6023#6024#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/Model/ImageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="18" selection-start="4603" selection-end="4603" vertical-scroll-proportion="0.0" vertical-offset="2215" max-vertical-offset="2895">
+        <state line="137" column="22" selection-start="3532" selection-end="3532" vertical-scroll-proportion="0.0" vertical-offset="1845" max-vertical-offset="2460">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solver/IterativeEnergySolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="555" column="19" selection-start="20118" selection-end="20118" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="6000">
+          <folding>
+            <element signature="docComment;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="docComment;method#IterativeEnergySolver#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="method#IterativeEnergySolver#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="docComment;method#run#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="method#run#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="method#toString#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="docComment;method#w#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="method#w#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="docComment;method#initPhiData#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="method#initPhiData#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="docComment;method#initDerivativeMatrices#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="method#initDerivativeMatrices#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="docComment;method#initWeightMatrix#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="method#initWeightMatrix#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="docComment;method#generateOverallHistogramm#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="method#generateOverallHistogramm#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="docComment;method#initLnT#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="method#initLnT#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="docComment;method#w2#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="method#w2#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="method#calculateG#0;class#IterativeEnergySolver#0" expanded="false" />
+            <element signature="e#10384#10466#0" expanded="false" />
+            <element signature="method#calculateEnergy#0;class#IterativeEnergySolver#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/GUIFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="51" selection-start="3922" selection-end="3922" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="6795">
-          <folding />
+        <state line="52" column="4" selection-start="1615" selection-end="1615" vertical-scroll-proportion="-7.5" vertical-offset="585" max-vertical-offset="7890">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2095#2101#0" expanded="true" />
+            <element signature="e#3663#3678#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Ctrl/ControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="8" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="990">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ctrl/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="128" selection-start="1576" selection-end="1661" vertical-scroll-proportion="0.17190775" vertical-offset="556" max-vertical-offset="1515">
+        <state line="90" column="16" selection-start="3081" selection-end="3081" vertical-scroll-proportion="-0.13298792" vertical-offset="1112" max-vertical-offset="3045">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
   </component>
@@ -1507,10 +1785,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>HDR:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1559,6 +1839,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -6,14 +6,18 @@
 %}
 \chapter{Realisierung}
 \label{chap:impl}
-Neben der mathematischen Ausarbeitung (siehe \autoref{chap:maths}) beschäftigt sich diese Arbeit auch mit der eigentlichen Implementierung des erarbeiteten Verfahrens. In diesem Kapitel werden die Anforderungen an die Software sowie das Vorgehen bei der Wahl der Programmiersprache beschrieben. Anschließend werden die Installation und Bedienung kurz erklärt. Es folgt eine Auflistung der externen Bibliotheken die zum Einsatz kamen und eine Beschreibung der Architektur der Software.
+Neben der mathematischen Ausarbeitung (siehe \autoref{chap:maths}) beschäftigt sich die vorliegende Arbeit auch mit der eigentlichen Realisierung des erarbeiteten Verfahrens. In diesem Kapitel werden die Anforderungen an die Software sowie das Vorgehen bei der Wahl der Programmiersprache beschrieben. Anschließend folgt eine Beschreibung der Software mittels eines Prototypen sowie der Architekturentwurf. Abschließend werden die Installation und Bedienung kurz erklärt.
+
+Die entwickelte Software sowie die Dokumentation zu dieser befinden sich auf der beiliegenden CD-Rom.
 
 %------------------------------------------------------------------------------------------------------------------------------------
 \section{Anforderungen}
-Die Anforderungen an die Realisierung der Arbeit lassen sich zum einen aus der Aufgabenbeschreibung der Bachelor-Arbeit entnehmen und sind zum anderen während der Bearbeitung des theoretischen Ansatzes entstanden. Diese lassen sich in funktionale und nichtfunktionale Anforderungen gliedern  \cite[S. 369f]{ludewig}.
+Die Anforderungen an die Realisierung lassen sich zum einen aus der Aufgabenbeschreibung der Bachelor-Arbeit entnehmen und sind zum anderen während der Bearbeitung des theoretischen Ansatzes entstanden. Diese lassen sich in funktionale und nichtfunktionale Anforderungen gliedern  \cite[S. 369f]{ludewig}.
 \subsection{Funktionale Anforderungen}
 \label{fa}
 \begin{description}
+\item[Berechnung eines HDR-Bildes:] Mit der Software soll es möglich sein, aus einer Belichtungsserie ein \gls{HDR}-Bild zu erstellen. Dazu soll das Verfahren den Algorithmus von Debevec und Malik verwenden.
+
 \item[Evaluation der Daten:] Die entstehenden Daten sollen evaluiert und grafisch dargestellt werden. Dazu muss die Software in der Lage sein folgende Aufgaben zu übernehmen: 
     \begin{itemize}
         \item Anpassung der Parameter für die Berechnung des \gls{HDR}-Bildes
@@ -120,7 +124,7 @@ Für die Implementierung des Programms wurde eine Analyse verschiedener Programm
           \\
 	\bottomrule
     \end{tabular}
-    \caption{Vergleich der Programmiersprachen mit den Anforderungen. (\checkmark: \textit{out of the box}, (\checkmark): zusätzliche Bibliotheke oder Erweiterung benötigt, $\times$ keine Unterstützung)}
+    \caption{\textit{Programmiersprachen im Vergleich} --- \checkmark: \textit{out of the box}, (\checkmark): zusätzliche Bibliothek oder Erweiterung benötigt, $\times$: keine Unterstützung}
     \label{tab:languages}
   \end{center}
 \end{table}
@@ -129,64 +133,28 @@ Für die Implementierung des Programms wurde eine Analyse verschiedener Programm
 Aufgrund meiner in universitären Projekte erlangten Vorkenntnissen in \texttt{Java} und des besseren Abschneidens im Vergleich mit den anderen hier genannten Sprachen, wird die Software in \texttt{Java} realisiert.
 
 
-\section{Programmvorstellung und Benutzeroberfläche}
-
-Für die Realisierung der \gls{GUI} und der grafische Evaluation der Ergebnisse wurde in der vorliegende Arbeit eine \texttt{Swing}-Oberfläche (siehe \autoref{fig:tool}) implementiert, die sowohl die Eingabe der Parameter und Daten als auch die Ausgabe der verschiedenen Diagramme und Bilder ermöglichen soll. In der nachfolgenden Beschreibung sind die umgesetzten Anforderungen zu erkennen.
-
-Über den Button \enquote{Bilder wählen} können die Eingabebilder gewählt werden. Im dafür entwickelten Datei-Fenster steht dem Benutzer eine Vorschau der Bilder zur Verfügung. Aus Gründen der Robustheit (siehe \autoref{nfa}) können nur Bilddateien ausgewählt werden.  Eine Registrierung der Bilder wird nicht unterstützt. Dies bedeutet, dass die Bilder vorab von Hand oder mit einem Algorithmus registriert werden müssen. Der Nutzer erhält diesbezüglich einen Hinweis bei der Auswahl der Bilder.
-
-In der Tabelle im unteren Bereich des Fensters werden die Bilder mit ihren Belichtungszeiten aufgeführt. Falls die Bibliothek \texttt{metadate-extractor} die Belichtungszeiten nicht auslesen konnte müssen diese händisch eingegeben werden. Auch hierzu erhält der Benutzer ggf. einen optischen Hinweis.
-
-Die Verwendung der Komponente \texttt{NumericTextField} (siehe \autoref{externals}) bei der Eingabe der Parameter stellt sicher, dass der Benutzer nur sinnvolle Daten angibt. Bei Falscheingaben ertönt ein akustisches Warnsignal. Die \enquote{Start} Schaltfläche wird bei fehlenden oder fehlerhaften Angaben deaktiviert. Die Eingabemöglichkeiten werden deaktiviert sobald der Berechnungsprozess gestartet wird. Dies verhindert ungültige Benutzerinteraktionen. Das Anwendungsfenster verfügt zudem über eine Fortschrittsanzeige im unteren Bereich. Detaillierte Informationen über den Fortgang der Berechnung können im \texttt{LOG}-Reiter der Anwendung eingesehen werden.
-
-\subsection{Installation}
-
-Die Anwendung kann unter \url{https://github.com/sebastianzillessen/hdr-generator} heruntergeladen werden. Dazu wird ein installiertes \gls{JRE} der Version 6 oder höher benötigt (siehe \url{http://www.java.com/de/download/}). Im Unterordner \texttt{bin} befindet sich eine ausführbare Version des Programms als \texttt{.jar} Datei. 
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.5\textwidth]{Tool}
-    \caption{Die Benutzereingabe für die Erzeugung der HDR-Bilder ist absichtlich schlicht und einfach gehalten.}
-    \label{fig:tool}
-  \end{center}
-\end{figure}
-
-
-\subsection{Erste Schritte}
-Nach dem Öffnen der Anwendung erscheint das Hauptfenster (siehe \autoref{fig:tool}). Folgende Schritte sind notwendig um ein \gls{HDR}-Bild zu erzeugen:
-
-\begin{enumerate}
-    \item Wahl der Belichtungsserie über die Schaltfläche \enquote{Bilder wählen}.
-    \item Eingabe der Belichtungszeiten in der Tabelle (falls notwendig).
-    \item Veränderung der Parameter für die Bilderzeugung (falls gewünscht). Dazu gehören:
-    \begin{itemize}
-        \item Gewichtung der Glattheitsforderung $\lambda$ von $\b g$
-        \item Monotonie-Forderung durch die Eingabe des Gewichtes $\mu$
-        \item Anzahl der Haupt- und Inneniterationen (siehe \autoref{alg:alternierend:extended})
-        \item Aktivierung des Räumlichen Glattheitsterms 
-        \item Aktivierung der subquadratischen Bestrafungsterme für $\b g$ und $\b E$, sowie für den räumlichen Glattheitsterm
-        \item Bildstörungen (\gls{SaltAndPepperNoise} oder additives Gauss-Rauschen) auf den Eingabebildern (zu Testzwecken)
-        \item Änderung des Prefix für den Export von Bildern
-    \end{itemize}
-
-    \item Bestätigung der Generierung mittels der Schaltfläche \enquote{Start}.
-\end{enumerate}
-
-Dadurch wird das \gls{HDR}-Bild erzeugt. Der Fortschritt wird im unteren Bereich dargestellt. Die Ausgabe (auch der Zwischenresultate) erfolgt über die verschiedenen Reiter des Fensters. Bei der Darstellung des \gls{HDR}-Bilds mit den verschiedenen \gls{Tone-Mapping}-Operatoren können die Parameter in der Oberfläche verändert werden (siehe \autoref{fig:app:tone}). Der Export der generierten Bilder und Kurven erfolgt über die Schaltfläche \enquote{Speichern}.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.5\textwidth]{tonemapped}
-    \caption{Vorschau des Tone-Mapped Resultats mit der Möglichkeit der Veränderung der Variablen für diesen Tone-Mapper (globaler \gls{Tone-Mapping}-Operator von Reinhard).}
-    \label{fig:app:tone}
-  \end{center}
-\end{figure}
-
-
-
-
 %------------------------------------------------------------------------------------------------------------------------------------
+\section{Prototyping}
+\label{sec:prototyp}
+Zunächst wurde unter Berücksichtigung der oben genannten funktionalen und nichtfunktionalen Anforderungen ein Prototyp der Benutzeroberfläche erstellt. Ziel dieses Prototypen ist es, die Anforderungen in der Benutzeroberfläche zu visualisieren. Die drei Ansichten des Prototyps sind in \autoref{fig:proto:1} dargestellt.
 
+Im Startfenster werden zunächst die Eingabedateien ausgewählt (1) und in einer Tabelle aufgelistet (2). Die Belichtungszeiten der Bilder werden nach Möglichkeit automatisiert aus den Dateien ausgelesen, können aber auch von Hand modifiziert werden. Die Parameter der Berechnung können über Eingabefelder (3) und Auswahlelemente modifiziert werden. Zu Testzwecken kann außerdem Rauschen auf die Eingabedateien gelegt werden. Sollte eine Eingabe nicht valide sein, so wird der Benutzer durch einen optischen Hinweis (4) darauf hingewiesen. Sobald alle Eingaben getätigt wurden, kann die Generierung des Bildes gestartet werden (5).
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{prototyp/Prototyp}
+    \hspace{10pt}
+	\includegraphics[width=0.3\textwidth]{prototyp/status}
+    \hspace{10pt}
+    \includegraphics[width=0.3\textwidth]{prototyp/tonemapped}
+    \caption{\textit{Prototyp der Benutzeroberfläche} --- \textbf{links:} Startfenster der Anwendung, \textbf{mitte:} Zwischenergebnisse der Antwortkurve und Fortschrittsanzeige, \textbf{rechts:} Resultat mit angewandtem \gls{Tone-Mapping}-Operator}
+    \label{fig:proto:1}
+  \end{center}
+\end{figure}
+
+Während der Berechnung der Antwortkurve und des \gls{HDR}-Bildes kann der Fortschritt (6) festgestellt werden. Außerdem wird dem Anwender die aktuell errechnete Antwortkurve grafisch dargestellt (7).
+
+Sobald das \gls{HDR}-Bild erstellt wurde wird es dargestellt (8). Der Anwender kann die vorhandenen Parameter des \gls{Tone-Mapping}-Operators verändern (9). Auch hier werden die Eingaben des Benutzers validiert und Fehler ggf. hervorgehoben. Die Veränderungen an den Parametern werden separat bestätigt (10) und das Ergebnis kann als \gls{HDR}-Bild exportiert werden (11).
 
 
 
@@ -228,7 +196,7 @@ Darin enthalten sind auch die verschiedenen \texttt{ToneMappers}, die zur Darste
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.6\textwidth]{architecture/components}
-    \caption{Die Architektur der Software auf Paketebene. Die fünf Hauptpakete sind \texttt{Solver}, \texttt{View},\texttt{Ctrl}, \texttt{Model}, \texttt{Maths} (hier fett dargestellt).  Die übrigen fünf Pakete (\texttt{ToneMappers}, \texttt{ImageChooser}, \texttt{ImageTable}, \texttt{Plots} und \texttt{NumericTextField} sind im Paket \texttt{View} enthalten und werden hier für einen besseren Überblick ebenfalls dargestellt.}
+    \caption{\textit{Architektur der Software} --- Die fünf Pakete sind \texttt{Solver}, \texttt{View},\texttt{Ctrl}, \texttt{Model}, \texttt{Maths} (hier fett dargestellt).  Die übrigen Pakete (\texttt{ToneMappers}, \texttt{ImageChooser}, \texttt{ImageTable}, \texttt{Plots} und \texttt{NumericTextField} sind im Paket \texttt{View} enthalten}
     \label{fig:arch:components}
   \end{center}
 \end{figure}
@@ -237,7 +205,7 @@ Darin enthalten sind auch die verschiedenen \texttt{ToneMappers}, die zur Darste
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.8\textwidth]{architecture/view}
-    \caption{Das \texttt{View}-Paket im Detail. Das Hauptfenster \texttt{GUIFrame} stellt die zentrale Klasse für die Darstellung dar und importiert dazu die verschiedenen Komponenten. Die \texttt{Plots} und die \texttt{ToneMappers} gehören ebenfalls zu diesem Paket.}
+    \caption{\textit{\texttt{View}-Paket im Detail} --- Das Hauptfenster \texttt{GUIFrame} stellt die zentrale Klasse für die Darstellung dar und importiert dazu die verschiedenen Komponenten (wie z.B. \texttt{Plots} und \texttt{ToneMappers})}
     \label{fig:arch:view}
   \end{center}
 \end{figure}
@@ -247,20 +215,26 @@ Alle rein mathematischen Aufgaben (wie z.B. die LU-Zerlegung oder das SOR-Verfah
 Die abstrakte Klasse \textit{\texttt{AbstractMatrix}} stellt die Basisfunktionalität im Umgang mit Matrizen zur Verfügung und kennt die beiden Implementierungen \texttt{BandMatrix} und \texttt{Matrix}. Erstere ist eine spezielle Repräsentation von dünnbesetzten Diagonalmatrizen mit beliebig vielen Bändern. Die hier häufig beschriebenen pentadiagonal Matrizen werden mit dieser Implementierung dargestellt. Der Vorteil dieser ist, dass auch große sehr dünn besetzte Matrizen abgespeichert werden können (in einem zweidimensionalen Array würden diese zu viel Speicherplatz verbrauchen). Die \texttt{Matrix} ist die zweite Implementierung der Matrizen und arbeitet intern mit einem zweidimensionalen Array.
 
 Die Klasse \texttt{EquationSolver} (Paket \texttt{Maths}) übernimmt das Lösen eines \gls{LGS}. Das \gls{SOR}- und das LU-Verfahren werden unterstützt. Die beiden Hilfsklassen \texttt{Convolution} und \texttt{ArrayMaths} bieten weitere Berechnungsfunktionalitäten, die z.B. in den \gls{Tone-Mapping}-Verfahren verwendet werden. 
+
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.9\textwidth]{architecture/maths}
-    \caption{Überblick über das Paket \texttt{Maths}. Auf die Darstellung der Assoziationen zu den restlichen Klassen und Paketen wurde aus Gründen der Übersichtlichkeit verzichtet.}
+    \caption{\textit{Paket \texttt{Maths}} --- Mathematische Bibliothek für das Lösen der Gleichungssysteme und die Repräsentationen für Matrizen und Vektoren (auf die Darstellung der Assoziationen zu anderen Klassen wurde verzichtet)}
     \label{fig:arch:matrix}
   \end{center}
 \end{figure}
 
+
+%------------------------------------------------------------------------------------------------------------------------------------
+
+
 \subsection{Sequenzdiagramm}
 Das Programm läuft sehr vielschichtig ab. Als grundsätzlicher Informationsfluss dient der Aufbau wie er in \autoref{fig:arch:sequence} beschrieben. Wichtig dabei ist, dass die grafische Benutzeroberfläche nicht von der Berechnungsdauer des Algorithmus blockiert wird, da so die Zwischenresultate des Algorithmus bereits analysiert werden können und der Prozess ggf. früher beendet werden kann um Parameter zu verändern. Deshalb bestehen besonders zwischen \texttt{Controller} und \texttt{GUIFrame} asynchrone Methodenaufrufe. Das Sequenzdiagramm ist nur beispielhaft zu verstehen. Es wurden einige Aufrufe und Zwischenschritte vereinfacht oder weggelassen.
+
 \begin{figure}
   \begin{center}
     \includegraphics[width=\textwidth]{architecture/sequence_example}
-    \caption{Der grundsätzliche Ablauf der Berechnung des HDR-Bildes und der Antwortkurve und der dabei beteiligten Komponenten sowie deren Interaktion. Zwischenschritte und tiefer verschachtelte Aufrufe werden nicht dargestellt. }
+    \caption{\textit{Sequenzdiagramm} --- Grundsätzlicher Ablauf der Berechnung eines HDR-Bildes und der Antwortkurve (Zwischenschritte und tiefer verschachtelte Aufrufe werden nicht dargestellt) }
     \label{fig:arch:sequence}
   \end{center}
 \end{figure}
@@ -281,6 +255,53 @@ Die Bibliothek \texttt{metadata-extractor} wird verwendet um automatisiert aus B
 Der verwendete \texttt{JFileChooser} zur Selektion der Bilddateien ist inspiriert von dem vorhandenen Tutorial bei Oracle. Er ist in der Lage eine kleine Vorschau der Bilder anzuzeigen.
 \end{description}
 
-\section{Herausforderungen während der Programmierung}
 
-\texttt{T.B.D, ggf. rauslassen}
+%------------------------------------------------------------------------------------------------------------------------------------
+
+\section{Programmvorstellung}
+
+Für die Realisierung der \gls{GUI} und der grafische Evaluation der Ergebnisse wurde in der vorliegende Arbeit eine \texttt{Swing}-Oberfläche (siehe \autoref{fig:tool}) implementiert, die sowohl die Eingabe der Parameter und Daten als auch die Ausgabe der verschiedenen Diagramme und Bilder ermöglichen soll. Als Vorlage wurde der Prototyp aus \autoref{sec:prototyp} verwendet.
+
+Für die Auswahl der Bilddateien wurde ein Datei-Auswahl-Fenster mit Vorschau der Bilder entwickelt. Aus Gründen der Robustheit (siehe \autoref{nfa}) können nur Bilddateien ausgewählt werden.  Eine Registrierung der Bilder wird nicht unterstützt. Dies bedeutet, dass die Bilder vorab von Hand oder mit einem Algorithmus registriert werden müssen. Der Nutzer erhält diesbezüglich einen Hinweis bei der Auswahl der Bilder.
+
+In der Tabelle werden die Bilder mit ihren Belichtungszeiten aufgeführt. Falls die Bibliothek \texttt{metadate-extractor} die Belichtungszeiten nicht auslesen konnte müssen diese händisch eingegeben werden. Auch hierzu erhält der Benutzer ggf. einen optischen Hinweis.
+
+Die Verwendung der Komponente \texttt{NumericTextField} (siehe \autoref{externals}) bei der Eingabe der Parameter stellt sicher, dass der Benutzer nur sinnvolle Daten angibt. Bei Falscheingaben ertönt ein akustisches Warnsignal und das Feld wird hervorgehoben. Die \enquote{Start} Schaltfläche wird bei fehlenden oder fehlerhaften Angaben deaktiviert. Die Eingabemöglichkeiten werden deaktiviert sobald der Berechnungsprozess gestartet wird. Dies verhindert ungültige Benutzerinteraktionen. Detaillierte Informationen über den Fortgang der Berechnung können im \texttt{LOG}-Reiter der Anwendung eingesehen werden.
+
+\subsection{Installation}
+
+Die Anwendung kann unter \url{https://github.com/sebastianzillessen/hdr-generator} heruntergeladen werden. Dazu wird ein installiertes \gls{JRE} der Version 6 oder höher benötigt (siehe \url{http://www.java.com/de/download/}). Im Unterordner \texttt{bin} befindet sich eine ausführbare Version des Programms als \texttt{.jar} Datei.  
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{Tool}\hfill
+    \includegraphics[width=0.45\textwidth]{tonemapped}
+    \caption{\textit{Benutzeroberfläche} --- \textbf{links}: Die Benutzereingabe für die Erzeugung der HDR-Bilder ist absichtlich schlicht und einfach gehalten. Vorlage dafür ist der Prototyp (siehe \autoref{sec:prototyp}). \textbf{rechts}: Vorschau des Tone-Mapped Resultats mit der Möglichkeit der Veränderung der Variablen für diesen Tone-Mapper (lokaler \gls{Tone-Mapping}-Operator von Reinhard)}
+    \label{fig:tool}
+    \label{fig:app:tone}
+  \end{center}
+\end{figure}
+
+
+\subsection{Erste Schritte}
+Nach dem Öffnen der Anwendung erscheint das Hauptfenster (siehe \autoref{fig:tool}, links). Folgende Schritte sind notwendig um ein \gls{HDR}-Bild zu erzeugen:
+
+\begin{enumerate}
+    \item Wahl der Belichtungsserie über die Schaltfläche \enquote{Bilder wählen}.
+    \item Eingabe der Belichtungszeiten in der Tabelle (falls notwendig).
+    \item Veränderung der Parameter für die Bilderzeugung (falls gewünscht). Dazu gehören:
+    \begin{itemize}
+        \item Gewichtung der Glattheitsforderung $\lambda$ von $\b g$
+        \item Monotonie-Forderung durch die Eingabe des Gewichtes $\mu$
+        \item Anzahl der Haupt- und Inneniterationen (siehe \autoref{alg:alternierend:extended})
+        \item Aktivierung des Räumlichen Glattheitsterms 
+        \item Aktivierung der subquadratischen Bestrafungsterme für $\b g$ und $\b E$, sowie für den räumlichen Glattheitsterm
+        \item Bildstörungen (\gls{SaltAndPepperNoise} oder additives Gauss-Rauschen) auf den Eingabebildern (zu Testzwecken)
+        \item Änderung des Prefix für den Export von Bildern
+    \end{itemize}
+
+    \item Bestätigung der Generierung mittels der Schaltfläche \enquote{Start}.
+\end{enumerate}
+
+Dadurch wird das \gls{HDR}-Bild erzeugt. Der Fortschritt wird im unteren Bereich dargestellt. Die Ausgabe (auch der Zwischenresultate) erfolgt über die verschiedenen Reiter des Fensters. Bei der Darstellung des \gls{HDR}-Bilds mit den verschiedenen \gls{Tone-Mapping}-Operatoren können die Parameter in der Oberfläche verändert werden (siehe \autoref{fig:app:tone}, rechts). Der Export der generierten Bilder und Kurven erfolgt über die Schaltfläche \enquote{Speichern}.
+

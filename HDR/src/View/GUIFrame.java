@@ -3,7 +3,9 @@ package View;
 import Ctrl.Controller;
 import Model.Image;
 import Model.WeightMode;
+import View.EventListener.InvalidInputListener;
 import View.ImageChooser.JImageChooser;
+import View.ImageTable.HighlightEmptyRenderer;
 import View.ImageTable.ImageTableModel;
 import View.ImageTable.LeftDotTableRenderer;
 import View.NumericTextField.NumericTextField;
@@ -29,7 +31,7 @@ import java.util.List;
  * Time: 16:42
  * To change this template use File | Settings | File Templates.
  */
-public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
+public class GUIFrame extends JFrame implements ActionListener, Log, Runnable, InvalidInputListener {
 
     // UI Elements
     private JTabbedPane tabs = new JTabbedPane();
@@ -48,7 +50,6 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
 
     private final DecimalFormat format = new DecimalFormat("###.###");
     private NumericTextField[] nums = new NumericTextField[5];
-    private Controller ctrl = Controller.getInstance();
 
     // Parameters
     private double lambda = 50;
@@ -65,6 +66,13 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
     private List<Plot> plots = new ArrayList<Plot>();
     private String outputPrefix = "output_" + new Date().toString();
     private JImageChooser chooser;
+    private JButton btnChoose;
+    private boolean running = false;
+
+    @Override
+    public void statusUpdate(boolean invalid) {
+        btnStart.setEnabled(!running && !invalid);
+    }
 
     private enum ACTIONS {
         CHOOSE_FILE,
@@ -100,6 +108,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
                 break;
             case START:
                 if (updatePrefix()) {
+                    setEnableRecursive(ctrlPnl, false);
                     this.outputPrefix = prefix.getText();
                     Map<String, Float> img = new HashMap<String, Float>();
                     for (int i = 0; i < tableModel.getRowCount(); i++) {
@@ -110,13 +119,25 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
                         append("Images read (" + (saltAndPepperNoise ? "SaltNPepperNoise" : "") + " " + (devStd > 0 ? "GaussianNoise: " + devStd : "") + ")");
                         Controller.getInstance().solve(lambda, iteration, mu, robustnessDataG, robustnessSmoothnessE, weightning, alpha);
                     } catch (Exception e) {
-                        append("Failure in Reading images: \n" + e.toString());
+                        alert("Failure in Reading images: \n" + e.getMessage());
                         e.printStackTrace();
                     }
+                    running = true;
+                    btnStart.setEnabled(false);
                 }
                 break;
             default:
                 throw new IllegalArgumentException("Could not cast " + actionEvent.getActionCommand() + " to a ACTION.");
+        }
+    }
+
+    private void setEnableRecursive(Container container, boolean enable) {
+        Component[] components = container.getComponents();
+        for (Component component : components) {
+            component.setEnabled(enable);
+            if (component instanceof Container) {
+                setEnableRecursive((Container) component, enable);
+            }
         }
     }
 
@@ -128,18 +149,6 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
      */
     public GUIFrame(String name) {
         super(name);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        // add Ui Components
-        tabs.setPreferredSize(new Dimension(700, 700));
-        add(tabs, BorderLayout.CENTER);
-        buildCtrlPanel();
-        addLog();
-        addProgressBar();
-
-        addMenuBar();
-
-        loadDefaultPictures();
         SwingUtilities.invokeLater(this);
 
     }
@@ -150,7 +159,14 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         menuBar = new JMenuBar();
         menu = new JMenu("Datei");
         menuBar.add(menu);
-        menu.add(new JMenuItem("Schließen"));
+        JMenuItem close = new JMenuItem("Schließen");
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                System.exit(0);
+            }
+        });
+        menu.add(close);
         menu.add(new JMenuItem("Information"));
         this.setJMenuBar(menuBar);
     }
@@ -160,8 +176,23 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
      */
     @Override
     public void run() {
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        // add Ui Components
+        tabs.setPreferredSize(new Dimension(700, 700));
+        add(tabs, BorderLayout.CENTER);
+        buildCtrlPanel();
+        addLog();
+        addProgressBar();
+        addMenuBar();
+        loadDefaultPictures();
         pack();
         setVisible(true);
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+        }
+
     }
 
     /**
@@ -212,6 +243,16 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
     @Override
     public void write(final Object s) {
         log.append(s.toString());
+    }
+
+    /**
+     * Displays an alert which is normally used when an error occurs.
+     *
+     * @param s the message to display.
+     */
+    @Override
+    public void alert(String s) {
+        JOptionPane.showMessageDialog(this, s);
     }
 
 
@@ -281,40 +322,80 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
     }
 
     private void buildCtrlPanel() {
-        ctrlPnl = new JPanel(new BorderLayout());
-        JPanel btns = new JPanel(new GridLayout(11, 1));
-        JButton btnChoose = new JButton("Bilder wählen");
+
+
+        ctrlPnl = new JPanel(new BorderLayout(5, 5));
+        Font bigFont = ctrlPnl.getFont().deriveFont(18.0f);
+        /** Select Button **/
+        JPanel top = new JPanel(new BorderLayout(5, 5));
+        btnChoose = new JButton("Bilder wählen");
         btnChoose.addActionListener(this);
         btnChoose.setActionCommand(String.valueOf(ACTIONS.CHOOSE_FILE));
-        btns.add(btnChoose);
+        top.add(btnChoose, BorderLayout.WEST);
+        ctrlPnl.add(top, BorderLayout.NORTH);
 
+        /** Start Button **/
+        JPanel bottom = new JPanel(new BorderLayout(5, 5));
+        bottom.add(new JSeparator(SwingConstants.HORIZONTAL), BorderLayout.NORTH);
+        btnStart = new JButton("Start");
+
+        btnStart.setEnabled(false);
+        btnStart.setActionCommand(String.valueOf(ACTIONS.START));
+        btnStart.addActionListener(this);
+        bottom.add(btnStart, BorderLayout.EAST);
+
+
+        ctrlPnl.add(bottom, BorderLayout.SOUTH);
+
+
+        JPanel center = new JPanel(new BorderLayout(5, 5));
+
+
+        /** table**/
         tableModel = new ImageTableModel();
         table = new JTable(tableModel);
         LeftDotTableRenderer leftDot = new LeftDotTableRenderer();
         table.getColumnModel().getColumn(0).setCellRenderer(leftDot);
-        ctrlPnl.add(new JScrollPane(table), BorderLayout.SOUTH);
+
+        HighlightEmptyRenderer highlightEmptyRenderer = new HighlightEmptyRenderer();
+        highlightEmptyRenderer.addInvalidInputListener(this);
+        table.setDefaultRenderer(Object.class, highlightEmptyRenderer);
+        JScrollPane jScrollPane = new JScrollPane(table);
+        jScrollPane.setPreferredSize(new Dimension(600, 200));
 
 
-        btnStart = new JButton("Start");
-        btnStart.setEnabled(false);
-        btnStart.setActionCommand(String.valueOf(ACTIONS.START));
-        btnStart.addActionListener(this);
-        btns.add(btnStart);
+        /** parameter inputs*/
+        JPanel btns = new JPanel(new GridLayout(13, 1, 5, 0));
 
 
+        addHeadline(bigFont, btns, "Parameter");
         buildLambdaSlider(btns);
         buildMuSlider(btns);
         buildIterationSlider(btns);
         buildRobustnessSelector(btns);
         buildOutputPrefix(btns);
-        buildWightPanel(btns);
+        //buildWightPanel(btns);
         buildAlphaSlider(btns);
+        btns.add(new JSeparator(SwingConstants.HORIZONTAL));
+        btns.add(new JSeparator(SwingConstants.HORIZONTAL));
+        addHeadline(bigFont, btns, "Rauschen");
+        buildNoise(btns);
 
-        ctrlPnl.add(btns, BorderLayout.CENTER);
 
+        center.add(jScrollPane, BorderLayout.NORTH);
+        center.add(btns, BorderLayout.CENTER);
+
+        ctrlPnl.add(center, BorderLayout.CENTER);
 
         tabs.addTab("Control", ctrlPnl);
 
+    }
+
+    private void addHeadline(Font bigFont, JPanel btns, String text) {
+        JLabel parameter = new JLabel(text);
+        parameter.setFont(bigFont);
+        btns.add(parameter);
+        btns.add(new JLabel());
     }
 
     private void addLog() {
@@ -376,6 +457,10 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         });
         btns.add(check3);
 
+
+    }
+
+    private void buildNoise(JPanel btns) {
         btns.add(new JLabel("Salt&Pepper (4%)"));
         JCheckBox saltNPepper = new JCheckBox("aktivieren");
         saltNPepper.setSelected(this.robustnessSmoothnessE);
@@ -399,6 +484,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         btns.add(l);
         inputDevStd = new NumericTextField(5, format);
         inputDevStd.setValue(devStd);
+        inputDevStd.addInvalidInputListener(this);
         btns.add(inputDevStd);
     }
 
@@ -408,6 +494,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         l.setToolTipText(tool);
         btns.add(l);
         inputIterations = new NumericTextField(5, format);
+        inputIterations.addInvalidInputListener(this);
         inputIterations.setValue(iteration);
         btns.add(inputIterations);
     }
@@ -419,6 +506,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         btns.add(l);
 
         lambdaInput = new NumericTextField(5, format);
+        lambdaInput.addInvalidInputListener(this);
         lambdaInput.setValue(lambda);
         btns.add(lambdaInput);
     }
@@ -429,6 +517,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         l.setToolTipText(tool);
         btns.add(l);
         inputMu = new NumericTextField(5, format);
+        inputMu.addInvalidInputListener(this);
         inputMu.setValue(mu);
         btns.add(inputMu);
     }
@@ -439,6 +528,7 @@ public class GUIFrame extends JFrame implements ActionListener, Log, Runnable {
         l.setToolTipText(tool);
         btns.add(l);
         inputAlpha = new NumericTextField(5, format);
+        inputAlpha.addInvalidInputListener(this);
         inputAlpha.setValue(alpha);
         btns.add(inputAlpha);
     }

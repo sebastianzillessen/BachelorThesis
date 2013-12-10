@@ -5,11 +5,9 @@ import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sebastianzillessen
- * Date: 14.07.13
- * Time: 14:03
- * To change this template use File | Settings | File Templates.
+ * Renderer for file names with dots as ellipsis.
+ *
+ * @author sebastianzillessen
  */
 public class LeftDotTableRenderer extends DefaultTableCellRenderer {
 

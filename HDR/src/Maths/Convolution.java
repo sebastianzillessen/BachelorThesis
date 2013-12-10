@@ -6,7 +6,7 @@ package Maths;
  * @author: Simon Horne, Sebastian Zillessen
  * @see: http://www.inf.ufpr.br/danielw/pos/ci724/20102/HIPR2/flatjavasrc/Convolution.java
  */
-public class Convolution {
+public class /**/Convolution {
     private Convolution() {
 
     }

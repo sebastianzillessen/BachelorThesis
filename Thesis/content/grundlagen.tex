@@ -6,33 +6,29 @@
 \label{chap:hdr}
 
 
-In den vergangenen Jahren hat die digitale Fotografie zu einem Umdenken und einer Neuschaffung von Kommunikationskanälen geführt. Im analogen Zeitalter war Fotografie in erster Linie ein autobiographisches Medium.  Sie hatten u.a. im Familienfotoalbum eine Daseinsberechtigung als Gedächtnisstütze an frühere Zeiten.
+In den vergangenen Jahren hat die digitale Fotografie zu einem Umdenken und einer Neuschaffung von Kommunikationskanälen geführt. 
+Durch die Verbreitung von Digitalkameras (insbesondere auch solchen, die in Smartphones und Handys eingebaut sind) können Nachrichten in Form von Fotografien in Sekundenschnelle über den ganzen Globus geschickt werden. In Diensten wie \texttt{Twitter}, \texttt{Instagram} oder \texttt{Vine} werden Bilder und Videos in riesigen Mengen verschickt. Nach aktuellen Zahlen werden z.B. in \texttt{Instagram} täglich 55 Millionen Bilder gepostet\footnote{\url{http://instagram.com/press/}}. In diesem Zuge spielt auch die digitale Bildbearbeitung eine immer größer werdende Rolle. 
 
-Durch die Verbreitung von Digitalkameras (insbesondere auch solchen, die in Smartphones und Handys eingebaut sind) haben Fotografien aber auch eine immer größere Rolle als Kommunikationsmedium eingenommen. 
-In diesem Zuge spielt auch die digitale Bildbearbeitung eine immer größer werdende Rolle. 
+Digitalbilder werden in der heutigen Zeit hauptsächlich in Form der drei Farbkanäle Rot, Grün und Blau dargestellt (sog. RGB-Farbraum). Häufig kommt noch ein vierter Kanal, der sog. Alpha-Kanal hinzu, der für die Darstellung von Transparenz genutzt wird. 
 
-Bevor auf die Grundlagen von \gls{HDR}-Bildern näher eingegangen wird, bedarf es noch zunächst der Schaffung einiger Grundlagen.
-
-Digitalbilder werden in der heutigen Zeit hauptsächlich in Form der drei Farbkanäle für Rot, Grün und Blau dargestellt (sog. \gls{RGB-Farbraum}). Häufig kommt noch ein vierter Kanal, der sog. Alpha-Kanal hinzu, der für die Darstellung von Transparenz genutzt wird. 
-
-Diese drei bzw. vier Kanäle werden in der Regel mittels eines Bytes repräsentiert. Damit können 16,7 Millionen verschieden Farben dargestellt werden. Trotz dieser großen Zahl sind nur 256 verschiedene Werte für jeden Farbkanal möglich. Diese Anzahl ist häufig unzureichend, um Szenen mit hohen Helligkeitsunterschieden zu repräsentieren (vgl. \cite[S.~1f]{Reinhard}).
+Jeder Kanäle wird in der Regel mittels eines Bytes repräsentiert. Damit können 16,7 Millionen verschieden Farben dargestellt werden. Trotz dieser großen Zahl sind nur 256 verschiedene Werte für jeden Farbkanal möglich. Diese Anzahl ist häufig unzureichend, um Szenen mit hohen Helligkeitsunterschieden zu repräsentieren \cite[S.~1f]{Reinhard}.
 
 
-\begin{figure}[h]
+\begin{figure}
   \begin{center}
-    \includegraphics[width=0.5\textwidth]{example}
-    \caption{Beispielhaftes \gls{HDR}-Bild mit bereits angewandtem \gls{Tone-Mapping}-Verfahren (siehe \cite{tellone}). }
+    \includegraphics[width=0.6\textwidth]{example}
+    \caption{HDR-Bild mit bereits angewandtem \gls{Tone-Mapping}-Verfahren \cite{tellone}}
     \label{fig:teezer}
   \end{center}
 \end{figure}
 
-Dieses Problem wird durch die Verwendung von \gls{HDR}-Bildern behoben. Ziel ist es, mehr Farben und Details in unterschiedlichen Bildbereichen sichtbar zu machen. Um dies zu ermöglichen, erhöht man bei \gls{HDR}-Bildern den \gls{Dynamikumfang} des Bildbereiches. Dazu bricht man die Beschränkung auf den Byte-Bereich auf und erlaubt Fließkomma-Werte im Bildbereich.
+Die Verwendung von \gls{HDR}-Bildern kann diese Problematik beheben. Ziel ist es, mehr Farben und Details in unterschiedlichen Bildbereichen sichtbar zu machen. Um dies zu ermöglichen, erhöht man bei \gls{HDR}-Bildern den \gls{Dynamikumfang} des Bildbereiches. Dazu ist jedoch eine andere Form der Repräsentation des Bildes notwendig (sog. \glspl{Radiance Map}).
 
 %------------------------------------------------------------------------------------------------------------
 \section{Prinzip}
 
-Das menschliche Auge kann in einer täglichen Szene einen \gls{Dynamikumfang} im Bereich von 1:10.000 (vgl. \cite{Fairchild04theicam}) wahrnehmen. Dies liegt weit über den herkömmlichen Werten eines normalen Kamera-Sensors. In der \autoref{tab:illumination} können verschiedenen Dynamikumfänge (und die damit zusammenhängende Beleuchtungsstärke) entnommen werden. 
-Um wie gewünscht mit \gls{HDR}-Bildern einen höheren \gls{Dynamikumfang} darstellen zu können, müssen daher mehr Informationen als über den herkömmlichen Weg beschafft werden. Dazu werden entweder mehrere Bilder mit verschiedenen \glspl{Belichtungszeit} zu einer \gls{Radiance Map} kombiniert oder es werden spezielle Kamera-Sensoren eingesetzt, welche in der Lage sind die höhere Dichte der Bildinformationen (z.B. die großen Helligkeitsunterschiede) aufzunehmen (vgl. \cite{Yang99a640}). 
+Das menschliche Auge kann in einer täglichen Szene einen \gls{Dynamikumfang} im Bereich von 1:10.000 wahrnehmen \cite{Fairchild04theicam}. Dieser Umfang liegt weit über den herkömmlichen Werten eines normalen Kamera-Sensors. In der \autoref{tab:illumination} sind verschiedene Dynamikumfänge (und die damit zusammenhängende Belichtungsstärke) aufgelistet. 
+Um mit \gls{HDR}-Bildern einen höheren \gls{Dynamikumfang} darstellen zu können, müssen mehr Informationen als über den herkömmlichen Weg beschaffen werden. Dazu werden entweder mehrere Bilder mit verschiedenen Belichtungszeiten zu einer \gls{Radiance Map} kombiniert oder es werden spezielle Kamera-Sensoren eingesetzt, welche in der Lage sind eine höhere Dichte an Bildinformationen (z.B. große Helligkeitsunterschiede) aufzunehmen \cite{Yang99a640}. 
 
 
 \begin{table}
@@ -55,7 +51,7 @@ Um wie gewünscht mit \gls{HDR}-Bildern einen höheren \gls{Dynamikumfang} darst
 
 
 
-Der hier verwendete Begriff \enquote{\glspl{Dynamikumfang}} beschreibt das Verhältnis zwischen hellstem und dunkelstem Pixel im Bild. Um Ausreißer weniger zu berücksichtigen und die Messung robuster zu machen, werden hierbei auch Quantile verwendet, die dafür sorgen sollen, dass Rauschen nicht ins Gewicht fällt. Bei Bildschirmen hingegen wird unter dem \gls{Dynamikumfang} das Verhältnis zwischen der maximalen und minimalen Leuchtkraft verstanden (vgl. \cite[S.~4]{Reinhard}).
+Der hier verwendete Begriff \enquote{\gls{Dynamikumfang}} beschreibt das Verhältnis zwischen dem hellsten und dunkelsten Pixel im Bild. Um Ausreißer weniger zu berücksichtigen und die Messung robuster zu machen, werden manchmal auch Quantile verwendet, um Rauschen in der Eingabe weniger zu gewichten. Bei Bildschirmen wird hingegen unter dem \gls{Dynamikumfang} das Verhältnis zwischen der maximalen und minimalen Leuchtkraft verstanden \cite[S.~4]{Reinhard}.
 
 \begin{figure}[H]
   \begin{center}
@@ -65,7 +61,7 @@ Der hier verwendete Begriff \enquote{\glspl{Dynamikumfang}} beschreibt das Verh�
     \includegraphics[width=2cm]{img/1_40}
     \includegraphics[width=2cm]{img/1_60}
     \includegraphics[width=2cm]{img/1_160}
-    \caption{Die in dieser Ausarbeitung häufig verwendete Belichtungsserie besteht aus sechs Einzelaufnahmen mit den Belichtungszeiten 1/6, 1/10, 1/20, 1/40, 1/60 und 1/160 (v. l.) \cite{tellone}.}
+    \caption{\textit{Verwendete Belichtungsserie} --- Sechs Einzelaufnahmen mit den Belichtungszeiten $\frac{1}{6}, \frac{1}{10}, \frac{1}{20}, \frac{1}{40}, \frac{1}{60}\mbox{ und }\frac{1}{160}$ (v.l.n.r) \cite{tellone}}
     \label{fig:teezer}
   \end{center}
 \end{figure}
@@ -77,7 +73,7 @@ Der hier verwendete Begriff \enquote{\glspl{Dynamikumfang}} beschreibt das Verh�
 
 \section{Anwendungsgebiet und Geschichte}
 
-Die Möglichkeiten des Einsatzes von \gls{HDR}-Bildern sind vielfältig. Die nachfolgende Liste umfasst einige der Gebiete, in denen diese Technologie eingesetzt wird oder werden kann (vgl. \cite[S.~87f]{Reinhard}).
+Die Möglichkeiten des Einsatzes von \gls{HDR}-Bildern sind vielfältig. Die nachfolgende Liste umfasst einige der Gebiete, in denen diese Technologie eingesetzt wird oder werden kann \cite[S.~87f]{Reinhard}.
 
 \begin{description}
 
@@ -85,59 +81,59 @@ Die Möglichkeiten des Einsatzes von \gls{HDR}-Bildern sind vielfältig. Die nac
 
 \item[Satellitenbilder:] Satellitenbilder beinhalten in aller Regel sehr viel mehr Informationen als nur den sichtbaren Bereich des Lichtspektrums. \gls{HDR}-Bilder sind hier von Bedeutung, da sie multispektrale Aufnahmen ermöglichen.
 
-\item[Visualisierungen und Rendering:] Eine der ersten Anwendungen waren vermutlich die ersten Render-Engines von Visualisierungen (Computer-Spiele, medizinische Visualisierungen und Simulationen, etc.). Bei manchen Anwendungen ist es insbesondere für Reflektionen wichtig auch nicht sichtbare Frequenzen bei Berechnungen mit einzubeziehen, da diese durch Interferenzen wieder sichtbar werden können und somit der Detailgrad steigt.
+\item[Visualisierungen und Rendering:] Eine der ersten Anwendungen waren vermutlich die ersten Render-Engines von Visualisierungen (Computer-Spiele, medizinische Visualisierungen und Simulationen, etc.). Bei manchen Anwendungen ist es insbesondere für Reflektionen wichtig, auch nicht sichtbare Frequenzen bei Berechnungen mit einzubeziehen, da diese durch Interferenzen wieder sichtbar werden können und somit der Detailgrad steigt.
 
-\item[Bildbearbeitungssoftware:] Die großen Bildbearbeitungs-Anwendungen bieten mittlerweile in der Regel auch die Bearbeitung und Generierung von \gls{HDR}-Bildern an. Als Beispiele sind hier Adobe Photoshop\footnote{\url{http://adobe.com/photoshop}}, Photogenics\footnote{\url{http://www.cinepaint.org}} und Photomatix\footnote{\url{http://www.hdrsoft.com/download.html}} genannt.
+\item[Bildbearbeitungssoftware:] Die großen Bildbearbeitungsanwendungen bieten mittlerweile in der Regel auch die Bearbeitung und Generierung von \gls{HDR}-Bildern an. Als Beispiele sind hier Adobe Photoshop\footnote{\url{http://adobe.com/photoshop}}, Photogenics\footnote{\url{http://www.cinepaint.org}} und Photomatix\footnote{\url{http://www.hdrsoft.com/download.html}} genannt.
 
-\item[Medizin:] In der Endoskopie besteht ein hoher Bedarf an immer höher auflösenden \gls{CMOS} Bildsensoren. Diese können immer bessere Aufnahmen aus dem Inneren des Körpers liefern und helfen damit in der Medizin große Fortschritte machen zu können. Solche Sensoren können bereits in der Größe eines Streichholzkopfes einen Dynamikumfang von 179 dB erreichen (vgl. \cite{Klingler_Richter_Strobel_2006}).
+\item[Medizin:] In der Endoskopie besteht ein großer Bedarf an immer höher auflösenden \gls{CMOS} Bildsensoren. Diese können immer bessere Aufnahmen aus dem Inneren des Körpers liefern und ermöglichen der Medizin große Fortschritte. Solche Sensoren können bereits in der Größe eines Streichholzkopfes einen Dynamikumfang von 179 dB erreichen \cite{Klingler_Richter_Strobel_2006}.
 
-\item[Virtual Reality:] Bei Anwendungen, bei denen sich der Benutzer in einem virtuellen Raum bewegt, wird die Wahrnehmung zunehmend wichtig. Auch hier spielen deshalb hohe Dynamikumfänge eine besondere Rolle. Außerdem ist es besonders in diesem Bereich wichtig, gute Kompressions-Algorithmen für \gls{HDR}-Bilder zu entwickeln, um eine schnelle Übertragung dieser zu gewährleisten. Auch bei dem Platzieren von synthetischen Objekten in realen Szenen (vgl. \cite{Debevec:2008:RSO:1401132.1401175}) können \gls{HDR}-Bilder eingesetzt werden, um dem Betrachter eine noch \enquote{realere} Szene zu suggestieren.
+\item[Virtual Reality:] In Anwendungen, bei denen sich der Benutzer in einem virtuellen Raum bewegt, wird die Wahrnehmung zunehmend wichtig. Auch hier spielen deshalb hohe Dynamikumfänge eine besondere Rolle. In diesem Bereich ist es besonders wichtig, gute Kompressions-Algorithmen für \gls{HDR}-Bilder zu entwickeln, um eine schnelle Übertragung zu gewährleisten. Auch beim Platzieren von synthetischen Objekten in realen Szenen können \gls{HDR}-Bilder eingesetzt werden, um dem Betrachter eine noch \enquote{realere} Szene zu suggestieren \cite{Debevec:2008:RSO:1401132.1401175}.
 \end{description}
 
 %------------------------------------------------------------------------------------------------------------
 \section{Bilderzeugung}
-Für die Erstellung von \gls{HDR}-Bildern gibt es unterschiedliche Möglichkeiten. Dabei muss man jedoch zwischen echten \gls{HDR}-Bildern und \enquote{Pseudo-\gls{HDR}} Bildern unterscheiden. Im Nachfolgenden werden die verschiedenen Verfahren kurz beschrieben. Der Fokus liegt jedoch auf dem letzten Verfahren, der \nameref{sub:belichtungsreihe}.
+Für die Erstellung von \gls{HDR}-Bildern gibt es unterschiedliche Möglichkeiten. Dabei muss man jedoch zwischen echten \gls{HDR}-Bildern und Pseudo-\gls{HDR}-Bildern unterscheiden. Im Nachfolgenden werden die verschiedenen Verfahren kurz beschrieben. Der Fokus liegt jedoch auf dem letzten Verfahren, der \nameref{sub:belichtungsreihe}, da dieses Verfahren auch im Ausgangsverfahren von Debevec und Malik verwendet wird.
 
 
 \subsection{Pseudo-\gls{HDR}-Bilder}
-Bei Pseudo-\gls{HDR}-Bildern handelt es sich um eine einfache Fusion von Bildreihen. Deswegen werden diese Verfahren auch Exposure Blending oder Exposure Fusion genannt. Bei dieser Technologie geht es darum mehr Details aus einer Belichtungsreihe von \gls{LDR}-Bildern zu generieren, ohne dabei ein \gls{HDR}-Bild zu erzeugen (vgl. \cite{Jing_Hong_Zheng_Rahardja_2012}). Die Bilder der Belichtungsreihe werden dazu einfach fusioniert. Diese Technologie wird hier jedoch nicht behandelt.
+Bei Pseudo-\gls{HDR}-Bildern handelt es sich um eine einfache Fusion von Bildreihen. Deswegen werden diese Verfahren auch Exposure Blending oder Exposure Fusion genannt. Bei dieser Technologie geht es darum, mehr Details aus einer Belichtungsreihe von \acrshort{LDR}-Bildern (\acrlong{LDR} Bilder) zu generieren, ohne dabei ein \gls{HDR}-Bild zu erzeugen. Die Bilder der Belichtungsreihe werden dazu einfach fusioniert \cite{Jing_Hong_Zheng_Rahardja_2012}.
 
 \subsection{HDR-Kameras} 
-Diese speziellen Kameras verfügen über Bildsensoren, die von sich aus einen hohen Dynamikumfang aufnehmen können und dadurch bereits die notwendigen Informationen in einer Aufnahme generieren können. Diese Spezial-Kameras sind jedoch noch sehr teuer und wenig verbreitet (vgl. \cite[S. 95ff]{Bloch2012}). Viele digitale Spiegelreflex-Kameras bieten mittlerweile einen \gls{HDR}-Modus an.
+Diese speziellen Kameras verfügen über Bildsensoren, die von sich aus einen höheren Dynamikumfang aufnehmen können und dadurch bereits die notwendigen Informationen in einer Aufnahme generieren können. Diese Spezial-Kameras sind jedoch noch sehr teuer und wenig verbreitet \cite[S. 95ff]{Bloch2012}. Digitale Spiegelreflex-Kameras bieten mittlerweile häufig ebenfalls einen \gls{HDR}-Modus an.
 
 \subsection{HDR-Bildgenerierung aus einer Belichtungsreihe}
 \label{sub:belichtungsreihe}
-Um ein \gls{HDR}-Bild aus einer Belichtungsreihe zu erzeugen, braucht man zunächst die Grundlage für das Bild. Dazu sind in der Regel mehr Informationen notwendig als eine einzelne Aufnahme liefern kann. Deshalb werden mehrere Bilder der selben Szene mit unterschiedlichen Belichtungszeiten aufgenommen. Ziel der Algorithmen ist es, anschließend aus diesen Bildern ein \gls{HDR}-Bild zu erzeugen.
+Um ein \gls{HDR}-Bild aus einer Belichtungsreihe zu erzeugen, braucht man zunächst eine Grundlage für das Bild. In diesem Verfahren werden mehrere Bilder der selben Szene mit unterschiedlichen Belichtungszeiten fusioniert. Ziel der dabei verwendeten Algorithmen ist es, aus diesen Bildern ein \gls{HDR}-Bild zu erzeugen.
 
-Um die Bilder später weiter zu verarbeiten, müssen diese jedoch zunächst registriert werden. Dies ist aufgrund der verschiedenen Belichtungswerte der Aufnahmen nicht über Kantendetektionsverfahren möglich, da diese Merkmale unter den unterschiedlichen Belichtungen sehr stark variieren können.
+Um die Bilder später weiter zu verarbeiten, müssen diese jedoch zunächst registriert werden. Dies ist aufgrund der verschiedenen Belichtungswerte der Aufnahmen häufig nicht oder nur schlecht über Kantendetektions-Verfahren möglich, da diese Merkmale unter den unterschiedlichen Belichtungen sehr stark variieren können.
 
-Ein performanter Ansatz um Bilder zu registrieren ist der \gls{MTB} Ansatz (siehe \autoref{subsec:MTB}). Auf eine Implementierung dieser Verfahren wurde verzichtet, da sie nicht relevant für die Zielsetzung sind.
+Ein besserer Ansatz um Bilder zu registrieren ist der \gls{MTB} Ansatz (siehe \autoref{subsec:MTB}). Auf eine Implementierung dieses Verfahrens wurde verzichtet, da es nicht relevant für die Zielsetzung ist.
 
 %------------------------------------------------------------------------------------------------------------
 \section{Bildformate und -speicherung}
 
-Für die Abspeicherung der \gls{HDR}-Bilder werden in \autoref{tab:formats} die drei gängigsten Formate mit den dazu gängigen Codierungen verglichen (vgl. \cite{Reinhard}). Die Speicherung der erzeugten Daten war kein zentraler Bestandteil dieser Arbeit und wird vom Programm auch nicht unterstützt. Dennoch sollen hier die bekanntesten Kodierungen zur Abspeicherung vorgestellt werden.
+Für die Abspeicherung der \gls{HDR}-Bilder werden in \autoref{tab:formats} die drei gängigsten Formate mit den dazu gängigen Kodierungen verglichen \cite[S.~89]{Reinhard}. Die Speicherung der erzeugten Daten war kein zentraler Bestandteil der vorliegenden Arbeit und wurde deshalb bei der Realisierung nicht berücksichtigt. Dennoch sollen hier die bekanntesten Kodierungen zur Abspeicherung vorgestellt werden.
 
 
-\begin{table}
+\begin{table}[H]
   \begin{center}
     \small
     \begin{tabularx}{\textwidth}{l|XXXX}
 	\toprule
 	Format & Kodierung & Kompression & Metadaten & Lizenz \\
 	\midrule
-	HDR & RGBE & Laufl"angen-\newline kodierung & Kallibrierung, \newline Farbraum & Open source software (\textit{Radiance})\\
+	HDR & RGBE & Laufl"angen-\newline kodierung & Kallibrierung, \newline Farbraum & Open source\newline software (\textit{Radiance})\\
 	& XYZE & Laufl"angen-\newline kodierung & + benutzerdef. Daten & \\
 	\midrule
-	TIFF & IEEE RGB & keine & Kallibrierung, \newline Farbraum & Public domain library (\textit{libtiff})\\
-	& LogLuv24 & keine & + Registrierung \newline + benutzerdef. Daten& \\
+	TIFF & IEEE RGB & keine & Kallibrierung, \newline Farbraum & Public domain \newline library (\textit{libtiff})\\
+	& LogLuv24 & keine &+ Registrierung \newline+ benutzerdef. Daten& \\
 	& LogLuv32 & Lauflängen-\newline kodierung & & \\
 	\midrule
-	EXR & Half RGB & Wavelet, ZIP & Kallibrierung, \newline Farbraum \newline+ Fensterfunktion \newline + benutzerdef. Daten & Open source library (\textit{OpenEXR})\\
+	EXR & Half RGB & Wavelet, ZIP & Kallibrierung, \newline Farbraum \newline+ Fensterfunktion \newline+ benutzerdef. Daten & Open source library (\textit{OpenEXR})\\
 	\bottomrule
     \end{tabularx}
     \normalsize
-    \caption{Verbreitete HDR-Bildformate in der Übersicht \cite[S.89]{Reinhard}}
+    \caption{\textit{HDR-Bildformate} --- Die verbreitetsten Formate und ihre Eigenschaften in der Übersicht \cite[S.89]{Reinhard}.}
     \label{tab:formats}
   \end{center}
 \end{table}
@@ -145,32 +141,32 @@ Für die Abspeicherung der \gls{HDR}-Bilder werden in \autoref{tab:formats} die 
 
 \subsection{RGBE -- Das .hdr Format}
 
-Dieses Format wurde ursprünglich unter den Dateiendungen $.hdr$ und $.pic$ eingeführt. Abgesehen von den Metadaten (wie z.B. Bildgröße, Ausrichtung, notwendigen Angaben zur verwendeten Kodierung, etc.) werden die Bildpunkte mit 32-Bit dargestellt. Diese umfassen die Kanäle für Rot, Grün und Blau sowie einen Exponenten, was zu einer Vergrößerung des Dynamikbereiches führt \cite[S. 92]{Reinhard}.
+Dieses Format wurde ursprünglich unter den Dateiendungen \texttt{.hdr} und \texttt{.pic} eingeführt. Abgesehen von den Metadaten (wie z.B. Bildgröße, Ausrichtung, notwendige Angaben zur verwendeten Kodierung, etc.) werden die Bildpunkte mit 32-Bit dargestellt. Diese umfassen die Kanäle für Rot, Grün und Blau sowie einen Exponenten, was zu einer Vergrößerung des Dynamikbereiches führt \cite[S. 92]{Reinhard}.
 
-\subsection{TIFF -- Gleitkomma Codierung}
+\subsection{TIFF -- Gleitkomma Kodierung}
 \label{sub:tiff}
-Das Format $.tif[f]$ enthält eine 32-Bit Kodierung pro Komponente (also 96-Bit für einen Bildpunkt). Dabei werden die Bildpunkte mittels Fließkommazahlen dargestellt \cite{adobe:tiff}. Dieser Standard unterstützt bereits eine sehr hohe Genauigkeit. Dazu benötigt dieses Dateiformat im Vergleich zu anderen jedoch auch am meisten Speicherplatz. Allerdings lassen sich nahezu verlustfreie Abspeicherungen von \gls{HDR}-Bildern erreichen. Im Standard von 1992 wurde auf jede Form der Komprimierung verzichtet \cite[S. 93]{Reinhard}. Dieser kann jedoch um verschieden Kompressionsverfahren erweitert werden. \texttt{LogLuv} ist beispielsweise ein solches, bei dem die Werte logarithmisch skaliert und quantisiert werden \cite{logluv}. 
+Das Format \texttt{.tiff} enthält eine 32-Bit Kodierung pro Komponente (also 96-Bit für einen Bildpunkt). Dabei werden die Bildpunkte mittels Fließkommazahlen dargestellt \cite{adobe:tiff}. Dieser Standard unterstützt bereits eine sehr hohe Genauigkeit. Dazu benötigt dieses Dateiformat im Vergleich zu anderen jedoch auch am meisten Speicherplatz. Allerdings lässt sich damit auch eine nahezu verlustfreie Abspeicherung von \gls{HDR}-Bildern erreichen. Im Standard von 1992 wurde auf jede Form der Komprimierung verzichtet \cite[S. 93]{Reinhard}. Dieser kann jedoch um verschiedene Kompressionsverfahren erweitert werden. \texttt{LogLuv} ist beispielsweise ein solches, bei dem die Werte logarithmisch skaliert und quantisiert werden \cite{logluv}. 
 
 
 \subsection{EXR -- EXtended Range Format}
 
-Dieses Format\footnote{\url{www.openexr.com}} wurde 2002 veröffentlicht und basiert ebenfalls auf der Speicherung von Fließkommazahlen. Dabei ist es jedoch auch möglich die Fließkommazahlen nur mit 16 Bit (Hälfte der normalen Anzahl) abzuspeichern: ein Bit für das Vorzeichen, fünf für den Exponenten und zehn für die Mantisse. Für diese Komprimierung sind Quantisierungsschritte von unter 0.1\% vorgesehen und damit für das menschliche Auge nicht erkennbar. Dadurch ist die Kompression quasi verlustfrei durchführbar (vgl. \cite[S. 97f]{Reinhard}).
+Dieses Format wurde 2002 veröffentlicht\footnote{\url{www.openexr.com}} und basiert ebenfalls auf der Speicherung von Fließkommazahlen. Es existiert eine Variante bei der nur 16 Bit (Hälfte der normalen Anzahl) für das Speichern der Fließkommazahlen verwendet wird: ein Bit für das Vorzeichen, fünf für den Exponenten und zehn für die Mantisse. Für diese Komprimierung sind Quantisierungsschritte von unter 0.1\% vorgesehen und damit für das menschliche Auge nicht erkennbar. Dadurch ist diese Kompression quasi verlustfrei durchführbar \cite[S. 97f]{Reinhard}.
 
 %------------------------------------------------------------------------------------------------------------
 \section{Bilddarstellung}
 \label{subsec:ToneMapping}
- Für die Darstellung der \glspl{Radiance Map} gibt es vereinzelte spezielle Hardware, die in der Lage sind den erweiterten Dynamikumfang darzustellen. Sehr viel häufiger kommen jedoch sog. \gls{Tone-Mapping} (dt.: Dynamikkompressions) Verfahren zum Einsatz. Diese stellen ein Bild mit erhöhtem \gls{Dynamikumfang} durch eine andere Skalierung des Bildbereichs auf handelsüblichen Monitoren oder als herkömmliche Bilddateien dar. 
+ Für die Darstellung der \glspl{Radiance Map} gibt es vereinzelt spezielle Hardware, die in der Lage ist den erweiterten Dynamikumfang darzustellen. Sehr viel häufiger kommen jedoch sog. \gls{Tone-Mapping} (dt.: Dynamikkompressions) Verfahren zum Einsatz. Diese stellen ein HDR-Bild durch eine andere Skalierung des Bildbereichs als herkömmliche Bilddateien dar. 
  
- Der Kerngedanke beim \gls{Tone-Mapping} besteht darin, einen geeigneten Weg für die Zuordnung von Bildpunkten aus dem \gls{HDR}-Bild in das \gls{LDR}-Bild zu finden (vgl. \cite[S. 145]{Bloch2012}). Diese Zuordnungsfunktionen nennen sich \gls{Tone-Mapping}-Operatoren und können generell in zwei Kategorien unterschieden werden. Die globalen Operatoren (siehe \autoref{sub:tone:global}) bearbeiten alle Bildpunkte gleich, während die lokalen Operatoren (siehe \autoref{sub:tone:local}) Informationen aus der Umgebung in die Berechnung an jedem Bildpunkt mit einbeziehen.
+ Der Kerngedanke beim \gls{Tone-Mapping} besteht darin, einen geeigneten Weg für die Zuordnung von Bildpunkten aus dem \gls{HDR}-Bild in das \gls{LDR} Bild zu finden \cite[S. 145]{Bloch2012}. Diese Zuordnungsfunktionen nennen sich \gls{Tone-Mapping}-Operatoren und können generell in zwei Kategorien unterschieden werden. Die globalen Operatoren (siehe \autoref{sub:tone:global}) bearbeiten alle Bildpunkte gleich, während die lokalen Operatoren (siehe \autoref{sub:tone:local}) Informationen aus der Umgebung in die Berechnung an jedem Bildpunkt mit einbeziehen.
  
 
  \subsection{Globale \gls{Tone-Mapping}-Operatoren}
 \label{sub:tone:global}
-Bei globalen \gls{Tone-Mapping}-Operatoren wird die gesamte Farbkurve (engl. tone curves) modifiziert. Die Veränderungen können auf den verschiedenen Farbkanälen unterschiedlich sein. Auch die Berechnung der modifizierten Kurve kann sich aufgrund des Bildes ändern (vgl. \cite[S. 146]{Bloch2012}). 
+Bei globalen \gls{Tone-Mapping}-Operatoren wird die gesamte Farbkurve (engl. tone curves) modifiziert. Die Veränderungen können auf den verschiedenen Farbkanälen unterschiedlich sein. Auch die Berechnung der modifizierten Kurve kann sich aufgrund des Bildes ändern \cite[S. 146]{Bloch2012}. 
 
-Es bestehen viele verschiedene Ansätze für globale \gls{Tone-Mapping}-Operatoren, die unterschiedliche Vor- und Nachteile aufweisen können.
-In dieser Arbeit wurde lediglich der \gls{Tone-Mapping}-Operator von Reinhard et al. \cite{ReinhardToneMapper} implementiert und verwendet. Dies ist die vereinfachte Form des komplexeren lokalen Operators, der im gleichen Artikel veröffentlich wurde.
-Hierzu wird zunächst der durchschnittliche Wert des Logarithmus aus der Helligkeit des Bildes ($L_w(x,y)$) bestimmt. Dieser wird als charakteristischer Wert der Szene $\tilde{L}_w$ beschrieben. Anschließend werden die skalierten Helligkeiten des Bildes errechnet (siehe \autoref{eq:skaled:greyvalues}). $\alpha$ bestimmt die Lage des mittleren Grauwertes und hat in der Regel den Wert $0.18$. Daraus lässt sich dann der einfache globale Operator in \autoref{eq:tonemapping:global} erstellen.
+Es bestehen viele verschiedene Ansätze für globale \gls{Tone-Mapping}-Operatoren, die unterschiedliche Vor- und Nachteile aufweisen.
+In dieser Arbeit wurde lediglich der \gls{Tone-Mapping}-Operator von Reinhard et al. \cite{ReinhardToneMapper} implementiert und verwendet. Dabei handelt es sich um die vereinfachte Form des komplexeren lokalen Operators, der im gleichen Artikel veröffentlicht wurde.
+Hierzu wird zunächst der durchschnittliche Wert des Logarithmus aus der Helligkeit des Bildes $L_w(x,y)$ bestimmt. Dieser wird als charakteristischer Wert der Szene $\tilde{L}_w$ beschrieben. Anschließend werden die skalierten Helligkeiten des Bildes errechnet (siehe \autoref{eq:skaled:greyvalues}). $\alpha$ bestimmt die Lage des mittleren Grauwertes und hat in der Regel den Wert $0.18$. Daraus lässt sich dann der globale Operator in \autoref{eq:tonemapping:global} erstellen.
 \begin{align}
 \label{eq:skaled:greyvalues}
 L(x,y) = \frac{\alpha}{\tilde{L}_w} L_w(x,y)\\
@@ -182,9 +178,9 @@ L_d(x, y) =\frac{L(x,y)}{1+ L(x,y)}
 \subsection{Lokale \gls{Tone-Mapping}-Operatoren}
 \label{sub:tone:local}
 
-Lokale \gls{Tone-Mapping}-Operatoren können bei der Zuordnung eines Wertes aus dem \gls{HDR}- in das \gls{LDR}- Bild auch die lokale Umgebung eines jeden Bildpunktes berücksichtigen. Damit erreichen Sie besonders in sehr dynamischen Bildern bessere Ergebnisse und können mehr Details in Bildern hervorheben. Auch hier gibt es eine Vielzahl verschiedener Operatoren, die alle ihre Vor- und Nachteile haben. Da keine Analyse der \gls{Tone-Mapping}-Operatoren im Fokus der Arbeit stand, wurde hier ebenfalls ein Operator gewählt. Die Wahl dieses Operators wurde nach ersten Recherchen getroffen, da dieser in verschiedenen Veröffentlichungen \cite{tone_mapper_1,tone_mapper_2} gut abgeschnitten hat.
- 
-Reinhard et al. \cite{ReinhardToneMapper} stellen in ihrer Ausarbeitung auch einen weitaus komplexeren Operator vor, der die lokalen Eigenschaften des Bildes mit analysiert und entsprechend den Operator anpasst. Bei diesem handelt es sich um einen lokalen \gls{Tone-Mapping}-Operator, der dodging-and-burning (dt. abwedeln) zur Berechnung verwendet. Dieses Verfahren ist eine Technik, die aus der analogen Fotografie stammt. Dabei wird die Belichtungszeit in einzelnen Bereichen des Bildes verändert, um dies bei der Entwicklung des Filmmaterials differenziert zu behandeln. Die Wahl der einzelnen Bereiche geschieht im technischen Ansatz durch die Berechnung des lokalen Kontrastes im Bild. Die Reichweite des Einflusses der umliegenden Bildpunkte wird über diese Bereiche gesteuert.
+Lokale \gls{Tone-Mapping}-Operatoren können bei der Zuordnung eines Wertes aus einem \gls{HDR}- in ein \gls{LDR}-Bild auch die lokale Umgebung eines jeden Bildpunktes berücksichtigen. Damit erreichen sie in sehr dynamischen Bildern bessere Ergebnisse und können mehr Details in Bildern hervorheben. Auch hier gibt es eine Vielzahl verschiedener Operatoren, die alle ihre Vor- und Nachteile haben. Da der Operator von Reinhard et. al \cite{ReinhardToneMapper} in verschiedenen Veröffentlichungen \cite{tone_mapper_1,tone_mapper_2} gut abgeschnitten hat, wird dieser verwendet.
+
+Bei diesem handelt es sich um einen lokalen \gls{Tone-Mapping}-Operator, der dodging-and-burning (dt. abwedeln) zur Berechnung verwendet. Dieses Verfahren ist eine Technik, die aus der analogen Fotografie stammt. Dabei wird die Belichtungszeit in einzelnen Bereichen des Bildes verändert, um diese bei der Entwicklung des Filmmaterials differenziert zu behandeln. Die Wahl der einzelnen Bereiche wird im technischen Ansatz durch die Berechnung des lokalen Kontrastes im Bild umgesetzt, welche die Reichweite des Operators beeinflussen.
 
 Auf eine weitere Beschreibung des Verfahrens wird hier aus Gründen der Komplexität verzichtet.
 
@@ -192,11 +188,13 @@ Auf eine weitere Beschreibung des Verfahrens wird hier aus Gründen der Komplexi
 %------------------------------------------------------------------------------------------------------------
 \section{Software zur Erstellung von HDR-Bildern}
 \label{sec:software}
-Herkömmlich Programme zur Bildbearbeitung (z.B. \texttt{Photoshop}\footnote{\url{http://www.adobe.com/de/products/photoshop.html}} oder \texttt{GIMP}\footnote{\url{http://www.gimp.org} mit Plugin \texttt{Exposure Blend} (\url{http://tir.astro.utoledo.edu/jdsmith/code/exposure_blend.php})}) unterstützen die Erzeugung von \gls{HDR}-Bildern aus einer Belichtungsserie recht gut. Es gibt in der Regel mehrere \gls{Tone-Mapping}-Operatoren, deren Parameter anschaulich verändert werden können. Diese trumpfen mit hohem Funktionsumfang, vielfältigen Einstellungsvarianten und der Möglichkeit der weiteren Bearbeitung auf.
+Herkömmlich Programme zur Bildbearbeitung (z.B. \texttt{Photoshop}\footnote{\url{http://adobe.com/photoshop}} oder \texttt{GIMP}\footnote{\url{http://www.gimp.org} mit Plugin \texttt{Exposure Blend} (\url{http://tir.astro.utoledo.edu/jdsmith/code/exposure_blend.php})}) unterstützen die Erzeugung von \gls{HDR}-Bildern aus einer Belichtungsserie recht gut. Es gibt in der Regel mehrere \gls{Tone-Mapping}-Operatoren, deren Parameter anschaulich verändert werden können. Diese trumpfen mit hohem Funktionsumfang, vielfältigen Einstellungsvarianten und der Möglichkeit der weiteren Bearbeitung auf.
+
+
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=0.8\textwidth]{Luminance}
-    \caption{Der Erstell-Assistent von \texttt{Luminance HDR}. Auch hier wird intern der Algorithmus von Debevec und Malik \cite{paper} verwendet.}
+    \caption{\textit{Erstell-Assistent von \texttt{Luminance HDR}} --- Auch hier wird intern der Algorithmus von Debevec und Malik verwendet.}
     \label{fig:luminance}
   \end{center}
 \end{figure}
@@ -206,13 +204,13 @@ Darüber hinaus gibt es verschiedene Programme, die speziell auf die Erzeugung v
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.5\textwidth]{BenchGeneratedLuminance}
-    \caption{Ein mögliches Ergebnis des \gls{HDR}-Bildes. Erstellt mit \texttt{Luminance HDR} und dem \gls{Tone-Mapping}-Operator \texttt{Reinhard'05} \cite{Reinhard05}. Bildserie siehe \cite{tellone}.}
+    \includegraphics[width=0.8\textwidth]{BenchGeneratedLuminance}
+    \caption{\textit{Ergebnis eines HDR-Bildes} --- Hier erstellt mit \texttt{Luminance HDR} und dem \gls{Tone-Mapping}-Operator \texttt{Reinhard'05} \cite{Reinhard05}, Bildserie siehe \cite{tellone}.}
     \label{fig:luminance}
   \end{center}
 \end{figure}
 
-Als weitere Beispiele für HDR-Software seien hier außerdem \texttt{Dynamic-Photo HDR}\footnote{\url{http://www.mediachance.com/hdri/index.html}, kostenpflichtig} und \texttt{HDR Darkroom}\footnote{\url{http://www.everimaging.com}, kostenpflichtig} genannt. Diese haben sehr viele \gls{Tone-Mapping}-Operatoren implementiert und können sowohl realistische als auch sehr verfremdete \gls{HDR}-Bilder generieren. 
+Als weitere Beispiele für \gls{HDR}-Software seien hier außerdem \texttt{Dynamic-Photo HDR}\footnote{\url{http://www.mediachance.com/hdri/index.html}, kostenpflichtig} und \texttt{HDR Darkroom}\footnote{\url{http://www.everimaging.com}, kostenpflichtig} genannt. Diese haben sehr viele \gls{Tone-Mapping}-Operatoren implementiert und können sowohl realistische als auch sehr verfremdete \gls{HDR}-Bilder generieren. 
 
 Ein wirklich einfaches Programm ist \texttt{Picturenaut}\footnote{\url{http://www.hdrlabs.com/picturenaut/}, Freeware}. Die Anzahl und der Funktionsumfang der implementierten \gls{Tone-Mapping}-Operatoren ist limitiert, jedoch liefert das Programm recht rasch realitätsgetreue Bilder.
 

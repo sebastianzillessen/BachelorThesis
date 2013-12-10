@@ -1,23 +1,16 @@
 package View.ImageTable;
 
-import com.drew.imaging.ImageMetadataReader;
-import com.drew.metadata.Metadata;
-import com.drew.metadata.exif.ExifSubIFDDirectory;
+import Ctrl.Controller;
 
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
 import javax.swing.table.AbstractTableModel;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sebastianzillessen
- * Date: 14.07.13
- * Time: 13:34
- * To change this template use File | Settings | File Templates.
+ * Image Table model to represent the images listed in a table with the exposure time
+ *
+ * @author sebastianzillessen
  */
 public class ImageTableModel extends AbstractTableModel {
 
@@ -68,50 +61,29 @@ public class ImageTableModel extends AbstractTableModel {
         }
     }
 
-    /*
-     * Don't need to implement this method unless your table's
-     * editable.
+    /**
+     * We want the second col to be editable
+     *
+     * @param row
+     * @param col
+     * @return
      */
     public boolean isCellEditable(int row, int col) {
         return (col == 1);
     }
 
 
-    private float extractExposureTime(File f) {
-        float v = 0;
-
-        try {
-            Metadata metadata = ImageMetadataReader.readMetadata(f);
-            ExifSubIFDDirectory directory = metadata.getDirectory(ExifSubIFDDirectory.class);
-            v = directory.getFloat(ExifSubIFDDirectory.TAG_EXPOSURE_TIME);
-        } catch (Exception e) {
-            v = calculate(f.getName());
-        }
-        return v;
-
-    }
-
-    public float calculate(String s) {
-        String filename = s.split("\\.")[0].replace(":", "/");
-        float v = 0;
-        try {
-            ScriptEngineManager mgr = new ScriptEngineManager();
-            ScriptEngine engine = mgr.getEngineByName("JavaScript");
-            v = Float.parseFloat(engine.eval(String.valueOf(filename)).toString());
-        } catch (NumberFormatException e) {
-        } catch (ScriptException e) {
-        }
-        return v;
-    }
-
-    /*
-     * Don't need to implement this method unless your table's
-     * data can change.
+    /**
+     * handels the parsing of a changing value in the table.
+     *
+     * @param value
+     * @param row
+     * @param col
      */
     public void setValueAt(Object value, int row, int col) {
         try {
             if (col == 1) {
-                fileMap.put((File) getValueAt(row, 0), calculate(value.toString()));
+                fileMap.put((File) getValueAt(row, 0), Controller.getInstance().calculate(value.toString()));
                 fireTableCellUpdated(row, col);
             }
         } catch (Exception e) {
@@ -119,10 +91,15 @@ public class ImageTableModel extends AbstractTableModel {
         }
     }
 
+    /**
+     * Sets the files to display
+     *
+     * @param files
+     */
     public void setFiles(File[] files) {
         this.fileMap.clear();
         for (File f : files) {
-            fileMap.put(f, extractExposureTime(f));
+            fileMap.put(f, Controller.getInstance().extractExposureTime(f));
         }
         fireTableStructureChanged();
     }

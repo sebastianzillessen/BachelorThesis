@@ -97,22 +97,6 @@ public class ImageTest {
         assertEquals(20, i.getHeight());
     }
 
-    @Test
-    public void testDownsample() throws Exception {
-        Image i = new Image(10, 20);
-        i.set(0, 0, 1);
-        i.set(0, 1, 1);
-        i.set(1, 0, 1);
-        i.set(1, 1, 1);
-        Image d = i.downsample();
-
-        assertEquals(5, d.getWidth());
-        assertEquals(10, d.getHeight());
-        assertEquals(1, d.get(0, 0));
-        assertEquals(0, d.get(1, 1));
-        assertEquals(0, d.get(1, 0));
-        assertEquals(0, d.get(0, 1));
-    }
 
     @Test
     public void testCopy() throws Exception {
@@ -130,19 +114,6 @@ public class ImageTest {
         assertEquals(100, i.get(1, 1));
     }
 
-
-    @Test
-    public void testShiftedInstance() throws Exception {
-        Image i = new Image(10, 20);
-        i.set(1, 1, 100);
-        Image image = i.shiftedInstance(5, 5);
-        assertTrue(i.equals(image.shiftedInstance(-5, -5)));
-        System.out.println(Arrays.toString(image.data));
-        assertEquals(100, image.get(6, 6));
-        assertEquals(0, image.get(0, 0));
-        assertEquals(0, image.get(9, 19));
-
-    }
 
     @Test
     public void testAddSaltAndPepper() throws Exception {

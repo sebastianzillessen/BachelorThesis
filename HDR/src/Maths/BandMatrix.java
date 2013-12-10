@@ -118,6 +118,14 @@ public class BandMatrix extends AbstractMatrix {
         return res;
     }
 
+
+    /**
+     * Adds two matrixes element wise.
+     *
+     * @param m other matrix to add on this matrix.
+     * @return result of this + m (each coefficients will be added).
+     * @throws java.lang.IllegalArgumentException if the matrixes are not of same size.
+     */
     public BandMatrix add(BandMatrix m) {
         if (m.size != size) {
             throw new IllegalArgumentException("The both matrices to add are not of the same size");
@@ -146,6 +154,11 @@ public class BandMatrix extends AbstractMatrix {
         return res;
     }
 
+    /**
+     * Clones a Band Matrix.
+     *
+     * @return the exact same Matrix as new instance.
+     */
     @Override
     public BandMatrix clone() {
         BandMatrix r = new BandMatrix(size, bandIndexes);
@@ -155,6 +168,12 @@ public class BandMatrix extends AbstractMatrix {
         return r;
     }
 
+    /**
+     * Multiplies the Band Matrix with a real number.
+     *
+     * @param a value to multiply this matrix
+     * @return scaled instance of this matrix.
+     */
     @Override
     public BandMatrix mult(double a) {
         BandMatrix m = new BandMatrix(size, bandIndexes);
@@ -164,6 +183,16 @@ public class BandMatrix extends AbstractMatrix {
         return m;
     }
 
+
+    /**
+     * sets an entry in the matrix.
+     *
+     * @param row Row of the matrix element
+     * @param col Col of the matrix element
+     * @param f   Number to set the entry to
+     * @throws java.lang.ArithmeticException       if f is NaN or Infinite
+     * @throws java.lang.IndexOutOfBoundsException if the row or col is out of range
+     */
     @Override
     public void set(int row, int col, double f) {
         if (Double.isInfinite(f) || Double.isNaN(f)) {
@@ -173,28 +202,44 @@ public class BandMatrix extends AbstractMatrix {
         if (pos == -1 || pos >= elements.length) {
             // give only an alert if i'm not zero
             if (f != 0.0) {
-                String s = "";
-                for (int i = 0; i < bandIndexes.length; i++) {
-                    s += bandIndexes[i] + ",";
-                }
-                throw new IndexOutOfBoundsException("This is a Band Matrix and you tried to set a value which is not in the bounds (" + row + "|" + col + ")\n" +
-                        " The Matrix diagonales are: " + s);
+                throw new IndexOutOfBoundsException("This is a Band Matrix and you tried to set a value which is not in the bounds (" + row + "|" + col + ")\n" + this.debugString());
             }
         } else
             elements[pos] = f;
     }
 
+    /**
+     * Get columns of this matrix
+     *
+     * @return number of cols
+     */
     @Override
     public int cols() {
         return size;
     }
 
+    /**
+     * Get rows of this matrix
+     *
+     * @return number of rows
+     */
     @Override
     public int rows() {
         return size;
     }
 
+    /**
+     * Get the entry of a element.
+     *
+     * @param row row of the matrix element.
+     * @param col col of the matrix element
+     * @return the set value in this cell. If no value was set, zero is returned. If the entry is outside of the
+     * specified bands of this matrix zero is returned as well.
+     * @throws java.lang.IndexOutOfBoundsException if rows or cols is not in the range of this matrix
+     */
     public double get(int row, int col) {
+        if (row < 0 || col < 0 || row >= rows() || col >= cols())
+            throw new IndexOutOfBoundsException("This is a Band Matrix and you tried to get a value which is not in the bounds (" + row + "|" + col + ")\n" + this.debugString());
         int pos = getIndex(row, col);
         if (pos == -1)
             return 0.0;
@@ -204,7 +249,13 @@ public class BandMatrix extends AbstractMatrix {
         }
     }
 
-    public String debug() {
+    /**
+     * returns a string which represents the instance of this matrix for debugging purposes.
+     *
+     * @return Debug-String representation.
+     */
+    @Override
+    public String debugString() {
         String s = "";
         for (int i = 0; i < bandIndexes.length; i++) {
             s += bandIndexes[i] + ",";
@@ -224,6 +275,11 @@ public class BandMatrix extends AbstractMatrix {
     }
 
 
+    /**
+     * Tranposes a Matrix.
+     *
+     * @return transposed instance of this matrix.
+     */
     @Override
     public BandMatrix transpose() {
         int[] newBandIndexes = Arrays.copyOf(bandIndexes, bandIndexes.length);
@@ -279,6 +335,14 @@ public class BandMatrix extends AbstractMatrix {
 
     }
 
+
+    /**
+     * Multiplies a matrix with a vector.
+     *
+     * @param x vector to multiply this matrix with
+     * @return result of A * x
+     * @throws java.lang.IllegalArgumentException if the Vector doesn't match the size of the matrix (x.length() != this.cols())
+     */
     @Override
     public Vector mult(final Vector x) {
         if (x.length() != this.cols())
@@ -308,6 +372,11 @@ public class BandMatrix extends AbstractMatrix {
         return r;
     }
 
+    /**
+     * Checks if a matrix is positiv semi definite
+     *
+     * @return true if the matrix is positiv semi definite.
+     */
     @Override
     public boolean isPositiveSemiDefinit() {
         for (int row = 0; row < size; row++) {
@@ -324,6 +393,12 @@ public class BandMatrix extends AbstractMatrix {
         return true;
     }
 
+    /**
+     * Stores a matrix in a file.
+     *
+     * @param filename the file where to save it.
+     * @return true if the file was stored, false if not.
+     */
     @Override
     public boolean toFileSync(String filename) {
         BufferedWriter writer = null;
@@ -361,11 +436,11 @@ public class BandMatrix extends AbstractMatrix {
 
     }
 
-    @Override
-    public String debugString() {
-        return String.format("Band Matrix: (%d x %d) Bands: %s", rows(), cols(), Arrays.toString(bandIndexes));
-    }
-
+    /**
+     * checks if a matrix is symmetric
+     *
+     * @return true if the matrix is symmetric
+     */
     @Override
     public boolean isSymmetric() {
         for (int i = 0; i < this.bandIndexes.length / 2; i++) {
@@ -384,6 +459,13 @@ public class BandMatrix extends AbstractMatrix {
         return true;
     }
 
+    /**
+     * Checks if a matrix is pentadiagonale
+     * (only the diagonale and the two elements next to it are set, so special form of a band matrix)
+     * A Band matrix is pentadiagonale if the bandIndexes are a subset of [-2,-1,0,1,2]
+     *
+     * @return true if pentadiagonale
+     */
     @Override
     public boolean isPentadiagonale() {
         for (int i = 0; i < bandIndexes.length; i++) {
@@ -393,20 +475,7 @@ public class BandMatrix extends AbstractMatrix {
         return true;
     }
 
-    private static int[] extractBands(AbstractMatrix m) {
-        Set<Integer> diagonales = new HashSet<Integer>();
-        if (m.rows() != m.cols())
-            throw new IllegalArgumentException("Only Quadratic Matrices allowed");
-        for (int row = 0; row < m.rows(); row++) {
-            for (int col = 0; col < m.cols(); col++) {
-                double v = m.get(row, col);
-                if (v != 0) {
-                    diagonales.add(col - row);
-                }
-            }
-        }
-        return ArrayMaths.TointArray(diagonales);
-    }
+    // --------------- --------------- Private Methods  --------------- ---------------
 
     /**
      * returns the index in the internal array of a given row and col
@@ -431,4 +500,29 @@ public class BandMatrix extends AbstractMatrix {
             return index;
         }
     }
+
+    /**
+     * Extracts from a given Matrix the used bands to transform the matrix into a band matrix.
+     *
+     * @param m Matrix to check the bands on
+     * @return indexes of the bands required for the band matrix representation.
+     * [0] stands for only the center diagonale is set.
+     * [1,0] is a diagonale two band matrix with center and one diagonale above set.
+     */
+    private static int[] extractBands(AbstractMatrix m) {
+        Set<Integer> diagonales = new HashSet<Integer>();
+        if (m.rows() != m.cols())
+            throw new IllegalArgumentException("Only Quadratic Matrices allowed");
+        for (int row = 0; row < m.rows(); row++) {
+            for (int col = 0; col < m.cols(); col++) {
+                double v = m.get(row, col);
+                if (v != 0) {
+                    diagonales.add(col - row);
+                }
+            }
+        }
+        return ArrayMaths.TointArray(diagonales);
+    }
+
+
 }

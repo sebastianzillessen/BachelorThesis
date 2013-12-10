@@ -139,17 +139,17 @@ public class BandMatrixTest {
         Vector b = new Vector(new double[]{
                 4, 5, 12, 3, 1, 2, 4
         });
-        Vector r = EquotationSolver.solve(d, b, EquotationSolverAlgorithm.LU);
+        Vector r = EquationSolver.solve(d, b, EquationSolverAlgorithm.LU);
         assertArrayEquals(new double[]{4.788460, 6.245192, 6.913459, 4.759616, 2.836539, 2.437500, 3.019231}, r.toArray(), 0.00001);
     }
 
     @Test
-    public void solveSOR() throws EquotationSolverException {
+    public void solveSOR() throws EquationSolverException {
         BandMatrix d = m(7);
         Vector b = new Vector(new double[]{
                 4, 5, 12, 3, 1, 2, 4
         });
-        Vector r = EquotationSolver.solve(d, b, EquotationSolverAlgorithm.SOR);
+        Vector r = EquationSolver.solve(d, b, EquationSolverAlgorithm.SOR);
         Vector s = new Vector(new double[]{4.788461, 6.245192, 6.913462, 4.759616, 2.836539, 2.437500, 3.019231});
         s.setPrecision(4);
         r.setPrecision(4);
@@ -279,7 +279,7 @@ public class BandMatrixTest {
     }
 
     @Test
-    public void solveLargeMatrix() throws EquotationSolverException {
+    public void solveLargeMatrix() throws EquationSolverException {
         BandMatrix m = BandMatrix.parse(
                 "6 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0\n" +
                         "1 7 1 0 0 1 0 0 0 0 0 0 0 0 0 0\n" +
@@ -308,7 +308,7 @@ public class BandMatrixTest {
 
         System.out.println(m);
         System.out.println(b);
-        Vector res = EquotationSolver.solve(m, b, EquotationSolverAlgorithm.SOR);
+        Vector res = EquationSolver.solve(m, b, EquationSolverAlgorithm.SOR);
         assertArrayEquals(r.toArray(), res.toArray(), 0.0001);
     }
 
@@ -400,7 +400,7 @@ public class BandMatrixTest {
                         " 0 0 0 0 0 -2 2").toString(), m.toString());
 
         BandMatrix test = b.add(m);
-        System.out.println(test.debug());
+        System.out.println(test.debugString());
         assertEquals(BandMatrix.parse(
                 " 3 -3 1 0 0 0 0\n" +
                         " -4 7 -6 2 0 0 0\n" +

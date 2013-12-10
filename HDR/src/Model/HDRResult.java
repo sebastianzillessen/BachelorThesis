@@ -4,11 +4,11 @@ package Model;
 import Maths.Vector;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sebastianzillessen
- * Date: 02.07.13
- * Time: 10:17
- * To change this template use File | Settings | File Templates.
+ * This represents a (temp.) result of the calculation of an HDR Picture.
+ * It contains the radiance map E and the response curve g.
+ * It is used to exchange this information asynchronously between the calculator and the GUI.
+ *
+ * @author sebastianzillessen
  */
 public class HDRResult {
 
@@ -17,6 +17,15 @@ public class HDRResult {
     private final int height;
     private final int width;
 
+
+    /**
+     * Default constructor
+     *
+     * @param E      the radiance map
+     * @param g      the camera response curve
+     * @param width  the width of the picture
+     * @param height the height of the picture
+     */
     public HDRResult(Vector E, Vector g, int width, int height) {
         if (g.length() != 256)
             throw new IndexOutOfBoundsException("G should be a vector of 256 elements!");
@@ -26,18 +35,38 @@ public class HDRResult {
         this.height = height;
     }
 
+    /**
+     * returns the camera response curve
+     *
+     * @return currently estimated camera response curve
+     */
     public Vector getG() {
         return g;
     }
 
+    /**
+     * returns radiance map.
+     *
+     * @return the currently calculated radiance map
+     */
     public Vector getE() {
         return E;
     }
 
+    /**
+     * Width of the HDRI
+     *
+     * @return width
+     */
     public int getWidth() {
         return width;
     }
 
+    /**
+     * Height of the HDRI
+     *
+     * @return height
+     */
     public int getHeight() {
         return height;
     }

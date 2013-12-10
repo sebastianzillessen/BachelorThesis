@@ -21,4 +21,10 @@ public interface Log {
      * @param s the object to print
      */
     public void write(Object s);
+
+    /**
+     * Displays an alert which is normally used when an error occurs.
+     * @param s the message to display.
+     */
+    public void alert(String s);
 }

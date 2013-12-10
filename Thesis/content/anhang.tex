@@ -1,11 +1,64 @@
 \chapter{Anhang}
-\section{Verwendete Algorithmen}
 
-\subsection{MTB-Algorithmus, vgl. \cite[S.9 f]{Ward03fast}}
+
+\section{LU-Zerlegung}
+\begin{Algorithmus}[H]
+\caption{Lösen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)}
+\label{alg:LU}
+\begin{algorithmic}
+\Function{LUDecomposition}{$A$}
+	\If{!\Call{isPentadiagonale}{$A$}}
+	    \State \Return error
+	\EndIf
+    \State $m_0 \gets A_{0,0}$, $\qquad r_0 \gets A_{0,1}$, $\qquad l_0 \gets A_{1,0}/m_0$, $ \qquad m_1 \gets A_{1,1}- l_1r_0$
+    \ForAll{$i \in [2,n]$}
+        \State $p_i \gets A_{i-2,i}$, $\qquad k_i \gets A_{i,i-2}/m_{i-2}$
+        \State $r_{i-1} \gets A_{i-1,i} - l_{i-1}  p_{i-2}$
+        \State $m_i \gets A_{i,i} - k_i p_{i-2} - l_i  r_{i-1}$
+        \State $l_i \gets (A_{i,i-1}-k_i r_{i-2})/m_{i-1}$
+    \EndFor
+    \State $L \gets $\Call{generateL}{$l$, $k$}         \Comment{Generiert die Matrix L und U }
+    \State $U \gets $\Call{generateU}{$m$, $r$, $p$}    \Comment{nach obigem Schema (siehe \autoref{eq:lu:structure})}
+    \State \Return [L, U]
+\EndFunction
+
+\Function{forwardElimination}{b,L}
+        \State $y_0 \gets b_0, \qquad y_1 \gets b_1 - L_{1,0} y_0$
+        \For{$i = 2 \mbox{ to } size(b)$}
+            \State $y_i \gets b_i - L_{i,i-2} y_{i-2} - L_{i,i-1} y_{i-1}$
+        \EndFor
+        \State \Return $y$
+\EndFunction
+
+
+\Function{backwardSubstitution}{U,y}
+        \State $x_{n-1} \gets y_{n-1}/U_{n-1,n-2}$
+        \State $x_{n-2} \gets (y_{n-2} - U_{n-2,n-1} x_{n-1})/U_{n-2,n-2}$
+        \State $y_1 \gets b_1 - L_{1,0} y_0$
+        \For{$i = size(b)-3 \mbox{ to } 0$}
+            \State $x_i \gets (U_{i,i+1} x_{i+1}- U_{i,i+2} x_{i+2} - y_i) / U_{i,i}$
+        \EndFor
+        \State \Return $x$
+\EndFunction
+
+
+
+
+\Function{Solve}{$A$, $b$}
+	\If{\Call{size}{$A$} != \Call{size}{b}} \State \Return error	\EndIf
+	\State [L,U] = \Call{LUDecomposition}{A};
+    \State $y \gets $\Call{forwardElimination}{b, L} \Comment{forward elimination $L\cdot y = b$}
+    \State \Return \Call{backwardSubstitution}{U,y} \Comment{backward substitution $U\cdot x = y$}
+\EndFunction
+\end{algorithmic}
+\end{Algorithmus}
+
+
+\section{MTB-Algorithmus}
 \label{subsec:MTB}
-Dem \gls{MTB} Verfahren (vgl. \cite{Ward03fast}) wird eine Serie von $N$ Bildern als Eingabe geliefert. Diese werden zunächst in ein Grauwert-Bild umgerechnet. Aus diesen Bildern wird der Algorithmus dann ausgehend von einem gewähltem Bild $N-1$ Offsets $(x,y)$ ausgeben, sodass die Bilder exakt übereinander gelegt werden können (vgl. \cite[S. 123f]{Reinhard}). Eine Registrierung von rotierten Bildern ist somit mit diesem Verfahren nicht möglich. 
+Dem \gls{MTB} Verfahren \cite[S.9 f]{Ward03fast} wird eine Serie von $N$ Bildern als Eingabe geliefert. Diese werden zunächst in ein Grauwert-Bild umgerechnet. Aus diesen Bildern wird der Algorithmus dann ausgehend von einem gewähltem Bild $N-1$ Offsets $(x,y)$ ausgeben, sodass die Bilder exakt übereinander gelegt werden können \cite[S. 123f]{Reinhard}. Eine Registrierung von rotierten Bildern ist somit mit diesem Verfahren nicht möglich. 
 
-Das Verfahren arbeitet dabei im Gegensatz zu vielen konventionellen Algorithmen nicht mit Kanten-Detektion im Bild um die Registrierung durchzuführen, da diese sehr anfällig auf unterschiedliche Belichtungswerte in Bildern sind. Es kommt hingegen ein Schwellwert-Verfahren auf einer Bilderpyramide zum Einsatz, dass dann mit schnellen Bit-Operationen die Verschiebung der Bilder berechnet (vgl. \cite{Ward03fast}). 
+Das Verfahren arbeitet dabei im Gegensatz zu vielen konventionellen Algorithmen nicht mit Kanten-Detektion im Bild um die Registrierung durchzuführen, da diese sehr anfällig auf unterschiedliche Belichtungswerte in Bildern sind. Es kommt hingegen ein Schwellwert-Verfahren auf einer Bilderpyramide zum Einsatz, dass dann mit schnellen Bit-Operationen die Verschiebung der Bilder berechnet  \cite{Ward03fast}. 
 
 \begin{Listing}[H]
 \label{lst:MTB:helpers}
@@ -78,62 +131,3 @@ GetExpShift(const Image *img1, const Image *img2, int shift_bits, int shift_ret[
 \end{lstlisting}
 \caption{Rekursive C Funktion zur Berechnung der notwendigen Verschiebung zwischen den Bildern um diese zu registrieren \cite{Ward03fast}}
 \end{Listing}
-
-\subsection{LU-Zerlegung}
-\begin{Algorithmus}[H]
-\caption{Lösen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)}
-\label{alg:LU}
-\begin{algorithmic}
-\Function{LUDecomposition}{$A$}
-	\If{!\Call{isPentadiagonale}{$A$}}
-	    \State \Return error
-	\EndIf
-    \State $m_0 \gets A_{0,0}$, $\qquad r_0 \gets A_{0,1}$, $\qquad l_0 \gets A_{1,0}/m_0$, $ \qquad m_1 \gets A_{1,1}- l_1r_0$
-    \ForAll{$i \in [2,n]$}
-        \State $p_i \gets A_{i-2,i}$
-        \State $k_i \gets A_{i,i-2}/m_{i-2}$
-        \State $r_{i-1} \gets A_{i-1,i} - l_{i-1}  p_{i-2}$
-        \State $m_i \gets A_{i,i} - k_i p_{i-2} - l_i  r_{i-1}$
-        \State $l_i \gets (A_{i,i-1}-k_i r_{i-2})/m_{i-1}$
-    \EndFor
-    \State $L \gets $\Call{generateL}{$l$, $k$}         \Comment{Generiert die Matrix L und U }
-    \State $U \gets $\Call{generateU}{$m$, $r$, $p$}    \Comment{nach obigem Schema (siehe \autoref{eq:lu:structure})}
-    \State \Return [L, U]
-\EndFunction
-
-\Function{forwardElimination}{b,L}
-        \State $y_0 \gets b_0$
-        \State $y_1 \gets b_1 - L_{1,0} y_0$
-        \For{$i = 2 \mbox{ to } size(b)$}
-            \State $y_i \gets b_i - L_{i,i-2} y_{i-2} - L_{i,i-1} y_{i-1}$
-        \EndFor
-        \Return $y$
-\EndFunction
-
-
-\Function{backwardSubstitution}{U,y}
-        \State $x_{n-1} \gets y_{n-1}/U_{n-1,n-2}$
-        \State $x_{n-2} \gets (y_{n-2} - U_{n-2,n-1} x_{n-1})/U_{n-2,n-2}$
-        \State $y_1 \gets b_1 - L_{1,0} y_0$
-        \For{$i = size(b)-3 \mbox{ to } 0$}
-            \State $x_i \gets (U_{i,i+1} x_{i+1}- U_{i,i+2} x_{i+2} - y_i) / U_{i,i}$
-        \EndFor
-        \Return $x$
-\EndFunction
-
-
-
-
-\Function{Solve}{$A$, $b$}
-	\If{\Call{size}{$A$} != \Call{size}{b}}
-	    \State \Return error
-	\EndIf
-	\State [L,U] = \Call{LUDecomposition}{A};
-
-    \State $y \gets $\Call{forwardElimination}{b, L} \Comment{forward elimination L*y = b}
-    \State $x \gets $\Call{backwardSubstitution}{U,y} \Comment{backward substitution U*x = y}
-    \State \Return $x$
-\EndFunction
-\end{algorithmic}
-\end{Algorithmus}
-

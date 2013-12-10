@@ -8,36 +8,73 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sebastianzillessen
- * Date: 03.11.13
- * Time: 17:32
- * To change this template use File | Settings | File Templates.
+ * Abstract implementation of a Matrix.
+ * <p/>
+ * This class offers the basic functionalities for a matrix.
+ *
+ * @author sebastianzillessen
  */
 public abstract class AbstractMatrix {
-    /* Abstract methods to overwrite */
 
-    public abstract void set(int i, int j, double f);
+    /**
+     * Sets a entry of the Matrix.
+     *
+     * @param row   Row of the matrix element
+     * @param col   Col of the matrix element
+     * @param value value for the matrix element
+     * @throws java.lang.IndexOutOfBoundsException if the row or col are not in the matrixs range.
+     */
+    public abstract void set(int row, int col, double value);
 
 
+    /**
+     * returns a value in the matrix. if the value has not been set yet it returns 0.
+     *
+     * @param row row of the matrix element.
+     * @param col col of the matrix element
+     * @return the value of the matrix in this position. if not set, then it returns 0.
+     * @throws IndexOutOfBoundsException if the row or col are not in the matrix range.
+     */
     public abstract double get(int row, int col);
 
+    /**
+     * Returns number of cols
+     *
+     * @return number of cols
+     */
     public abstract int cols();
 
+    /**
+     * Returns number of rows
+     *
+     * @return number of rows
+     */
     public abstract int rows();
 
+    /**
+     * Returns a string representation of this matrix containing relevant information for debugging processes.
+     *
+     * @return String for debug.
+     */
     public abstract String debugString();
 
+
+    /**
+     * multiplication of this matrix with a real value. Each element of the matrix gets multiplied by a.
+     *
+     * @param a value to multiply this matrix
+     * @return multiplied istance of this matrix. For a = 1 the same matrix is returned.
+     */
     public abstract AbstractMatrix mult(double a);
 
 
     /**
-     * Variables *
+     * Multiplies a matrix with a vector.
+     *
+     * @param x vector to multiply this matrix with
+     * @return result of A * x
+     * @throws java.lang.IllegalArgumentException if the Vector doesn't match the size of the matrix (x.length() != this.cols())
      */
-    protected AbstractMatrix R = null;
-    protected AbstractMatrix L = null;
-
-
     public Vector mult(final Vector x) {
         if (x.length() != cols())
             throw new IllegalArgumentException("Matrix * vector: vector must be of size " + cols() + " but was " + x.length());
@@ -65,11 +102,25 @@ public abstract class AbstractMatrix {
         return r;
     }
 
+    /**
+     * Multiplies a matrix with a vector (vector is represented by the array of real numbers).
+     *
+     * @param x vector to multiply this matrix with
+     * @return result of A * x
+     * @throws java.lang.IllegalArgumentException if the Vector doesn't match the size of the matrix (x.length() != this.cols())
+     */
     public Vector mult(double[] x) {
         return this.mult(new Vector(x));
     }
 
 
+    /**
+     * Multiplies a matrix with another matrix.
+     *
+     * @param m other matrix
+     * @return result of the matrix multiplication this * m
+     * @throws java.lang.IllegalArgumentException if the matrizes do not match.
+     */
     public AbstractMatrix mult(AbstractMatrix m) {
         if (m.rows() != cols())
             throw new IllegalArgumentException("Not the same rows and colls. Inputs has " + m.rows() + " rows. I have " + cols() + " cols");
@@ -88,6 +139,14 @@ public abstract class AbstractMatrix {
         return c;
     }
 
+
+    /**
+     * Adds an other matrix to this matrix.
+     *
+     * @param m other matrix
+     * @return result of the matrix addition this + m
+     * @throws java.lang.IllegalArgumentException if the matrizes do not match.
+     */
     public AbstractMatrix add(AbstractMatrix m) {
         if (m.cols() != rows() || m.cols() != cols())
             throw new IllegalArgumentException("Not the same rows and colls");
@@ -100,6 +159,11 @@ public abstract class AbstractMatrix {
         return r;
     }
 
+    /**
+     * Transposed matrix of this matrix.
+     *
+     * @return transposed matrix.
+     */
     public AbstractMatrix transpose() {
         AbstractMatrix res = new Matrix(cols(), rows());
         for (int r = 0; r < rows(); r++) {
@@ -111,58 +175,73 @@ public abstract class AbstractMatrix {
     }
 
 
-    public AbstractMatrix[] decomposePenta() {
-        if (L == null || R == null) {
-            final int n = rows();
-            L = new Matrix(n);
-            R = new Matrix(n);
-            double[] m = new double[n];
-            double[] l = new double[n];
-            double[] k = new double[n];
-            double[] p = new double[n];
-            double[] r = new double[n];
-            // initialization
-            m[0] = get(0, 0);
-            r[0] = get(0, 1);
-            l[1] = get(1, 0) / m[0];
-            m[1] = get(1, 1) - l[1] * r[0];
+    /**
+     * Decomposes a matrix if it is pentadiagonale.
+     *
+     * @return two matrizes [L, U] with L * U = this,
+     * L contains only entries lower then the diagonale and the diagonale entries are 1,
+     * U contains only entries over or on the diagonale.
+     * @throws java.lang.IllegalArgumentException if the matrix is not pentadiagonale this error is thrown.
+     */
+    public AbstractMatrix[] decomposePenta() throws IllegalArgumentException {
+        final int n = rows();
+        if (this.isPentadiagonale() == false)
+            throw new IllegalArgumentException("Matrix is not pentadiagonale. Cannot do the pentadiagonal decomposition.");
 
-            // p_i s
-            for (int i = 0; i < n - 2; i++) {
-                p[i] = get(i, i + 2);
-            }
+        BandMatrix L = new BandMatrix(n, new int[]{0, -1, -2});
+        BandMatrix R = new BandMatrix(n, new int[]{0, 1, 2});
+        double[] m = new double[n];
+        double[] l = new double[n];
+        double[] k = new double[n];
+        double[] p = new double[n];
+        double[] r = new double[n];
+        // initialization
+        m[0] = get(0, 0);
+        r[0] = get(0, 1);
+        l[1] = get(1, 0) / m[0];
+        m[1] = get(1, 1) - l[1] * r[0];
 
-            for (int i = 2; i < n; i++) {
-                k[i] = get(i, i - 2) / m[i - 2];
-                l[i] = (get(i, i - 1) - k[i] * r[i - 2]) / m[i - 1];
-                r[i - 1] = get(i - 1, i) - (l[i - 1] * (p[i - 2]));
-                m[i] = get(i, i) - k[i] * p[i - 2] - l[i] * r[i - 1];
-            }
+        // p_i s
+        for (int i = 0; i < n - 2; i++) {
+            p[i] = get(i, i + 2);
+        }
 
-            // build L
-            for (int i = 0; i < n; i++) {
-                L.set(i, i, 1);
-                if (i >= 1)
-                    L.set(i, i - 1, l[i]);
-                if (i >= 2)
-                    L.set(i, i - 2, k[i]);
-            }
+        for (int i = 2; i < n; i++) {
+            k[i] = get(i, i - 2) / m[i - 2];
+            l[i] = (get(i, i - 1) - k[i] * r[i - 2]) / m[i - 1];
+            r[i - 1] = get(i - 1, i) - (l[i - 1] * (p[i - 2]));
+            m[i] = get(i, i) - k[i] * p[i - 2] - l[i] * r[i - 1];
+        }
 
-            //build R
-            for (int i = 0; i < n; i++) {
-                R.set(i, i, m[i]);
-                if (i < n - 1)
-                    R.set(i, i + 1, r[i]);
-                if (i < n - 2)
-                    R.set(i, i + 2, p[i]);
+        // build L
+        for (int i = 0; i < n; i++) {
+            L.set(i, i, 1);
+            if (i >= 1)
+                L.set(i, i - 1, l[i]);
+            if (i >= 2)
+                L.set(i, i - 2, k[i]);
+        }
 
-            }
+        //build R
+        for (int i = 0; i < n; i++) {
+            R.set(i, i, m[i]);
+            if (i < n - 1)
+                R.set(i, i + 1, r[i]);
+            if (i < n - 2)
+                R.set(i, i + 2, p[i]);
         }
 
         return new AbstractMatrix[]{L, R};
     }
 
 
+    /**
+     * Method to print a matrix.
+     * <p/>
+     * Use this only on small matrices!
+     *
+     * @return a string representing the matrix entries.
+     */
     @Override
     public String toString() {
         String s = "[\n";
@@ -178,6 +257,11 @@ public abstract class AbstractMatrix {
         return s;
     }
 
+    /**
+     * Clones a matrix.
+     *
+     * @return clone of this matrix.
+     */
     public AbstractMatrix clone() {
         AbstractMatrix r = new Matrix(rows(), cols());
         for (int row = 0; row < rows(); row++) {
@@ -188,6 +272,13 @@ public abstract class AbstractMatrix {
         return r;
     }
 
+
+    /**
+     * Checks if two matrices are the same.
+     *
+     * @param o other matrix
+     * @return true if  each entry is the exactly the same in each matrix and the size equals as well.
+     */
     @Override
     public boolean equals(Object o) {
         if (o instanceof AbstractMatrix) {
@@ -203,6 +294,18 @@ public abstract class AbstractMatrix {
         return false;
     }
 
+    /**
+     * Parses a string representation of a matrix to a matrix.
+     * <p/>
+     * Format has to be:
+     * 0 0 0 0
+     * ...
+     * 0 0 0 0
+     * (rows seperated by \n and entries seperated by space).
+     *
+     * @param s string representation (see above)
+     * @return a matrix defined by the string
+     */
     public static AbstractMatrix parse(String s) {
         String[] lines = s.trim().split("\n");
         int rows = lines.length;
@@ -221,6 +324,12 @@ public abstract class AbstractMatrix {
         return m;
     }
 
+    /**
+     * Saves a matrix to a file in text form. This is handeld asynchron and does not return any errors,
+     * if the save process failed.
+     *
+     * @param filename the filename where to save it.
+     */
     public void toFile(final String filename) {
         new Thread(new Runnable() {
             @Override
@@ -230,6 +339,11 @@ public abstract class AbstractMatrix {
         }).start();
     }
 
+    /**
+     * Array representation of the Matrix.
+     *
+     * @return Matrix as array of doubles.
+     */
     public double[][] toArray() {
         double[][] res = new double[rows()][cols()];
         for (int i = 0; i < rows(); i++) {
@@ -240,6 +354,12 @@ public abstract class AbstractMatrix {
         return res;
     }
 
+    /**
+     * Stores a matrix in a file.
+     *
+     * @param filename the file where to save it.
+     * @return true if the file was stored, false if not.
+     */
     public boolean toFileSync(String filename) {
         BufferedWriter writer = null;
         boolean success = false;
@@ -271,10 +391,20 @@ public abstract class AbstractMatrix {
 
     }
 
+    /**
+     * Checks if a matrix is quadratic
+     *
+     * @return quadratic (rows == cols)
+     */
     public boolean isQuadratic() {
         return rows() == cols();
     }
 
+    /**
+     * checks if a matrix is symmetric
+     *
+     * @return true if the matrix is symmetric
+     */
     public boolean isSymmetric() {
         if (!isQuadratic())
             return false;
@@ -288,6 +418,11 @@ public abstract class AbstractMatrix {
         return true;
     }
 
+    /**
+     * Checks if a matrix is positiv semi definite
+     *
+     * @return true if the matrix is positiv semi definite.
+     */
     public boolean isPositiveSemiDefinit() {
         for (int row = 0; row < rows(); row++) {
             double sum = 0;
@@ -301,6 +436,12 @@ public abstract class AbstractMatrix {
         return true;
     }
 
+    /**
+     * Checks if a matrix is pentadiagonale
+     * (only the diagonale and the two elements next to it are set, so special form of a band matrix)
+     *
+     * @return true if pentadiagonale
+     */
     public boolean isPentadiagonale() {
         for (int row = 0; row < rows(); row++) {
             for (int col = 0; col < cols(); col++) {

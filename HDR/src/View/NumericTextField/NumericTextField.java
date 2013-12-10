@@ -7,15 +7,24 @@ package View.NumericTextField;
  @see    http://www.java2s.com/Code/Java/Swing-JFC/NumericTextField.htm
  **/
 
+import View.EventListener.InvalidInputListener;
+
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.text.*;
 import java.awt.*;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.ParsePosition;
+import java.util.ArrayList;
 
 public class NumericTextField extends JTextField implements
-        NumericPlainDocument.InsertErrorListener {
+        NumericPlainDocument.InsertErrorListener, DocumentListener {
+    private Border oldBorder;
+    private java.util.List<InvalidInputListener> listeners = new ArrayList<InvalidInputListener>();
+
     public NumericTextField() {
         this(null, 0, null);
     }
@@ -28,6 +37,7 @@ public class NumericTextField extends JTextField implements
             numericDoc.setFormat(format);
         }
         numericDoc.addInsertErrorListener(this);
+        numericDoc.addDocumentListener(this);
     }
 
     public NumericTextField(int columns, DecimalFormat format) {
@@ -96,11 +106,46 @@ public class NumericTextField extends JTextField implements
                              AttributeSet a) {
         // By default, just beep
         Toolkit.getDefaultToolkit().beep();
+        if (this.oldBorder == null)
+            oldBorder = this.getBorder();
+        this.setBorder(BorderFactory.createLineBorder(Color.red));
+        notifyListener(true);
     }
 
     // Method to create default model
     protected Document createDefaultModel() {
         return new NumericPlainDocument();
+    }
+
+    @Override
+    public void insertUpdate(DocumentEvent documentEvent) {
+        removeErrorBorder();
+    }
+
+    private void removeErrorBorder() {
+        notifyListener(false);
+        if (this.oldBorder == null)
+            oldBorder = this.getBorder();
+        this.setBorder(oldBorder);
+    }
+
+    @Override
+    public void removeUpdate(DocumentEvent documentEvent) {
+        removeErrorBorder();
+    }
+
+    @Override
+    public void changedUpdate(DocumentEvent documentEvent) {
+        removeErrorBorder();
+    }
+
+    public void addInvalidInputListener(InvalidInputListener i) {
+        this.listeners.add(i);
+    }
+
+    private void notifyListener(boolean isInvalid) {
+        for (InvalidInputListener i : listeners)
+            i.statusUpdate(isInvalid);
     }
 }
 

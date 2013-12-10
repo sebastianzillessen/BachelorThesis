@@ -6,7 +6,7 @@
 %}
 \chapter{Mathematische Ausarbeitung}
 \label{chap:maths}
-Zur Lösung des \gls{LGS} aus \autoref{eq:energy:weights} soll in dieser Arbeit ein anderes Verfahren verwendet werden. Hierbei wird das Lösen nach $\b g$ und $E_i$ in zwei Probleme zerlegt und durch ein alternierendes Lösungsverfahren ersetzt. Der Vorteil dieses Ansatzes ist, dass die gesamten Bildinformationen aus der Belichtungsserie verwendet werden können. Dies ist möglich, da die entstehenden Gleichungssysteme sehr dünn besetzt sind und effizient gelöst werden können. Die Struktur des alternierenden Vorgehens ist im \autoref{alg:alternierend:basic} beschrieben.
+Zur Lösung des \gls{LGS} aus \autoref{eq:energy:weights} soll in der vorliegenden Arbeit ein anderes Verfahren verwendet werden. Hierbei wird das Lösen nach $\b g$ und $E_i$ in zwei Probleme zerlegt und durch ein alternierendes Lösungsverfahren ersetzt. Der Vorteil dieses Ansatzes ist, dass die gesamten Bildinformationen aus der Belichtungsserie verwendet werden können. Dies ist möglich, da die entstehenden Gleichungssysteme sehr dünn besetzt sind und effizient gelöst werden können. Die Struktur des alternierenden Vorgehens ist im \autoref{alg:alternierend:basic} beschrieben.
 
 \begin{Algorithmus} %Die Umgebung nur benutzen, wenn man den Algorithmus ähnlich wie Graphiken von TeX platzieren lassen möchte
 \caption{Alternierendes Lösen nach $g(k)$ und $E_i$}
@@ -23,7 +23,7 @@ Zur Lösung des \gls{LGS} aus \autoref{eq:energy:weights} soll in dieser Arbeit 
 \end{algorithmic}
 \end{Algorithmus}
 
-Der Vorteil dieses Vorgehens ist, dass neben der Schätzung der Kamera-Antwortkurve auch gleichzeitig die \gls{Radiance Map} des \gls{HDR}-Bildes mit berechnet wird. Dadurch spart man sich die anschließende Umrechnung der Bildpunkte mittels der Funktion $\b g$ und ist darüber hinaus auch in der Lage Forderungen an $\b E$ zu stellen.
+Darüber hinaus kann durch dieses Verfahren neben der Schätzung der Kamera-Antwortkurve auch gleichzeitig die \gls{Radiance Map} des \gls{HDR}-Bildes mit berechnet wird. Dadurch spart man sich die anschließende Umrechnung der Bildpunkte mittels der Funktion $\b g$ und ist außerdem in der Lage Forderungen an $\b E$ zu stellen.
 
 In den nachfolgenden Abschnitten werden häufig Approximationen für die erste und zweite Ableitung verwendet. Dass es sich hierbei deswegen in der Regel um keine exakte Gleichheit ($=$) handelt, sondern vielmehr um eine Annäherung ($\approx$) sei hier erwähnt. Es wird im Nachfolgenden aus Gründen der Lesbarkeit darauf verzichtet dies kenntlich zu machen.
 
@@ -31,24 +31,24 @@ In den nachfolgenden Abschnitten werden häufig Approximationen für die erste u
 % --------------------------------------------------------------------------------------------------------------
 \section{Optimierungsansatz}
 \label{sec:ansatz}
-Die Gleichung aus \autoref{eq:energy:weights} dient als Grundlage für den Optimierungsansatz des gesamten Verfahrens. Da dieses Energiefunktional minimiert werden soll, sind partielle Ableitungen nach $\b g(k)$ bzw. $\ln E_i = F_i$ notwendig. Die vorkommenden Ableitungen zweiter Ordnung werden mittels der zentralen Differenz $\b g''(k) = \b g(k-1) - 2\b g(k) +\b g(k+1)$ diskretisiert (siehe \autoref{eq:energy:diskret}).
+Die \autoref{eq:energy:weights} dient als Grundlage für den Optimierungsansatz des gesamten Verfahrens. Da dieses Energiefunktional minimiert werden soll, sind partielle Ableitungen nach $\b g(k)$ bzw. $\ln E_i = F_i$ notwendig. Die vorkommenden Ableitungen zweiter Ordnung werden mittels der zentralen Differenz $\b g''(k) = \b g(k-1) - 2\b g(k) +\b g(k+1)$ diskretisiert (siehe \autoref{eq:energy:diskret}).
 
 \begin{align}
-\Omega &= \sum \limits_{i=1}^{N} \sum \limits_{j=1}^{P}w^2(Z_{ij})\cdot[\b g(Z_{ij}) - \ln E_i - \ln \Delta t_j]^2 + \lambda  \sum \limits_{z=Z_{min}+1}^{Z_{max}-1} [w(z) \cdot \b g''(z)]^2\\
+\Omega =& \sum \limits_{i=0}^{N-1} \sum \limits_{j=0}^{P-1}w^2(Z_{ij})\cdot[\b g(Z_{ij}) - \ln E_i - \ln \Delta t_j]^2 + \lambda  \sum \limits_{z=Z_{min}+1}^{Z_{max}-1} [w(z) \cdot \b g''(z)]^2\\
 \label{eq:energy:diskret}
 \begin{split}
- &= \underbrace{\sum \limits_{i=1}^{N} \sum \limits_{j=1}^{P}w^2(Z_{ij})\cdot[\b g(Z_{ij}) - F_i - \ln \Delta t_j]^2}_{\Phi} \\
- &+ \lambda \underbrace{ \sum \limits_{z=Z_{min}+1}^{Z_{max}-1} w^2(z) \cdot \overbrace{
+ &\qquad= \underbrace{\sum \limits_{i=0}^{N-1} \sum \limits_{j=0}^{P-1}w^2(Z_{ij})\cdot[\b g(Z_{ij}) - F_i - \ln \Delta t_j]^2}_{\Phi} \\
+ &\qquad+ \lambda \underbrace{ \sum \limits_{z=Z_{min}+1}^{Z_{max}-1} w^2(z) \cdot \overbrace{
  	[\b g(z-1)-2\b g(z)+\b g(z+1)]^2
  }^{
  	\text{Diskretisierung von }g''(k)
  }
  }_{\Theta}
  \end{split}\\
- \Omega &= \Phi + \lambda \Theta
+ \Omega =& \Phi + \lambda \Theta
 \end{align}
 
-In den folgenden Herleitungen taucht häufig der Faktor $2$ auf. Dieser entsteht durch das Ableiten der quadratischen Bestrafungsfunktionen. Er taucht in der Regel in allen Summanden von $\partial \Omega$ auf und kann deswegen gekürzt werden. In besonderen Fällen (wie z.B. der Erweiterung um robuste Bestrafungsterme, siehe \autoref{sec:robustheit}) ist das nicht der Fall. Dann werden diese Faktoren separat behandelt.
+In den folgenden Herleitungen taucht häufig der Faktor $2$ auf. Dieser entsteht durch das Ableiten der quadratischen Bestrafungsfunktionen. Er taucht in der Regel in allen Summanden von $\partial \Omega$ auf und kann deswegen gekürzt werden. In besonderen Fällen (wie z.B. der Erweiterung um robuste Bestrafungsterme, siehe \autoref{sec:robustheit}) ist dies nicht der Fall. Dann werden diese Faktoren separat behandelt.
 
 % --------------------------------------------------------------------------------------------------------------
 \subsection{Gleichungssystem für $\b g$}
@@ -56,26 +56,28 @@ Um nun das \gls{LGS} zur Lösung nach $g$ aufzustellen, muss $\Omega$ zunächst 
 
 \begin{align}
 \label{eq:energy:partial}
-\frac{\partial \Omega}{\partial \b g(k)} & = \frac{\partial \Phi}{\partial \b g(k)} +\frac{\partial \Theta}{\partial \b g(k)}\\
-\frac{\partial \Phi}{\partial \b g(k)} &= 2\cdot w^2(k) \cdot \sum \limits_{i=1}^{N} \sum \limits_{j=1}^{P} \cdot[\b g(k) - \ln E_i - \ln \Delta t_j]\cdot \delta_{Z_{ij}=k} \qquad \delta_{z=k} = \begin{cases}
+\frac{\partial \Omega}{\partial \b g(k)} 
+	& = \frac{\partial \Phi}{\partial \b g(k)} +\frac{\partial \Theta}{\partial \b g(k)}\\
+\frac{\partial \Phi}{\partial \b g(k)} 
+	&= 2\cdot w^2(k) \cdot \sum \limits_{i=0}^{N-1} \sum \limits_{j=0}^{P-1} \cdot[\b g(k) - \ln E_i - \ln \Delta t_j]\cdot \delta_{Z_{ij}=k} \qquad \delta_{z=k} = \begin{cases}
     1 \mbox{ wenn } z = k\\
     0 \mbox{ sonst}
 \end{cases}\\
-&=2\cdot w^2(k) \cdot \b g(k) \sum \limits_{i=1}^{N} \sum \limits_{j=1}^{P}\delta_{Z{ij}=k} - 2w^2(k)\cdot\sum \limits_{i=1}^{N} \sum \limits_{j=1}^{P}\delta_{Z_{ij}=k}(\ln E_i - \ln \Delta t_j)
+&=2\cdot w^2(k) \cdot \b g(k) \sum \limits_{i=0}^{N-1} \sum \limits_{j=0}^{P-1}\delta_{Z{ij}=k} - 2w^2(k)\cdot\sum \limits_{i=0}^{N-1} \sum \limits_{j=0}^{P-1}\delta_{Z_{ij}=k}(\ln E_i - \ln \Delta t_j)
 \end{align}
 
-Da $\Omega$ minimiert werden soll, gilt $\Omega' \overset{!}{=} 0 \Rightarrow (\Theta' \overset{!}{=} 0 \wedge \Phi' \overset{!}{=} 0)$. Daraus entsteht das lineare Gleichungssystem für den Datenterm in \autoref{eq:matrix:data}. Die Koeffizienten der Matrix können aus den einzelnen partiellen Ableitungen gewonnen werden.
+Da $\Omega$ minimiert werden soll, gilt $\Omega' = 0 \Rightarrow (\Theta' = 0 \wedge \Phi' = 0)$. Daraus entsteht das lineare Gleichungssystem für den Datenterm in \autoref{eq:matrix:data}. Die Koeffizienten der Matrix können aus den einzelnen partiellen Ableitungen gewonnen werden.
 \begin{align}
 \frac{\partial \Phi}{\partial \b g(k)} 
     \overset{!}{=} 0 & = 
-    2 w^2(k) [\b g(k) \sum_{i=1}^{N} \sum_{j=1}^{P}\delta_{Z_{ij}=k} - 
-    \sum_{i=1}^{N} \sum_{j=1}^{P}(\ln E_i - \ln \Delta t_j)\delta_{Z_{ij}=k}]\\
+    2 w^2(k) [\b g(k) \sum_{i=0}^{N-1} \sum_{j=0}^{P-1}\delta_{Z_{ij}=k} - 
+    \sum_{i=0}^{N-1} \sum_{j=0}^{P-1}(\ln E_i - \ln \Delta t_j)\delta_{Z_{ij}=k}]\\
     \underbrace{
-        w^2(k) \sum_{i=1}^{N} \sum_{j=1}^{P}(\delta_{Z_{ij}=k})
+        w^2(k) \sum_{i=0}^{N-1} \sum_{j=0}^{P-1}(\delta_{Z_{ij}=k})
     }_{\mbox{Matrixeintrag }a_k} 
     \cdot \b g(k) &= 
     \underbrace{
-        w^2(k) \sum_{i=1}^{N} \sum_{j=1}^{P}(\ln E_i - \ln \Delta t_j)\delta_{Z_{ij}=k}
+        w^2(k) \sum_{i=0}^{N-1} \sum_{j=0}^{P-1}(\ln E_i - \ln \Delta t_j)\delta_{Z_{ij}=k}
     }_{\mbox{Vektoreintrag }b_k} \\ 
 \begin{pmatrix}
 \ddots & 0& 0\\
@@ -95,7 +97,8 @@ Da $\Omega$ minimiert werden soll, gilt $\Omega' \overset{!}{=} 0 \Rightarrow (\
 \end{align}
 
 
-Anschließend betrachten wir den Glattheitsterm $\Theta$. Auch dieser muss partiell nach $\b g(k)$ abgeleitet werden. Aus Gründen der Vereinfachung wurden in den folgenden Berechnungen $Z_{min} = 0$ und $Z_{max} = 255$ angenommen. In der \autoref{eq:energy:diskret} wurde der Gewichtungsfaktor für den Glattheitsterm $\lambda$ absichtlich nicht in $\Theta$ integriert, da dieser bei der Herleitung keine Rolle spielt. Der Faktor $\lambda$ wird am Ende wieder hinzugefügt. Bei der partiellen Ableitung des Glattheitsterms muss hier besonders auf die Randbedingungen geachtet werden, dort verhält sich die partielle Ableitung anders:
+Anschließend betrachten wir den Glattheitsterm $\Theta$. Auch dieser muss partiell nach $\b g(k)$ abgeleitet werden. Aus Gründen der Vereinfachung wurden in den folgenden Berechnungen $Z_{min} = 0$ und $Z_{max} = 255$ angenommen. In der \autoref{eq:energy:diskret} wurde der Gewichtungsfaktor für den Glattheitsterm $\lambda$ absichtlich nicht in $\Theta$ integriert, da dieser bei der Herleitung keine Rolle spielt. Der Faktor $\lambda$ wird am Ende wieder hinzugefügt. Bei der partiellen Ableitung des Glattheitsterms muss hier besonders auf die Randbedingungen geachtet werden, dort verhalten sich die partiellen Ableitungen anders:
+
 
 \begin{align}
 \label{eq:partials:smoothness:0}
@@ -127,8 +130,7 @@ Anschließend betrachten wir den Glattheitsterm $\Theta$. Auch dieser muss parti
     + w^2(254)\cdot \b g(255)= 0
 \end{align}
 
-
-Aus diesen Gleichungen kann nun das lineare Gleichungssystem (siehe \autoref{eq:matrix:smoothness}) aufgestellt werden. Die  Koeffizienten der Matrix gehen aus obigen Gleichungen hervor (z.B. $d_{0,0} = w^2(1), \; d_{1,-1} = -2w^2(1), \dots$). Der Faktor $\lambda$ wurde hier wieder mit integriert (siehe \autoref{eq:energy:diskret}).
+Aus diesen Gleichungen kann nun das lineare Gleichungssystem (siehe \autoref{eq:matrix:smoothness}) aufgestellt werden. Die  Koeffizienten der Matrix gehen aus obigen Gleichungen hervor (z.B. $d_{0,0} = w^2(1), \; d_{1,-1} = -2w^2(1), \dots$). Der Faktor $\lambda$ wurde hier wieder mit integriert (siehe \autoref{eq:energy:diskret}). Bei der Matrix $D_4$ handelt es sich um eine diskrete Approximation der vierten Ableitung.
 
 \begin{align}
 \label{eq:matrix:smoothness}
@@ -179,12 +181,12 @@ Damit ist sichergestellt, dass alle Antwortkurven, die durch das Verfahren berec
 
 % --------------------------------------------------------------------------------------------------------------
 
-\subsection{Lösen von $E$}
-Für $E$ muss in der Fassung des Algorithmus ohne räumlichen Glattheitsterm (siehe \autoref{sec:raeumlich}) kein lineares Gleichungssystem  gelöst werden. Hier können die Werte direkt berechnet werden, da $\b g$ bekannt ist. Dazu wird das Energiefunktional aus \autoref{eq:energy:diskret} nach $\ln E_i = F_i$ partiell abgeleitet und umgeformt.    
+\subsection{Lösen von $\b E$}
+Für $\b E$ muss in der Fassung des Algorithmus ohne räumlichen Glattheitsterm (siehe \autoref{sec:raeumlich}) kein lineares Gleichungssystem  gelöst werden. Hier können die Werte direkt berechnet werden, da $\b g$ bekannt ist. Dazu wird das Energiefunktional aus \autoref{eq:energy:diskret} nach $\ln E_i = F_i$ partiell abgeleitet und umgeformt.    
 
 \begin{align}
 \label{eq:fi:basic}
-    \ln E_i = F_i =& \frac{\sum \limits_{j=0}^{P-1} (\b g(Z_{ij})-\ln \Delta t_j)\cdot w(Z_{ij})}{\sum \limits_{j=0}^{P-1} w(Z_{ij})}
+    \ln E_i = F_i =& \frac{\sum \limits_{j=0}^{P-1} (\b g(Z_{ij})-\ln \Delta t_j)\cdot w^2(Z_{ij})}{\sum \limits_{j=0}^{P-1} w^2(Z_{ij})}
 \end{align}
 
 
@@ -193,7 +195,7 @@ Für $E$ muss in der Fassung des Algorithmus ohne räumlichen Glattheitsterm (si
 \section{Erweiterung um Monotonie-Eigenschaft}
 \label{sec:monotonie}
 
-Bereits im Ansatz von Debevec und Malik wird für die Funktion $f$ angenommen, dass sie monoton und damit invertierbar ist. Für die Funktion $\b g$ wird diese Forderung jedoch nicht weiter aufgenommen. Aus physikalischer und mathematischer Sicht muss $\b g$ jedoch ebenfalls monoton sein, da ansonsten die Annahme $f$ sei monoton nicht gelten würde. Deshalb wurde eine erste Erweiterung des Algorithmus mit einer Forderung an die Monotonie von $\b g$ realisiert. Dies lässt sich über das Energiefunktional $\Omega$ als weiteren Bestrafungsterm $\Gamma$ realisieren.
+Im Ansatz von Debevec und Malik wird für die Funktion $f$ angenommen, dass sie monoton und damit invertierbar ist. Für die diskrete Funktion $\b g$ wird dies jedoch nicht explizit gefordert. Aus physikalischer und radiometrischer Sicht muss $\b g$ jedoch ebenfalls monoton sein. Deshalb wird nachfolgend eine erste Erweiterung des Algorithmus mit einer Forderung an die Monotonie von $\b g$ vorgestellt. Dies lässt sich über das Energiefunktional $\Omega$ als weiteren Bestrafungsterm $\Gamma$ realisieren.
 
 \begin{align}
 \tilde{\Omega} &= \Omega + \underbrace{\mu \sum \limits_{z=1}^{255} w^2(z) [(\phi_{\b g'<0}(z)\cdot \b g'(z)]^2}_{\mbox{Monotonie-Forderung } \Gamma} = \Omega + \Gamma\\
@@ -243,20 +245,20 @@ Diese Berechnung kann auch über Matritzenmultiplikation erreicht werden. $D$ is
 \end{align}
 
 
-Der Parameter $\mu$ ist ähnlich wie $\lambda$ ein Gewichtungsfaktor für die Monotonie-Bedingung. Die \autoref{eq:monotonie:derivate} kann damit einfach zum Gleichungssystem aus \ref{eq:g:lgs} hinzugenommen. Daraus entsteht folgendes zu lösende Gleichungssystem:
+Der Parameter $\mu$ ist ähnlich wie $\lambda$ ein Gewichtungsfaktor für die Monotonie-Bedingung. Das Gleichungssystem aus \ref{eq:g:lgs} kann damit um den Summanden aus \autoref{eq:monotonie:derivate} ergänzt werden.
 
 \begin{align}
 \label{eq:g:monotonie}
 [M + \mu C] \cdot \b g = b
 \end{align}
 
-Zu beachten ist hier, dass die Matrix $C$ ebenfalls pentadiagonal ist und somit auch bei diesem LGS die besondere Eigenschaft bestehen bleibt, wodurch auch hier die \nameref{sec:maths:lu} (siehe \autoref{sec:maths:lu}) verwendet werden kann.
+Zu beachten ist, dass die Matrix $C$ ebenfalls pentadiagonal ist und somit auch bei diesem \gls{LGS} die besondere Eigenschaft bestehen bleibt. Deshalb kann auch hier die LU-Zerlegung einer \gls{Pentadiagonal-Matrix} (siehe \autoref{sec:maths:lu}) verwendet werden.
 
 
 %------------------------------------------------------------------------------------------------------------------
 \section{Räumlicher Glattheitsterm}
 \label{sec:raeumlich}
-Die Erweiterung um den räumlichen Glattheitsterm (also eine Forderung an $\b E$ sich im zweidimensionalen Bild möglichst glatt zu verhalten) ist eine sinnvolle Erweiterung, um die Berechnung der $\ln E_i$ noch weiter zu optimieren und das lokale Umfeld um einen Bildpunkt mit in die Berechnung einzubeziehen. Dazu fordern wir eine räumliche Glattheit, die (analog zum Glattheitsterm von $\b g$) mittels der ersten Ableitung ausgedrückt werden kann. Da wir uns nun jedoch im zweidimensionalen Bildbereich befinden, müssen die Ableitungen in $x$- und $y$-Richtung betrachtet werden. Der Vektor $\b E$ ist eine eindimensionale Darstellung des zweidimensionalen Bildbereiches ($n \times m$), wobei gilt: $i = x+y*n$ ($x \in [0,n], \; y \in [0,m]$). 
+Die Erweiterung um den räumlichen Glattheitsterm (also eine Forderung an $\b E$ sich im zweidimensionalen Bild möglichst glatt zu verhalten) ist eine sinnvolle Erweiterung, um die Berechnung der $\ln E_i$ noch weiter zu optimieren und das lokale Umfeld um einen Bildpunkt mit in die Berechnung einzubeziehen. Dazu wird eine räumliche Glattheit gefordert, welche (analog zum Glattheitsterm von $\b g$) mittels der ersten Ableitung ausgedrückt werden kann. Da es sich bei $\b E$ um den zweidimensionalen Bildbereich handelt, müssen die Ableitungen in $x$- und $y$-Richtung betrachtet werden. Der Vektor $\b E$ ist eine eindimensionale Darstellung des zweidimensionalen Bildbereiches ($n \times m$), wobei gilt: $i = x+y*n$ ($x \in [0,n-1], \; y \in [0,m-1]$). 
 Hierbei müssen die Ränder entsprechend behandelt werden.
 
 \begin{align}
@@ -279,7 +281,7 @@ Hierbei müssen die Ränder entsprechend behandelt werden.
     A=& \{ i \in [0,N-1]\} \setminus \{ i \cdot k | k \in \mathbb{N}_+^0 \}
 \end{align}
 
-Dies muss nun wieder nach $\ln E_i$ partiell abgeleitet werden um das Minimum des Energiefunktionals (siehe \autoref{eq:raum:glattheit}) zu bestimmen. Auch hier wurde $\ln E_i$ durch $F_i$ ersetzt. Zunächst werden die Randbedingungen vernachlässigt.
+Auch hier muss nun wieder nach $\ln E_i$ partiell abgeleitet werden um das Minimum des Energiefunktionals (siehe \autoref{eq:raum:glattheit}) zu bestimmen. Zunächst werden die Randbedingungen vernachlässigt.
 \begin{align}
 \label{eq:raum:derivate}
 \frac{\partial \Psi}{\partial F_i} =& 2\alpha[(F_i - F_{i-1}) - (F_{i+1} - F_i) + (F_i - F_{i-n})-(F_{i+n}- F_i)]\\
@@ -302,7 +304,7 @@ Der Einfluss der benachbarten Bildpunkte (siehe \autoref{fig:raum:stencil}) erin
         \cline{2-2} 
     \end{tabular}
   \end{center}
-\caption{Einfluss der umliegenden Bildpunkte $F_i$ beim aktiviertem räumlichen Glattheitsterm. Hier in 2D dargestellt}
+\caption{\textit{Einfluss der umliegenden Bildpunkte} --- Räumlicher Glattheitsterm als 2D Stencil}
 \label{fig:raum:stencil}
 \end{figure}
 
@@ -323,7 +325,7 @@ Aus der obigen \autoref{eq:raum:derivate} (in der die Ränder noch nicht beachte
 
 Die entstehende Matrix $R$ ist eine $N \times N$ Matrix, die in Blöcken der Größe $n \times m$ aufgeteilt werden kann. Ein solcher Block auf der Diagonalen der Matrix  steht jeweils für eine Reihe von Bildpunkten im Bild (siehe \autoref{fig:raum:matrix}). 
 
-Aus den Gleichungen \ref{eq:raum:derivate} und \ref{eq:raum:phi} können nun die einzelnen Gleichungen für $\b F_k$ erstellt werden:
+Aus den Gleichungen \ref{eq:raum:derivate} und \ref{eq:raum:phi} können nun die einzelnen Gleichungen für $F_k$ erstellt werden:
 
 \begin{align}
  0 = 2 \sum_{j=0}^{P-1} w^2(Z_{kj})[\b g(Z_{kj}) -\ln \Delta t_j] - 2 \sum_{j=0}^{P-1} w^2(Z_{kj})F_k + 2\alpha [4 F_k-F_{k-n} - F_{k-1} - F_{k+1} - F_{k+n}]
@@ -367,7 +369,7 @@ Das Gleichungssystem aus \ref{eq:raum:res} ist symmetrisch, quadratisch und posi
     \right)
 \end{align*}
 \end{center}
-\caption{Schematischer Aufbau der Matrix $R$ für die Berechnung von $\ln E_i$ mit räumlicher Glattheit am Beispiel eines $4 \times 4$ Bildes.}
+\caption{\textit{Schematischer Aufbau der Matrix $R$} --- Berechnung von $\ln E_i$ mit räumlicher Glattheit am Beispiel eines $4 \times 4$ Bildes.}
 \label{fig:raum:matrix}
 \end{figure}
 
@@ -376,7 +378,7 @@ Das Gleichungssystem aus \ref{eq:raum:res} ist symmetrisch, quadratisch und posi
 \section{Erweiterung um Robustheit}
 \label{sec:robustheit}
 
-Wie in \autoref{algo:schwachstellen:robustheit} bereits beschrieben, setzt das Verfahren von Debevec und Malik nur quadratische Bestrafungsterme ein. Diese reduzieren die Auswirkungen von Gauß-Rauschen auf den Eingabebildern (künstlich erzeugt oder z.B. durch Unschärfe bei der Aufnahme der Bilder). Bei anderen Messungenauigkeiten (wie z.B. \gls{SaltAndPepperNoise}) ist ein subquadratischer Bestrafungsterm aus Sicht der Robustheit des Verfahrens jedoch besser geeignet, da hier die starken Ausreißer weniger stark bestrafend wirken. Um die Erweiterung um die Robustheit einzuführen, werden die quadratischen Bestrafungsterme an den gewünschten Stellen durch die subquadratischen ersetzt. 
+Wie in \autoref{algo:schwachstellen:robustheit} bereits beschrieben, setzt das Verfahren von Debevec und Malik nur quadratische Bestrafungsterme ein. Diese reduzieren die Auswirkungen von Gauß-Rauschen auf den Eingabebildern. Bei anderen Messungenauigkeiten (wie z.B. \gls{SaltAndPepperNoise}) ist ein subquadratischer Bestrafungsterm aus Sicht der Robustheit des Verfahrens jedoch besser geeignet, da hier die starken Ausreißer weniger stark bestrafend wirken. Um die Erweiterung um die Robustheit einzuführen, werden die quadratischen Bestrafungsterme an den gewünschten Stellen durch die subquadratischen ersetzt. 
 
 
 % --------------------------------------------------------------------------------------------------------------
@@ -386,17 +388,19 @@ An den Termen für die Glattheit von $\b g$ und die Monotonie-Forderung an $\b g
 
 % --------------------------------------------------------------------------------------------------------------
 \subsection{Subquadratische Bestrafungsfunktion im Datenterm von $\b g$ und $\b E$}
+\label{subsec:robust:e:daten}
+
 Der Datenterm von $\b g$ berücksichtigt bisher keine Ausreißer. Sind also starke Ausreißer in den Bildern der Belichtungsserie zu finden (wie z.B. \gls{SaltAndPepperNoise}), dann werden diese den Datenterm quadratisch beeinflussen. Besser wäre es, hier große Ausreißer weniger stark zu gewichten.
 Hier kommen die subquadratischen Bestrafungsfunktionen zum Einsatz, die das Energiefunktional aus \autoref{eq:energy:weights} erweitern. Dieses wird dann wieder partiell nach $\b g(k)$ und $\ln E_i$ abgeleitet, um den Optimierungsansatz zu lösen. 
 
 \begin{align}
 \label{eq:energy:robust}
 \tilde{\Omega} &= 
-    \underbrace{\sum_{i=1}^{N} \sum_{j=1}^{P} w^2(Z_{ij})
+    \underbrace{\sum_{i=0}^{N-1} \sum_{j=0}^{P-1} w^2(Z_{ij})
     \cdot \varphi([\b g(Z_{ij}) - \ln E_i - \ln \Delta t_j]^2)}_{\mbox{Datenterm mit Robustheit }\tilde{\Phi}}
     + \underbrace{\lambda  \sum_{z=Z_{min}+1}^{Z_{max}-1} [w(Z_{ij}) \cdot \b g''(z)]^2}_{\mbox{Glattheitsterm für }g}\\
 \frac{\partial \tilde{\Phi}}{\partial \b g(k)} \overset{!}{=} 0 &= 
-    2 w^2(k) \sum_{i=1}^{N} \sum_{j=1}^{P}\delta_{Z_{ij}=k} 
+    2 w^2(k) \sum_{i=0}^{N-1} \sum_{j=0}^{P-1}\delta_{Z_{ij}=k} 
     \underbrace{
         \varphi'(
             [\b g(k)-\ln E_i - \ln \Delta t_j]^2
@@ -406,7 +410,7 @@ Hier kommen die subquadratischen Bestrafungsfunktionen zum Einsatz, die das Ener
 \end{align}
 \begin{align}
     &\underbrace{
-        2w^2(k)\sum_{i=1}^{N} \sum_{j=1}^{P}  
+        2w^2(k)\sum_{i=0}^{N-1} \sum_{j=0}^{P-1}  
             \delta_{Z_{ij}=k}
             \varphi'(
                 [\b g(k)-\ln E_i - \ln \Delta t_j]^2
@@ -414,7 +418,7 @@ Hier kommen die subquadratischen Bestrafungsfunktionen zum Einsatz, die das Ener
     }_{\mbox{Matrixeintrag } \tilde{a}_k}\b g(k) \nonumber \\
     &\qquad= 
     \underbrace{
-        2w^2(k)\sum_{i=1}^{N} \sum_{j=1}^{P} 
+        2w^2(k)\sum_{i=0}^{N-1} \sum_{j=0}^{P-1} 
             (\ln E_i +\ln \Delta t_j)
             \varphi'(
                 [\b g(k)-\ln E_i - \ln \Delta t_j]^2
@@ -425,7 +429,7 @@ Hier kommen die subquadratischen Bestrafungsfunktionen zum Einsatz, die das Ener
 
 Der dabei vorkommende Bestrafungsfaktor $\varphi'([\b g(k)-\ln E_i - \ln \Delta t_j]^2)$ wird regelmäßig neu berechnet  (aus den alten Werten von $\b g$ und $\ln E_i$) und kann zeitweise festgehalten. Damit fließt dieser nur als Faktor in die Berechnung ein. Die Koeffizienten $\tilde a_k$ und $\tilde b_k$ ersetzen die Matrix- bzw. Vektoreinträge des Gleichungssystemes aus \autoref{eq:matrix:data}. Der Glattheitsterm $\Theta$ bleibt zusammen mit seinen partiellen Ableitungen identisch. Auch mit dieser Erweiterung hat sich die Struktur des LGS für $\b g$ nicht verändert und kann deswegen mit der LU-Zerlegung (siehe \autoref{sec:maths:lu}) gelöst werden. 
 
-\label{subsec:robust:e:daten}
+
 Diese Erweiterung muss nun auch noch bei der Berechnung von $\ln E_i$ berücksichtigt werden. Auch hierzu wird das Energiefunktional $\tilde{\Omega}$ (siehe \autoref{eq:energy:robust}) wieder partiell nach $\ln E_i$ abgeleitet. Aus der \autoref{eq:fi:basic} entsteht dann bei aktiviertem subquadratischem Bestrafungsterm die neue Berechnung von $\ln E_i$:
 
 \begin{align}
@@ -450,7 +454,7 @@ Diese Erweiterung muss nun auch noch bei der Berechnung von $\ln E_i$ berücksic
 
 Es kann eine schnellere Konvergenz erzielt werden, wenn die einzelnen Berechnungen von $\b g$ bzw. $\ln E_i$ noch häufiger iteriert werden. Um diesen Prozess zu beschleunigen wurden neben den bereits bestehenden Hauptiterationen (siehe \autoref{alg:alternierend:basic}) eine weitere Ebene der Iterationen eingeführt. Auf dieser Ebene wird nur das Lösen nach $\b g$ bzw. $\ln E_i$ wiederholt (siehe \autoref{alg:alternierend:extended}). Dieses Verfahren macht nur Sinn, falls das Monotonie-Kriterium (siehe \autoref{sec:monotonie}) oder die Robustheit mittels subquadratischen Bestrafungstermen aktiviert ist, da hier auf die vorherigen Werte der entsprechenden Unbekannten eingegangen wird. 
 
-Das Abbruchkriterium der inneren Schleife könnte ebenfalls wie beim \gls{SOR} Verfahren (siehe \autoref{sec:maths:sor}) über das relative Residuum erfolgen. In der verwendeten Implementierung wurde jedoch aus Gründen der Einfachheit eine maximale Anzahl an inneren Iterationen festgelegt.
+Das Abbruchkriterium der inneren Schleife könnte ebenfalls wie beim \gls{SOR}-Verfahren (siehe \autoref{sec:maths:sor}) über das relative Residuum erfolgen. In der verwendeten Implementierung wurde jedoch aus Gründen der Einfachheit eine maximale Anzahl an inneren Iterationen festgelegt.
 
 \begin{Algorithmus} %Die Umgebung nur benutzen, wenn man den Algorithmus ähnlich wie Graphiken von TeX platzieren lassen möchte
 \caption{Erweitertes alternierendes Lösen nach $g(k)$ und $\ln E_i$ mit Haupt- und Inneniterationen}
@@ -482,15 +486,14 @@ Das Abbruchkriterium der inneren Schleife könnte ebenfalls wie beim \gls{SOR} V
 Die subquadratischen Bestrafungsfunktionen machen auch bei der Betrachtung des räumlichen Glattheitsterms für $\b E$ 
 Sinn. Durch die weniger starke Gewichtung von starken Ausreißern (wie sie z.B. typischer Weise an Kanten in Bildern vorkommen) können Strukturen im Bild besser erhalten werden.
 
-Als Grundlage gilt hier der Glattheitsterm $\Psi$ aus der \autoref{eq:raum:glattheit}. Dieser wird nun um die subquadratische Bestrafungsfunktion $\varphi(s^2) = \sqrt{s^2+\epsilon^2}$ erweitert.
+Die Grundlage hierfür bildet der Glattheitsterm $\Psi$ aus der \autoref{eq:raum:glattheit}. Die darin vorkommenden quadratischen Bestrafungsterme werden nun durch die subquadratische Bestrafungsfunktion $\varphi(s^2) = \sqrt{s^2+\epsilon^2}$ ersetzt.
 
 \begin{align}
 \label{eq:robust:raum}
 \tilde{\Psi} =& 
         \alpha \sum_{i\in A}
             \varphi((\ln E_i - \ln E_{i-1})^2)
-        +\alpha \sum_{i=n}^{N-1}\varphi((\ln E_i - \ln E_{i-n})^2)
-    \\
+        +\alpha \sum_{i=n}^{N-1}\varphi([\ln E_i - \ln E_{i-n}]^2)\\
     A=& \{ i \in [0,N-1]\} \setminus \{ i \cdot k | k \in \mathbb{N} \}
 \end{align}
 
@@ -513,7 +516,7 @@ Dies muss nun wieder nach $\ln E_i$ partiell abgeleitet werden. Dabei wurde auch
 
 Daraus lässt sich wieder ein Stencil (immer noch ohne Berücksichtigung der Ränder) für den Einfluss der umliegenden Bildpunkte bei der Berechnung von $\ln E_i$ aufstellen (siehe \autoref{fig:robust:raum:stencil}). Die Struktur der Matrix $\tilde R$ (siehe \autoref{fig:raum:matrix}) ist hier wieder ähnlich. An den Rändern fallen entsprechend die Stencil-Einträge an den Seiten weg und treten damit dann auch nicht im zentralen Pixel auf (dieses enthält die positive Summe der Koeffizienten der Umgebungspixel). Auch in dieser Erweiterung wird $\varphi'(s^2)$ vorab berechnet und dann regelmäßig aktualisiert.
 
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
     \begin{tabular}{c|c|c}
         \cline{2-2}
@@ -528,7 +531,7 @@ Daraus lässt sich wieder ein Stencil (immer noch ohne Berücksichtigung der Rä
         \cline{2-2} 
     \end{tabular}
   \end{center}
-\caption{Einfluss der umliegenden Bildpunkte $F_i$ bei aktiviertem räumlichen Glattheitsterm mit der Erweiterung durch einen subquadratischen Bestrafungsterm}
+\caption{\textit{Einfluss der umliegenden Bildpunkte} --- Räumlicher Glattheitsterm mit der Erweiterung durch subquadratische Bestrafungsterme.}
 \label{fig:robust:raum:stencil}
 \end{figure}
 
@@ -551,7 +554,7 @@ Um bei der Berechnung von $\ln E_i$ sowohl im Datenterm, als auch im Glattheitst
 
 \begin{align}
 \tilde{\Omega} &= 
-    \underbrace{\sum_{i=1}^{N} \sum_{j=1}^{P} w^2(Z_{ij})
+    \underbrace{\sum_{i=0}^{N-1} \sum_{j=0}^{P-1} w^2(Z_{ij})
     \cdot \varphi([\b g(Z_{ij}) - \ln E_i - \ln \Delta t_j]^2)}_{\mbox{Datenterm mit Robustheit }\tilde{\Phi}}
     + \underbrace{\lambda  \sum_{z=Z_{min}+1}^{Z_{max}-1} [w(Z_{ij}) \cdot \b g''(z)]^2}_{\mbox{Glattheitsterm für }g} \nonumber\\
     & + \underbrace{
@@ -559,7 +562,6 @@ Um bei der Berechnung von $\ln E_i$ sowohl im Datenterm, als auch im Glattheitst
             \varphi((\ln E_i - \ln E_{i-1})^2)
         +\alpha \sum_{i=n}^{N-1}\varphi((\ln E_i - \ln E_{i-n})^2)
     }_{\mbox{räumlicher Glattheitsterm mit Robustheit }\Tilde \Psi}
-\\
 \end{align}
 
 Die \autoref{eq:f_i:robust} kann ebenfalls so umgeformt werden, dass ein LGS entsteht. 
@@ -608,7 +610,7 @@ Dieses Gleichungssystem wird nun mit der partiellen Ableitung von $\tilde \Psi$ 
 (\tilde H+\alpha \tilde R)\cdot \b F =& \tilde{\b b}
 \end{align}
 
-Strukturell entspricht dieses LGS dem aus \autoref{sec:raeumlich}, da die Matrix $\tilde H$ eine Diagonalmatrix mit positiven Einträgen ist. Damit bleibt das LGS positiv semidefinit und quadratisch. Auch hier kommt das \gls{SOR} Verfahren zum Einsatz.
+Strukturell entspricht dieses LGS dem aus \autoref{sec:raeumlich}, da die Matrix $\tilde H$ eine Diagonalmatrix mit positiven Einträgen ist. Damit bleibt das LGS positiv semidefinit und quadratisch. Auch hier kommt das \gls{SOR}-Verfahren zum Einsatz.
 
 
 
@@ -618,7 +620,7 @@ Strukturell entspricht dieses LGS dem aus \autoref{sec:raeumlich}, da die Matrix
 \label{sec:solvers}
 Grundsätzlich hat es der Algorithmus mit zwei verschiedenen Matrix-Strukturen zu tun. Bei der Berechnung von $\b g$ wird die strukturelle Eigenschaft der Matrix $M$ ausgenutzt um ein schnelles Lösen mittels der LU-Zerlegung zu gewährleisten.
 
-Bei der Erweiterung des Ansatzes um einen räumlichen Glattheitsterm (siehe \autoref{sec:raeumlich}) tritt außerdem eine positive semidefinite Matrix auf, die gut durch das \gls{SOR} Verfahren gelöst werden kann. Beide Verfahren werden hier kurz vorgestellt.
+Bei der Erweiterung des Ansatzes um einen räumlichen Glattheitsterm (siehe \autoref{sec:raeumlich}) tritt außerdem eine positive semidefinite Matrix auf, die gut durch das \gls{SOR}-Verfahren gelöst werden kann. Beide Verfahren werden hier kurz vorgestellt.
 
 
 
@@ -627,7 +629,7 @@ Bei der Erweiterung des Ansatzes um einen räumlichen Glattheitsterm (siehe \aut
 \label{sec:maths:lu}
 Die Matrix $M$ aus \autoref{eq:g:lgs} ist pentadiagonal. Das bedeutet, es sind nur die zentralen fünf Diagonal-Elemente der Matrix besetzt. Hier kommt eine besonders schnelle Variante der LU-Zerlegung zum Einsatz.
 
-Die LU-Zerlegung ist ein Verfahren, bei dem eine quadratische Matrix $A$ in die beiden Dreiecksmatritzen $L$ und $U$ zerlegt wird. Das besondere an diesem Verfahren ist, dass die nichttrivialen Elemente (Einträge ungleich Null) in der Matrix $L$ (engl. lower) sich nur in der unteren linken bzw. bei der Matrix $U$ (engl. upper) nur in der oberen rechten Hälfte befinden. Die Diagonaleinträge von $L$ haben alle den Wert eins. 
+Die LU-Zerlegung ist ein Verfahren, bei dem eine quadratische Matrix $A$ in die beiden Dreiecksmatritzen $L$ und $U$ zerlegt wird. Das besondere an diesem Verfahren ist, dass die nichttrivialen Elemente (Einträge ungleich null) in der Matrix $L$ (engl. lower) sich nur in der unteren linken bzw. bei der Matrix $U$ (engl. upper) nur in der oberen rechten Hälfte befinden. Die Diagonaleinträge von $L$ haben alle den Wert eins. 
 
 In diesem speziellen Fall ist bekannt, dass die Matrix nur fünf besetzte Diagonalen hat, was zur Struktur der Matritzen in \autoref{eq:lu:structure} führt.
 
@@ -659,7 +661,7 @@ m_0 & r_0 & p_0 & 0 &  \\
 
 Daraus lässt sich dann der \autoref{alg:LU} herleiten, der eine pentadiagonale Matrix $A$ und einen Vektor $\b b$ als Eingabe hat und den Vektor $\b x$ zurückgibt, sodass gilt $A \cdot \b x = \b b$. Das darin enthaltende Lösen des LGS $A\cdot \b x = \b b$ geschieht mittels der Vorwärts-Eliminierung und der Rückwärts-Substitution. 
 
-Eine erweiterte Pivotisierung der Spalten ist nicht notwendig, da die Diagonal-Einträge der Matrix bereits die betragsmäßig größten Werte einer Spalte haben. Der komplette Algorithmus ist in Pseudocode im Anhang zu finden (siehe \ref{alg:LU}).
+Eine Pivotisierung der Spalten ist nicht notwendig, da die Diagonal-Einträge der Matrix bereits die betragsmäßig größten Werte einer Spalte sind. Der komplette Algorithmus ist in Pseudocode im Anhang zu finden (siehe \ref{alg:LU}).
 
 
 
@@ -667,9 +669,9 @@ Eine erweiterte Pivotisierung der Spalten ist nicht notwendig, da die Diagonal-E
 \subsection{SOR-Algorithmus}
 \label{sec:maths:sor}
 
-Für die Erweiterung um einen räumlichen Glattheitsterm (siehe \autoref{sec:robustheit}) musste außerdem noch ein weiterer Typ Matrix gelöst werden. Das dabei entstehende Gleichungssystem hätte nicht so effizient mit der LU-Zerlegung gelöst werden können, da die dabei entstehende Matrix nicht pentadiagonal ist und außerdem sehr groß ist ($N \times N$, wobei $N$ die Anzahl der Pixel in einem Bild der Belichtungsserie ist). 
+Für die Erweiterung um einen räumlichen Glattheitsterm (siehe \autoref{sec:robustheit}) muss außerdem noch ein weiterer Typ Matrix gelöst werden. Das dabei entstehende Gleichungssystem kann nicht so effizient mit der LU-Zerlegung gelöst werden, da die dabei entstehende Matrix nicht pentadiagonal und außerdem sehr groß ist ($N \times N$). 
 
-Hierfür scheint das \gls{SOR} Verfahren besser geeignet zu sein. Bei Matritzen, die quadratisch, positiv definit, symmetrischen und dünn besetzt sind, stellt das \gls{SOR} eine Verbesserung gegenüber dem Gauß-Seidel Verfahren dar. Der reelle Parameter $\omega \in (0,2)$ sorgt dafür, dass das Verfahren schneller konvergiert. Das Gauß-Seidel und das \gls{SOR} Verfahren sind identisch für $\omega = 1 $.
+Hierfür ist das \gls{SOR}-Verfahren besser geeignet. Bei Matrizen, die quadratisch, positiv definit, symmetrischen und dünn besetzt sind, stellt dieses Verfahren eine Verbesserung gegenüber dem Gauß-Seidel-Verfahren dar. Der reelle Parameter $\omega \in (0,2)$ sorgt dafür, dass das Verfahren schneller konvergiert. Das Gauß-Seidel- und das \gls{SOR}-Verfahren sind identisch für $\omega = 1 $.
 
 Die Lösung für $x$ wird komponentenweise und iterativ nach folgender Vorschrift bestimmt:
 \begin{align}

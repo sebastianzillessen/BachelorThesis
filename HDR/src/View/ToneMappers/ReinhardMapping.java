@@ -4,13 +4,12 @@ import Maths.AbstractMatrix;
 import Maths.Matrix;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sebastianzillessen
- * Date: 16.07.13
- * Time: 17:48
- * To change this template use File | Settings | File Templates.
+ * Implements the Reinhard global Tone-Mapper
+ * parameters:
+ * hdr: high dynamic range radiance map, a matrix of size rows * columns * 3
+ * % luminance map: the corresponding lumiance map of the hdr image
  * <p/>
- * From: http://www.drama.uga.edu/~jkundert/DRAMA5310/SoundFX/SFX-Dvd1/FM%20Samples/12-03B/Drum%20Styles%20Vol4/ROCK_KIT/reinhard.pdf
+ * Matlab Code from : http://cybertron.cg.tu-berlin.de/eitz/hdr/
  */
 public class ReinhardMapping extends ToneMapping {
 
@@ -20,6 +19,12 @@ public class ReinhardMapping extends ToneMapping {
         this.a = a;
     }
 
+    /**
+     * calculation
+     *
+     * @param lum
+     * @return
+     */
     @Override
     public double[][] getValuesIntern(double[][] lum) {
         double[][] e = super.mapToRange(lum, 0, 1);
@@ -48,10 +53,18 @@ public class ReinhardMapping extends ToneMapping {
         return r;
     }
 
+    /**
+     * WE only have one parameter
+     */
     protected enum VARS {
         a
     }
 
+    /**
+     * returns the varaiables
+     *
+     * @return
+     */
     public String[] getVars() {
         String[] vars = new String[VARS.values().length];
         for (int i = 0; i < vars.length; i++)

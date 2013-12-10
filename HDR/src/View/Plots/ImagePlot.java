@@ -1,15 +1,13 @@
 package View.Plots;
 
 import java.awt.*;
-import java.awt.Image;
 import java.awt.image.BufferedImage;
 
 /**
- * Created with IntelliJ IDEA.
- * User: sebastianzillessen
- * Date: 15.07.13
- * Time: 17:52
- * To change this template use File | Settings | File Templates.
+ * Plot to display an image.
+ *
+ * @author sebastianzillessen
+ * @see Model.Image
  */
 public class ImagePlot extends Plot {
 
@@ -26,19 +24,12 @@ public class ImagePlot extends Plot {
         }
     };
 
-    private void startImageCalculation() {
-        if (generating == null || !generating.isAlive()) {
-            generating = new Thread(runner);
-            generating.start();
-        }
-    }
 
-    public void setImage(Model.Image image) {
-        this.image = image;
-        startImageCalculation();
-    }
-
-
+    /**
+     * Creates a new image plot with given image. Starts generation in background
+     *
+     * @param image the image to display.
+     */
     public ImagePlot(Model.Image image) {
         super();
         this.image = image;
@@ -46,6 +37,31 @@ public class ImagePlot extends Plot {
         this.height = image.getHeight();
         startImageCalculation();
     }
+
+    /**
+     * updates the image of the plot
+     *
+     * @param image
+     */
+    public void setImage(Model.Image image) {
+        this.image = image;
+        startImageCalculation();
+    }
+
+
+    /**
+     * Stores the current displayed image
+     *
+     * @param filename
+     * @return true if saved
+     */
+    @Override
+    public boolean saveGraphic(String filename) {
+        BufferedImage bufferedImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
+        bufferedImage.getGraphics().drawImage(bi.getScaledInstance(image.getWidth(), image.getHeight(), Image.SCALE_REPLICATE), 0, 0, null);
+        return saveGraphic(filename, bufferedImage);
+    }
+
 
     @Override
     protected void redraw() {
@@ -76,10 +92,11 @@ public class ImagePlot extends Plot {
     }
 
 
-    @Override
-    public void saveGraphic(String filename) {
-        BufferedImage bufferedImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
-        bufferedImage.getGraphics().drawImage(bi.getScaledInstance(image.getWidth(), image.getHeight(), Image.SCALE_REPLICATE), 0, 0, null);
-        saveGraphic(filename, bufferedImage);
+    private void startImageCalculation() {
+        if (generating == null || !generating.isAlive()) {
+            generating = new Thread(runner);
+            generating.start();
+        }
     }
+
 }

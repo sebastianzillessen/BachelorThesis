@@ -6,36 +6,66 @@
 \BOOKMARK [1][-]{section.2.1}{2.1 Prinzip}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.2}{2.2 Anwendungsgebiet und Geschichte}{chapter.2}% 7
 \BOOKMARK [1][-]{section.2.3}{2.3 Bilderzeugung}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.4}{2.4 Bildformate und -speicherung}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.5}{2.5 Bilddarstellung}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.6}{2.6 Software zur Erstellung von HDR-Bildern}{chapter.2}% 11
-\BOOKMARK [0][]{chapter.3}{3 Verwandte Arbeiten und Implementierungen}{}% 12
-\BOOKMARK [1][-]{section.3.1}{3.1 Bekannte Implementierungen des Ansatzes von Debevec und Malik}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{3.2 Verwandte Arbeiten}{chapter.3}% 14
-\BOOKMARK [0][]{chapter.4}{4 Algorithmus von Debevec und Malik paper}{}% 15
-\BOOKMARK [1][-]{section.4.1}{4.1 Ansatz}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{4.2 Berechnung der Antwortkurve}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.3}{4.3 Konstruktion der Radiance Map}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.4}{4.4 M\366gliche Erweiterungen des Ansatzes}{chapter.4}% 19
-\BOOKMARK [0][]{chapter.5}{5 Mathematische Ausarbeitung}{}% 20
-\BOOKMARK [1][-]{section.5.1}{5.1 Optimierungsansatz}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.2}{5.2 Erweiterung um Monotonie-Eigenschaft}{chapter.5}% 22
-\BOOKMARK [1][-]{section.5.3}{5.3 R\344umlicher Glattheitsterm}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.4}{5.4 Erweiterung um Robustheit}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.5}{5.5 L\366sung der Gleichungssysteme}{chapter.5}% 25
-\BOOKMARK [0][]{chapter.6}{6 Realisierung}{}% 26
-\BOOKMARK [1][-]{section.6.1}{6.1 Anforderungen}{chapter.6}% 27
-\BOOKMARK [1][-]{section.6.2}{6.2 Wahl der Programmiersprache}{chapter.6}% 28
-\BOOKMARK [1][-]{section.6.3}{6.3 Programmvorstellung und Benutzeroberfl\344che}{chapter.6}% 29
-\BOOKMARK [1][-]{section.6.4}{6.4 Externe Bibliotheken}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.5}{6.5 Architektur}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.6}{6.6 Herausforderungen w\344hrend der Programmierung}{chapter.6}% 32
-\BOOKMARK [0][]{chapter.7}{7 Ergebnisse und Resultate}{}% 33
-\BOOKMARK [1][-]{section.7.1}{7.1 Ergebnisse mit Monotonie-Bedingung}{chapter.7}% 34
-\BOOKMARK [1][-]{section.7.2}{7.2 Ergebnisse mit r\344umlichem Glattheitsterm}{chapter.7}% 35
-\BOOKMARK [1][-]{section.7.3}{7.3 Ergebnisse mit subquadratischen Bestrafungstermen}{chapter.7}% 36
-\BOOKMARK [0][]{chapter.8}{8 Zusammenfassung und Ausblick}{}% 37
-\BOOKMARK [0][]{appendix.A}{A Anhang}{}% 38
-\BOOKMARK [1][-]{section.A.1}{A.1 Verwendete Algorithmen}{appendix.A}% 39
-\BOOKMARK [0][]{section*.38}{Glossar und Abk\374rzungsverzeichnis}{}% 40
-\BOOKMARK [0][]{appendix*.40}{Literaturverzeichnis}{}% 41
+\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Pseudo-HDR-Bilder}{section.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 HDR-Kameras}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 HDR-Bildgenerierung aus einer Belichtungsreihe}{section.2.3}% 11
+\BOOKMARK [1][-]{section.2.4}{2.4 Bildformate und -speicherung}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.4.1}{2.4.1 RGBE \205 Das .hdr Format}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.2}{2.4.2 TIFF \205 Gleitkomma Kodierung}{section.2.4}% 14
+\BOOKMARK [2][-]{subsection.2.4.3}{2.4.3 EXR \205 EXtended Range Format}{section.2.4}% 15
+\BOOKMARK [1][-]{section.2.5}{2.5 Bilddarstellung}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.5.1}{2.5.1 Globale Tone-Mapping-Operatoren}{section.2.5}% 17
+\BOOKMARK [2][-]{subsection.2.5.2}{2.5.2 Lokale Tone-Mapping-Operatoren}{section.2.5}% 18
+\BOOKMARK [1][-]{section.2.6}{2.6 Software zur Erstellung von HDR-Bildern}{chapter.2}% 19
+\BOOKMARK [0][]{chapter.3}{3 Verwandte Arbeiten und Implementierungen}{}% 20
+\BOOKMARK [1][-]{section.3.1}{3.1 Bekannte Implementierungen des Ansatzes von Debevec und Malik}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{3.2 Verwandte Arbeiten}{chapter.3}% 22
+\BOOKMARK [0][]{chapter.4}{4 Algorithmus von Debevec und Malik paper}{}% 23
+\BOOKMARK [1][-]{section.4.1}{4.1 Ansatz}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Verwendete Symbole}{section.4.1}% 25
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Herleitung}{section.4.1}% 26
+\BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 Eindeutigkeit der L\366sung f\374r g}{section.4.1}% 27
+\BOOKMARK [1][-]{section.4.2}{4.2 Berechnung der Antwortkurve}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.3}{4.3 Konstruktion der Radiance Map}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.4}{4.4 M\366gliche Erweiterungen des Ansatzes}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.4.1}{4.4.1 Gewichtungsfunktion}{section.4.4}% 31
+\BOOKMARK [2][-]{subsection.4.4.2}{4.4.2 Selektion von Bildpunkten}{section.4.4}% 32
+\BOOKMARK [2][-]{subsection.4.4.3}{4.4.3 Robustheit des Verfahrens}{section.4.4}% 33
+\BOOKMARK [2][-]{subsection.4.4.4}{4.4.4 Monotonie-Kriterium}{section.4.4}% 34
+\BOOKMARK [0][]{chapter.5}{5 Mathematische Ausarbeitung}{}% 35
+\BOOKMARK [1][-]{section.5.1}{5.1 Optimierungsansatz}{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Gleichungssystem f\374r g}{section.5.1}% 37
+\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 L\366sen von E}{section.5.1}% 38
+\BOOKMARK [1][-]{section.5.2}{5.2 Erweiterung um Monotonie-Eigenschaft}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.3}{5.3 R\344umlicher Glattheitsterm}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.4}{5.4 Erweiterung um Robustheit}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Subquadratische Bestrafungsfunktion im Monotonie- oder Glattheits-Term von g}{section.5.4}% 42
+\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Subquadratische Bestrafungsfunktion im Datenterm von g und E}{section.5.4}% 43
+\BOOKMARK [2][-]{subsection.5.4.3}{5.4.3 Subquadratische Bestrafungsfunktion im r\344umlichen Glattheitsterm von E}{section.5.4}% 44
+\BOOKMARK [2][-]{subsection.5.4.4}{5.4.4 Subquadratische Bestrafungsfunktion im Daten- und Glattheitsterm von E}{section.5.4}% 45
+\BOOKMARK [1][-]{section.5.5}{5.5 L\366sung der Gleichungssysteme}{chapter.5}% 46
+\BOOKMARK [2][-]{subsection.5.5.1}{5.5.1 LU-Zerlegung einer Pentadiagonal-Matrix}{section.5.5}% 47
+\BOOKMARK [2][-]{subsection.5.5.2}{5.5.2 SOR-Algorithmus}{section.5.5}% 48
+\BOOKMARK [0][]{chapter.6}{6 Realisierung}{}% 49
+\BOOKMARK [1][-]{section.6.1}{6.1 Anforderungen}{chapter.6}% 50
+\BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 Funktionale Anforderungen}{section.6.1}% 51
+\BOOKMARK [2][-]{subsection.6.1.2}{6.1.2 Nichtfunktionale Anforderungen}{section.6.1}% 52
+\BOOKMARK [1][-]{section.6.2}{6.2 Wahl der Programmiersprache}{chapter.6}% 53
+\BOOKMARK [1][-]{section.6.3}{6.3 Prototyping}{chapter.6}% 54
+\BOOKMARK [1][-]{section.6.4}{6.4 Architektur}{chapter.6}% 55
+\BOOKMARK [2][-]{subsection.6.4.1}{6.4.1 Paketdiagramm}{section.6.4}% 56
+\BOOKMARK [2][-]{subsection.6.4.2}{6.4.2 Sequenzdiagramm}{section.6.4}% 57
+\BOOKMARK [1][-]{section.6.5}{6.5 Externe Bibliotheken}{chapter.6}% 58
+\BOOKMARK [1][-]{section.6.6}{6.6 Programmvorstellung}{chapter.6}% 59
+\BOOKMARK [2][-]{subsection.6.6.1}{6.6.1 Installation}{section.6.6}% 60
+\BOOKMARK [2][-]{subsection.6.6.2}{6.6.2 Erste Schritte}{section.6.6}% 61
+\BOOKMARK [0][]{chapter.7}{7 Ergebnisse und Resultate}{}% 62
+\BOOKMARK [1][-]{section.7.1}{7.1 Ergebnisse mit Monotonie-Bedingung}{chapter.7}% 63
+\BOOKMARK [1][-]{section.7.2}{7.2 Ergebnisse mit r\344umlichem Glattheitsterm}{chapter.7}% 64
+\BOOKMARK [1][-]{section.7.3}{7.3 Ergebnisse mit subquadratischen Bestrafungstermen}{chapter.7}% 65
+\BOOKMARK [0][]{chapter.8}{8 Zusammenfassung und Ausblick}{}% 66
+\BOOKMARK [0][]{appendix.A}{A Anhang}{}% 67
+\BOOKMARK [1][-]{section.A.1}{A.1 LU-Zerlegung}{appendix.A}% 68
+\BOOKMARK [1][-]{section.A.2}{A.2 MTB-Algorithmus}{appendix.A}% 69
+\BOOKMARK [0][]{section*.38}{Glossar und Abk\374rzungsverzeichnis}{}% 70
+\BOOKMARK [0][]{appendix*.40}{Literaturverzeichnis}{}% 71

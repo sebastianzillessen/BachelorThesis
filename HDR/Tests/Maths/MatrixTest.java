@@ -112,8 +112,8 @@ public class MatrixTest {
 
         Vector r = null;
         try {
-            r = EquotationSolver.solve(d, b, EquotationSolverAlgorithm.LU);
-        } catch (EquotationSolverException e) {
+            r = EquationSolver.solve(d, b, EquationSolverAlgorithm.LU);
+        } catch (EquationSolverException e) {
             fail();
         }
 
@@ -127,9 +127,9 @@ public class MatrixTest {
                 4, 5, 12, 3, 1, 2, 4
         });
         try {
-            EquotationSolver.solve(d, b, EquotationSolverAlgorithm.SOR);
+            EquationSolver.solve(d, b, EquationSolverAlgorithm.SOR);
             fail();
-        } catch (EquotationSolverException e) {
+        } catch (EquationSolverException e) {
             assertTrue(e.getMessage().length() > 0);
         }
     }
