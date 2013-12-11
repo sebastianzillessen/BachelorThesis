@@ -7,54 +7,51 @@ Warning--entry type for "tellone" isn't style-file defined
 --line 116 of file bibliography/bibliography.bib
 Warning--entry type for "adobe:tiff" isn't style-file defined
 --line 124 of file bibliography/bibliography.bib
-Warning--entry type for "tone_mapper_1" isn't style-file defined
---line 155 of file bibliography/bibliography.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Warning--empty booktitle in logluv
+Warning--can't use both volume and number fields in Jinno
+Warning--empty booktitle in tone_mapper_2
+Warning--can't use both volume and number fields in tone_mapper_2
 Warning--can't use both volume and number fields in logluv
-Warning--empty booktitle in Xinqiao
-Warning--empty booktitle in Nayar00highdynamic
-Warning--empty booktitle in zimmer
 Warning--can't use both volume and number fields in zimmer
-You've used 23 entries,
+You've used 22 entries,
             3039 wiz_defined-function locations,
-            775 strings with 9021 characters,
-and the built_in function-call counts, 12346 in all, are:
-= -- 1015
-> -- 437
-< -- 19
-+ -- 158
-- -- 155
-* -- 782
-:= -- 1665
-add.period$ -- 76
-call.type$ -- 23
-change.case$ -- 136
-chr.to.int$ -- 23
-cite$ -- 29
-duplicate$ -- 969
-empty$ -- 1041
-format.name$ -- 199
-if$ -- 2569
+            768 strings with 8703 characters,
+and the built_in function-call counts, 12369 in all, are:
+= -- 1025
+> -- 413
+< -- 23
++ -- 149
+- -- 146
+* -- 779
+:= -- 1638
+add.period$ -- 77
+call.type$ -- 22
+change.case$ -- 142
+chr.to.int$ -- 22
+cite$ -- 27
+duplicate$ -- 987
+empty$ -- 1060
+format.name$ -- 188
+if$ -- 2612
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 203
-newline$ -- 123
-num.names$ -- 69
-pop$ -- 441
+missing$ -- 201
+newline$ -- 119
+num.names$ -- 66
+pop$ -- 438
 preamble$ -- 1
-purify$ -- 171
+purify$ -- 163
 quote$ -- 0
-skip$ -- 401
+skip$ -- 413
 stack$ -- 0
-substring$ -- 565
-swap$ -- 491
-text.length$ -- 19
+substring$ -- 574
+swap$ -- 508
+text.length$ -- 23
 text.prefix$ -- 8
 top$ -- 0
-type$ -- 168
-warning$ -- 6
-while$ -- 95
-width$ -- 27
-write$ -- 261
-(There were 9 warnings)
+type$ -- 160
+warning$ -- 5
+while$ -- 93
+width$ -- 26
+write$ -- 260
+(There were 7 warnings)

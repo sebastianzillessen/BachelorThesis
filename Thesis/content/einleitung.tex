@@ -1,15 +1,20 @@
+\glsresetall
+
+
 \chapter{Einleitung}
-Die \gls{HDR}-Bildgebung ist eines von vielen interessanten Problemen in dem aufstrebenden Forschungsgebiet \textit{Computational Photography}. Ziel dieser Arbeit ist die Fusion mehrerer Bilder mit verschiedener Belichtungszeit zu einem einzigen Bild mit deutlich vergrößertem Dynamikumfang.
+Die \gls{HDR} Bildgebung ist eines von vielen interessanten Problemen in dem aufstrebenden Forschungsgebiet \textit{Computational Photography}. Bei diesen Bildern handelt es sich um Repräsentationen einer realen Szene, die - im Vergleich zu herkömmlichen Aufnahmen - einen erhöhten Dynamikumfang (Verhältnis zwischen hellstem und dunkelstem Pixel im Bild) besitzen und somit u.a. größere Helligkeitsbereiche darstellen können. Ziel dieser Arbeit ist die Fusion mehrerer Bilder mit verschiedener Belichtungszeit zu einem einzigen Bild mit deutlich vergrößertem Dynamikumfang.
  
 \section{Motivation}
 
 
-Während viele Arbeiten sich nur mit der pixelweisen Fusion der Bilddaten auseinander setzen, schlagen Debevec und Malik \cite{paper} vor, gleichzeitig auch noch die Antwortkurve des Bildaufnahmeprozesses, d.h. der verwendeten Kamera, mitzuschätzen (siehe \autoref{fig:antwortkurve}). Dies bietet den klaren Vorteil, die Bildfusion auch ohne vorherige radiometrische Kalibration des Aufnahmeequipments durchführen zu können. Als mathematisches Werkzeug zur Formulierung des Verfahrens dient hierbei ein gemeinsames Energiefunktional, das einen Ähnlichkeits- und einen  Glattheitsterm besitzt. Während der Ähnlichkeitsterm unter Berücksichtigung der mitgeschätzten Antwortkurve die Beziehung zwischen den Einzelaufnahmen und dem gesuchten HDR-Bild herstellt, sorgt der Glattheitsterm für eine hinreichend glatte Antwortkurve, die auch aus radiometrischer Sicht Sinn ergibt.
+Während viele Arbeiten sich nur mit der pixelweisen Fusion der Bilddaten auseinander setzen, schlagen Debevec und Malik \cite{paper} vor, gleichzeitig auch noch die Antwortkurve des Bildaufnahmeprozesses, d.h. der verwendeten Kamera, mitzuschätzen. Diese Antwortkurve ist die kameraspezifische Abbildung, welche aus den Beleuchtungswerten der aufzunehmenden Szene Grau- bzw. Farbwerte erzeugt (siehe \autoref{fig:antwortkurve}).
+
+Dies bietet den klaren Vorteil, die Bildfusion auch ohne vorherige radiometrische Kalibration des Aufnahmeequipments durchführen zu können. Als mathematisches Werkzeug zur Formulierung des Verfahrens dient hierbei ein gemeinsames Energiefunktional, das einen Ähnlichkeits- und einen  Glattheitsterm besitzt. Während der Ähnlichkeitsterm unter Berücksichtigung der mitgeschätzten Antwortkurve die Beziehung zwischen den Einzelaufnahmen und dem gesuchten HDR-Bild herstellt, sorgt der Glattheitsterm für eine hinreichend glatte Antwortkurve, die auch aus radiometrischer Sicht Sinn ergibt.
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=\textwidth]{ImageAquisitionPipeline}
-    \caption{\textit{Bildaufnahme Pipeline} --- Veranschaulichung der zu durchlaufenden Prozesse bei der Aufnahme eines Bildes mit einer Kamera  \cite[S.2]{paper}.}
+    \caption{\textit{Bildaufnahme-Pipeline} --- Veranschaulichung der zu durchlaufenden Prozesse bei der Aufnahme eines Bildes mit einer Kamera  \cite[S.2]{paper}.}
     \label{fig:antwortkurve}
   \end{center}
 \end{figure}
@@ -40,20 +45,11 @@ Neben der Modellierung und Implementierung der einzelnen Erweiterungen soll auch
 
 
 \section{Gliederung}
-Die Arbeit gliedert sich wie folgt:
-\begin{description}
+In \autoref{chap:hdr} werden zunächst die Grundlagen der \gls{HDR}-Bilder vermittelt. Dabei wird auf die physikalischen, historischen und anwendungsorientierten Eigenschaften von \gls{HDR}-Bildern eingegangen. Im anschließenden \autoref{chap:references} werden verwandte Arbeiten zum Thema \gls{HDR} zusammengefasst sowie existierende Implementierungen des Ansatzes von Debevec und Malik vorgestellt.
 
-\item[\autoref{chap:hdr} -- \nameref{chap:hdr}:] Hier werden die Grundlagen der \gls{HDR}-Bilder vermittelt. Dabei wird auf die physikalischen, historischen und anwendungsorientierten Eigenschaften von \gls{HDR}-Bildern eingegangen.
+Die zu Grunde liegende Vorgehensweise von Debevec und Malik wird im nachfolgenden \autoref{chap:algo} beschrieben. Außerdem werden die existierenden Schwachstellen des bisherigen Ansatzes dargestellt und erläutert. Darauf basierend wird dann im \autoref{chap:maths} mathematisch umgesetzt und diskutiert. Außerdem werden die Erweiterungen des Algorithmus beschrieben und formal spezifiziert.
 
-\item[\autoref{chap:references} -- \nameref{chap:references}:] Anschließend werden verwandte Arbeiten zum Thema \gls{HDR} vorgestellt.
+Im \autoref{chap:impl} wird die Herangehensweise an die Problemstellung aus Sicht der Entwicklung beschrieben. Es werden Anforderungen an die Software formuliert, der Prototyp vorgestellt und die Architektur der Implementierung beschrieben. Abschließend wird die Verwendung der Software erläutert.
 
-\item[\autoref{chap:algo} -- \nameref{chap:algo}:] Die zu Grunde liegende Vorgehensweise von Debevec und Malik soll in diesem Kapitel beschrieben werden. Außerdem werden die existierenden Schwachstellen des bisherigen Ansatzes dargestellt.
-
-\item[\autoref{chap:maths} -- \nameref{chap:maths}:] Der theoretische Ansatz aus \autoref{chap:algo} wird hier mathematisch umgesetzt und diskutiert. Außerdem werden die Erweiterungen des Algorithmus beschrieben und formal spezifiziert.
-
-\item[\autoref{chap:impl} -- \nameref{chap:impl}:] Dieses Kapitel beschäftigt sich mit der Herangehensweise an die Problemstellung aus Sicht der Entwicklung. Es werden Anforderungen an die Software formuliert, der Prototyp vorgestellt und die Architektur der Implementierung beschrieben. Abschließend wird die Verwendung der Software erläutert.
-
-\item[\autoref{chap:results} -- \nameref{chap:results}:] Anschließend werden die Resultate und Einflüsse der unterschiedlichen Erweiterungen vorgestellt und diskutiert.
-
-\item[\autoref{chap:zusfas} -- \nameref{chap:zusfas}:] Zusammenfassung der Ergebnisse der Arbeit und Darstellung von Anknüpfungspunkten zu weiteren Arbeiten.
-\end{description}
+Das \autoref{chap:results} stellt die Resultate und Einflüsse der unterschiedlichen Erweiterungen vor. Die Ergebnisse werden mit dem Standard-Ansatz verglichen und es folgt eine Analyse der Resultate.
+Das \autoref{chap:zusfas} rundet die vorliegende Arbeit mit einer Zusammenfassung der Ergebnisse und Ausblicken ab. 

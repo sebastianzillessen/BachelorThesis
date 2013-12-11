@@ -40,7 +40,7 @@ Die Anforderungen an die Realisierung lassen sich zum einen aus der Aufgabenbesc
     
     \item[Performanz:] An die Performanz der Implementierung wurden keine besonderen Anforderungen gestellt. Die Umsetzbarkeit und die Ausgabe des Programms stehen im Vordergrund. Aus diesem Grund wurde von einer Laufzeitanalyse des Programmes abgesehen.
     
-    \item[Software-Qualität:] Da diese Arbeit eine Bachelor-Arbeit der Fachrichtung \textit{Softwaretechnik} ist, bestehen Anforderungen an die Qualität des Quellcodes. Diese beinhaltet die folgenden Aspekte.
+    \item[Software-Qualität:] Da diese Arbeit eine Bachelor-Arbeit der Fachrichtung \textit{Softwaretechnik} ist, bestehen Anforderungen an die Qualität des Quellcodes. Diese beinhaltet die folgenden Aspekte:
     \begin{itemize}
         \item Automatisierte Modul-Tests (Zielwert: 90\% Anweisungsüberdeckung für das Paket \texttt{Maths}, 80\% Anweisungsüberdeckung für das Paket \texttt{Solve}, 90\% Anweisungsüberdeckung für das Paket \texttt{Model}, für die Pakete \texttt{View} und \texttt{Ctrl} besteht keine Anforderung)
         \item \gls{OOP}
@@ -67,7 +67,7 @@ Die Anforderungen an die Realisierung lassen sich zum einen aus der Aufgabenbesc
 %------------------------------------------------------------------------------------------------------------------------------------
 \section{Wahl der Programmiersprache}
 \label{sec:language}
-Für die Implementierung des Programms wurde eine Analyse verschiedener Programmiersprachen durchgeführt. Eine Übersicht der untersuchten Sprachen ist in \autoref{tab:languages} zu finden. Der Vergleich zeigt, dass \texttt{Go} und \texttt{C} aufgrund der fehlenden Möglichkeit zur \gls{OOP} ausscheiden. Die verbleibenden vier Sprachen \texttt{Java}, \texttt{C++}, \texttt{C\#}  und \texttt{Free Pascal} unterscheiden sich dann nur noch kaum. Lediglich die Erstellung einer \gls{GUI} und die integration von automatisierten Tests werden von den beiden zuletzt genannten Sprachen nur über zusätzliche Bibliotheken unterstützt. \texttt{Java} schließt nur in Punkto nativem Systemzugriff und damit der Performance schlechter ab, als die anderen Sprachen im Test. Da jedoch an die Performanz der Software (siehe \autoref{nfa}) keine besonderen Anforderungen gestellt waren, ist dieser Punkt zu vernachlässigen. 
+Für die Implementierung des Programms wurde eine Analyse verschiedener Programmiersprachen durchgeführt. Eine Übersicht der untersuchten Sprachen ist in \autoref{tab:languages} zu finden. Der Vergleich zeigt, dass \texttt{Go} und \texttt{C} aufgrund der fehlenden Möglichkeit zur \gls{OOP} ausscheiden. Die verbleibenden vier Sprachen \texttt{Java}, \texttt{C++}, \texttt{C\#}  und \texttt{Free Pascal} unterscheiden sich dann nur noch kaum. Lediglich die Erstellung einer \gls{GUI} und die ntegration von automatisierten Tests werden von den beiden zuletzt genannten Sprachen nur über zusätzliche Bibliotheken unterstützt. \texttt{Java} schließt nur in Punkto nativem Systemzugriff und damit der Performanz schlechter ab, als die anderen Sprachen im Test. Da jedoch an die Performanz der Software (siehe \autoref{nfa}) keine besonderen Anforderungen gestellt waren, ist dieser Punkt zu vernachlässigen. 
 
 \begin{table}[H]
   \begin{center}
@@ -154,7 +154,7 @@ Im Startfenster werden zunächst die Eingabedateien ausgewählt (1) und in einer
 
 Während der Berechnung der Antwortkurve und des \gls{HDR}-Bildes kann der Fortschritt (6) festgestellt werden. Außerdem wird dem Anwender die aktuell errechnete Antwortkurve grafisch dargestellt (7).
 
-Sobald das \gls{HDR}-Bild erstellt wurde wird es dargestellt (8). Der Anwender kann die vorhandenen Parameter des \gls{Tone-Mapping}-Operators verändern (9). Auch hier werden die Eingaben des Benutzers validiert und Fehler ggf. hervorgehoben. Die Veränderungen an den Parametern werden separat bestätigt (10) und das Ergebnis kann als \gls{HDR}-Bild exportiert werden (11).
+Sobald das \gls{HDR}-Bild erstellt wurde, wird es dargestellt (8). Der Anwender kann die vorhandenen Parameter des \gls{Tone-Mapping}-Operators verändern (9). Auch hier werden die Eingaben des Benutzers validiert und Fehler ggf. hervorgehoben. Die Veränderungen an den Parametern werden separat bestätigt (10) und das \gls{HDR}-Bild kann als  \texttt{PNG}-Bild (\gls{LDR}) exportiert werden (11).
 
 
 
@@ -163,12 +163,12 @@ Sobald das \gls{HDR}-Bild erstellt wurde wird es dargestellt (8). Der Anwender k
 
 \section{Architektur}
 \label{sec:architektur}
-Bei der Architektur der Software wurde eine \gls{MVC} Struktur eingehalten. Dieses Muster beschreibt eine klare Trennung zwischen Datendarstellung, -verarbeitung und -repräsentation. Diese Teilung in drei Schichten sorgt dafür, dass die einzelnen Komponenten gut getestet werden können und beliebig austauschbar sind. Dadurch besteht ein hoher Grad an Erweiterbarkeit, da die Kopplung zwischen den Modulen gering ist \cite[S.~413]{ludewig}.
+Bei der Architektur der Software wurde eine \gls{MVC} Struktur eingehalten. Dieses Muster beschreibt eine klare Trennung zwischen Datenhaltung, -verarbeitung und -repräsentation. Diese Teilung in drei Schichten sorgt dafür, dass die einzelnen Komponenten gut getestet werden können und beliebig austauschbar sind. Dadurch besteht ein hoher Grad an Erweiterbarkeit, da die Kopplung zwischen den Modulen gering ist \cite[S.~413]{ludewig}.
 
 In allen Klassen wurde grundsätzlich das Prinzip des \textit{information hiding} angewandt, wodurch eine verbesserte Erweiterbarkeit durch klare Schnittstellen gegeben ist.
 
 \begin{ieee}{information hiding}
-A software development technique in which each module's interfaces reveal a s little a s possible about the module's inner workings and other modules are prevented from using information about the module that is not in the module's interface specification.
+A software development technique in which each module's interfaces reveal as little as possible about the module's inner workings and other modules are prevented from using information about the module that is not in the module's interface specification.
 \end{ieee}
 
 \subsection{Paketdiagramm}
@@ -191,7 +191,7 @@ Die Anwendung lässt sich in fünf verschiedene Pakete trennen (siehe \autoref{f
 
 Nachfolgend wird nun auf die einzelnen Pakete und Klassen näher eingegangen (siehe \autoref{fig:arch:view}). Die \texttt{View} besteht in erster Linie aus der Klasse \texttt{GuiFrame}. Diese ist das eigentliche Fenster des Programms und übernimmt die Schnittstelle zwischen Anwender und Programm. 
 
-Darin enthalten sind auch die verschiedenen \texttt{ToneMappers}, die zur Darstellung der \gls{Radiance Map} verwendet werden ( Paket \texttt{Plots}).
+Darin enthalten sind auch die verschiedenen \texttt{ToneMappers}, die zur Darstellung der \gls{Radiance Map} verwendet werden (Paket \texttt{Plots}).
 
 \begin{figure}
   \begin{center}
@@ -212,7 +212,7 @@ Darin enthalten sind auch die verschiedenen \texttt{ToneMappers}, die zur Darste
 
 Alle rein mathematischen Aufgaben (wie z.B. die LU-Zerlegung oder das SOR-Verfahren, siehe \autoref{sec:solvers}) sind im Paket \texttt{Maths} ausgelagert, da dieses Paket die gesamte mathematische Logik enthalten soll. So kann -- bei Bedarf -- auf eine andere Bibliothek für das Lösen der mathematischen Probleme (in aller erster Linie der Gleichungssysteme) gewechselt werden, ohne die Logik des erarbeiten Lösungsalgorithmus zu verändern. 
 
-Die abstrakte Klasse \textit{\texttt{AbstractMatrix}} stellt die Basisfunktionalität im Umgang mit Matrizen zur Verfügung und kennt die beiden Implementierungen \texttt{BandMatrix} und \texttt{Matrix}. Erstere ist eine spezielle Repräsentation von dünnbesetzten Diagonalmatrizen mit beliebig vielen Bändern. Die hier häufig beschriebenen pentadiagonal Matrizen werden mit dieser Implementierung dargestellt. Der Vorteil dieser ist, dass auch große sehr dünn besetzte Matrizen abgespeichert werden können (in einem zweidimensionalen Array würden diese zu viel Speicherplatz verbrauchen). Die \texttt{Matrix} ist die zweite Implementierung der Matrizen und arbeitet intern mit einem zweidimensionalen Array.
+Die abstrakte Klasse \textit{\texttt{AbstractMatrix}} stellt die Basisfunktionalität im Umgang mit Matrizen zur Verfügung und kennt die beiden Implementierungen \texttt{BandMatrix} und \texttt{Matrix}. Erstere ist eine spezielle Repräsentation von dünnbesetzten Diagonalmatrizen mit beliebig vielen Bändern. Die hier häufig beschriebenen pentadiagonal Matrizen werden mit dieser Implementierung dargestellt. Der Vorteil dieser ist, dass auch große, sehr dünn besetzte Matrizen abgespeichert werden können (in einem zweidimensionalen Array würden diese zu viel Speicherplatz verbrauchen). Die \texttt{Matrix} ist die zweite Implementierung der Matrizen und arbeitet intern mit einem zweidimensionalen Array.
 
 Die Klasse \texttt{EquationSolver} (Paket \texttt{Maths}) übernimmt das Lösen eines \gls{LGS}. Das \gls{SOR}- und das LU-Verfahren werden unterstützt. Die beiden Hilfsklassen \texttt{Convolution} und \texttt{ArrayMaths} bieten weitere Berechnungsfunktionalitäten, die z.B. in den \gls{Tone-Mapping}-Verfahren verwendet werden. 
 
@@ -229,7 +229,7 @@ Die Klasse \texttt{EquationSolver} (Paket \texttt{Maths}) übernimmt das Lösen 
 
 
 \subsection{Sequenzdiagramm}
-Das Programm läuft sehr vielschichtig ab. Als grundsätzlicher Informationsfluss dient der Aufbau wie er in \autoref{fig:arch:sequence} beschrieben. Wichtig dabei ist, dass die grafische Benutzeroberfläche nicht von der Berechnungsdauer des Algorithmus blockiert wird, da so die Zwischenresultate des Algorithmus bereits analysiert werden können und der Prozess ggf. früher beendet werden kann um Parameter zu verändern. Deshalb bestehen besonders zwischen \texttt{Controller} und \texttt{GUIFrame} asynchrone Methodenaufrufe. Das Sequenzdiagramm ist nur beispielhaft zu verstehen. Es wurden einige Aufrufe und Zwischenschritte vereinfacht oder weggelassen.
+Das Programm läuft sehr vielschichtig ab. Als grundsätzlicher Informationsfluss dient der Aufbau wie er in \autoref{fig:arch:sequence} beschrieben. Wichtig dabei ist, dass die grafische Benutzeroberfläche nicht von der Berechnungsdauer des Algorithmus blockiert wird, da so die Zwischenresultate des Algorithmus bereits analysiert werden können und der Prozess ggf. früher beendet werden kann, um Parameter zu verändern. Deshalb bestehen besonders zwischen \texttt{Controller} und \texttt{GUIFrame} asynchrone Methodenaufrufe. Das Sequenzdiagramm ist nur beispielhaft zu verstehen. Es wurden einige Aufrufe und Zwischenschritte vereinfacht oder weggelassen.
 
 \begin{figure}
   \begin{center}
@@ -243,7 +243,7 @@ Das Programm läuft sehr vielschichtig ab. Als grundsätzlicher Informationsflus
 %------------------------------------------------------------------------------------------------------------------------------------
 \section{Externe Bibliotheken}
 \label{externals}
-Für die Implementierung wurden einige externen Komponenten verwendet. Diese werden hier kurz beschrieben.
+Für die Implementierung wurden einige externe Komponenten verwendet. Diese werden hier kurz beschrieben.
 \begin{description}
 \item[\texttt{NumericTextField}\footnote{\url{http://www.java2s.com/Code/Java/Swing-JFC/NumericTextField.htm}}]
 Für die Eingabe der einzelnen Parameter wird eine Implementierung eines numerischen Textfeldes verwendet. Dieses verhindert ungültige Eingaben und erleichtert das Auslesen der numerischen Parameter. Diese Komponente verwendet mehrere Klassen und wurde deshalb in den nachfolgenden Diagrammen zu einem Paket gebündelt.
@@ -264,7 +264,7 @@ Für die Realisierung der \gls{GUI} und der grafische Evaluation der Ergebnisse 
 
 Für die Auswahl der Bilddateien wurde ein Datei-Auswahl-Fenster mit Vorschau der Bilder entwickelt. Aus Gründen der Robustheit (siehe \autoref{nfa}) können nur Bilddateien ausgewählt werden.  Eine Registrierung der Bilder wird nicht unterstützt. Dies bedeutet, dass die Bilder vorab von Hand oder mit einem Algorithmus registriert werden müssen. Der Nutzer erhält diesbezüglich einen Hinweis bei der Auswahl der Bilder.
 
-In der Tabelle werden die Bilder mit ihren Belichtungszeiten aufgeführt. Falls die Bibliothek \texttt{metadate-extractor} die Belichtungszeiten nicht auslesen konnte müssen diese händisch eingegeben werden. Auch hierzu erhält der Benutzer ggf. einen optischen Hinweis.
+In der Tabelle werden die Bilder mit ihren Belichtungszeiten aufgeführt. Falls die Bibliothek \texttt{metadate-extractor} die Belichtungszeiten nicht auslesen konnte, müssen diese händisch eingegeben werden. Auch hierzu erhält der Benutzer ggf. einen optischen Hinweis.
 
 Die Verwendung der Komponente \texttt{NumericTextField} (siehe \autoref{externals}) bei der Eingabe der Parameter stellt sicher, dass der Benutzer nur sinnvolle Daten angibt. Bei Falscheingaben ertönt ein akustisches Warnsignal und das Feld wird hervorgehoben. Die \enquote{Start} Schaltfläche wird bei fehlenden oder fehlerhaften Angaben deaktiviert. Die Eingabemöglichkeiten werden deaktiviert sobald der Berechnungsprozess gestartet wird. Dies verhindert ungültige Benutzerinteraktionen. Detaillierte Informationen über den Fortgang der Berechnung können im \texttt{LOG}-Reiter der Anwendung eingesehen werden.
 

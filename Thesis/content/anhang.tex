@@ -1,11 +1,13 @@
 \chapter{Anhang}
 
-
 \section{LU-Zerlegung}
 \begin{Algorithmus}[H]
 \caption{Lösen von $A\cdot x = b$ mittels LU-Zerlegung (A ist pentadiagonal)}
 \label{alg:LU}
-\begin{algorithmic}
+%\scalebox{0.8}
+{
+\footnotesize
+	\begin{algorithmic}
 \Function{LUDecomposition}{$A$}
 	\If{!\Call{isPentadiagonale}{$A$}}
 	    \State \Return error
@@ -30,7 +32,6 @@
         \State \Return $y$
 \EndFunction
 
-
 \Function{backwardSubstitution}{U,y}
         \State $x_{n-1} \gets y_{n-1}/U_{n-1,n-2}$
         \State $x_{n-2} \gets (y_{n-2} - U_{n-2,n-1} x_{n-1})/U_{n-2,n-2}$
@@ -41,9 +42,6 @@
         \State \Return $x$
 \EndFunction
 
-
-
-
 \Function{Solve}{$A$, $b$}
 	\If{\Call{size}{$A$} != \Call{size}{b}} \State \Return error	\EndIf
 	\State [L,U] = \Call{LUDecomposition}{A};
@@ -51,8 +49,8 @@
     \State \Return \Call{backwardSubstitution}{U,y} \Comment{backward substitution $U\cdot x = y$}
 \EndFunction
 \end{algorithmic}
+}
 \end{Algorithmus}
-
 
 \section{MTB-Algorithmus}
 \label{subsec:MTB}

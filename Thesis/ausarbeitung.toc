@@ -1,72 +1,72 @@
 \select@language {ngerman}
-\contentsline {chapter}{\numberline {1}Einleitung}{11}{chapter.1}
-\contentsline {section}{\numberline {1.1}Motivation}{11}{section.1.1}
-\contentsline {section}{\numberline {1.2}Aufgabenstellung}{12}{section.1.2}
-\contentsline {section}{\numberline {1.3}Gliederung}{12}{section.1.3}
-\contentsline {chapter}{\numberline {2}Grundlagen der HDR-Bilder}{15}{chapter.2}
-\contentsline {section}{\numberline {2.1}Prinzip}{16}{section.2.1}
-\contentsline {section}{\numberline {2.2}Anwendungsgebiet und Geschichte}{17}{section.2.2}
-\contentsline {section}{\numberline {2.3}Bilderzeugung}{18}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Pseudo-\gls {HDR}-Bilder}{18}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}HDR-Kameras}{18}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}HDR-Bildgenerierung aus einer Belichtungsreihe}{18}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Bildformate und -speicherung}{19}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}RGBE -- Das .hdr Format}{19}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}TIFF -- Gleitkomma Kodierung}{19}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}EXR -- EXtended Range Format}{20}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}Bilddarstellung}{20}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Globale \gls {Tone-Mapping}-Operatoren}{20}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Lokale \gls {Tone-Mapping}-Operatoren}{21}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Software zur Erstellung von HDR-Bildern}{21}{section.2.6}
-\contentsline {chapter}{\numberline {3}Verwandte Arbeiten und Implementierungen}{25}{chapter.3}
-\contentsline {section}{\numberline {3.1}Bekannte Implementierungen des Ansatzes von Debevec und Malik}{25}{section.3.1}
-\contentsline {section}{\numberline {3.2}Verwandte Arbeiten}{25}{section.3.2}
-\contentsline {chapter}{\numberline {4}Algorithmus von Debevec und Malik \cite {paper}}{27}{chapter.4}
-\contentsline {section}{\numberline {4.1}Ansatz}{27}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Verwendete Symbole}{27}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Herleitung}{28}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Eindeutigkeit der L\IeC {\"o}sung f\IeC {\"u}r $\mathbf g$}{29}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Berechnung der Antwortkurve}{29}{section.4.2}
-\contentsline {section}{\numberline {4.3}Konstruktion der Radiance Map}{29}{section.4.3}
-\contentsline {section}{\numberline {4.4}M\IeC {\"o}gliche Erweiterungen des Ansatzes}{30}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Gewichtungsfunktion}{30}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Selektion von Bildpunkten}{30}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Robustheit des Verfahrens}{31}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Monotonie-Kriterium}{31}{subsection.4.4.4}
-\contentsline {chapter}{\numberline {5}Mathematische Ausarbeitung}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Optimierungsansatz}{33}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Gleichungssystem f\IeC {\"u}r $\mathbf g$}{34}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}L\IeC {\"o}sen von $\mathbf E$}{37}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Erweiterung um Monotonie-Eigenschaft}{37}{section.5.2}
-\contentsline {section}{\numberline {5.3}R\IeC {\"a}umlicher Glattheitsterm}{39}{section.5.3}
-\contentsline {section}{\numberline {5.4}Erweiterung um Robustheit}{41}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Subquadratische Bestrafungsfunktion im Monotonie- oder Glattheits-Term von $\mathbf g$}{42}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Subquadratische Bestrafungsfunktion im Datenterm von $\mathbf g$ und $\mathbf E$}{42}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Subquadratische Bestrafungsfunktion im r\IeC {\"a}umlichen Glattheitsterm von $\mathbf E$}{44}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Subquadratische Bestrafungsfunktion im Daten- und Glattheitsterm von $\mathbf E$}{45}{subsection.5.4.4}
-\contentsline {section}{\numberline {5.5}L\IeC {\"o}sung der Gleichungssysteme}{46}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}LU-Zerlegung einer Pentadiagonal-Matrix}{46}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}SOR-Algorithmus}{47}{subsection.5.5.2}
-\contentsline {chapter}{\numberline {6}Realisierung}{49}{chapter.6}
-\contentsline {section}{\numberline {6.1}Anforderungen}{49}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Funktionale Anforderungen}{49}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Nichtfunktionale Anforderungen}{50}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Wahl der Programmiersprache}{51}{section.6.2}
-\contentsline {section}{\numberline {6.3}Prototyping}{52}{section.6.3}
-\contentsline {section}{\numberline {6.4}Architektur}{53}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Paketdiagramm}{53}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Sequenzdiagramm}{56}{subsection.6.4.2}
-\contentsline {section}{\numberline {6.5}Externe Bibliotheken}{57}{section.6.5}
-\contentsline {section}{\numberline {6.6}Programmvorstellung}{58}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Installation}{58}{subsection.6.6.1}
-\contentsline {subsection}{\numberline {6.6.2}Erste Schritte}{59}{subsection.6.6.2}
-\contentsline {chapter}{\numberline {7}Ergebnisse und Resultate}{61}{chapter.7}
-\contentsline {section}{\numberline {7.1}Ergebnisse mit Monotonie-Bedingung}{62}{section.7.1}
-\contentsline {section}{\numberline {7.2}Ergebnisse mit r\IeC {\"a}umlichem Glattheitsterm}{62}{section.7.2}
-\contentsline {section}{\numberline {7.3}Ergebnisse mit subquadratischen Bestrafungstermen}{62}{section.7.3}
-\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{69}{chapter.8}
-\contentsline {chapter}{\numberline {A}Anhang}{71}{appendix.A}
-\contentsline {section}{\numberline {A.1}LU-Zerlegung}{72}{section.A.1}
-\contentsline {section}{\numberline {A.2}MTB-Algorithmus}{73}{section.A.2}
-\contentsline {chapter}{Glossar und Abk\IeC {\"u}rzungsverzeichnis}{75}{section*.38}
-\contentsline {chapter}{Literaturverzeichnis}{77}{appendix*.40}
+\contentsline {chapter}{\numberline {1}Einleitung}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Aufgabenstellung}{8}{section.1.2}
+\contentsline {section}{\numberline {1.3}Gliederung}{8}{section.1.3}
+\contentsline {chapter}{\numberline {2}Grundlagen der HDR-Bilder}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Prinzip}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}Anwendungsgebiet und Geschichte}{13}{section.2.2}
+\contentsline {section}{\numberline {2.3}Bilderzeugung}{14}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Pseudo-\gls {HDR}-Bilder}{14}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}HDR-Kameras}{14}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}HDR-Bildgenerierung aus einer Belichtungsreihe}{14}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Bildformate und -speicherung}{15}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}RGBE -- Das .hdr Format}{15}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}TIFF -- Gleitkomma Kodierung}{16}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}EXR -- EXtended Range Format}{16}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}Bilddarstellung}{16}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Globale \gls {Tone-Mapping}-Operatoren}{17}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Lokale \gls {Tone-Mapping}-Operatoren}{17}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Software zur Erstellung von HDR-Bildern}{18}{section.2.6}
+\contentsline {chapter}{\numberline {3}Verwandte Arbeiten und Implementierungen}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Bekannte Implementierungen des Ansatzes von Debevec und Malik}{21}{section.3.1}
+\contentsline {section}{\numberline {3.2}Verwandte Arbeiten}{21}{section.3.2}
+\contentsline {chapter}{\numberline {4}Algorithmus von Debevec und Malik}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ansatz}{23}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Verwendete Symbole}{23}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Herleitung}{24}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Eindeutigkeit der L\IeC {\"o}sung f\IeC {\"u}r $\mathbf g$}{25}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Berechnung der Antwortkurve}{25}{section.4.2}
+\contentsline {section}{\numberline {4.3}Konstruktion der Radiance Map}{25}{section.4.3}
+\contentsline {section}{\numberline {4.4}M\IeC {\"o}gliche Erweiterungen des Ansatzes}{26}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Gewichtungsfunktion}{26}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Selektion von Bildpunkten}{26}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Robustheit des Verfahrens}{27}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Monotonie-Kriterium}{27}{subsection.4.4.4}
+\contentsline {chapter}{\numberline {5}Mathematische Ausarbeitung}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Optimierungsansatz}{29}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Gleichungssystem f\IeC {\"u}r $\mathbf g$}{30}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}L\IeC {\"o}sen nach $\mathbf F$}{33}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Erweiterung um Monotonie-Eigenschaft}{33}{section.5.2}
+\contentsline {section}{\numberline {5.3}Erweiterung um einen R\IeC {\"a}umlicher Glattheitsterm}{35}{section.5.3}
+\contentsline {section}{\numberline {5.4}Erweiterung um Robustheit}{37}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Subquadratische Bestrafungsfunktion im Monotonie- oder Glattheits-Term von $\mathbf g$}{38}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Subquadratische Bestrafungsfunktion im Datenterm von $\mathbf g$ und $\mathbf F$}{39}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Subquadratische Bestrafungsfunktion im r\IeC {\"a}umlichen Glattheitsterm von $\mathbf F$}{40}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Subquadratische Bestrafungsfunktion im Daten- und Glattheitsterm von $\mathbf E$}{42}{subsection.5.4.4}
+\contentsline {section}{\numberline {5.5}L\IeC {\"o}sung der Gleichungssysteme}{43}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}LU-Zerlegung einer Pentadiagonal-Matrix}{43}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}SOR-Algorithmus}{44}{subsection.5.5.2}
+\contentsline {chapter}{\numberline {6}Realisierung}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Anforderungen}{45}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Funktionale Anforderungen}{45}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Nichtfunktionale Anforderungen}{46}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Wahl der Programmiersprache}{47}{section.6.2}
+\contentsline {section}{\numberline {6.3}Prototyping}{48}{section.6.3}
+\contentsline {section}{\numberline {6.4}Architektur}{49}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Paketdiagramm}{49}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Sequenzdiagramm}{52}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}Externe Bibliotheken}{53}{section.6.5}
+\contentsline {section}{\numberline {6.6}Programmvorstellung}{54}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Installation}{54}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}Erste Schritte}{55}{subsection.6.6.2}
+\contentsline {chapter}{\numberline {7}Ergebnisse und Resultate}{57}{chapter.7}
+\contentsline {section}{\numberline {7.1}Ergebnisse mit Monotonie-Bedingung}{58}{section.7.1}
+\contentsline {section}{\numberline {7.2}Ergebnisse mit r\IeC {\"a}umlichem Glattheitsterm}{58}{section.7.2}
+\contentsline {section}{\numberline {7.3}Ergebnisse mit subquadratischen Bestrafungstermen}{59}{section.7.3}
+\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{65}{chapter.8}
+\contentsline {chapter}{\numberline {A}Anhang}{67}{appendix.A}
+\contentsline {section}{\numberline {A.1}LU-Zerlegung}{67}{section.A.1}
+\contentsline {section}{\numberline {A.2}MTB-Algorithmus}{68}{section.A.2}
+\contentsline {chapter}{Glossar und Abk\IeC {\"u}rzungsverzeichnis}{71}{section*.33}
+\contentsline {chapter}{Literaturverzeichnis}{73}{appendix*.35}

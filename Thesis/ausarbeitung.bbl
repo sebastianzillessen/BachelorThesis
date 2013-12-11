@@ -10,8 +10,7 @@
 \bibitem[Ado92]{adobe:tiff}
 Adobe.
 \newblock Tiff specification, Revision 6.0, 1992.
-\newblock
-  \urlprefix\url{http://partners.adobe.com/public/developer/en/tiff/TIFF6.pdf}.
+\newblock \urlprefix\url{http://goo.gl/Yt1nxJ}.
 
 \bibitem[BGH{\etalchar{+}}06]{Klingler_Richter_Strobel_2006}
 J.~Burghartz, H.-g. Graf, C.~Harendt, W.~Klingler, H.~Richter, M.~Strobel.
@@ -54,23 +53,26 @@ M.~D. Fairchild, G.~M. Johnson.
 \bibitem[JO12]{Jinno}
 T.~Jinno, M.~Okuda.
 \newblock Multiple Exposure Fusion for High Dynamic Range Image Acquisition.
-\newblock \emph{IEEE Transactions on Image Processing}, 21(1):358--365, 2012.
+\newblock In \emph{IEEE Transactions on Image Processing}, Band~21, S.
+  358--365. IEEE Press, 2012.
 
 \bibitem[KYL{\etalchar{+}}07]{tone_mapper_2}
 J.~Kuang, H.~Yamaguchi, C.~Liu, G.~M, M.~D. Fairchild.
 \newblock Evaluating HDR rendering algorithms.
-\newblock \emph{ACM Transactions on Applied Perception}, 4(2), 2007.
+\newblock Band~4. ACM Press/Addison-Wesley Publishing Co., 2007.
 
 \bibitem[Lar98]{logluv}
 G.~W. Larson.
 \newblock LogLuv Encoding for Full-gamut, High-dynamic Range Images.
-\newblock Band~3, S. 15--31. A. K. Peters, Ltd., 1998.
+\newblock In \emph{J. Graph. Tools}, Band~3, S. 15--31. A. K. Peters, Ltd.,
+  1998.
 
 \bibitem[LG03]{Xinqiao}
 X.~C. Liu, A.~E. Gamal.
 \newblock Synthesis of high dynamic range motion blur free image from multiple
   captures.
-\newblock Band~50, S. 530--539. IEEE Press, 2003.
+\newblock In \emph{IEEE transactions on circuits and systems I}, Band~50, S.
+  530--539. IEEE Press, 2003.
 
 \bibitem[LL10]{ludewig}
 J.~Ludewig, H.~Lichter.
@@ -86,13 +88,8 @@ Z.~G. Li, J.~H. Zheng, S.~Rahardja.
 \bibitem[NM00]{Nayar00highdynamic}
 S.~K. Nayar, T.~Mitsunaga.
 \newblock High dynamic range imaging: Spatially varying pixel exposures.
-\newblock S. 472--479. IEEE Press, 2000.
-
-\bibitem[RSD05]{Reinhard05}
-E.~Reinhard, I.~C. Society, K.~Devlin.
-\newblock Dynamic range reduction inspired by photoreceptor physiology.
-\newblock \emph{IEEE Transactions on Visualization and Computer Graphics},
-  11:13--24, 2005.
+\newblock In \emph{IEEE Computer Vision and Pattern Recognition}, S. 472--479.
+  IEEE Press, 2000.
 
 \bibitem[RSSF02]{ReinhardToneMapper}
 E.~Reinhard, M.~Stark, P.~Shirley, J.~Ferwerda.
@@ -110,8 +107,7 @@ E.~Reinhard, G.~Ward, S.~Pattanaik, P.~Debevec.
 P.~Tellone.
 \newblock How to Shoot and Post-Process Professional HDR Photos in One Day,
   2010.
-\newblock
-  \urlprefix\url{http://photography.tutsplus.com/tutorials/how-to-shoot-and-post-process-professional-hdr-photos-in-one-day-2--photo-4102}.
+\newblock \urlprefix\url{http://goo.gl/cdwGdT}.
 
 \bibitem[War03]{Ward03fast}
 G.~Ward.
@@ -126,9 +122,11 @@ T.~Westermann.
 \newblock Springer, 6 Auf\/lage, 2008.
 
 \bibitem[YBMS05]{tone_mapper_1}
-A.~Yoshida, V.~Blanz, K.~Myszkowski, H.-P. Seidel.
+A.~Yoshida, V.~Blanz, K.~Myszkowski, H.~peter Seidel.
 \newblock Perceptual evaluation of tone mapping operators with real-world
-  scenes, 2005.
+  scenes.
+\newblock In \emph{Human Vision \& Electronic Imaging X, SPIE}, S. 192--203.
+  2005.
 
 \bibitem[YGFT99]{Yang99a640}
 D.~X.~D. Yang, A.~E. Gamal, B.~Fowler, H.~Tian.
@@ -138,8 +136,9 @@ D.~X.~D. Yang, A.~E. Gamal, B.~Fowler, H.~Tian.
 
 \bibitem[ZBW11]{zimmer}
 H.~Zimmer, A.~Bruhn, J.~Weickert.
-\newblock Freehand HDR Imaging of moving scenes with simultaneous resolution
-  enhancement.
-\newblock Band~30, S. 405--414. 2011.
+\newblock Freehand HDR Imaging of Moving Scenes with Simultaneous Resolution
+  Enhancement.
+\newblock In \emph{Computer Graphics Forum}, Band~30, S. 405--414. Blackwell
+  Publishing Ltd, 2011.
 
 \end{thebibliography}
