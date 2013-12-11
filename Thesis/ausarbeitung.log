@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 DEC 2013 02:54
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  11 DEC 2013 09:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1681,9 +1681,9 @@ Overfull \hbox (22.58585pt too wide) in paragraph at lines 34--34
 
 ]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 60.
+(Font)              scaled to size 12.50409pt on input line 58.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 60.
+(Font)              scaled to size 12.50409pt on input line 58.
  [24] [25] [26]) (./content/mathematik.tex [27] [28]
 Kapitel 5.
 Package hyperref Info: bookmark level for unknown Algorithmus defaults to 0 on 
@@ -2128,11 +2128,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29936 strings out of 493488
- 505594 string characters out of 3141326
- 774572 words of memory out of 3000000
+ 29946 strings out of 493488
+ 505694 string characters out of 3141326
+ 774573 words of memory out of 3000000
  31691 multiletter control sequences out of 15000+200000
- 132363 words of font info for 485 fonts, out of 3000000 for 9000
+ 132935 words of font info for 493 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  77i,28n,87p,1470b,1639s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.28} has been referenced but does not ex
@@ -2165,10 +2165,10 @@ hvb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.p
 fb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></us
 r/local/texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local
 /texlive/2012/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on ausarbeitung.pdf (75 pages, 5450490 bytes).
+Output written on ausarbeitung.pdf (75 pages, 5450254 bytes).
 PDF statistics:
- 1604 PDF objects out of 1728 (max. 8388607)
- 1417 compressed objects within 15 object streams
+ 1606 PDF objects out of 1728 (max. 8388607)
+ 1419 compressed objects within 15 object streams
  375 named destinations out of 1000 (max. 500000)
  78920 words of extra memory for PDF output out of 89155 (max. 10000000)
 

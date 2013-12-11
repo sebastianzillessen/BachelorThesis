@@ -6,7 +6,7 @@
 %}
 \chapter{Algorithmus von Debevec und Malik}
 \label{chap:algo}
-Diese Arbeit behandelt im Kern den Ansatz von Debevec und Malik \cite{paper}. Obwohl der Artikel bereits relativ alt ist (Verfassung 1997), wird das Verfahren noch immer in vielen Anwendungen benutzt (siehe \autoref{sec:implementations}). Dessen Kerngedanke ist es \gls{HDR}-Bilder aus Bildserien zu generieren, welche mit einer herkömmlichen Kamera-Ausrüstung aufgenommen wurden.
+Diese Arbeit behandelt im Kern den Ansatz von Debevec und Malik \cite{paper}. Obwohl der Artikel bereits relativ alt ist (1997), wird das Verfahren in vielen Anwendungen benutzt (siehe \autoref{sec:implementations}). Dessen Kerngedanke ist es \gls{HDR}-Bilder aus Bildserien zu generieren, welche mit einer herkömmlichen Kamera-Ausrüstung aufgenommen wurden.
 
 \section{Ansatz}
 Der Algorithmus schätzt während der Generierung des \gls{HDR}-Bildes gleichzeitig auch die sog. Antwortkurve der Kamera. Diese Antwortkurve ist die kameraspezifische Abbildung, welche aus den Beleuchtungswerten der aufzunehmenden Szene Grau- bzw. Farbwerte erzeugt (siehe \autoref{fig:antwortkurve}). 
@@ -53,9 +53,7 @@ Das aus obiger Gleichung ermittelbare Gleichungssystem hat die Unbekannten $\b g
 \Omega = \underbrace{\sum \limits_{i=1}^{N} \sum \limits_{j=1}^{P}[\b g(Z_{ij}) - F_i - \ln \Delta t_j]^2}_{Datenterm} + \underbrace{\lambda  \sum \limits_{z=Z_{min}+1}^{Z_{max}-1} \b{g}''(z)^2}_{Glattheitsterm}\\
 \end{equation}
 
-Der Datenterm dieser Energiefunktion sorgt für eine Verknüpfung der Bilder an jedem Pixel und ein Erhalten der Farb- bzw. Grauwerte. Der Glattheitsterm hingegen sorgt für eine möglichst lineare und im Bezug zur zweiten Ableitung glatten Antwortkurve.
-
-Das hier (und in den folgenden Gleichungen) verwendete $z$ im Glattheitsterm ist als diskreter Laufindex zu verstehen. 
+Der Datenterm dieser Energiefunktion sorgt für eine Verknüpfung der Bilder an jedem Pixel und ein Erhalten der Farb- bzw. Grauwerte. Der Glattheitsterm hingegen sorgt für eine möglichst lineare und im Bezug zur zweiten Ableitung glatten Antwortkurve. Das hier (und in den folgenden Gleichungen) verwendete $z$ im Glattheitsterm ist als diskreter Laufindex zu verstehen. 
 
 \subsection{Eindeutigkeit der Lösung für $\b g$}
 \label{sec:eindeutigkeit}
@@ -80,7 +78,7 @@ Aus Gründen der Robustheit und um alle Bilder bei der Konstruktion der \gls{Rad
 
 \begin{align}
 \label{eq:radiance:weight}
-F_i &= \frac{\sum \limits_{j=1}^P w(Z_{ij}) \cdot (\b g(Z_{ij})-\ln \Delta t_j)}{\sum \limits_{j=1}^P w(Z_{ij})}
+F_i &= \frac{\sum \limits_{j=1}^P w^2(Z_{ij}) \cdot (\b g(Z_{ij})-\ln \Delta t_j)}{\sum \limits_{j=1}^P w^2(Z_{ij})}
 \end{align}
 
 Nachdem nun das Verfahren zur Berechnung der \gls{HDR}-Bilder bekannt ist, werden im nächsten Abschnitt die möglichen Erweiterungen diskutiert.

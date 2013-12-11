@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{RWPD05}
+\begin{thebibliography}{RWPD10}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,7 +10,8 @@
 \bibitem[Ado92]{adobe:tiff}
 Adobe.
 \newblock Tiff specification, Revision 6.0, 1992.
-\newblock \urlprefix\url{http://goo.gl/Yt1nxJ}.
+\newblock
+  \urlprefix\url{http://partners.adobe.com/public/developer/en/tiff/TIFF6.pdf}.
 
 \bibitem[BGH{\etalchar{+}}06]{Klingler_Richter_Strobel_2006}
 J.~Burghartz, H.-g. Graf, C.~Harendt, W.~Klingler, H.~Richter, M.~Strobel.
@@ -22,7 +23,7 @@ J.~Burghartz, H.-g. Graf, C.~Harendt, W.~Klingler, H.~Richter, M.~Strobel.
 C.~Bloch.
 \newblock \emph{The HDRI Handbook - High Dynamic Range Imaging for
   Photographers and CG Artists}.
-\newblock O'Reilly Media, Sebastapool, 1 Auf\/lage, 2012.
+\newblock O'Reilly Media, 1 Auf\/lage, 2012.
 
 \bibitem[Bru06]{bruhn06}
 A.~Bruhn.
@@ -31,12 +32,13 @@ A.~Bruhn.
 \newblock Dissertation, Department of Mathematics and Computer Science,
   Saarland University, 2006.
 
-\bibitem[Deb08]{Debevec:2008:RSO:1401132.1401175}
+\bibitem[Deb98]{Debevec:2008:RSO:1401132.1401175}
 P.~Debevec.
-\newblock Rendering Synthetic Objects into Real Scenes: Bridging Traditional
-  and Image-based Graphics with Global Illumination and High Dynamic Range
-  Photography.
-\newblock In \emph{ACM SIGGRAPH 2008 Classes}, S. 32:1--32:10. ACM Press, 2008.
+\newblock Rendering synthetic objects into real scenes: bridging traditional
+  and image-based graphics with global illumination and high dynamic range
+  photography.
+\newblock In \emph{ACM SIGGRAPH 1998}, S. 189--198. ACM Press/Addison-Wesley
+  Publishing Co., 1998.
 
 \bibitem[DM97]{paper}
 P.~Debevec, J.~Malik.
@@ -53,31 +55,29 @@ M.~D. Fairchild, G.~M. Johnson.
 \bibitem[JO12]{Jinno}
 T.~Jinno, M.~Okuda.
 \newblock Multiple Exposure Fusion for High Dynamic Range Image Acquisition.
-\newblock In \emph{IEEE Transactions on Image Processing}, Band~21, S.
-  358--365. IEEE Press, 2012.
+\newblock \emph{IEEE Transactions on Image Processing}, 21(1):358--365, 2012.
 
 \bibitem[KYL{\etalchar{+}}07]{tone_mapper_2}
 J.~Kuang, H.~Yamaguchi, C.~Liu, G.~M, M.~D. Fairchild.
 \newblock Evaluating HDR rendering algorithms.
-\newblock Band~4. ACM Press/Addison-Wesley Publishing Co., 2007.
+\newblock \emph{ACM Transactions on Applied Perception}, 4(2):9:1--9:30, 2007.
 
 \bibitem[Lar98]{logluv}
 G.~W. Larson.
-\newblock LogLuv Encoding for Full-gamut, High-dynamic Range Images.
-\newblock In \emph{J. Graph. Tools}, Band~3, S. 15--31. A. K. Peters, Ltd.,
-  1998.
+\newblock LogLuv encoding for full-gamut, high-dynamic range images.
+\newblock \emph{Journal of Graphics Tools}, 3(1):15--31, 1998.
 
 \bibitem[LG03]{Xinqiao}
 X.~C. Liu, A.~E. Gamal.
 \newblock Synthesis of high dynamic range motion blur free image from multiple
   captures.
-\newblock In \emph{IEEE transactions on circuits and systems I}, Band~50, S.
-  530--539. IEEE Press, 2003.
+\newblock \emph{IEEE Transactions on Circuits and Systems I}, 50:530--539,
+  2003.
 
 \bibitem[LL10]{ludewig}
 J.~Ludewig, H.~Lichter.
 \newblock \emph{Software Engeneering}.
-\newblock dpunkt.verlag GmbH, Heidelberg, 2 Auf\/lage, 2010.
+\newblock dpunkt.verlag GmbH, 2010.
 
 \bibitem[LZR12]{Jing_Hong_Zheng_Rahardja_2012}
 Z.~G. Li, J.~H. Zheng, S.~Rahardja.
@@ -97,15 +97,15 @@ E.~Reinhard, M.~Stark, P.~Shirley, J.~Ferwerda.
 \newblock In \emph{ACM SIGGRAPH 2002}, S. 267--276. ACM Press/Addison-Wesley
   Publishing Co., 2002.
 
-\bibitem[RWPD05]{Reinhard}
+\bibitem[RWPD10]{Reinhard}
 E.~Reinhard, G.~Ward, S.~Pattanaik, P.~Debevec.
 \newblock \emph{High Dynamic Range Imaging: Acquisition, Display, and
   Image-Based Lighting}.
-\newblock Morgan Kaufmann Publishers Inc., 2005.
+\newblock Morgan Kaufmann Publishers Inc., 2 Auf\/lage, 2010.
 
 \bibitem[Tel10]{tellone}
 P.~Tellone.
-\newblock How to Shoot and Post-Process Professional HDR Photos in One Day,
+\newblock How to shoot and post-process professional HDR Photos in one day,
   2010.
 \newblock \urlprefix\url{http://goo.gl/cdwGdT}.
 
@@ -113,7 +113,7 @@ P.~Tellone.
 G.~Ward.
 \newblock Fast, robust image registration for compositing high dynamic range
   photographs from handheld exposures.
-\newblock \emph{Journal of Graphics Tools}, 8:17--30, 2003.
+\newblock \emph{Journal of Graphics Tools}, 8(1):17--30, 2003.
 
 \bibitem[Wes08]{Westermann2008}
 T.~Westermann.
@@ -126,19 +126,18 @@ A.~Yoshida, V.~Blanz, K.~Myszkowski, H.~peter Seidel.
 \newblock Perceptual evaluation of tone mapping operators with real-world
   scenes.
 \newblock In \emph{Human Vision \& Electronic Imaging X, SPIE}, S. 192--203.
-  2005.
+  SPIE, 2005.
 
 \bibitem[YGFT99]{Yang99a640}
 D.~X.~D. Yang, A.~E. Gamal, B.~Fowler, H.~Tian.
 \newblock A 640 512 CMOS image sensor with ultrawide dynamic range
   floating-point pixel-level ADC.
-\newblock \emph{IEEE Journal of Solid-State Circuits}, 34:1821--1834, 1999.
+\newblock \emph{IEEE Journal of Solid-State Circuits}, 34(12):1821--1834, 1999.
 
 \bibitem[ZBW11]{zimmer}
 H.~Zimmer, A.~Bruhn, J.~Weickert.
-\newblock Freehand HDR Imaging of Moving Scenes with Simultaneous Resolution
-  Enhancement.
-\newblock In \emph{Computer Graphics Forum}, Band~30, S. 405--414. Blackwell
-  Publishing Ltd, 2011.
+\newblock Freehand HDR imaging of moving scenes with simultaneous resolution
+  enhancement.
+\newblock \emph{Computer Graphics Forum}, 30(2):405--414, 2011.
 
 \end{thebibliography}

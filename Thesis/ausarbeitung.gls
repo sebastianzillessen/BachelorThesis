@@ -15,8 +15,8 @@
 \glsgroupheading{H}\relax \glsresetentrylist %
 \glossaryentryfield{HDR}{\glsnamefont{HDR}}{High Dynamic Range}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{3}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{7\delimN 8}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{12\delimR 18}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{7\delimR 9}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{12\delimR 19}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{21\delimR 24}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{26}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{29}\delimN 
@@ -32,7 +32,7 @@
 \glsgroupheading{L}\relax \glsresetentrylist %
 \glossaryentryfield{LDR}{\glsnamefont{LDR}}{Low Dynamic Range}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{14}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{17}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{16\delimN 17}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{21\delimN 22}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{49}}}%
 \glossaryentryfield{LGS}{\glsnamefont{LGS}}{Lineare Gleichungssystem}{\relax }{\glossaryentrynumbers{\relax 
@@ -44,8 +44,8 @@
 		\setentrycounter[]{page}\glsnumberformat{50}}}\glsgroupskip
 \glsgroupheading{M}\relax \glsresetentrylist %
 \glossaryentryfield{MTB}{\glsnamefont{MTB}}{Mean Threshold Bitmap Alignment}{\relax }{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{15}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{69}}}%
+		\setentrycounter[]{page}\glsnumberformat{14}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{68}}}%
 \glossaryentryfield{MVC}{\glsnamefont{MVC}}{Model-View-Controller}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{49}}}\glsgroupskip
 \glsgroupheading{O}\relax \glsresetentrylist %
@@ -82,7 +82,7 @@
 \glossaryentryfield{Tone-Mapping}{\glsnamefont{Tone-Mapping}}{Tone-Mapping (dt. Dynamikkompression) steht für die Kompression des Dynamikumfanges von HDR-Bildern auf einen niederen Kontrastbereich, sodass diese mit herkömmlichen Geräten dargestellt werden können}{\relax }{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{8}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{11}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{16\delimR 18}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{16\delimR 19}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{22}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{45}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{48\delimN 49}\delimN 
